@@ -7,44 +7,30 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="JCJYXJS,elstec,blog" />
-    <meta name="generator" content="Maverick 1.0" />
-    <meta name="template" content="Galileo" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Kepler" />
     <link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
     <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
-    <link rel="stylesheet" href="/assets/galileo-f9d119f8ef.css">
-    <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://blog-1251724647.file.myqcloud.com/test/f.css" />
-	<link rel="stylesheet" href="https://blog-1251724647.file.myqcloud.com/test/f-embed.css" />
-	<style>.brand{font-family:'f';font-weight:normal;}</style>
-	<script>
-        (function(){
-            if(/windows/i.test(navigator.userAgent)){
-                document.getElementsByTagName('html')[0].classList.add('windows');
-            }
-        })();
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs@master/assets/kepler-8f1c36e1cd.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs@master/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.10.0/dist/tocbot.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
+    <script>
         var ExSearchConfig = {
             root: "",
-            api: "/654aa0a11a36a0be544c00abf764fa4b.json"
+            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs@master/21f0cc7446fbf6d612d881f14475aeb6.json"
         }
     </script>
-	<script data-ad-client="ca-pub-9781903816543246" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-	</script>
-<script src="https://cdn.bootcss.com/bluebird/3.5.1/bluebird.core.min.js"></script>
-<script src="https://cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
-<script>
-  fetch('https://v1.hitokoto.cn')
-    .then(function (res){
-      return res.json();
-    })
-    .then(function (data) {
-      var hitokoto = document.getElementById('hitokoto');
-      hitokoto.innerText = data.hitokoto; 
-    })
-    .catch(function (err) {
-      console.error(err);
-    })
-</script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            if(/Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent)){
+                document.body.classList.add('safari')
+            }else{
+                document.body.classList.remove('safari')
+            }
+        });
+    </script>
     
 <title>利用腾讯云数据万象节省带宽，极致压缩图片 - 毫无作为</title>
 <meta name="author" content="jcjyxjs" />
@@ -63,201 +49,201 @@
 
 
     
-<!-- Content here will be added before </head>. -->
-
     </head>
     
-    <body>
-        <div class="container">
-            <header id="ga-header">
-                <div first>
-                    <aside id="ga-logo">
-                        <a href="/" target="_self">
-                            <img src="/tx.png" alt="毫无作为">
-                        </a>
-                    </aside>
-                    <aside id="ga-nav">
-                        <h1 class="brand">毫无作为</h1>
-                        <nav>
-                            <a href="/" target="_self">Home</a> · <a href="/archives/" target="_self">Archives</a> · <a href="/about/" target="_self">About</a> · <a href="#" target="_self" class="search-form-input">Search</a>
-                        </nav>
-                    </aside>
-                </div>
-                <div second>
-                    <p>Personal blog.</p>
-                    <p class="ga-mono">
-                        Catch me: <a title="Twitter" href="https://twitter.com/jcjyxjs" target="_blank"><i class="gi gi-twitter"></i></a>, <a title="GitHub" href="https://github.com/JCJYXJS" target="_blank"><i class="gi gi-github"></i></a>, <a title="Weibo" href="https://weibo.com/JCJYXJS/" target="_blank"><i class="gi gi-weibo"></i></a>
-                    </p>
-                </div>
-            </header>
-            
-<main>    
-    <section class="ga-section" id="ga-content">
-        <article class="yue">
-            <h1 class="ga-post_title">利用腾讯云数据万象节省带宽，极致压缩图片</h1>
-            <span class="ga-post_meta ga-mono">
-                <span>jcjyxjs</span>
-                <time>
-                    2019-08-14
-                </time>
+    <body class="content">
+        <header>
+            <div class="container">
+                <section>
+                    <a href="/"><img src="/tx.png">毫无作为</a>
+                </section>
+                <section>
+                    <nav>
+                        <ul>
+                            
+                                <li><a href="https://jcjyxjs.me/" target="_blank">JCJYXJS</a></li>
+                            
+                                <li><a href="https://wzfou.com/" target="_blank">挖站否</a></li>
+                            
+                                <li><a href="https://blog.ovzla.com/" target="_blank">繁星点点</a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+    
+                <section>
+                    <a hidden class="toggle-toc" target="_self" href="javascript:void(0)" onclick="$(body).toggleClass('toc-open')"><i class="fa fa-align-right"></i></a>
+                    <a hidden class="toggle-navbar" target="_self" href="javascript:void(0)" onclick="$(body).toggleClass('navbar-open')"><i class="fa fa-indent"></i></a>
+                    <button class="search-form-input"><i class="fa fa-search"></i></button>
+                </section>
+            </div>
+        </header>
+
+        <main>
+            <div id="pjax-container" class="container">
+                <aside id="navbar" class="no-scrollbar">
+                    
+                    <section class="sidebar-nav">
+                        
+                            <div class="None" ><span><a href="/">Home</a></span></div>
+                        
+                            <div class="None" ><span><a href="/archives/">Archives</a></span></div>
+                        
+                            <div class="None" ><span><a href="/about/">About</a></span></div>
+                        
+                    </section>
+                    
+                    <section>
+                        
+    <div class=" "><span><a href="/category/Default/">Default</a><button class="toggle_sidebar fa"></button></span><ul><li class=""><a href="/archives/fixrpmdb/">解决yum报错</a></li><li class=""><a href="/archives/20191115/">k2p所有lan口无法使用之后我的解决方案</a></li><li class=""><a href="/archives/wnhqh/">记一次蜗牛星际安装黑群晖过程</a></li><li class=""><a href="/archives/6plat/">6Plat固定公网IPv6地址（已失效）</a></li></ul></div><div class="open "><span><a href="/category/网站/">网站</a><button class="toggle_sidebar fa"></button></span><ul><li class=""><a href="/archives/ngxluawaf/">bt下开启nginx自带lua防火墙</a></li><li class=""><a href="/archives/fixbtwaf/">解决宝塔nginx防火墙启动后nginx不工作</a></li><li class=""><a href="/archives/fwbf/">使用Fontmin生成WebFont压缩字体</a></li><li class=""><a href="/archives/cfont/">记一次改字体的辛酸史，解决CDN跨域问题</a></li><li class="current"><a href="/archives/tci/">利用腾讯云数据万象节省带宽，极致压缩图片</a></li></ul></div><div class=" "><span><a href="/category/生活/">生活</a><button class="toggle_sidebar fa"></button></span><ul><li class=""><a href="/archives/2019818/">遗憾是常有的吧</a></li><li class=""><a href="/archives/2019816/">今天差点文章重写了</a></li></ul></div>
+
+                    </section>
+                    <section hidden class="sidebar-external-link">
+                        
+                            <div class="external"><span><a href="https://jcjyxjs.me/">JCJYXJS</a><button class="go-external"><i class="fa fa-external-link"></i></button></span></div>
+                        
+                            <div class="external"><span><a href="https://wzfou.com/">挖站否</a><button class="go-external"><i class="fa fa-external-link"></i></button></span></div>
+                        
+                            <div class="external"><span><a href="https://blog.ovzla.com/">繁星点点</a><button class="go-external"><i class="fa fa-external-link"></i></button></span></div>
+                        
+                    </section>
+                    <section class="maverick">
+                        <div><span style="border: 1px solid #d4dadf;"><a href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Kepler</a></span></div>
+                    </section>
+                </aside>
+                <div id="content-wrapper">
+                    <div id="content">
+    <section>
+        <h1 class="post-title">利用腾讯云数据万象节省带宽，极致压缩图片</h1>
+        <p class="post-meta">
+            <time>August 14 2019</time>
+            <span class="tags">
                 
-                in <a no-style class="category" href="/category/网站/">
-                    网站
-                </a>
+                <span>
+                    <a href="/tag/腾讯云/">#腾讯云</a>
+                </span>
                 
+                <span>
+                    <a href="/tag/网站加速/">#网站加速</a>
+                </span>
+                
+                <span>
+                    <a href="/tag/优化/">#优化</a>
+                </span>
                 
             </span>
-            <div class="ga-content_body">
-                <p>目前我的博客使用<code>Typecho + VOID</code>(主题)部署在GCP香港上，访问速度不能说很慢，但是移动全线路绕美个人体验很差。之前直接套了nodecache的香港CDN，反而变成了减速器，之后又安装了魔改版BBR，腾讯TCPA加速80，443，图片懒加载并上传到腾讯云cos用国内CDN加速，但是总体速度依旧不尽人意。直接压缩成WebP并不是所有浏览器都支持，不支持的浏览器直接不显示图片，所以要让支持的浏览器加载WebP格式，不持支的浏览器加载原格式。
-<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/6-0.png?imageMogr2/format/webp/interlace/1/quality/100" alt="webP浏览器支持度" /><figcaption>webP浏览器支持度</figcaption></figure>
+        </p>
+        <article class="yue"><p>目前我的博客使用<code>Typecho + VOID</code>(主题)部署在GCP香港上，访问速度不能说很慢，但是移动全线路绕美个人体验很差。之前直接套了nodecache的香港CDN，反而变成了减速器，之后又安装了魔改版BBR，腾讯TCPA加速80，443，图片懒加载并上传到腾讯云cos用国内CDN加速，但是总体速度依旧不尽人意。直接压缩成WebP并不是所有浏览器都支持，不支持的浏览器直接不显示图片，所以要让支持的浏览器加载WebP格式，不持支的浏览器加载原格式。
+<figure><img data-width="-1" data-height="-1" src="https://blog-1251724647.image.myqcloud.com/6-0.png?imageMogr2/format/webp/interlace/1/quality/100" alt="webP浏览器支持度" /><figcaption>webP浏览器支持度</figcaption></figure>
 在CDN无法满足需求后，我又想到了一个更给力的方案，就是利用腾讯云对象存储(COS) + 数据万象(CI)。(腾讯云每月都有赠送免费额度，个人小站完全够用)详情:<a href="https://cloud.tencent.com/document/product/460/6970">点我</a></p>
 <blockquote><p>数据万象基于对象存储提供优化服务，也可以同时使用CDN进行加速。可以按照我的步骤来，也可自行发挥。</p>
 </blockquote>
 <h2>1.创建Bucket(存储桶)</h2>
 <p>访问<a href="https://console.cloud.tencent.com/ci/bucket">数据万象控制台</a>，选择绑定Bucket，如果已经有Bucket可以直接绑定，也可以新建一个。
-<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/gif/1.gif?imageMogr2/format/webp/interlace/1/quality/100" alt=" (/ω＼) " /><figcaption> (/ω＼) </figcaption></figure>
+<figure><img data-width="-1" data-height="-1" src="https://blog-1251724647.image.myqcloud.com/gif/1.gif?imageMogr2/format/webp/interlace/1/quality/100" alt=" (/ω＼) " /><figcaption> (/ω＼) </figcaption></figure>
 我这里就以新建一个Bucket为例，名称，所属区域自定。</p>
 <blockquote><p>注意访问权限需要设置成公有读私有写。CDN加速的话，如果需要绑定自定义域名，就先不要开启，如果是默认加速域名，直接开启即可。
 新建完Bucket之后先不要设置防盗链等。在数据万象的Bucket管理页面，找到你新建或者绑定的Bucket，点击管理进入Bucket管理，依次点击样式→样式管理→添加样式。</p>
 </blockquote>
 <h2>2.新建处理样式</h2>
 <blockquote><p>输入样式名称，缩放方式一般选择不缩放，渐进显示看个人喜好，输出格式选择WebP，最后保存。
-<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/gif/2.gif?imageMogr2/format/webp/interlace/1/quality/100" alt=" OωO " /><figcaption> OωO </figcaption></figure></p>
+<figure><img data-width="-1" data-height="-1" src="https://blog-1251724647.image.myqcloud.com/gif/2.gif?imageMogr2/format/webp/interlace/1/quality/100" alt=" OωO " /><figcaption> OωO </figcaption></figure></p>
 </blockquote>
 <h2>3.最终测试</h2>
 <p>生成结束之后，会得到如下图所示的内容。点击预览，会访问腾讯自带的测试网址。
-<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/3.png?imageMogr2/format/webp/interlace/1/quality/100" alt=" |´・ω・)ノ " /><figcaption> |´・ω・)ノ </figcaption></figure>
+<figure><img data-width="-1" data-height="-1" src="https://blog-1251724647.image.myqcloud.com/3.png?imageMogr2/format/webp/interlace/1/quality/100" alt=" |´・ω・)ノ " /><figcaption> |´・ω・)ノ </figcaption></figure>
 所有操作结束之后可以用如下格式访问:</p>
 <blockquote><p><strong>[图片处理域名或图片加速域名或自定义域名]+[文件路径]+[?]+[描述]</strong>
 (描述内容详见上图)
-<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/5.png?imageMogr2/format/webp/interlace/1/quality/100" alt="" /></figure>
+<figure><img data-width="-1" data-height="-1" src="https://blog-1251724647.image.myqcloud.com/5.png?imageMogr2/format/webp/interlace/1/quality/100" alt="" /></figure>
 这是使用数据万象优化之前，1.6M大小
-<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/4.png?imageMogr2/format/webp/interlace/1/quality/100" alt="" /></figure>
+<figure><img data-width="-1" data-height="-1" src="https://blog-1251724647.image.myqcloud.com/4.png?imageMogr2/format/webp/interlace/1/quality/100" alt="" /></figure>
 这是优化之后，只有437KB
 加载速度明显提升
 以上全部设置完成之后可以逐一设置防盗链，原图保护等功能。这只是一个非常简单快速的部署使用，省略了很多功能的配置。</p>
 </blockquote>
-
-            </div>
-        </article>
-        <div id="ga-tags">
-    
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/tag/腾讯云/">#腾讯云</a>
-    </span>
-    
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/tag/网站加速/">#网站加速</a>
-    </span>
-    
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/tag/优化/">#优化</a>
-    </span>
-    
-</div>
-
-<!--katex-->
-<link rel="stylesheet" href="/assets/katex.min.css">
-<script defer src="/assets/katex.min.js"></script>
-<script>
-mathOpts = {
-    delimiters: [
-        {left: "$$", right: "$$", display: true},
-        {left: "\\[", right: "\\]", display: true},
-        {left: "$", right: "$", display: false},
-        {left: "\\(", right: "\\)", display: false}
-    ]
-};
-</script>
-<script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+</article>
     </section>
 
     
-<section id="ga-content_pager">
-
-    <div class="next">
-        <a class="ga-highlight" href="/archives/cfont/">记一次改字体的辛酸史，解决CDN跨域问题</a>
-        <p class="yue">改字体</p>
-    </div>
-
-
-    <div class="prev">
-        <h3>No More</h3>
-        <p class="yue">This is the oldest one.</p>
-    </div>
-
-</section>
-
+    <section id="content-pager">
+        
+            <div class="next">
+                <a class="card" href="/archives/cfont/">
+                    <time>August 14 2019</time>
+                    <span>记一次改字体的辛酸史，解决CDN跨域问题</span>
+                </a>
+            </div>
+        
+        
+    </section>
+    
 
     
 
-</main>
-
-            <footer class="ga-mono" id="ga-footer">
-                <section>
-                    <span id="ga-uptime"></span>
-                    <span class="brand">毫无作为</span>
-                </section>
-                <section>
-                    <p>Copyright © 2020 JCJYXJS</p>
-                    <p>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></p>
-                    
-<!-- Content here will be added to <footer> tag.-->
-
-					<p><a no-style href="http://www.miitbeian.gov.cn/" target="_blank">浙ICP备18034167号</a></p>
-					<a href="https://996.icu"><img src="https://blog-1251724647.image.myqcloud.com/svg/red.svg" /></a>
-					<a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://blog-1251724647.image.myqcloud.com/svg/blue.svg" /></a>					
-                </section>
-                <script>
-                    var site_build_date = "2019-12-06T12:00+08:00"
-                </script>
-                <script src="/assets/galileo-d8a0a06eff.js"></script>
-            </footer>
-        </div>
-        
-        
-        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="pswp__bg"></div>
-        <div class="pswp__scroll-wrap">
-            <div class="pswp__container">
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-                <div class="pswp__item"></div>
-            </div>
-            <div class="pswp__ui pswp__ui--hidden">
-                <div class="pswp__top-bar">
-                    <div class="pswp__counter"></div>
-                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
-                    <button class="pswp__button pswp__button--share" title="Share"></button>
-                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
-                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
-                    <div class="pswp__preloader">
-                        <div class="pswp__preloader__icn">
-                          <div class="pswp__preloader__cut">
-                            <div class="pswp__preloader__donut"></div>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
-                    <div class="pswp__share-tooltip"></div> 
-                </div>
-                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
-                </button>
-                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
-                </button>
-                <div class="pswp__caption">
-                    <div class="pswp__caption__center"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="/assets/ExSearch/jquery.min.js"></script>
-    <script src="/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
-
+    <script>
+        document.body.classList.add('content');
+        document.body.classList.remove('archive');
+    </script>
+</div>
+                    <footer>
+                        <span>Copyright © 2020 JCJYXJS</span>
+                        
     
-<!-- Content here will be added before </body>. -->
 
+                        
+                    </footer>
+                </div>
+                
+<aside id="toc-container" class="no-scrollbar">
+    <span><i class="fa fa-align-right"></i> CONTENTS</span>
+    <div id="toc"></div>
+</aside>
+
+            </div>
+        </main>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/tocbot@4.10.0/dist/tocbot.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs@master/assets/kepler-ef161b04d5.js"></script>
+        <script>
+            function ExSearchCall(item){
+                if (item && item.length) {
+                    $('.ins-close').click(); // 关闭搜索框
+                    $('input.ins-search-input').val(''); // 清空
+                    let url = item.attr('data-url'); // 获取目标页面 URL
+                    $.pjax({url: url, 
+                        container: '#pjax-container',
+                        fragment: '#pjax-container',
+                        timeout: 8000, }); // 发起一次 PJAX 请求
+                }
+            }
+        </script>
+
+        <!--Valine-->
+        
+
+        <!--ExSearch-->
+        <script src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs@master/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+        
+        <!--katex-->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs@master/assets/katex.min.css">
+        <script defer src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs@master/assets/katex.min.js"></script>
+        <script>
+        mathOpts = {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "\\[", right: "\\]", display: true},
+                {left: "$", right: "$", display: false},
+                {left: "\\(", right: "\\)", display: false}
+            ]
+        };
+        </script>
+        <script defer src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs@master/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+        
     </body>
 </html>
