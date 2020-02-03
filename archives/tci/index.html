@@ -46,19 +46,20 @@
     })
 </script>
     
-<title></title>
-<meta name="author" content="JCJYXJS" />
-<meta name="description" content="Personal blog." />
-<meta property="og:title" content="" />
-<meta property="og:description" content="Personal blog." />
+<title>利用腾讯云数据万象节省带宽，极致压缩图片 - 毫无作为</title>
+<meta name="author" content="jcjyxjs" />
+<meta name="description" content="优化加速" />
+<meta property="og:title" content="利用腾讯云数据万象节省带宽，极致压缩图片 - 毫无作为" />
+<meta property="og:description" content="优化加速" />
 <meta property="og:site_name" content="毫无作为" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="" />
-<meta property="og:image" content="毫无作为" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:description" content="Personal blog." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/tci/" />
+<meta property="og:image" content="None" />
+<meta property="article:published_time" content="2019-08-14T13:26:00+08.00" />
+<meta name="twitter:title" content="利用腾讯云数据万象节省带宽，极致压缩图片 - 毫无作为" />
+<meta name="twitter:description" content="优化加速" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="/tx.png" />
+<meta name="twitter:image" content="None" />
 
 
     
@@ -91,97 +92,104 @@
             </header>
             
 <main>    
-    
+    <section class="ga-section" id="ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">利用腾讯云数据万象节省带宽，极致压缩图片</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>jcjyxjs</span>
+                <time>
+                    2019-08-14
+                </time>
+                
+                in <a no-style class="category" href="/category/网站/">
+                    网站
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <p>目前我的博客使用<code>Typecho + VOID</code>(主题)部署在GCP香港上，访问速度不能说很慢，但是移动全线路绕美个人体验很差。之前直接套了nodecache的香港CDN，反而变成了减速器，之后又安装了魔改版BBR，腾讯TCPA加速80，443，图片懒加载并上传到腾讯云cos用国内CDN加速，但是总体速度依旧不尽人意。直接压缩成WebP并不是所有浏览器都支持，不支持的浏览器直接不显示图片，所以要让支持的浏览器加载WebP格式，不持支的浏览器加载原格式。
+<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/6-0.png?imageMogr2/format/webp/interlace/1/quality/100" alt="webP浏览器支持度" /><figcaption>webP浏览器支持度</figcaption></figure>
+在CDN无法满足需求后，我又想到了一个更给力的方案，就是利用腾讯云对象存储(COS) + 数据万象(CI)。(腾讯云每月都有赠送免费额度，个人小站完全够用)详情:<a href="https://cloud.tencent.com/document/product/460/6970">点我</a></p>
+<blockquote><p>数据万象基于对象存储提供优化服务，也可以同时使用CDN进行加速。可以按照我的步骤来，也可自行发挥。</p>
+</blockquote>
+<h2>1.创建Bucket(存储桶)</h2>
+<p>访问<a href="https://console.cloud.tencent.com/ci/bucket">数据万象控制台</a>，选择绑定Bucket，如果已经有Bucket可以直接绑定，也可以新建一个。
+<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/gif/1.gif?imageMogr2/format/webp/interlace/1/quality/100" alt=" (/ω＼) " /><figcaption> (/ω＼) </figcaption></figure>
+我这里就以新建一个Bucket为例，名称，所属区域自定。</p>
+<blockquote><p>注意访问权限需要设置成公有读私有写。CDN加速的话，如果需要绑定自定义域名，就先不要开启，如果是默认加速域名，直接开启即可。
+新建完Bucket之后先不要设置防盗链等。在数据万象的Bucket管理页面，找到你新建或者绑定的Bucket，点击管理进入Bucket管理，依次点击样式→样式管理→添加样式。</p>
+</blockquote>
+<h2>2.新建处理样式</h2>
+<blockquote><p>输入样式名称，缩放方式一般选择不缩放，渐进显示看个人喜好，输出格式选择WebP，最后保存。
+<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/gif/2.gif?imageMogr2/format/webp/interlace/1/quality/100" alt=" OωO " /><figcaption> OωO </figcaption></figure></p>
+</blockquote>
+<h2>3.最终测试</h2>
+<p>生成结束之后，会得到如下图所示的内容。点击预览，会访问腾讯自带的测试网址。
+<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/3.png?imageMogr2/format/webp/interlace/1/quality/100" alt=" |´・ω・)ノ " /><figcaption> |´・ω・)ノ </figcaption></figure>
+所有操作结束之后可以用如下格式访问:</p>
+<blockquote><p><strong>[图片处理域名或图片加速域名或自定义域名]+[文件路径]+[?]+[描述]</strong>
+(描述内容详见上图)
+<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/5.png?imageMogr2/format/webp/interlace/1/quality/100" alt="" /></figure>
+这是使用数据万象优化之前，1.6M大小
+<figure class="pswp-item"  data-width="-1" data-height="-1" size-undefined><img src="https://blog-1251724647.image.myqcloud.com/4.png?imageMogr2/format/webp/interlace/1/quality/100" alt="" /></figure>
+这是优化之后，只有437KB
+加载速度明显提升
+以上全部设置完成之后可以逐一设置防盗链，原图保护等功能。这只是一个非常简单快速的部署使用，省略了很多功能的配置。</p>
+</blockquote>
 
-<section id="ga-archive_list" class="ga-section" data-title="Archives">
-    <ul>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/fixrpmdb/">解决yum报错</a></h1>
-            <time class="ga-mono">
-                2019-11-17
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/20191115/">k2p所有lan口无法使用之后我的解决方案</a></h1>
-            <time class="ga-mono">
-                2019-11-17
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/ngxluawaf/">bt下开启nginx自带lua防火墙</a></h1>
-            <time class="ga-mono">
-                2019-11-09
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/fixbtwaf/">解决宝塔nginx防火墙启动后nginx不工作</a></h1>
-            <time class="ga-mono">
-                2019-11-09
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/wnhqh/">记一次蜗牛星际安装黑群晖过程</a></h1>
-            <time class="ga-mono">
-                2019-09-12
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/6plat/">6Plat固定公网IPv6地址</a></h1>
-            <time class="ga-mono">
-                2019-08-27
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/2019818/">遗憾是常有的吧</a></h1>
-            <time class="ga-mono">
-                2019-08-18
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/2019816/">今天差点文章重写了</a></h1>
-            <time class="ga-mono">
-                2019-08-16
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/fwbf/">使用Fontmin生成WebFont压缩字体</a></h1>
-            <time class="ga-mono">
-                2019-08-15
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/cfont/">记一次改字体的辛酸史，解决CDN跨域问题</a></h1>
-            <time class="ga-mono">
-                2019-08-14
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/tci/">利用腾讯云数据万象节省带宽，极致压缩图片</a></h1>
-            <time class="ga-mono">
-                2019-08-14
-            </time>
-        </li>
-        
-    </ul>
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/腾讯云/">#腾讯云</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/网站加速/">#网站加速</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/优化/">#优化</a>
+    </span>
+    
+</div>
+
+<!--katex-->
+<link rel="stylesheet" href="/assets/katex.min.css">
+<script defer src="/assets/katex.min.js"></script>
+<script>
+mathOpts = {
+    delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+    ]
+};
+</script>
+<script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <a class="ga-highlight" href="/archives/cfont/">记一次改字体的辛酸史，解决CDN跨域问题</a>
+        <p class="yue">改字体</p>
+    </div>
+
+
+    <div class="prev">
+        <h3>No More</h3>
+        <p class="yue">This is the oldest one.</p>
+    </div>
+
 </section>
 
-<section class="ga-section ga-mono" id="ga-pager">
-    
-    <span>Page 1 of 1</span>
-    
-</section>
 
+    
 
 </main>
 

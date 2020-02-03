@@ -46,19 +46,20 @@
     })
 </script>
     
-<title></title>
-<meta name="author" content="JCJYXJS" />
-<meta name="description" content="Personal blog." />
-<meta property="og:title" content="" />
-<meta property="og:description" content="Personal blog." />
+<title>今天差点文章重写了 - 毫无作为</title>
+<meta name="author" content="jcjyxjs" />
+<meta name="description" content="None" />
+<meta property="og:title" content="今天差点文章重写了 - 毫无作为" />
+<meta property="og:description" content="None" />
 <meta property="og:site_name" content="毫无作为" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="" />
-<meta property="og:image" content="毫无作为" />
-<meta name="twitter:title" content="" />
-<meta name="twitter:description" content="Personal blog." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/2019816/" />
+<meta property="og:image" content="None" />
+<meta property="article:published_time" content="2019-08-16T15:04:00+08.00" />
+<meta name="twitter:title" content="今天差点文章重写了 - 毫无作为" />
+<meta name="twitter:description" content="None" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="/tx.png" />
+<meta name="twitter:image" content="None" />
 
 
     
@@ -91,97 +92,84 @@
             </header>
             
 <main>    
-    
+    <section class="ga-section" id="ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">今天差点文章重写了</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>jcjyxjs</span>
+                <time>
+                    2019-08-16
+                </time>
+                
+                in <a no-style class="category" href="/category/生活/">
+                    生活
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <div class="Meting">
+[Music server="netease" id="421423808" type="song"/]</div><p>现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
+事情是这样的，碍于GCP线路对国内不太友好。我入了一台香港阿里云，ssh连上准备安装bt，敲下enter之后发现香港的对应节点<code>103.224.251.67 time out</code>，一开始我以为是阿里云屏蔽了这个ip，用备用的广东节点装进去了，一顿操作之后，安装nginx只用了5秒，我透，这怎么可能呢。于是又重复安装了好几遍，又试了其他环境，还是无法安装的状态。
+无奈之下又只好用那台GCP进行测试安装，我上午优化的时候想到可以试试Alisql因为我提升了服务器配置，备份了数据库，准备卸载mysql，提示说要删掉原先的库，我直接就点了删除数据库，删完才记起来数据库备份没下载，整个人就呆坐了半天，一生气直接<code>rm -rf</code>。删完之后尝试安装Alisql，发现安不进，看log也连的<code>103.224.251.67</code>这个节点。我就ping了这个ip，全部提示<code>time out</code>，逛了一圈bt论坛，发现也有人跟我情况一样，那就是bt的问题，估计又被打了，我于是仔细看了log，发现他不是直接连这个ip，是个域名，那肯定是cdn鸭，站长工具ping了一下果然有这么多节点，bt后台首页看到又Linux工具箱，突然想起来可以通过改dns指定host来更改请求的ip，一波114完美安装所有环境。
+于是我从0开始写博客，准备引用图片了，看到bucket上有今天备份的数据库，我的妈，激动哭了，我昨天安装的腾讯云cos，设置了自动备份，今天早上手动执行了一遍，还没太当回事，不仅有数据库备份还有根目录备份 :@(喜极而泣)</p>
 
-<section id="ga-archive_list" class="ga-section" data-title="Archives">
-    <ul>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/fixrpmdb/">解决yum报错</a></h1>
-            <time class="ga-mono">
-                2019-11-17
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/20191115/">k2p所有lan口无法使用之后我的解决方案</a></h1>
-            <time class="ga-mono">
-                2019-11-17
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/ngxluawaf/">bt下开启nginx自带lua防火墙</a></h1>
-            <time class="ga-mono">
-                2019-11-09
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/fixbtwaf/">解决宝塔nginx防火墙启动后nginx不工作</a></h1>
-            <time class="ga-mono">
-                2019-11-09
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/wnhqh/">记一次蜗牛星际安装黑群晖过程</a></h1>
-            <time class="ga-mono">
-                2019-09-12
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/6plat/">6Plat固定公网IPv6地址</a></h1>
-            <time class="ga-mono">
-                2019-08-27
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/2019818/">遗憾是常有的吧</a></h1>
-            <time class="ga-mono">
-                2019-08-18
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/2019816/">今天差点文章重写了</a></h1>
-            <time class="ga-mono">
-                2019-08-16
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/fwbf/">使用Fontmin生成WebFont压缩字体</a></h1>
-            <time class="ga-mono">
-                2019-08-15
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/cfont/">记一次改字体的辛酸史，解决CDN跨域问题</a></h1>
-            <time class="ga-mono">
-                2019-08-14
-            </time>
-        </li>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/tci/">利用腾讯云数据万象节省带宽，极致压缩图片</a></h1>
-            <time class="ga-mono">
-                2019-08-14
-            </time>
-        </li>
-        
-    </ul>
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/博客/">#博客</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/网站搬家/">#网站搬家</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/数据库/">#数据库</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/jcjyxjs/">#jcjyxjs</a>
+    </span>
+    
+</div>
+
+<!--katex-->
+<link rel="stylesheet" href="/assets/katex.min.css">
+<script defer src="/assets/katex.min.js"></script>
+<script>
+mathOpts = {
+    delimiters: [
+        {left: "$$", right: "$$", display: true},
+        {left: "\\[", right: "\\]", display: true},
+        {left: "$", right: "$", display: false},
+        {left: "\\(", right: "\\)", display: false}
+    ]
+};
+</script>
+<script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <a class="ga-highlight" href="/archives/2019818/">遗憾是常有的吧</a>
+        <p class="yue">时间错过不会再来</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/fwbf/">使用Fontmin生成WebFont压缩字体</a>
+        <p class="yue">Fontmin</p>
+    </div>
+
 </section>
 
-<section class="ga-section ga-mono" id="ga-pager">
-    
-    <span>Page 1 of 1</span>
-    
-</section>
 
+    
 
 </main>
 

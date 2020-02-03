@@ -1,485 +1,348 @@
-<!DOCTYPE html>
-
-
-
-
-
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
-<meta name="theme-color" content="#222">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.4.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.4.0">
-  <link rel="mask-icon" href="/images/logo.svg?v=7.4.0" color="#222">
-
-<link rel="stylesheet" href="/css/main.css?v=7.4.0">
-
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
-
-
-<script id="hexo-configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Muse',
-    version: '7.4.0',
-    exturl: false,
-    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
-    copycode: {"enable":false,"show_result":false,"style":null},
-    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
-    bookmark: {"enable":false,"color":"#222","save":"auto"},
-    fancybox: false,
-    mediumzoom: false,
-    lazyload: false,
-    pangu: false,
-    algolia: {
-      appID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
-    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
-    },
-    sidebarPadding: 40
-  };
+<!DOCTYPE HTML>
+<html lang="english">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="JCJYXJS,elstec,blog" />
+    <meta name="generator" content="Maverick 1.0" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="/assets/galileo-f9d119f8ef.css">
+    <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://blog-1251724647.file.myqcloud.com/test/f.css" />
+	<link rel="stylesheet" href="https://blog-1251724647.file.myqcloud.com/test/f-embed.css" />
+	<style>.brand{font-family:'f';font-weight:normal;}</style>
+	<script>
+        (function(){
+            if(/windows/i.test(navigator.userAgent)){
+                document.getElementsByTagName('html')[0].classList.add('windows');
+            }
+        })();
+        var ExSearchConfig = {
+            root: "",
+            api: "/654aa0a11a36a0be544c00abf764fa4b.json"
+        }
+    </script>
+	<script data-ad-client="ca-pub-9781903816543246" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	</script>
+<script src="https://cdn.bootcss.com/bluebird/3.5.1/bluebird.core.min.js"></script>
+<script src="https://cdn.bootcss.com/fetch/2.0.3/fetch.min.js"></script>
+<script>
+  fetch('https://v1.hitokoto.cn')
+    .then(function (res){
+      return res.json();
+    })
+    .then(function (data) {
+      var hitokoto = document.getElementById('hitokoto');
+      hitokoto.innerText = data.hitokoto; 
+    })
+    .catch(function (err) {
+      console.error(err);
+    })
 </script>
-
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-  <link rel="canonical" href="http://yoursite.com/">
-
-
-<script id="page-configurations">
-  // https://hexo.io/docs/variables.html
-  CONFIG.page = {
-    sidebar: "",
-    isHome: true,
-    isPost: false,
-    isPage: false,
-    isArchive: false
-  };
-</script>
-
-  <title>Hexo</title>
-  <meta name="generator" content="Hexo 3.9.0">
-  
-
-
-
-
-
-
-
-
-  <noscript>
-  <style>
-  .use-motion .brand,
-  .use-motion .menu-item,
-  .sidebar-inner,
-  .use-motion .post-block,
-  .use-motion .pagination,
-  .use-motion .comments,
-  .use-motion .post-header,
-  .use-motion .post-body,
-  .use-motion .collection-header { opacity: initial; }
-
-  .use-motion .logo,
-  .use-motion .site-title,
-  .use-motion .site-subtitle {
-    opacity: initial;
-    top: initial;
-  }
-
-  .use-motion .logo-line-before i { left: initial; }
-  .use-motion .logo-line-after i { right: initial; }
-  </style>
-</noscript>
-
-</head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-  <div class="container use-motion">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-container">
-  <div class="site-meta">
-
-    <div>
-      <a href="/" class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
-  </div>
-
-  <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-
-<nav class="site-nav">
-  
-  <ul id="menu" class="menu">
-      
-      
-      
-        
-        <li class="menu-item menu-item-home">
-      
     
+<title>毫无作为</title>
+<meta name="author" content="JCJYXJS" />
+<meta name="description" content="Personal blog." />
+<meta property="og:title" content="毫无作为" />
+<meta property="og:description" content="Personal blog." />
+<meta property="og:site_name" content="毫无作为" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/" />
+<meta property="og:image" content="毫无作为" />
+<meta name="twitter:title" content="毫无作为" />
+<meta name="twitter:description" content="Personal blog." />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="/tx.png" />
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-archives">
-      
-    
-
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
-
-  </li>
-  </ul>
 
     
+<!-- Content here will be added before </head>. -->
 
-</nav>
-</div>
-    </header>
-
+    </head>
     
-  <div class="back-to-top">
-    <i class="fa fa-arrow-up"></i>
-    <span>0%</span>
-  </div>
-
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
+    <body>
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-logo">
+                        <a href="/" target="_self">
+                            <img src="/tx.png" alt="毫无作为">
+                        </a>
+                    </aside>
+                    <aside id="ga-nav">
+                        <h1 class="brand">毫无作为</h1>
+                        <nav>
+                            <a href="/" target="_self">Home</a> · <a href="/archives/" target="_self">Archives</a> · <a href="/about/" target="_self">About</a> · <a href="#" target="_self" class="search-form-input">Search</a>
+                        </nav>
+                    </aside>
+                </div>
+                <div second>
+                    <p>Personal blog.</p>
+                    <p class="ga-mono">
+                        Catch me: <a title="Twitter" href="https://twitter.com/jcjyxjs" target="_blank"><i class="gi gi-twitter"></i></a>, <a title="GitHub" href="https://github.com/JCJYXJS" target="_blank"><i class="gi gi-github"></i></a>, <a title="Weibo" href="https://weibo.com/JCJYXJS/" target="_blank"><i class="gi gi-weibo"></i></a>
+                    </p>
+                </div>
+            </header>
             
-  <div id="posts" class="posts-expand">
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/test/">
+<main>    
+    
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/08/test/" class="post-title-link" itemprop="url">test</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
+<section id="ga-post_list" class="ga-section" data-title="Posts">
+    <ul>
+        
+        <li>
+            <article class="yue">
+                <h1>解决yum报错</h1>
                 
-              
-
-              <time title="Created: 2019-08-08 18:08:32 / Modified: 18:12:21" itemprop="dateCreated datePublished" datetime="2019-08-08T18:08:32+08:00">2019-08-08</time>
-            </span>
-          
-            
-
-            
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <hr>
-<p>测试1</p>
-<hr>
-<p>测试2</p>
-<hr>
-<p>测试3 <a href="https://elstec.cn" target="_blank" rel="noopener">https://elstec.cn</a></p>
-<hr>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-        <article itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block home">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/08/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/08/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
-
-              
+                    <blockquote>这是我一台Google的服务器，很久不用，准备装软件突然就这样了。</blockquote>
                 
-              
-
-              <time title="Created: 2019-08-08 18:01:28" itemprop="dateCreated datePublished" datetime="2019-08-08T18:01:28+08:00">2019-08-08</time>
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-  </div>
-
-  
-
-
-          </div>
-          
-
-        </div>
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside class="sidebar">
-    <div class="sidebar-inner">
-
-      <ul class="sidebar-nav motion-element">
-        <li class="sidebar-nav-toc">
-          Table of Contents
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/fixrpmdb/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-11-17
+                    </time>
+                </footer>
+            </article>
         </li>
-        <li class="sidebar-nav-overview">
-          Overview
+        
+        <li>
+            <article class="yue">
+                <h1>k2p所有lan口无法使用之后我的解决方案</h1>
+                
+                    <blockquote>k2p真的是灵车</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/20191115/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-11-17
+                    </time>
+                </footer>
+            </article>
         </li>
-      </ul>
-
-      <!--noindex-->
-      <div class="post-toc-wrap sidebar-panel">
-      </div>
-      <!--/noindex-->
-
-      <div class="site-overview-wrap sidebar-panel">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-  <p class="site-author-name" itemprop="name">John Doe</p>
-  <div class="site-description" itemprop="description"></div>
-</div>
-  <nav class="site-state motion-element">
-      <div class="site-state-item site-state-posts">
         
-          <a href="/archives/">
+        <li>
+            <article class="yue">
+                <h1>bt下开启nginx自带lua防火墙</h1>
+                
+                    <blockquote>nginx自带waf</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/ngxluawaf/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-11-09
+                    </time>
+                </footer>
+            </article>
+        </li>
         
-          <span class="site-state-item-count">2</span>
-          <span class="site-state-item-name">posts</span>
-        </a>
-      </div>
+        <li>
+            <article class="yue">
+                <h1>解决宝塔nginx防火墙启动后nginx不工作</h1>
+                
+                    <blockquote>xswl宝塔nginx和nginx不兼容</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/fixbtwaf/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-11-09
+                    </time>
+                </footer>
+            </article>
+        </li>
+        
+        <li>
+            <article class="yue">
+                <h1>记一次蜗牛星际安装黑群晖过程</h1>
+                
+                    <blockquote>黑群晖</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/wnhqh/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-09-12
+                    </time>
+                </footer>
+            </article>
+        </li>
+        
+        <li>
+            <article class="yue">
+                <h1>6Plat固定公网IPv6地址</h1>
+                
+                    <blockquote>6Plat将在2020年停止46模块服务</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/6plat/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-08-27
+                    </time>
+                </footer>
+            </article>
+        </li>
+        
+        <li>
+            <article class="yue">
+                <h1>遗憾是常有的吧</h1>
+                
+                    <blockquote>时间错过不会再来</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/2019818/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-08-18
+                    </time>
+                </footer>
+            </article>
+        </li>
+        
+        <li>
+            <article class="yue">
+                <h1>今天差点文章重写了</h1>
+                
+                    <blockquote>None</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/2019816/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-08-16
+                    </time>
+                </footer>
+            </article>
+        </li>
+        
+        <li>
+            <article class="yue">
+                <h1>使用Fontmin生成WebFont压缩字体</h1>
+                
+                    <blockquote>Fontmin</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/fwbf/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-08-15
+                    </time>
+                </footer>
+            </article>
+        </li>
+        
+        <li>
+            <article class="yue">
+                <h1>记一次改字体的辛酸史，解决CDN跨域问题</h1>
+                
+                    <blockquote>改字体</blockquote>
+                
+                <footer>
+                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/cfont/">Read More</a></span>
+                    <time class="ga-mono">
+                        2019-08-14
+                    </time>
+                </footer>
+            </article>
+        </li>
+        
+    </ul>
+</section>
+
+<section class="ga-section ga-mono" id="ga-pager">
     
-  </nav>
+    <span>Page 1 of 2</span>
+    
+        <a next class="ga-highlight" href="/page/2/">Next</a>
+    
+</section>
+
+<section id="ga-external_links" class="ga-section" data-title="Links">
+    <ul>
+        
+        <li>
+            <a class="ga-highlight" target="_blank" href="https://jcjyxjs.me/">JCJYXJS</a>：Home Page
+        </li>
+        
+        <li>
+            <a class="ga-highlight" target="_blank" href="https://wzfou.com/">挖站否</a>：Friends
+        </li>
+        
+        <li>
+            <a class="ga-highlight" target="_blank" href="https://blog.ovzla.com/">繁星点点</a>：Friends
+        </li>
+        
+    </ul>
+</section>
 
 
+</main>
 
-      </div>
+            <footer class="ga-mono" id="ga-footer">
+                <section>
+                    <span id="ga-uptime"></span>
+                    <span class="brand">毫无作为</span>
+                </section>
+                <section>
+                    <p>Copyright © 2020 JCJYXJS</p>
+                    <p>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></p>
+                    
+<!-- Content here will be added to <footer> tag.-->
 
+					<p><a no-style href="http://www.miitbeian.gov.cn/" target="_blank">浙ICP备18034167号</a></p>
+					<a href="https://996.icu"><img src="https://blog-1251724647.image.myqcloud.com/svg/red.svg" /></a>
+					<a href="https://github.com/996icu/996.ICU/blob/master/LICENSE"><img src="https://blog-1251724647.image.myqcloud.com/svg/blue.svg" /></a>					
+                </section>
+                <script>
+                    var site_build_date = "2019-12-06T12:00+08:00"
+                </script>
+                <script src="/assets/galileo-d8a0a06eff.js"></script>
+            </footer>
+        </div>
+        
+        
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                          <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div> 
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
     </div>
-  </aside>
-  <div id="sidebar-dimmer"></div>
 
+    <script src="/assets/ExSearch/jquery.min.js"></script>
+    <script src="/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
 
-      </div>
-    </main>
+    
+<!-- Content here will be added before </body>. -->
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love" id="animate">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
-</div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
-  <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.4.0</div>
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
-      </div>
-    </footer>
-  </div>
-
-  
-
-
-  <script src="/lib/anime.min.js?v=3.1.0"></script>
-  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-<script src="/js/utils.js?v=7.4.0"></script><script src="/js/motion.js?v=7.4.0"></script>
-<script src="/js/schemes/muse.js?v=7.4.0"></script>
-<script src="/js/next-boot.js?v=7.4.0"></script>
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  
-
-  
-
-</body>
+    </body>
 </html>
