@@ -108,6 +108,10 @@
                 </a>
                 
                 
+                <span class="leancloud_visitors" 
+                    id="/archives/tci/" 
+                    data-flag-title="利用腾讯云数据万象节省带宽，极致压缩图片"> · <i class="leancloud-visitors-count"></i> Views</span>
+                
             </span>
             <div class="ga-content_body">
                 <p>目前我的博客使用<code>Typecho + VOID</code>(主题)部署在GCP香港上，访问速度不能说很慢，但是移动全线路绕美个人体验很差。之前直接套了nodecache的香港CDN，反而变成了减速器，之后又安装了魔改版BBR，腾讯TCPA加速80，443，图片懒加载并上传到腾讯云cos用国内CDN加速，但是总体速度依旧不尽人意。直接压缩成WebP并不是所有浏览器都支持，不支持的浏览器直接不显示图片，所以要让支持的浏览器加载WebP格式，不持支的浏览器加载原格式。
@@ -176,6 +180,14 @@
 </section>
 
 
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "6IbSkySz1sFtHscRpUnjah3J-gzGzoHsz", "appKey": "TuXcNNNCp9UkJuPnpYN538zT", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
     
 
 </main>
