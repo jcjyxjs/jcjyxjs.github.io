@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Fri, 07 Feb 2020 20:11:11 +0806</lastBuildDate><pubDate>Fri, 07 Feb 2020 20:11:11 +0806</pubDate><item><title>使用Fontmin生成WebFont压缩字体</title><link>/archives/fwbf/</link><description>&lt;p&gt;我上一篇文章&lt;strong&gt;&lt;em&gt;&lt;a href="https://jcjyxjs.me/archives/cfont.html"&gt;(记一次改字体的辛酸史，解决CDN跨域问题)&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;讲的是我改字体的一个过程，用了&lt;code&gt;@font-face&lt;/code&gt;的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是&lt;a href="https://github.com/aui/font-spider/blob/master/README-ZH-CN.md"&gt;Font-Spider(字蛛)&lt;/a&gt;，看了网上各种教程，无一例外全是一模一样的。
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Fri, 07 Feb 2020 20:23:54 +0806</lastBuildDate><pubDate>Fri, 07 Feb 2020 20:23:54 +0806</pubDate><item><title>使用Fontmin生成WebFont压缩字体</title><link>/archives/fwbf/</link><description>&lt;p&gt;我上一篇文章&lt;strong&gt;&lt;em&gt;&lt;a href="https://jcjyxjs.me/archives/cfont.html"&gt;(记一次改字体的辛酸史，解决CDN跨域问题)&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;讲的是我改字体的一个过程，用了&lt;code&gt;@font-face&lt;/code&gt;的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是&lt;a href="https://github.com/aui/font-spider/blob/master/README-ZH-CN.md"&gt;Font-Spider(字蛛)&lt;/a&gt;，看了网上各种教程，无一例外全是一模一样的。
 昨天我测试字体的时候用过&lt;strong&gt;&lt;a href="https://www.webfont.com/"&gt;有字库&lt;/a&gt;&lt;/strong&gt;，有字库就是一个典型的webfont，我就在想有没有跟有字库差不多的webfont引用方式，不直接引用整个字体，而是引用需要用到字，终于，我在GitHub上找到了这个15年的项目&lt;code&gt;Fontmin&lt;/code&gt;，我直接下载了他的客户端，&lt;code&gt;Fontmin&lt;/code&gt;提供了Mac os &amp;amp; Windows客户端。只需要将ttf原字体拖入客户端，输入需要用到的字，即可一键生成字体和css配置。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/gif/3.gif?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;生成之后，会创建以你原字体名开头的&lt;code&gt;eot，ttf，woff，css&lt;/code&gt;文件&lt;/p&gt;
@@ -320,12 +320,11 @@ CCrate="300/60"
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;刷新之后会出现&lt;code&gt;Custom domain&lt;/code&gt;选项，填入你的域名，点击Save&lt;/p&gt;
 &lt;/li&gt;
-&lt;li&gt;&lt;p&gt;然后修改你的域名解析CNAME&lt;/p&gt;
-&lt;p&gt;| &lt;strong&gt;www&lt;/strong&gt; | &lt;strong&gt;CNAME&lt;/strong&gt; | &lt;strong&gt;name.github.io&lt;/strong&gt; |
-| ------- | --------- | ------------------ |
-| &lt;strong&gt;@&lt;/strong&gt;   | &lt;strong&gt;CNAME&lt;/strong&gt; | &lt;strong&gt;name.github.io&lt;/strong&gt; |&lt;/p&gt;
-&lt;p&gt;过一会儿就可以用自定义域名看到了&lt;/p&gt;
+&lt;li&gt;&lt;p&gt;然后修改你的域名解析CNAME为&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;www | CNAME | name.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@   | CNAME | name.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;过一会儿就可以用自定义域名看到了&lt;/p&gt;
 &lt;h4&gt;关于其他东西以后再说，就是这样。&lt;/h4&gt;
 </description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/hexoblog/</guid><pubDate>Fri, 07 Feb 2020 19:08:00 +0806</pubDate></item></channel></rss>
