@@ -1,9 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Tue, 11 Feb 2020 15:31:38 +0806</lastBuildDate><pubDate>Tue, 11 Feb 2020 15:31:38 +0806</pubDate><item><title>今天差点文章重写了</title><link>/archives/2019816/</link><description>&lt;p&gt;现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
-事情是这样的，碍于GCP线路对国内不太友好。我入了一台香港阿里云，ssh连上准备安装bt，敲下enter之后发现香港的对应节点&lt;code&gt;103.224.251.67 time out&lt;/code&gt;，一开始我以为是阿里云屏蔽了这个ip，用备用的广东节点装进去了，一顿操作之后，安装nginx只用了5秒，我透，这怎么可能呢。于是又重复安装了好几遍，又试了其他环境，还是无法安装的状态。
-无奈之下又只好用那台GCP进行测试安装，我上午优化的时候想到可以试试Alisql因为我提升了服务器配置，备份了数据库，准备卸载mysql，提示说要删掉原先的库，我直接就点了删除数据库，删完才记起来数据库备份没下载，整个人就呆坐了半天，一生气直接&lt;code&gt;rm -rf&lt;/code&gt;。删完之后尝试安装Alisql，发现安不进，看log也连的&lt;code&gt;103.224.251.67&lt;/code&gt;这个节点。我就ping了这个ip，全部提示&lt;code&gt;time out&lt;/code&gt;，逛了一圈bt论坛，发现也有人跟我情况一样，那就是bt的问题，估计又被打了，我于是仔细看了log，发现他不是直接连这个ip，是个域名，那肯定是cdn鸭，站长工具ping了一下果然有这么多节点，bt后台首页看到又Linux工具箱，突然想起来可以通过改dns指定host来更改请求的ip，一波114完美安装所有环境。
-于是我从0开始写博客，准备引用图片了，看到bucket上有今天备份的数据库，我的妈，激动哭了，我昨天安装的腾讯云cos，设置了自动备份，今天早上手动执行了一遍，还没太当回事，不仅有数据库备份还有根目录备份。&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/2019816/</guid><pubDate>Fri, 16 Aug 2019 15:04:00 +0806</pubDate></item><item><title>今天差点文章重写了</title><link>/archives/2019816/</link><description>&lt;p&gt;现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Wed, 12 Feb 2020 21:36:34 +0806</lastBuildDate><pubDate>Wed, 12 Feb 2020 21:36:34 +0806</pubDate><item><title>今天差点文章重写了</title><link>/archives/2019816/</link><description>&lt;p&gt;现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
 事情是这样的，碍于GCP线路对国内不太友好。我入了一台香港阿里云，ssh连上准备安装bt，敲下enter之后发现香港的对应节点&lt;code&gt;103.224.251.67 time out&lt;/code&gt;，一开始我以为是阿里云屏蔽了这个ip，用备用的广东节点装进去了，一顿操作之后，安装nginx只用了5秒，我透，这怎么可能呢。于是又重复安装了好几遍，又试了其他环境，还是无法安装的状态。
 无奈之下又只好用那台GCP进行测试安装，我上午优化的时候想到可以试试Alisql因为我提升了服务器配置，备份了数据库，准备卸载mysql，提示说要删掉原先的库，我直接就点了删除数据库，删完才记起来数据库备份没下载，整个人就呆坐了半天，一生气直接&lt;code&gt;rm -rf&lt;/code&gt;。删完之后尝试安装Alisql，发现安不进，看log也连的&lt;code&gt;103.224.251.67&lt;/code&gt;这个节点。我就ping了这个ip，全部提示&lt;code&gt;time out&lt;/code&gt;，逛了一圈bt论坛，发现也有人跟我情况一样，那就是bt的问题，估计又被打了，我于是仔细看了log，发现他不是直接连这个ip，是个域名，那肯定是cdn鸭，站长工具ping了一下果然有这么多节点，bt后台首页看到又Linux工具箱，突然想起来可以通过改dns指定host来更改请求的ip，一波114完美安装所有环境。
 于是我从0开始写博客，准备引用图片了，看到bucket上有今天备份的数据库，我的妈，激动哭了，我昨天安装的腾讯云cos，设置了自动备份，今天早上手动执行了一遍，还没太当回事，不仅有数据库备份还有根目录备份。&lt;/p&gt;
@@ -286,4 +282,40 @@ CCrate="300/60"
 &lt;p&gt;&lt;code&gt;@   | CNAME | name.github.io&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;过一会儿就可以用自定义域名看到了&lt;/p&gt;
 &lt;h4&gt;关于其他东西以后再说，就是这样。&lt;/h4&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/hexoblog/</guid><pubDate>Fri, 07 Feb 2020 19:08:00 +0806</pubDate></item></channel></rss>
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/hexoblog/</guid><pubDate>Fri, 07 Feb 2020 19:08:00 +0806</pubDate></item><item><title>使用LiteSpeed为网站启用HTTP/3</title><link>/archives/enhttp3/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
+&lt;p&gt;关于HTTP/3我就不介绍了，网上有，多说无益。真的。
+就目前浏览器支持情况真的也就一般。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 149.80940279542565" &gt;&lt;img width="2358" height="787" src="https://blog-1251724647.image.myqcloud.com/13/0.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;p&gt;目前支持HTTP/3的只有LiteSpeed和Caddy，Nginx暂时还不支持，已知可行方法都需要通过Doker，也就是Nginx+Caddy实现，或者通过CloudFlare的开源项目实现，稳定性肯定不如前者。&lt;/p&gt;
+&lt;h1&gt;过程&lt;/h1&gt;
+&lt;p&gt;我这次采用的是LiteSpeed的开源项目OpenLiteSpeed。&lt;/p&gt;
+&lt;p&gt;OpenLiteSpeed有多种安装方式，我就采用第4种也就是命令行一键安装。
+&lt;figure style="flex: 273.84393063583815" &gt;&lt;img width="1895" height="346" src="https://blog-1251724647.image.myqcloud.com/13/3.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+根据官方说法，OpenLiteSpeed仅支持具有64位平台的Centos（6-7），Debian（7-9）和Ubuntu（14,16,18）。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wget --no-check-certificate https://raw.githubusercontent.com/litespeedtech/ols1clk/master/ols1clk.sh &amp;amp;&amp;amp; bash ols1clk.sh&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果需要安装wordPress,就在命令后面加&lt;code&gt;-w&lt;/code&gt;。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 140.06462035541196" &gt;&lt;img width="1734" height="619" src="https://blog-1251724647.image.myqcloud.com/13/4.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;安装完成之后，会把后台账号密码存储在&lt;code&gt;/usr/local/lsws/password&lt;/code&gt;。
+这时可以用&lt;a href="https://ip:7080访问后台。"&gt;https://ip:7080访问后台。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;首先需要在ssh中，cd到&lt;code&gt;/usr/local/lsws/&lt;/code&gt;该目录下，然后新建一个文件夹，名字随便。比方我叫&lt;code&gt;http3test&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir http3test
+mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;访问web后台 &lt;em&gt;（后台可以改简体中文）&lt;/em&gt; 点击虚拟主机，再点击➕号进行新建虚拟主机。
+虚拟主机名使用域名就行，虚拟主机根目录就是刚刚创建的文件夹名称，配置文件就这么填&lt;code&gt;$SERVER_ROOT/conf/vhosts/http3test.elstec.cn/vhconf.conf&lt;/code&gt;要把文件夹名称改成自己的。先填写完整之后点击保存，会提示没有配置文件，点击旁边的&lt;code&gt;CLICK TO CREATE&lt;/code&gt;进行创建，再次保存就可以了。&lt;em&gt;（启用脚本/外部应用程序和访问管制随你一般没什么用就选否。）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 140.01883239171374" &gt;&lt;img width="2974" height="1062" src="https://blog-1251724647.image.myqcloud.com/13/5.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;新建虚拟机之后先不要平滑重启。点击查看进入虚拟机设置，查看就是一个放大镜图标。点击SSL选项，找到安全，点击修改，把&lt;code&gt;Enable QUIC&lt;/code&gt;改为是，并保存。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 162.56771397616467" &gt;&lt;img width="3001" height="923" src="https://blog-1251724647.image.myqcloud.com/13/6.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;找到监听器，就是虚拟主机选项上面那个。默认有80和443，443点击查看。找到SSL，找到SSL私钥和证书，点击编辑，填入你的证书地址，然后保存。再次找到安全和特性选项，把&lt;code&gt;Allow QUIC&lt;/code&gt;改是就行。
+退回到443的常规，最下方有一个虚拟主机映射，新建映射，把虚拟主机和域名进行绑定，保存即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 179.08653846153845" &gt;&lt;img width="2980" height="832" src="https://blog-1251724647.image.myqcloud.com/13/7.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+然后进行平滑重启。页面索引什么的我就不说了没意思。
+最后就是测试结果+HTTP/3 CHECK的结果。
+&lt;figure style="flex: 43.511146496815286" &gt;&lt;img width="1093" height="1256" src="https://blog-1251724647.image.myqcloud.com/13/1.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 66.52587117212249" &gt;&lt;img width="1260" height="947" src="https://blog-1251724647.image.myqcloud.com/13/2.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;需要浏览器支持的话，Chrome打开&lt;code&gt;chrome://flags/&lt;/code&gt;，找到&lt;code&gt;Experimental QUIC protocol&lt;/code&gt;选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到&lt;code&gt;edge://flags/&lt;/code&gt;步骤同上就行。&lt;/p&gt;
+&lt;h1&gt;最后&lt;/h1&gt;
+&lt;p&gt;我想说，我评论区的评论通知有时候会鬼畜发不出去我也没办法，到时候再说:P&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/enhttp3/</guid><pubDate>Wed, 12 Feb 2020 21:50:00 +0806</pubDate></item></channel></rss>
