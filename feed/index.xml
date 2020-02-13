@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Thu, 13 Feb 2020 09:51:47 +0806</lastBuildDate><pubDate>Thu, 13 Feb 2020 09:51:47 +0806</pubDate><item><title>今天差点文章重写了</title><link>/archives/2019816/</link><description>&lt;p&gt;现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Thu, 13 Feb 2020 10:03:03 +0806</lastBuildDate><pubDate>Thu, 13 Feb 2020 10:03:03 +0806</pubDate><item><title>今天差点文章重写了</title><link>/archives/2019816/</link><description>&lt;p&gt;现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
 事情是这样的，碍于GCP线路对国内不太友好。我入了一台香港阿里云，ssh连上准备安装bt，敲下enter之后发现香港的对应节点&lt;code&gt;103.224.251.67 time out&lt;/code&gt;，一开始我以为是阿里云屏蔽了这个ip，用备用的广东节点装进去了，一顿操作之后，安装nginx只用了5秒，我透，这怎么可能呢。于是又重复安装了好几遍，又试了其他环境，还是无法安装的状态。
 无奈之下又只好用那台GCP进行测试安装，我上午优化的时候想到可以试试Alisql因为我提升了服务器配置，备份了数据库，准备卸载mysql，提示说要删掉原先的库，我直接就点了删除数据库，删完才记起来数据库备份没下载，整个人就呆坐了半天，一生气直接&lt;code&gt;rm -rf&lt;/code&gt;。删完之后尝试安装Alisql，发现安不进，看log也连的&lt;code&gt;103.224.251.67&lt;/code&gt;这个节点。我就ping了这个ip，全部提示&lt;code&gt;time out&lt;/code&gt;，逛了一圈bt论坛，发现也有人跟我情况一样，那就是bt的问题，估计又被打了，我于是仔细看了log，发现他不是直接连这个ip，是个域名，那肯定是cdn鸭，站长工具ping了一下果然有这么多节点，bt后台首页看到又Linux工具箱，突然想起来可以通过改dns指定host来更改请求的ip，一波114完美安装所有环境。
 于是我从0开始写博客，准备引用图片了，看到bucket上有今天备份的数据库，我的妈，激动哭了，我昨天安装的腾讯云cos，设置了自动备份，今天早上手动执行了一遍，还没太当回事，不仅有数据库备份还有根目录备份。&lt;/p&gt;
@@ -289,7 +289,7 @@ CCrate="300/60"
 &lt;h1&gt;实现&lt;/h1&gt;
 &lt;p&gt;目前支持HTTP/3的只有LiteSpeed和Caddy，Nginx暂时还不支持，已知可行方法都需要通过Doker，也就是Nginx+Caddy实现，或者通过CloudFlare的开源项目实现，稳定性肯定不如前者。&lt;/p&gt;
 &lt;h1&gt;过程&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;*本次需要在服务器安全组或防火墙放通&lt;/strong&gt;&lt;code&gt;TCP:7080&lt;/code&gt;和&lt;code&gt;UDP:443&lt;/code&gt;*&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;本次需要在服务器安全组或防火墙放通&lt;/strong&gt; &lt;code&gt;TCP:7080&lt;/code&gt; &lt;strong&gt;和&lt;/strong&gt; &lt;code&gt;UDP:443&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;我这次采用的是LiteSpeed的开源项目OpenLiteSpeed。&lt;/p&gt;
 &lt;p&gt;OpenLiteSpeed有多种安装方式，我就采用第4种也就是命令行一键安装。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
