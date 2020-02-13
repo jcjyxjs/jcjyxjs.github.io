@@ -19,6 +19,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+    <loc>/archives/jsimage/</loc>
+    <lastmod>2020-02-13</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>/archives/enhttp3/</loc>
     <lastmod>2020-02-12</lastmod>
     <changefreq>always</changefreq>

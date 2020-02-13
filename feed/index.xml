@@ -1,9 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Thu, 13 Feb 2020 10:03:03 +0806</lastBuildDate><pubDate>Thu, 13 Feb 2020 10:03:03 +0806</pubDate><item><title>今天差点文章重写了</title><link>/archives/2019816/</link><description>&lt;p&gt;现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
-事情是这样的，碍于GCP线路对国内不太友好。我入了一台香港阿里云，ssh连上准备安装bt，敲下enter之后发现香港的对应节点&lt;code&gt;103.224.251.67 time out&lt;/code&gt;，一开始我以为是阿里云屏蔽了这个ip，用备用的广东节点装进去了，一顿操作之后，安装nginx只用了5秒，我透，这怎么可能呢。于是又重复安装了好几遍，又试了其他环境，还是无法安装的状态。
-无奈之下又只好用那台GCP进行测试安装，我上午优化的时候想到可以试试Alisql因为我提升了服务器配置，备份了数据库，准备卸载mysql，提示说要删掉原先的库，我直接就点了删除数据库，删完才记起来数据库备份没下载，整个人就呆坐了半天，一生气直接&lt;code&gt;rm -rf&lt;/code&gt;。删完之后尝试安装Alisql，发现安不进，看log也连的&lt;code&gt;103.224.251.67&lt;/code&gt;这个节点。我就ping了这个ip，全部提示&lt;code&gt;time out&lt;/code&gt;，逛了一圈bt论坛，发现也有人跟我情况一样，那就是bt的问题，估计又被打了，我于是仔细看了log，发现他不是直接连这个ip，是个域名，那肯定是cdn鸭，站长工具ping了一下果然有这么多节点，bt后台首页看到又Linux工具箱，突然想起来可以通过改dns指定host来更改请求的ip，一波114完美安装所有环境。
-于是我从0开始写博客，准备引用图片了，看到bucket上有今天备份的数据库，我的妈，激动哭了，我昨天安装的腾讯云cos，设置了自动备份，今天早上手动执行了一遍，还没太当回事，不仅有数据库备份还有根目录备份。&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/2019816/</guid><pubDate>Fri, 16 Aug 2019 15:04:00 +0806</pubDate></item><item><title>遗憾是常有的吧</title><link>/archives/2019818/</link><description>&lt;p&gt;“越是气场平和、心性温柔的人，越不爱和别人太密切地交往，生怕哪里辜负了对方的期待，同时也绝少期待他人。于是在一般社会看来，反而像是比较冷淡的人。” 
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Fri, 14 Feb 2020 06:39:21 +0806</lastBuildDate><pubDate>Fri, 14 Feb 2020 06:39:21 +0806</pubDate><item><title>遗憾是常有的吧</title><link>/archives/2019818/</link><description>&lt;p&gt;“越是气场平和、心性温柔的人，越不爱和别人太密切地交往，生怕哪里辜负了对方的期待，同时也绝少期待他人。于是在一般社会看来，反而像是比较冷淡的人。” 
 “可惜越温柔的人，偏偏越难驯服。”&lt;/p&gt;
 </description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/2019818/</guid><pubDate>Sun, 18 Aug 2019 15:36:00 +0806</pubDate></item><item><title>6Plat固定公网IPv6地址（已失效）</title><link>/archives/6plat/</link><description>&lt;p&gt;这个也是今天刚看到的，就试了试。我家移动100M的情况就是能正常上Google，YouTube这类网站但是国内速度比较慢，比方b站之类的。&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;根据6Plat的使用方法，大概就是分3步，&lt;/p&gt;
@@ -319,4 +315,76 @@ mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;需要浏览器支持的话，Chrome打开&lt;code&gt;chrome://flags/&lt;/code&gt;，找到&lt;code&gt;Experimental QUIC protocol&lt;/code&gt;选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到&lt;code&gt;edge://flags/&lt;/code&gt;步骤同上就行。&lt;/p&gt;
 &lt;h1&gt;最后&lt;/h1&gt;
 &lt;p&gt;我想说，我评论区的评论通知有时候会鬼畜发不出去我也没办法，到时候再说:P&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/enhttp3/</guid><pubDate>Wed, 12 Feb 2020 21:50:00 +0806</pubDate></item></channel></rss>
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/enhttp3/</guid><pubDate>Wed, 12 Feb 2020 21:50:00 +0806</pubDate></item><item><title>DOM实现JavaScript图片库</title><link>/archives/jsimage/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
+&lt;blockquote&gt;&lt;p&gt;我比较菜（小声bb）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;h3&gt;HTML部分&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;test1&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;tupianku.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Test&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ul&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1.jpg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;onclick&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;showpic(this);&lt;/span&gt;
+&lt;span class="s"&gt;                 return false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;image1&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;2.jpg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;onclick&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;showpic(this);&lt;/span&gt;
+&lt;span class="s"&gt;                 return false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;image2&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;3.jpg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;onclick&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;showpic(this);&lt;/span&gt;
+&lt;span class="s"&gt;                 return false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;image3&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;ul&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;img123&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://blog-1251724647.file.myqcloud.com/14/5.jpg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;JS部分&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;showpic&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;whitchpic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;bianliang&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;whitchpic&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getAttribute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;href&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;place&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;img123&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;place&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAttribute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;src&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;bianliang&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;原理&lt;/h1&gt;
+&lt;p&gt;创建一个函数名为 &lt;code&gt;showpic&lt;/code&gt; ， &lt;code&gt;whitchpic&lt;/code&gt; 为参数。&lt;code&gt;whitchpic&lt;/code&gt; 通过调用 &lt;code&gt;getAttribute&lt;/code&gt; ，把 &lt;code&gt;"href"&lt;/code&gt; 作为参数传递给 &lt;code&gt;getAttribute&lt;/code&gt; ，声明一个变量并把语句赋给它。
+接下来获取占位图，需要在 &lt;code&gt;html&lt;/code&gt; 部分进行修改。 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 元素添加 &lt;code&gt;id&lt;/code&gt; ，调用 &lt;code&gt;document.getElementById&lt;/code&gt; ，再次声明一个变量并把语句赋给它。最后通过 &lt;code&gt;setAttribute&lt;/code&gt; 进行实现。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;变量2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAttribute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;src&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;变量1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;html部分中，都是采用 &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; 元素,添加处理函数 &lt;code&gt;showpic(this); return false&lt;/code&gt; ，防止被带到新窗口。&lt;/p&gt;
+&lt;h1&gt;效果&lt;/h1&gt;
+&lt;html&gt;
+&lt;!--在这里插入内容--&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;test1&lt;/title&gt;
+    &lt;script type="text/javascript" src="https://blog-1251724647.file.myqcloud.com/14/tupianku.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;ul&gt;
+            &lt;li &gt;
+                &lt;a href="https://blog-1251724647.file.myqcloud.com/14/1.jpg" onclick="showpic(this);
+                 return false"&gt;image1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="https://blog-1251724647.file.myqcloud.com/14/2.jpg" onclick="showpic(this);
+                 return false"&gt;image2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="https://blog-1251724647.file.myqcloud.com/14/3.jpg" onclick="showpic(this);
+                 return false"&gt;image3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;img id="img123" src="https://blog-1251724647.file.myqcloud.com/14/5.jpg"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/jsimage/</guid><pubDate>Thu, 13 Feb 2020 21:50:00 +0806</pubDate></item></channel></rss>
