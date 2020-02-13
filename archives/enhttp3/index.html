@@ -52,7 +52,7 @@
 	<script>
         var ExSearchConfig = {
             root: "",
-            api: "/56da5f226d93b84dcdbfda223ba00a66.json"
+            api: "/90492e7329eac22286f6e0bf683a0e42.json"
         }
     </script>
     
@@ -117,18 +117,19 @@
                 <h1>我想说的</h1>
 <p>关于HTTP/3我就不介绍了，网上有，多说无益。真的。
 就目前浏览器支持情况真的也就一般。</p>
-<p><figure style="flex: 149.80940279542565" ><img width="2358" height="787" src="https://blog-1251724647.image.myqcloud.com/13/0.png?Mogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/0.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
 <h1>实现</h1>
 <p>目前支持HTTP/3的只有LiteSpeed和Caddy，Nginx暂时还不支持，已知可行方法都需要通过Doker，也就是Nginx+Caddy实现，或者通过CloudFlare的开源项目实现，稳定性肯定不如前者。</p>
 <h1>过程</h1>
+<p><strong>*本次需要在服务器安全组或防火墙放通</strong><code>TCP:7080</code>和<code>UDP:443</code>*</p>
 <p>我这次采用的是LiteSpeed的开源项目OpenLiteSpeed。</p>
 <p>OpenLiteSpeed有多种安装方式，我就采用第4种也就是命令行一键安装。
-<figure style="flex: 273.84393063583815" ><img width="1895" height="346" src="https://blog-1251724647.image.myqcloud.com/13/3.png?Mogr2/format/webp/interlace/1/quality/100" /></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/3.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure>
 根据官方说法，OpenLiteSpeed仅支持具有64位平台的Centos（6-7），Debian（7-9）和Ubuntu（14,16,18）。</p>
 
 <pre><code>wget --no-check-certificate https://raw.githubusercontent.com/litespeedtech/ols1clk/master/ols1clk.sh &amp;&amp; bash ols1clk.sh</code></pre>
-<p>如果需要安装wordPress,就在命令后面加<code>-w</code>。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。</p>
-<p><figure style="flex: 140.06462035541196" ><img width="1734" height="619" src="https://blog-1251724647.image.myqcloud.com/13/4.png?Mogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>如果需要安装WordPress,就在命令后面加<code>-w</code>。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/4.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
 <p>安装完成之后，会把后台账号密码存储在<code>/usr/local/lsws/password</code>。
 这时可以用<a href="https://ip:7080访问后台。">https://ip:7080访问后台。</a></p>
 <p>首先需要在ssh中，cd到<code>/usr/local/lsws/</code>该目录下，然后新建一个文件夹，名字随便。比方我叫<code>http3test</code></p>
@@ -137,16 +138,16 @@
 mkdir http3test/{conf,html,logs}</code></pre>
 <p>访问web后台 <em>（后台可以改简体中文）</em> 点击虚拟主机，再点击➕号进行新建虚拟主机。
 虚拟主机名使用域名就行，虚拟主机根目录就是刚刚创建的文件夹名称，配置文件就这么填<code>$SERVER_ROOT/conf/vhosts/http3test.elstec.cn/vhconf.conf</code>要把文件夹名称改成自己的。先填写完整之后点击保存，会提示没有配置文件，点击旁边的<code>CLICK TO CREATE</code>进行创建，再次保存就可以了。<em>（启用脚本/外部应用程序和访问管制随你一般没什么用就选否。）</em></p>
-<p><figure style="flex: 140.01883239171374" ><img width="2974" height="1062" src="https://blog-1251724647.image.myqcloud.com/13/5.png?Mogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/5.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
 <p>新建虚拟机之后先不要平滑重启。点击查看进入虚拟机设置，查看就是一个放大镜图标。点击SSL选项，找到安全，点击修改，把<code>Enable QUIC</code>改为是，并保存。</p>
-<p><figure style="flex: 162.56771397616467" ><img width="3001" height="923" src="https://blog-1251724647.image.myqcloud.com/13/6.png?Mogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/6.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
 <p>找到监听器，就是虚拟主机选项上面那个。默认有80和443，443点击查看。找到SSL，找到SSL私钥和证书，点击编辑，填入你的证书地址，然后保存。再次找到安全和特性选项，把<code>Allow QUIC</code>改是就行。
 退回到443的常规，最下方有一个虚拟主机映射，新建映射，把虚拟主机和域名进行绑定，保存即可。</p>
-<p><figure style="flex: 179.08653846153845" ><img width="2980" height="832" src="https://blog-1251724647.image.myqcloud.com/13/7.png?Mogr2/format/webp/interlace/1/quality/100" /></figure>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/7.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure>
 然后进行平滑重启。页面索引什么的我就不说了没意思。
 最后就是测试结果+HTTP/3 CHECK的结果。
-<figure style="flex: 43.511146496815286" ><img width="1093" height="1256" src="https://blog-1251724647.image.myqcloud.com/13/1.png?Mogr2/format/webp/interlace/1/quality/100" /></figure></p>
-<p><figure style="flex: 66.52587117212249" ><img width="1260" height="947" src="https://blog-1251724647.image.myqcloud.com/13/2.png?Mogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/1.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/2.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
 <p>需要浏览器支持的话，Chrome打开<code>chrome://flags/</code>，找到<code>Experimental QUIC protocol</code>选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到<code>edge://flags/</code>步骤同上就行。</p>
 <h1>最后</h1>
 <p>我想说，我评论区的评论通知有时候会鬼畜发不出去我也没办法，到时候再说:P</p>

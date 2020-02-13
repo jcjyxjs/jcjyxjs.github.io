@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="english"><id>/</id><title>毫无作为</title><updated>2020-02-12T21:36:34.345117+08:06</updated><author><name>JCJYXJS</name><email>admin@elstec.cn</email></author><link href="/" rel="alternate"/><generator uri="http://lkiesow.github.io/python-feedgen" version="0.8.0">python-feedgen</generator><logo>/tx.png</logo><subtitle>Personal blog</subtitle><entry><id>/archives/2019816/</id><title>今天差点文章重写了</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="english"><id>/</id><title>毫无作为</title><updated>2020-02-13T09:51:47.397367+08:06</updated><author><name>JCJYXJS</name><email>admin@elstec.cn</email></author><link href="/" rel="alternate"/><generator uri="http://lkiesow.github.io/python-feedgen" version="0.8.0">python-feedgen</generator><logo>/tx.png</logo><subtitle>Personal blog</subtitle><entry><id>/archives/2019816/</id><title>今天差点文章重写了</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) 
 事情是这样的，碍于GCP线路对国内不太友好。我入了一台香港阿里云，ssh连上准备安装bt，敲下enter之后发现香港的对应节点&lt;code&gt;103.224.251.67 time out&lt;/code&gt;，一开始我以为是阿里云屏蔽了这个ip，用备用的广东节点装进去了，一顿操作之后，安装nginx只用了5秒，我透，这怎么可能呢。于是又重复安装了好几遍，又试了其他环境，还是无法安装的状态。
 无奈之下又只好用那台GCP进行测试安装，我上午优化的时候想到可以试试Alisql因为我提升了服务器配置，备份了数据库，准备卸载mysql，提示说要删掉原先的库，我直接就点了删除数据库，删完才记起来数据库备份没下载，整个人就呆坐了半天，一生气直接&lt;code&gt;rm -rf&lt;/code&gt;。删完之后尝试安装Alisql，发现安不进，看log也连的&lt;code&gt;103.224.251.67&lt;/code&gt;这个节点。我就ping了这个ip，全部提示&lt;code&gt;time out&lt;/code&gt;，逛了一圈bt论坛，发现也有人跟我情况一样，那就是bt的问题，估计又被打了，我于是仔细看了log，发现他不是直接连这个ip，是个域名，那肯定是cdn鸭，站长工具ping了一下果然有这么多节点，bt后台首页看到又Linux工具箱，突然想起来可以通过改dns指定host来更改请求的ip，一波114完美安装所有环境。
 于是我从0开始写博客，准备引用图片了，看到bucket上有今天备份的数据库，我的妈，激动哭了，我昨天安装的腾讯云cos，设置了自动备份，今天早上手动执行了一遍，还没太当回事，不仅有数据库备份还有根目录备份。&lt;/p&gt;
-</content><link href="/archives/2019816/" rel="alternate"/><published>2019-08-16T15:04:00+08:06</published></entry><entry><id>/archives/2019818/</id><title>遗憾是常有的吧</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;“越是气场平和、心性温柔的人，越不爱和别人太密切地交往，生怕哪里辜负了对方的期待，同时也绝少期待他人。于是在一般社会看来，反而像是比较冷淡的人。” 
+</content><link href="/archives/2019816/" rel="alternate"/><published>2019-08-16T15:04:00+08:06</published></entry><entry><id>/archives/2019818/</id><title>遗憾是常有的吧</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;“越是气场平和、心性温柔的人，越不爱和别人太密切地交往，生怕哪里辜负了对方的期待，同时也绝少期待他人。于是在一般社会看来，反而像是比较冷淡的人。” 
 “可惜越温柔的人，偏偏越难驯服。”&lt;/p&gt;
-</content><link href="/archives/2019818/" rel="alternate"/><published>2019-08-18T15:36:00+08:06</published></entry><entry><id>/archives/6plat/</id><title>6Plat固定公网IPv6地址（已失效）</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;这个也是今天刚看到的，就试了试。我家移动100M的情况就是能正常上Google，YouTube这类网站但是国内速度比较慢，比方b站之类的。&lt;/p&gt;
+</content><link href="/archives/2019818/" rel="alternate"/><published>2019-08-18T15:36:00+08:06</published></entry><entry><id>/archives/6plat/</id><title>6Plat固定公网IPv6地址（已失效）</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;这个也是今天刚看到的，就试了试。我家移动100M的情况就是能正常上Google，YouTube这类网站但是国内速度比较慢，比方b站之类的。&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;根据6Plat的使用方法，大概就是分3步，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;申请账号&lt;/li&gt;
@@ -81,7 +81,7 @@ o5ab
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;连接成功会提示并附带内网地址&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;a href="https://test-ipv6.com/"&gt;test-ipv6.com&lt;/a&gt;进行测试&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 北邮IPTV测试&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;点个新闻看看&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/6plat/" rel="alternate"/><published>2019-08-27T13:04:00+08:06</published></entry><entry><id>/archives/wnhqh/</id><title>记一次蜗牛星际安装黑群晖过程</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
+</content><link href="/archives/6plat/" rel="alternate"/><published>2019-08-27T13:04:00+08:06</published></entry><entry><id>/archives/wnhqh/</id><title>记一次蜗牛星际安装黑群晖过程</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/4/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;类似这样的一个，但不是这个店家&lt;/figcaption&gt;&lt;/figure&gt;
 机子自带一个16g小固态，但这个ssd不敢恭维，渣中之渣，不过用来装系统最合适了。 
 准备好群晖镜像和DiskImage，以及一个有pe系统的U盘或者移动硬盘。&lt;/p&gt;
@@ -96,7 +96,7 @@ o5ab
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/4/8.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 使用同网设备浏览器进入&lt;a href="http://find.synology.com"&gt;find.synology.com&lt;/a&gt;查找设备，点击联机即可。用获取到的ip访问后台就可以了。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/4/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/wnhqh/" rel="alternate"/><published>2019-09-12T16:22:00+08:06</published></entry><entry><id>/archives/fixbtwaf/</id><title>解决宝塔nginx防火墙启动后nginx不工作</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;blockquote&gt;&lt;p&gt;起因是某wp群有人发bt专业版6个月28的活动，跟风上车。&lt;/p&gt;
+</content><link href="/archives/wnhqh/" rel="alternate"/><published>2019-09-12T16:22:00+08:06</published></entry><entry><id>/archives/fixbtwaf/</id><title>解决宝塔nginx防火墙启动后nginx不工作</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;blockquote&gt;&lt;p&gt;起因是某wp群有人发bt专业版6个月28的活动，跟风上车。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;一套流程下来，发现安装nginx防火墙之后nginx直接关停，无法启动，重载配置也无果。试着卸载防火墙并重启nginx成功。论坛上也没有具体解决方案，官方人员只是说规则配置问题，要去加他们技术。不得不说，还挺牛.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;报错看下图&lt;/p&gt;
@@ -111,7 +111,7 @@ mv /www/server/panel/vhost/nginx/total.conf  /tmp/total.conf_back
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/8/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;最终效果&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/fixbtwaf/" rel="alternate"/><published>2019-11-09T19:32:00+08:06</published></entry><entry><id>/archives/ngxluawaf/</id><title>bt下开启nginx自带lua防火墙</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
+</content><link href="/archives/fixbtwaf/" rel="alternate"/><published>2019-11-09T19:32:00+08:06</published></entry><entry><id>/archives/ngxluawaf/</id><title>bt下开启nginx自带lua防火墙</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;bt下配置nginx，搜索&lt;code&gt;#include luawaf.conf;&lt;/code&gt;取消注释，保存配置并重启nginx。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/9/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
@@ -133,7 +133,7 @@ CCrate="300/60"
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;我只讲怎么开这个waf，并不讲怎么配置，没必要。这个和bt的waf还是有差距的，效果嘛仁者见仁智者见智。反正能用xD&lt;/p&gt;
-</content><link href="/archives/ngxluawaf/" rel="alternate"/><published>2019-11-09T19:59:00+08:06</published></entry><entry><id>/archives/20191115/</id><title>k2p所有lan口无法使用之后我的解决方案</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;我星期五从学校回来，晚上家里有事也没开房间的路由器。因为每次周日回学校，都会拔电源，周六早上一开，发现我的电脑无法上网，一开始以为是开机太快了，路由器还没开好，等了半天发现根本获取不到地址，不过奇怪的是WiFi是正常的，可以上网
+</content><link href="/archives/ngxluawaf/" rel="alternate"/><published>2019-11-09T19:59:00+08:06</published></entry><entry><id>/archives/20191115/</id><title>k2p所有lan口无法使用之后我的解决方案</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;我星期五从学校回来，晚上家里有事也没开房间的路由器。因为每次周日回学校，都会拔电源，周六早上一开，发现我的电脑无法上网，一开始以为是开机太快了，路由器还没开好，等了半天发现根本获取不到地址，不过奇怪的是WiFi是正常的，可以上网
 不过刚好也想买一个交换机，就看了看H3C，发现 S1209F 这款还行，8千兆电口+1千兆光口，横向对比其他厂商8口千兆都超过了200块，于是就毫不犹豫的买了下来。k2p印象里是去年pdd上的灵车了，买来全新，刷的大雕魔改的高恪。&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/10/4.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 今天周日刚刚到货。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/10/3.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
@@ -141,7 +141,7 @@ CCrate="300/60"
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/10/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/10/2.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 具体就这么接，反正能用&lt;/p&gt;
-</content><link href="/archives/20191115/" rel="alternate"/><published>2019-11-17T13:17:00+08:06</published></entry><entry><id>/archives/fixrpmdb/</id><title>解决yum报错</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;这是我一台Google的服务器，很久不用，准备装软件突然就这样了。
+</content><link href="/archives/20191115/" rel="alternate"/><published>2019-11-17T13:17:00+08:06</published></entry><entry><id>/archives/fixrpmdb/</id><title>解决yum报错</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;p&gt;这是我一台Google的服务器，很久不用，准备装软件突然就这样了。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/11/1.PNG?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;不过只需要重构rpm数据库就可以了&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -151,7 +151,7 @@ CCrate="300/60"
 [root@hk-0 ~]# rpm --rebuilddb
 
 &lt;/code&gt;&lt;/pre&gt;
-</content><link href="/archives/fixrpmdb/" rel="alternate"/><published>2019-11-17T15:54:00+08:06</published></entry><entry><id>/archives/hexoblog/</id><title>使用hexo搭建静态博客+Github Pages</title><updated>2020-02-12T13:36:34.346117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;h1&gt;使用hexo搭建静态博客步骤&lt;/h1&gt;
+</content><link href="/archives/fixrpmdb/" rel="alternate"/><published>2019-11-17T15:54:00+08:06</published></entry><entry><id>/archives/hexoblog/</id><title>使用hexo搭建静态博客+Github Pages</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;h1&gt;使用hexo搭建静态博客步骤&lt;/h1&gt;
 &lt;p&gt;1.安装Git&lt;/p&gt;
 &lt;p&gt;2.安装Node.js&lt;/p&gt;
 &lt;p&gt;3.安装hexo&lt;/p&gt;
@@ -282,21 +282,22 @@ CCrate="300/60"
 &lt;p&gt;&lt;code&gt;@   | CNAME | name.github.io&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;过一会儿就可以用自定义域名看到了&lt;/p&gt;
 &lt;h4&gt;关于其他东西以后再说，就是这样。&lt;/h4&gt;
-</content><link href="/archives/hexoblog/" rel="alternate"/><published>2020-02-07T19:08:00+08:06</published></entry><entry><id>/archives/enhttp3/</id><title>使用LiteSpeed为网站启用HTTP/3</title><updated>2020-02-12T13:36:34.345117+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;h1&gt;我想说的&lt;/h1&gt;
+</content><link href="/archives/hexoblog/" rel="alternate"/><published>2020-02-07T19:08:00+08:06</published></entry><entry><id>/archives/enhttp3/</id><title>使用LiteSpeed为网站启用HTTP/3</title><updated>2020-02-13T01:51:47.397367+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://elstec.cn</uri></author><content>&lt;h1&gt;我想说的&lt;/h1&gt;
 &lt;p&gt;关于HTTP/3我就不介绍了，网上有，多说无益。真的。
 就目前浏览器支持情况真的也就一般。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 149.80940279542565" &gt;&lt;img width="2358" height="787" src="https://blog-1251724647.image.myqcloud.com/13/0.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/0.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h1&gt;实现&lt;/h1&gt;
 &lt;p&gt;目前支持HTTP/3的只有LiteSpeed和Caddy，Nginx暂时还不支持，已知可行方法都需要通过Doker，也就是Nginx+Caddy实现，或者通过CloudFlare的开源项目实现，稳定性肯定不如前者。&lt;/p&gt;
 &lt;h1&gt;过程&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;*本次需要在服务器安全组或防火墙放通&lt;/strong&gt;&lt;code&gt;TCP:7080&lt;/code&gt;和&lt;code&gt;UDP:443&lt;/code&gt;*&lt;/p&gt;
 &lt;p&gt;我这次采用的是LiteSpeed的开源项目OpenLiteSpeed。&lt;/p&gt;
 &lt;p&gt;OpenLiteSpeed有多种安装方式，我就采用第4种也就是命令行一键安装。
-&lt;figure style="flex: 273.84393063583815" &gt;&lt;img width="1895" height="346" src="https://blog-1251724647.image.myqcloud.com/13/3.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 根据官方说法，OpenLiteSpeed仅支持具有64位平台的Centos（6-7），Debian（7-9）和Ubuntu（14,16,18）。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;wget --no-check-certificate https://raw.githubusercontent.com/litespeedtech/ols1clk/master/ols1clk.sh &amp;amp;&amp;amp; bash ols1clk.sh&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果需要安装wordPress,就在命令后面加&lt;code&gt;-w&lt;/code&gt;。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 140.06462035541196" &gt;&lt;img width="1734" height="619" src="https://blog-1251724647.image.myqcloud.com/13/4.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;如果需要安装WordPress,就在命令后面加&lt;code&gt;-w&lt;/code&gt;。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;安装完成之后，会把后台账号密码存储在&lt;code&gt;/usr/local/lsws/password&lt;/code&gt;。
 这时可以用&lt;a href="https://ip:7080访问后台。"&gt;https://ip:7080访问后台。&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;首先需要在ssh中，cd到&lt;code&gt;/usr/local/lsws/&lt;/code&gt;该目录下，然后新建一个文件夹，名字随便。比方我叫&lt;code&gt;http3test&lt;/code&gt;&lt;/p&gt;
@@ -305,16 +306,16 @@ CCrate="300/60"
 mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;访问web后台 &lt;em&gt;（后台可以改简体中文）&lt;/em&gt; 点击虚拟主机，再点击➕号进行新建虚拟主机。
 虚拟主机名使用域名就行，虚拟主机根目录就是刚刚创建的文件夹名称，配置文件就这么填&lt;code&gt;$SERVER_ROOT/conf/vhosts/http3test.elstec.cn/vhconf.conf&lt;/code&gt;要把文件夹名称改成自己的。先填写完整之后点击保存，会提示没有配置文件，点击旁边的&lt;code&gt;CLICK TO CREATE&lt;/code&gt;进行创建，再次保存就可以了。&lt;em&gt;（启用脚本/外部应用程序和访问管制随你一般没什么用就选否。）&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 140.01883239171374" &gt;&lt;img width="2974" height="1062" src="https://blog-1251724647.image.myqcloud.com/13/5.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;新建虚拟机之后先不要平滑重启。点击查看进入虚拟机设置，查看就是一个放大镜图标。点击SSL选项，找到安全，点击修改，把&lt;code&gt;Enable QUIC&lt;/code&gt;改为是，并保存。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 162.56771397616467" &gt;&lt;img width="3001" height="923" src="https://blog-1251724647.image.myqcloud.com/13/6.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;找到监听器，就是虚拟主机选项上面那个。默认有80和443，443点击查看。找到SSL，找到SSL私钥和证书，点击编辑，填入你的证书地址，然后保存。再次找到安全和特性选项，把&lt;code&gt;Allow QUIC&lt;/code&gt;改是就行。
 退回到443的常规，最下方有一个虚拟主机映射，新建映射，把虚拟主机和域名进行绑定，保存即可。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 179.08653846153845" &gt;&lt;img width="2980" height="832" src="https://blog-1251724647.image.myqcloud.com/13/7.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 然后进行平滑重启。页面索引什么的我就不说了没意思。
 最后就是测试结果+HTTP/3 CHECK的结果。
-&lt;figure style="flex: 43.511146496815286" &gt;&lt;img width="1093" height="1256" src="https://blog-1251724647.image.myqcloud.com/13/1.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 66.52587117212249" &gt;&lt;img width="1260" height="947" src="https://blog-1251724647.image.myqcloud.com/13/2.png?Mogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;需要浏览器支持的话，Chrome打开&lt;code&gt;chrome://flags/&lt;/code&gt;，找到&lt;code&gt;Experimental QUIC protocol&lt;/code&gt;选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到&lt;code&gt;edge://flags/&lt;/code&gt;步骤同上就行。&lt;/p&gt;
 &lt;h1&gt;最后&lt;/h1&gt;
 &lt;p&gt;我想说，我评论区的评论通知有时候会鬼畜发不出去我也没办法，到时候再说:P&lt;/p&gt;
