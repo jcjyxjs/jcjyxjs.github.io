@@ -55,7 +55,7 @@
 	<script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/dbcac0f499f55c54c34b486fb3001b30.json"
+            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/dd15a0871a40636bf25265182201c8a4.json"
         }
     </script>
     
@@ -119,7 +119,7 @@
             <div class="ga-content_body">
                 <p>我上一篇文章<strong><em><a href="https://jcjyxjs.me/archives/cfont.html">(记一次改字体的辛酸史，解决CDN跨域问题)</a></em></strong>讲的是我改字体的一个过程，用了<code>@font-face</code>的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是<a href="https://github.com/aui/font-spider/blob/master/README-ZH-CN.md">Font-Spider(字蛛)</a>，看了网上各种教程，无一例外全是一模一样的。
 昨天我测试字体的时候用过<strong><a href="https://www.webfont.com/">有字库</a></strong>，有字库就是一个典型的webfont，我就在想有没有跟有字库差不多的webfont引用方式，不直接引用整个字体，而是引用需要用到字，终于，我在GitHub上找到了这个15年的项目<code>Fontmin</code>，我直接下载了他的客户端，<code>Fontmin</code>提供了Mac os &amp; Windows客户端。只需要将ttf原字体拖入客户端，输入需要用到的字，即可一键生成字体和css配置。
-<figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/gif/3.gif?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<figure style="flex: 74.11971830985915" ><img width="842" height="568" src="https://blog-1251724647.image.myqcloud.com/gif/3.gif" /></figure></p>
 <blockquote><p>生成之后，会创建以你原字体名开头的<code>eot，ttf，woff，css</code>文件</p>
 </blockquote>
 <p><figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure>

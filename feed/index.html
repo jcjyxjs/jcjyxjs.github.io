@@ -1,7 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 16 Feb 2020 17:45:08 +0806</lastBuildDate><pubDate>Sun, 16 Feb 2020 17:45:08 +0806</pubDate><item><title>遗憾是常有的吧</title><link>/archives/2019818/</link><description>&lt;p&gt;“越是气场平和、心性温柔的人，越不爱和别人太密切地交往，生怕哪里辜负了对方的期待，同时也绝少期待他人。于是在一般社会看来，反而像是比较冷淡的人。” 
-“可惜越温柔的人，偏偏越难驯服。”&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/2019818/</guid><pubDate>Sun, 18 Aug 2019 15:36:00 +0806</pubDate></item><item><title>6Plat固定公网IPv6地址（已失效）</title><link>/archives/6plat/</link><description>&lt;p&gt;这个也是今天刚看到的，就试了试。我家移动100M的情况就是能正常上Google，YouTube这类网站但是国内速度比较慢，比方b站之类的。&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Tue, 18 Feb 2020 06:25:09 +0806</lastBuildDate><pubDate>Tue, 18 Feb 2020 06:25:09 +0806</pubDate><item><title>6Plat固定公网IPv6地址（已失效）</title><link>/archives/6plat/</link><description>&lt;p&gt;这个也是今天刚看到的，就试了试。我家移动100M的情况就是能正常上Google，YouTube这类网站但是国内速度比较慢，比方b站之类的。&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;根据6Plat的使用方法，大概就是分3步，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;申请账号&lt;/li&gt;
@@ -281,19 +279,19 @@ CCrate="300/60"
 </description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/hexoblog/</guid><pubDate>Fri, 07 Feb 2020 19:08:00 +0806</pubDate></item><item><title>使用LiteSpeed为网站启用HTTP/3</title><link>/archives/enhttp3/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
 &lt;p&gt;关于HTTP/3我就不介绍了，网上有，多说无益。真的。
 就目前浏览器支持情况真的也就一般。&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/0.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 149.80940279542565" &gt;&lt;img width="2358" height="787" src="https://cdn.elstec.cn/13/0.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h1&gt;实现&lt;/h1&gt;
 &lt;p&gt;目前支持HTTP/3的只有LiteSpeed和Caddy，Nginx暂时还不支持，已知可行方法都需要通过Doker，也就是Nginx+Caddy实现，或者通过CloudFlare的开源项目实现，稳定性肯定不如前者。&lt;/p&gt;
 &lt;h1&gt;过程&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;本次需要在服务器安全组或防火墙放通&lt;/strong&gt; &lt;code&gt;TCP:7080&lt;/code&gt; &lt;strong&gt;和&lt;/strong&gt; &lt;code&gt;UDP:443&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;我这次采用的是LiteSpeed的开源项目OpenLiteSpeed。&lt;/p&gt;
 &lt;p&gt;OpenLiteSpeed有多种安装方式，我就采用第4种也就是命令行一键安装。
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;figure style="flex: 273.84393063583815" &gt;&lt;img width="1895" height="346" src="https://cdn.elstec.cn/13/3.png" /&gt;&lt;/figure&gt;
 根据官方说法，OpenLiteSpeed仅支持具有64位平台的Centos（6-7），Debian（7-9）和Ubuntu（14,16,18）。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;wget --no-check-certificate https://raw.githubusercontent.com/litespeedtech/ols1clk/master/ols1clk.sh &amp;amp;&amp;amp; bash ols1clk.sh&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;如果需要安装WordPress,就在命令后面加&lt;code&gt;-w&lt;/code&gt;。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 140.06462035541196" &gt;&lt;img width="1734" height="619" src="https://cdn.elstec.cn/13/4.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;安装完成之后，会把后台账号密码存储在&lt;code&gt;/usr/local/lsws/password&lt;/code&gt;。
 这时可以用&lt;a href="https://ip:7080访问后台。"&gt;https://ip:7080访问后台。&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;首先需要在ssh中，cd到&lt;code&gt;/usr/local/lsws/&lt;/code&gt;该目录下，然后新建一个文件夹，名字随便。比方我叫&lt;code&gt;http3test&lt;/code&gt;&lt;/p&gt;
@@ -302,16 +300,16 @@ CCrate="300/60"
 mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;访问web后台 &lt;em&gt;（后台可以改简体中文）&lt;/em&gt; 点击虚拟主机，再点击➕号进行新建虚拟主机。
 虚拟主机名使用域名就行，虚拟主机根目录就是刚刚创建的文件夹名称，配置文件就这么填&lt;code&gt;$SERVER_ROOT/conf/vhosts/http3test.elstec.cn/vhconf.conf&lt;/code&gt;要把文件夹名称改成自己的。先填写完整之后点击保存，会提示没有配置文件，点击旁边的&lt;code&gt;CLICK TO CREATE&lt;/code&gt;进行创建，再次保存就可以了。&lt;em&gt;（启用脚本/外部应用程序和访问管制随你一般没什么用就选否。）&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 140.01883239171374" &gt;&lt;img width="2974" height="1062" src="https://cdn.elstec.cn/13/5.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;新建虚拟机之后先不要平滑重启。点击查看进入虚拟机设置，查看就是一个放大镜图标。点击SSL选项，找到安全，点击修改，把&lt;code&gt;Enable QUIC&lt;/code&gt;改为是，并保存。&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 162.56771397616467" &gt;&lt;img width="3001" height="923" src="https://cdn.elstec.cn/13/6.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;找到监听器，就是虚拟主机选项上面那个。默认有80和443，443点击查看。找到SSL，找到SSL私钥和证书，点击编辑，填入你的证书地址，然后保存。再次找到安全和特性选项，把&lt;code&gt;Allow QUIC&lt;/code&gt;改是就行。
 退回到443的常规，最下方有一个虚拟主机映射，新建映射，把虚拟主机和域名进行绑定，保存即可。&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;figure style="flex: 179.08653846153845" &gt;&lt;img width="2980" height="832" src="https://cdn.elstec.cn/13/7.png" /&gt;&lt;/figure&gt;
 然后进行平滑重启。页面索引什么的我就不说了没意思。
 最后就是测试结果+HTTP/3 CHECK的结果。
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/13/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure style="flex: 43.511146496815286" &gt;&lt;img width="1093" height="1256" src="https://cdn.elstec.cn/13/1.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 66.52587117212249" &gt;&lt;img width="1260" height="947" src="https://cdn.elstec.cn/13/2.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;需要浏览器支持的话，Chrome打开&lt;code&gt;chrome://flags/&lt;/code&gt;，找到&lt;code&gt;Experimental QUIC protocol&lt;/code&gt;选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到&lt;code&gt;edge://flags/&lt;/code&gt;步骤同上就行。&lt;/p&gt;
 &lt;h1&gt;最后&lt;/h1&gt;
 &lt;p&gt;我想说，我评论区的评论通知有时候会鬼畜发不出去我也没办法，到时候再说:P&lt;/p&gt;
@@ -387,4 +385,79 @@ mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
         &lt;/ul&gt;
         &lt;img id="img123" src="https://blog-1251724647.file.myqcloud.com/14/5.jpg"&gt;
 &lt;/body&gt;
-&lt;/html&gt;</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/jsimage/</guid><pubDate>Thu, 13 Feb 2020 21:50:00 +0806</pubDate></item></channel></rss>
+&lt;/html&gt;</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/jsimage/</guid><pubDate>Thu, 13 Feb 2020 21:50:00 +0806</pubDate></item><item><title>疫情期间在家の无聊生活</title><link>/archives/20200217/</link><description>&lt;div class="notice"&gt;我   要   无   聊   死   了  &lt;/div&gt;&lt;p&gt;如题，确实挺无聊的。但是闲着没事上RTARBG下神盾局看，不得不说那个时候的画质拿到现在来也确实不错。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;div&gt;
+还有现在巨火的梨泰院class，好看是真的好看
+&lt;img style="display:inline" src="https://cdn.elstec.cn/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A1%A8%E6%83%85%E5%8C%85/doge.png" width="24" height="24"&gt;不过只在Netflix和JTBC播出，观看比较麻烦其他都挺好。
+&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;虽然现在相对放开了，但出门总还是有点慌。每天大半夜睡早上10点起。学校也不开学，这还是我头一次如此盼望开学。一天到晚盯着电脑看属实没意思。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;于是日常回访友链。发现某博客现在还有防F12，防复制，防右键。防复制我觉得就挺神奇，因为ta不仅有防复制还有复制之后的弹窗脚本。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;反正在家里没事做，就研究研究这个好了，反正也不难，学习一下。&lt;/p&gt;
+&lt;p&gt;进入该站之后，无法通过F12，Ctrl+Shift+I调出开发者工具，只能手动。于是我返回首页并开启debug模式。在index找到跳转脚本如下。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;ConsoleManager&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;onOpen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;href&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;href&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./back.html&amp;quot;&lt;/span&gt;
+            &lt;span class="p"&gt;},&lt;/span&gt;
+            &lt;span class="nx"&gt;onClose&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;},&lt;/span&gt;
+            &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;isOpening&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nx"&gt;isOpened&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="nb"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;defineProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="nx"&gt;get&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;isOpening&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                            &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onOpen&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                            &lt;span class="nx"&gt;isOpening&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                        &lt;span class="p"&gt;}&lt;/span&gt;
+                        &lt;span class="nx"&gt;isOpened&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                    &lt;span class="p"&gt;}&lt;/span&gt;
+                &lt;span class="p"&gt;});&lt;/span&gt;
+                &lt;span class="nx"&gt;setInterval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="nx"&gt;isOpened&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;clear&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;isOpened&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nx"&gt;isOpening&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onClose&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                        &lt;span class="nx"&gt;isOpening&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                    &lt;span class="p"&gt;}&lt;/span&gt;
+                &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="nx"&gt;e3&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="nx"&gt;ConsoleManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;然后在找防F12脚本的时候，看到了他的两个好兄弟 &lt;code&gt;复制弹窗和防复制&lt;/code&gt; 。这时候有意思的事情就来了，ta的站防复制为什么还有复制弹窗，反正挺迷的&lt;img style="display:inline" src="https://cdn.elstec.cn/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A1%A8%E6%83%85%E5%8C%85/doge.png" width="24" height="24"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- 复制弹窗sweetalert2 直接访问有防盗链--&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://typecho-1257629916.file.myqcloud.com/sweetalert2.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;lt;!-- 防F12 --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onkeydown&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;event&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="nx"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;returnValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;lt;!-- 防复制 --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Javascript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oncontextmenu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;Function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;event.returnValue=false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onselectstart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;Function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;event.returnValue=false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;其实我觉得，现在做站，这种东西花里胡哨的没必要加。治标不治本，加载这么多js还对网站性能造成影响。不过做站还是自己开心来的好。&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200217/</guid><pubDate>Mon, 17 Feb 2020 21:50:00 +0806</pubDate></item></channel></rss>
