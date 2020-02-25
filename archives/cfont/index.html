@@ -55,7 +55,7 @@
 	<script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/e3873a78b00f31a42067eb587d009c08.json"
+            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/1b9a69429a235ad74aa98422c3a2e2d0.json"
         }
     </script>
     
@@ -120,16 +120,16 @@
                 <blockquote><p>建议本文搭配 <em><a href="https://elstec.cn/archives/fwbf/">使用Fontmin生成WebFont压缩字体</a></em> 食用更佳</p>
 </blockquote>
 <p>今天看到主题作者主页大标题用了这个字体，我一想哇还挺好看，也想自己整一个，看了看主题设置并没有更改字体的设置，只有头部标签引用,又回头看了看原页面，注意到了这两行代码，翻遍了他所有的评论知道这个字体叫<strong>方正粗金陵繁体</strong></p>
-<blockquote><p><figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/font.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption>①</figcaption></figure>
-<figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/branda.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption>②</figcaption></figure></p>
+<blockquote><p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/font.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption>①</figcaption></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/branda.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption>②</figcaption></figure></p>
 </blockquote>
 <p>于是我从方正官网下到了这个字体的ttf版本，并相应转成了<strong><em>.eot</em></strong>和<strong><em>.woff</em></strong>格式。
 新建一个css，码入以下代码，因为针对<code>class</code>为<code>brand</code>的文字字体替换，所以直接定义</p>
 
 <pre><code>@font-face {
     font-family: 'f';
-    src: url('https://blog-1251724647.file.myqcloud.com/font/f.eot?#iefix') format('eot');/*IE*/
-    src: url('https://blog-1251724647.file.myqcloud.com/font/f.woff') format('woff'), url('f.ttf') format('truetype');/*non-IE*/
+    src: url('https://cdn.elstec.cn/font/f.eot?#iefix') format('eot');/*IE*/
+    src: url('https://cdn.elstec.cn/font/f.woff') format('woff'), url('f.ttf') format('truetype');/*non-IE*/
     }
 
     div.brand {
@@ -139,12 +139,12 @@
 </code></pre>
 <p>主题设置<code>head</code><strong>标签输出内容</strong></p>
 
-<pre><code>&lt;link rel="stylesheet" href="https://blog-1251724647.file.myqcloud.com/zt.css" /&gt;
+<pre><code>&lt;link rel="stylesheet" href="https://cdn.elstec.cn/zt.css" /&gt;
 &lt;style&gt;.brand{font-family:'f';font-weight:normal;}&lt;/style&gt;
 
 </code></pre>
 <p>我直接把字体重命名为f，因为好打。刷新一看，字体没更新，看到不允许跨域访问。
-<figure  size-undefined><img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/er1.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption> ￣﹃￣ </figcaption></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/er1.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption> ￣﹃￣ </figcaption></figure>
 解决方案如下:
 在<code>nginx</code>配置文件中做如下配置</p>
 
