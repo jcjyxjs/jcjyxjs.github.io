@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="english"><id>/</id><title>毫无作为</title><updated>2020-02-19T16:05:12.398763+08:06</updated><author><name>JCJYXJS</name><email>admin@elstec.cn</email></author><link href="/" rel="alternate"/><generator uri="http://lkiesow.github.io/python-feedgen" version="0.8.0">python-feedgen</generator><logo>/tx.png</logo><subtitle>Personal blog</subtitle><entry><id>/archives/6plat/</id><title>6Plat固定公网IPv6地址（已失效）</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;p&gt;这个也是今天刚看到的，就试了试。我家移动100M的情况就是能正常上Google，YouTube这类网站但是国内速度比较慢，比方b站之类的。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="english"><id>/</id><title>毫无作为</title><updated>2020-02-25T16:39:48.809277+08:06</updated><author><name>JCJYXJS</name><email>admin@elstec.cn</email></author><link href="/" rel="alternate"/><generator uri="https://lkiesow.github.io/python-feedgen" version="0.9.0">python-feedgen</generator><logo>/tx.png</logo><subtitle>Personal blog</subtitle><entry><id>/archives/6plat/</id><title>6Plat固定公网IPv6地址（已失效）</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;p&gt;这个也是今天刚看到的，就试了试。我家移动100M的情况就是能正常上Google，YouTube这类网站但是国内速度比较慢，比方b站之类的。&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;根据6Plat的使用方法，大概就是分3步，&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;申请账号&lt;/li&gt;
@@ -75,7 +75,7 @@ o5ab
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;连接成功会提示并附带内网地址&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;a href="https://test-ipv6.com/"&gt;test-ipv6.com&lt;/a&gt;进行测试&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 北邮IPTV测试&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;点个新闻看看&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/6/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/6plat/" rel="alternate"/><published>2019-08-27T13:04:00+08:06</published></entry><entry><id>/archives/wnhqh/</id><title>记一次蜗牛星际安装黑群晖过程</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
+</content><link href="/archives/6plat/" rel="alternate"/><published>2019-08-27T13:04:00+08:06</published></entry><entry><id>/archives/wnhqh/</id><title>记一次蜗牛星际安装黑群晖过程</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/4/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;类似这样的一个，但不是这个店家&lt;/figcaption&gt;&lt;/figure&gt;
 机子自带一个16g小固态，但这个ssd不敢恭维，渣中之渣，不过用来装系统最合适了。 
 准备好群晖镜像和DiskImage，以及一个有pe系统的U盘或者移动硬盘。&lt;/p&gt;
@@ -90,7 +90,7 @@ o5ab
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/4/8.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 使用同网设备浏览器进入&lt;a href="http://find.synology.com"&gt;find.synology.com&lt;/a&gt;查找设备，点击联机即可。用获取到的ip访问后台就可以了。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/4/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/wnhqh/" rel="alternate"/><published>2019-09-12T16:22:00+08:06</published></entry><entry><id>/archives/fixbtwaf/</id><title>解决宝塔nginx防火墙启动后nginx不工作</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;blockquote&gt;&lt;p&gt;起因是某wp群有人发bt专业版6个月28的活动，跟风上车。&lt;/p&gt;
+</content><link href="/archives/wnhqh/" rel="alternate"/><published>2019-09-12T16:22:00+08:06</published></entry><entry><id>/archives/fixbtwaf/</id><title>解决宝塔nginx防火墙启动后nginx不工作</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;blockquote&gt;&lt;p&gt;起因是某wp群有人发bt专业版6个月28的活动，跟风上车。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;一套流程下来，发现安装nginx防火墙之后nginx直接关停，无法启动，重载配置也无果。试着卸载防火墙并重启nginx成功。论坛上也没有具体解决方案，官方人员只是说规则配置问题，要去加他们技术。不得不说，还挺牛.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;报错看下图&lt;/p&gt;
@@ -105,7 +105,7 @@ mv /www/server/panel/vhost/nginx/total.conf  /tmp/total.conf_back
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/8/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;最终效果&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-</content><link href="/archives/fixbtwaf/" rel="alternate"/><published>2019-11-09T19:32:00+08:06</published></entry><entry><id>/archives/ngxluawaf/</id><title>bt下开启nginx自带lua防火墙</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
+</content><link href="/archives/fixbtwaf/" rel="alternate"/><published>2019-11-09T19:32:00+08:06</published></entry><entry><id>/archives/ngxluawaf/</id><title>bt下开启nginx自带lua防火墙</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;bt下配置nginx，搜索&lt;code&gt;#include luawaf.conf;&lt;/code&gt;取消注释，保存配置并重启nginx。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/9/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
@@ -127,7 +127,7 @@ CCrate="300/60"
 
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;我只讲怎么开这个waf，并不讲怎么配置，没必要。这个和bt的waf还是有差距的，效果嘛仁者见仁智者见智。反正能用xD&lt;/p&gt;
-</content><link href="/archives/ngxluawaf/" rel="alternate"/><published>2019-11-09T19:59:00+08:06</published></entry><entry><id>/archives/20191115/</id><title>k2p所有lan口无法使用之后我的解决方案</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;p&gt;我星期五从学校回来，晚上家里有事也没开房间的路由器。因为每次周日回学校，都会拔电源，周六早上一开，发现我的电脑无法上网，一开始以为是开机太快了，路由器还没开好，等了半天发现根本获取不到地址，不过奇怪的是WiFi是正常的，可以上网
+</content><link href="/archives/ngxluawaf/" rel="alternate"/><published>2019-11-09T19:59:00+08:06</published></entry><entry><id>/archives/20191115/</id><title>k2p所有lan口无法使用之后我的解决方案</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;p&gt;我星期五从学校回来，晚上家里有事也没开房间的路由器。因为每次周日回学校，都会拔电源，周六早上一开，发现我的电脑无法上网，一开始以为是开机太快了，路由器还没开好，等了半天发现根本获取不到地址，不过奇怪的是WiFi是正常的，可以上网
 不过刚好也想买一个交换机，就看了看H3C，发现 S1209F 这款还行，8千兆电口+1千兆光口，横向对比其他厂商8口千兆都超过了200块，于是就毫不犹豫的买了下来。k2p印象里是去年pdd上的灵车了，买来全新，刷的大雕魔改的高恪。&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/10/4.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 今天周日刚刚到货。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/10/3.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
@@ -135,7 +135,7 @@ CCrate="300/60"
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/10/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/10/2.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 具体就这么接，反正能用&lt;/p&gt;
-</content><link href="/archives/20191115/" rel="alternate"/><published>2019-11-17T13:17:00+08:06</published></entry><entry><id>/archives/fixrpmdb/</id><title>解决yum报错</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;p&gt;这是我一台Google的服务器，很久不用，准备装软件突然就这样了。
+</content><link href="/archives/20191115/" rel="alternate"/><published>2019-11-17T13:17:00+08:06</published></entry><entry><id>/archives/fixrpmdb/</id><title>解决yum报错</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;p&gt;这是我一台Google的服务器，很久不用，准备装软件突然就这样了。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://blog-1251724647.image.myqcloud.com/11/1.PNG?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;不过只需要重构rpm数据库就可以了&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -145,7 +145,7 @@ CCrate="300/60"
 [root@hk-0 ~]# rpm --rebuilddb
 
 &lt;/code&gt;&lt;/pre&gt;
-</content><link href="/archives/fixrpmdb/" rel="alternate"/><published>2019-11-17T15:54:00+08:06</published></entry><entry><id>/archives/hexoblog/</id><title>使用hexo搭建静态博客+Github Pages</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;h1&gt;使用hexo搭建静态博客步骤&lt;/h1&gt;
+</content><link href="/archives/fixrpmdb/" rel="alternate"/><published>2019-11-17T15:54:00+08:06</published></entry><entry><id>/archives/hexoblog/</id><title>使用hexo搭建静态博客+Github Pages</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;h1&gt;使用hexo搭建静态博客步骤&lt;/h1&gt;
 &lt;p&gt;1.安装Git&lt;/p&gt;
 &lt;p&gt;2.安装Node.js&lt;/p&gt;
 &lt;p&gt;3.安装hexo&lt;/p&gt;
@@ -276,7 +276,7 @@ CCrate="300/60"
 &lt;p&gt;&lt;code&gt;@   | CNAME | name.github.io&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;过一会儿就可以用自定义域名看到了&lt;/p&gt;
 &lt;h4&gt;关于其他东西以后再说，就是这样。&lt;/h4&gt;
-</content><link href="/archives/hexoblog/" rel="alternate"/><published>2020-02-07T19:08:00+08:06</published></entry><entry><id>/archives/enhttp3/</id><title>使用LiteSpeed为网站启用HTTP/3</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;h1&gt;我想说的&lt;/h1&gt;
+</content><link href="/archives/hexoblog/" rel="alternate"/><published>2020-02-07T19:08:00+08:06</published></entry><entry><id>/archives/enhttp3/</id><title>使用LiteSpeed为网站启用HTTP/3</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;h1&gt;我想说的&lt;/h1&gt;
 &lt;p&gt;关于HTTP/3我就不介绍了，网上有，多说无益。真的。
 就目前浏览器支持情况真的也就一般。&lt;/p&gt;
 &lt;p&gt;&lt;figure style="flex: 149.80940279542565" &gt;&lt;img width="2358" height="787" src="https://cdn.elstec.cn/13/0.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -313,7 +313,7 @@ mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;需要浏览器支持的话，Chrome打开&lt;code&gt;chrome://flags/&lt;/code&gt;，找到&lt;code&gt;Experimental QUIC protocol&lt;/code&gt;选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到&lt;code&gt;edge://flags/&lt;/code&gt;步骤同上就行。&lt;/p&gt;
 &lt;h1&gt;最后&lt;/h1&gt;
 &lt;p&gt;我想说，我评论区的评论通知有时候会鬼畜发不出去我也没办法，到时候再说:P&lt;/p&gt;
-</content><link href="/archives/enhttp3/" rel="alternate"/><published>2020-02-12T21:50:00+08:06</published></entry><entry><id>/archives/jsimage/</id><title>DOM实现JavaScript图片库</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;h1&gt;我想说的&lt;/h1&gt;
+</content><link href="/archives/enhttp3/" rel="alternate"/><published>2020-02-12T21:50:00+08:06</published></entry><entry><id>/archives/jsimage/</id><title>DOM实现JavaScript图片库</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;h1&gt;我想说的&lt;/h1&gt;
 &lt;blockquote&gt;&lt;p&gt;我比较菜（小声bb）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;实现&lt;/h1&gt;
@@ -385,12 +385,12 @@ mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
         &lt;/ul&gt;
         &lt;img id="img123" src="https://blog-1251724647.file.myqcloud.com/14/5.jpg"&gt;
 &lt;/body&gt;
-&lt;/html&gt;</content><link href="/archives/jsimage/" rel="alternate"/><published>2020-02-13T21:50:00+08:06</published></entry><entry><id>/archives/20200217/</id><title>疫情期间在家の无聊生活</title><updated>2020-02-19T08:05:12.399763+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;div class="notice"&gt;我   要   无   聊   死   了  &lt;/div&gt;&lt;p&gt;如题，确实挺无聊的。但是闲着没事上RTARBG下神盾局看，不得不说那个时候的画质拿到现在来也确实不错。&lt;/p&gt;
+&lt;/html&gt;</content><link href="/archives/jsimage/" rel="alternate"/><published>2020-02-13T21:50:00+08:06</published></entry><entry><id>/archives/20200217/</id><title>疫情期间在家の无聊生活</title><updated>2020-02-25T08:39:48.809277+00:00</updated><author><name>jcjyxjs</name><email>admin@elstec.cn</email><uri>https://jcjyxjs.me</uri></author><content>&lt;div class="notice"&gt;我   要   无   聊   死   了  &lt;/div&gt;&lt;p&gt;如题，确实挺无聊的。但是闲着没事上RTARBG下神盾局看，不得不说那个时候的画质拿到现在来也确实不错。&lt;/p&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;div&gt;
 还有现在巨火的梨泰院class，好看是真的好看
 &lt;img style="display:inline" src="https://cdn.elstec.cn/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A1%A8%E6%83%85%E5%8C%85/doge.png" width="24" height="24"&gt;不过只在Netflix和JTBC播出，观看比较麻烦其他都挺好。
-&lt;/div&gt;&lt;div class="dplayer"  data-url="https://cdn.elstec.cn/15/1.mp4"&gt;&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;/div&gt;&lt;div class="dplayer"  data-url="https://media.elstec.cn/15/1.mp4"&gt;&lt;/div&gt;&lt;div class="photos"&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div class="photos"&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
