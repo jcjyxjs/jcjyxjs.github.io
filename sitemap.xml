@@ -103,13 +103,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/2019816/</loc>
-    <lastmod>2019-08-16</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-</url>
-
-<url>
     <loc>/archives/fwbf/</loc>
     <lastmod>2019-08-15</lastmod>
     <changefreq>always</changefreq>
