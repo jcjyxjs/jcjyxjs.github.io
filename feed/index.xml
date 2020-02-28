@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Fri, 28 Feb 2020 17:47:32 +0806</lastBuildDate><pubDate>Fri, 28 Feb 2020 17:47:32 +0806</pubDate><item><title>记一次蜗牛星际安装黑群晖过程</title><link>/archives/wnhqh/</link><description>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Fri, 28 Feb 2020 18:41:19 +0806</lastBuildDate><pubDate>Fri, 28 Feb 2020 18:41:19 +0806</pubDate><item><title>记一次蜗牛星际安装黑群晖过程</title><link>/archives/wnhqh/</link><description>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/4/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;类似这样的一个，但不是这个店家&lt;/figcaption&gt;&lt;/figure&gt;
 机子自带一个16g小固态，但这个ssd不敢恭维，渣中之渣，不过用来装系统最合适了。 
 准备好群晖镜像和DiskImage，以及一个有pe系统的U盘或者移动硬盘。&lt;/p&gt;
@@ -402,16 +402,17 @@ Swal.fire({
 &lt;li&gt;需要有Cloudflare Partener或使用别人的。原因很简单，因为官方只允许NS接入，CFP贼可以IP/CNAME接入。这里推荐 &lt;a href="http://cdn.bnxb.com/"&gt;http://cdn.bnxb.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;自选IP原理就是国内DNS解析的时候分配最快的IP然后用A记录解析到这个IP上，国外保持不变。&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/1.svg" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/1.svg" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;h1&gt;实现&lt;/h1&gt;
 &lt;p&gt;首先添加域名（我是用的奔牛，用什么其实原理都一样）&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;然后可以在解析设置看到需要解析的地址，先CNAME解析然后等待SSL签发。默认IP直接ping这条CNAME记录就行。&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;SSL签发之后，进入dns解析把CNAME解析删掉，国内根据情况分线路进行解析。境外默认分配IP就行。&lt;/p&gt;
+&lt;h1&gt;其他&lt;/h1&gt;
 &lt;p&gt;CloudFlare官方公示IP
 &lt;a href="https://www.cloudflare.com/zh-cn/ips/"&gt;https://www.cloudflare.com/zh-cn/ips/&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;IPv4&lt;/p&gt;
+&lt;h3&gt;IPv4&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;173.245.48.0/20&lt;/li&gt;
 &lt;li&gt;103.21.244.0/22&lt;/li&gt;
@@ -428,7 +429,7 @@ Swal.fire({
 &lt;li&gt;172.64.0.0/13&lt;/li&gt;
 &lt;li&gt;131.0.72.0/22&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;IPv6&lt;/p&gt;
+&lt;h3&gt;IPv6&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;2400:cb00::/32&lt;/li&gt;
 &lt;li&gt;2606:4700::/32&lt;/li&gt;
@@ -438,7 +439,7 @@ Swal.fire({
 &lt;li&gt;2a06:98c0::/29&lt;/li&gt;
 &lt;li&gt;2c0f:f248::/32&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;百度云合作线路&lt;/p&gt;
+&lt;h3&gt;百度云合作线路&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;162.159.208.4-162.159.208.103&lt;/li&gt;
 &lt;li&gt;162.159.209.4-162.159.209.103&lt;/li&gt;
