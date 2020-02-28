@@ -1,81 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Thu, 27 Feb 2020 17:12:53 +0806</lastBuildDate><pubDate>Thu, 27 Feb 2020 17:12:53 +0806</pubDate><item><title>6Plat固定公网IPv6地址（已失效）</title><link>/archives/6plat/</link><description>&lt;p&gt;这个也是今天刚看到的，就试了试。我家移动100M的情况就是能正常上Google，YouTube这类网站但是国内速度比较慢，比方b站之类的。&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;根据6Plat的使用方法，大概就是分3步，&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;申请账号&lt;/li&gt;
-&lt;li&gt;下载软件&lt;/li&gt;
-&lt;li&gt;连接
-## 申请账号 ##
-用你的邮箱，新建邮件：
-收件人：6plat@biigroup.cn
-主题：6Plat-46个人账号申请
-内容：账号 密码（中间有一个空格）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/6/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;就像这样&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;发送邮件之后会有自动回复，一般就是可以开通，等着就行。如果没有收到，多半被判定垃圾邮件或者格式不对，换个邮箱或者更改一下格式就可以了。
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/6/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;自动回复&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h2&gt;下载软件&lt;/h2&gt;
-&lt;p&gt;根据&lt;a href="http://bbs2.6plat.org/d/19"&gt;6Plat 46模块&lt;/a&gt;的官方帖子，下载对应的软件：&lt;a href="http://d.6plat.org/openvpn-install-2.4.0-I601.exe.zip"&gt;Windows端点我下载&lt;/a&gt;
-解压打开安装下一步下一步就好了。&lt;/p&gt;
-&lt;h2&gt;连接&lt;/h2&gt;
-&lt;p&gt;当你的账号开通之后，打开客户端软件，会提示没有配置文件。复制以下内容另存为&lt;code&gt;6plat.ovpn&lt;/code&gt;，配置内容不知道可以不改。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;client
-dev tun
-proto tcp
-remote 46.6plat.org 9185
-comp-lzo
-resolv-retry infinite
-nobind
-persist-key
-persist-tun
-setenv CLIENT_CERT 0
-auth-user-pass
-remote-cert-tls server
-verb 3
-sndbuf 0
-rcvbuf 0
-cipher none
-&amp;lt;ca&amp;gt;
------BEGIN CERTIFICATE-----
-MIIE3zCCA8egAwIBAgIJAJVvrlqcS4YsMA0GCSqGSIb3DQEBCwUAMIGlMQswCQYD
-VQQGEwJDTjEQMA4GA1UECBMHQmVpamluZzEQMA4GA1UEBxMHQmVpamluZzESMBAG
-A1UEChMJNnBsYXQub3JnMRMwEQYDVQQLEwo2cGxhdGdyb3VwMRUwEwYDVQQDEww2
-cGxhdC5vcmcgQ0ExEDAOBgNVBCkTB0Vhc3lSU0ExIDAeBgkqhkiG9w0BCQEWETZw
-bGF0QGJpaWdyb3VwLmNuMB4XDTE3MDEwNDA5MTc1NVoXDTI3MDEwMjA5MTc1NVow
-gaUxCzAJBgNVBAYTAkNOMRAwDgYDVQQIEwdCZWlqaW5nMRAwDgYDVQQHEwdCZWlq
-aW5nMRIwEAYDVQQKEwk2cGxhdC5vcmcxEzARBgNVBAsTCjZwbGF0Z3JvdXAxFTAT
-BgNVBAMTDDZwbGF0Lm9yZyBDQTEQMA4GA1UEKRMHRWFzeVJTQTEgMB4GCSqGSIb3
-DQEJARYRNnBsYXRAYmlpZ3JvdXAuY24wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAw
-ggEKAoIBAQDpTRpxYttg0EsUYWCE3GKLMPTDXlzVtn93yb9MdgUJkCiGNgaXHQ6Y
-NCcOXb3pLIxZN7eYH873ZgAY74+LiEIIAAPn+CTQjTcZ82r92xuSj47mMNd4/CcG
-5byC9clsNijsWvJ7Rq2Fy2ynSddWMMkmVGZ8oS3psPc57cEOBUBdhTI4szo6aLE0
-N3/AAFpIdfxlTATc5EWFxEk4SMPWAIcqkvZ1ETBit+HHU+Bv2oYcpzzi6jHmVw0d
-EofxV0w3AUNUN894mWprBtZKZ+DVqms0+LI3mLWPXsv3m8zYBNTXqgE5p4vJ+E3J
-3AzDKH2Rb/coBiy3V2g0Cdgc9vATQ4XzAgMBAAGjggEOMIIBCjAdBgNVHQ4EFgQU
-M/hZJqaKeV9UVH6WoS7iwAk8/Q0wgdoGA1UdIwSB0jCBz4AUM/hZJqaKeV9UVH6W
-oS7iwAk8/Q2hgaukgagwgaUxCzAJBgNVBAYTAkNOMRAwDgYDVQQIEwdCZWlqaW5n
-MRAwDgYDVQQHEwdCZWlqaW5nMRIwEAYDVQQKEwk2cGxhdC5vcmcxEzARBgNVBAsT
-CjZwbGF0Z3JvdXAxFTATBgNVBAMTDDZwbGF0Lm9yZyBDQTEQMA4GA1UEKRMHRWFz
-eVJTQTEgMB4GCSqGSIb3DQEJARYRNnBsYXRAYmlpZ3JvdXAuY26CCQCVb65anEuG
-LDAMBgNVHRMEBTADAQH/MA0GCSqGSIb3DQEBCwUAA4IBAQBzYlX/RgvViVvcxwGQ
-SN9wP32U9aALFI4GCQz6ODrlYVx4m00zJeuR69bjLO3NZgMv6LtcovbuME+FYq/4
-uXJJIfMlo2S/kKp5dBaGk9ERx0xs2OLAKyzc4wgx5zah5Nke1NhdYdCB6Lj6tM+s
-vthNz2SWpcctvlOvV+5IdVrefiaLl7RBgf2j81DYmPCILZwHo8rQ0zKppgqAFcFk
-tDO0FnHQcwe6xfTE1cIoOU39t+hTnvxQDBW4p9xkxX0hAFnNV41OadgEwxqyo6J0
-BZ4dtEw8E9FFF8ewWl897xSv6AMPZTizFl3OReE376Kgv+gtFlSuj4kizCd7uiRp
-o5ab
------END CERTIFICATE-----
-&amp;lt;/ca&amp;gt;
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;右键客户端软件，点击&lt;code&gt;Import file...&lt;/code&gt;选择刚刚保存的文件。&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/6/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;Import file...&lt;/figcaption&gt;&lt;/figure&gt;
-再次右键，点击&lt;code&gt;Connect&lt;/code&gt;，输入刚刚申请的账号密码进行连接（前提是你的账号已经开通，不然就会连不上）&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/6/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/6/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;连接成功会提示并附带内网地址&lt;/figcaption&gt;&lt;/figure&gt;
-&lt;a href="https://test-ipv6.com/"&gt;test-ipv6.com&lt;/a&gt;进行测试&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/6/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-北邮IPTV测试&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/6/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;点个新闻看看&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/6/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/6plat/</guid><pubDate>Tue, 27 Aug 2019 13:04:00 +0806</pubDate></item><item><title>记一次蜗牛星际安装黑群晖过程</title><link>/archives/wnhqh/</link><description>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Fri, 28 Feb 2020 17:47:32 +0806</lastBuildDate><pubDate>Fri, 28 Feb 2020 17:47:32 +0806</pubDate><item><title>记一次蜗牛星际安装黑群晖过程</title><link>/archives/wnhqh/</link><description>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/4/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;类似这样的一个，但不是这个店家&lt;/figcaption&gt;&lt;/figure&gt;
 机子自带一个16g小固态，但这个ssd不敢恭维，渣中之渣，不过用来装系统最合适了。 
 准备好群晖镜像和DiskImage，以及一个有pe系统的U盘或者移动硬盘。&lt;/p&gt;
@@ -473,4 +397,53 @@ Swal.fire({
 &lt;/pre&gt;&lt;/div&gt;
 &lt;hr&gt;
 &lt;p&gt;其实我觉得，现在做站，这种东西花里胡哨的没必要加。治标不治本，加载这么多js还对网站性能造成影响。不过做站还是自己开心来的好。&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200217/</guid><pubDate>Mon, 17 Feb 2020 21:50:00 +0806</pubDate></item></channel></rss>
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200217/</guid><pubDate>Mon, 17 Feb 2020 21:50:00 +0806</pubDate></item><item><title>CloudFlare自选节点</title><link>/archives/cfcus/</link><description>&lt;h1&gt;首先&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;需要有Cloudflare Partener或使用别人的。原因很简单，因为官方只允许NS接入，CFP贼可以IP/CNAME接入。这里推荐 &lt;a href="http://cdn.bnxb.com/"&gt;http://cdn.bnxb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;自选IP原理就是国内DNS解析的时候分配最快的IP然后用A记录解析到这个IP上，国外保持不变。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/1.svg" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;p&gt;首先添加域名（我是用的奔牛，用什么其实原理都一样）&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后可以在解析设置看到需要解析的地址，先CNAME解析然后等待SSL签发。默认IP直接ping这条CNAME记录就行。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;SSL签发之后，进入dns解析把CNAME解析删掉，国内根据情况分线路进行解析。境外默认分配IP就行。&lt;/p&gt;
+&lt;p&gt;CloudFlare官方公示IP
+&lt;a href="https://www.cloudflare.com/zh-cn/ips/"&gt;https://www.cloudflare.com/zh-cn/ips/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;IPv4&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;173.245.48.0/20&lt;/li&gt;
+&lt;li&gt;103.21.244.0/22&lt;/li&gt;
+&lt;li&gt;103.22.200.0/22&lt;/li&gt;
+&lt;li&gt;103.31.4.0/22&lt;/li&gt;
+&lt;li&gt;141.101.64.0/18&lt;/li&gt;
+&lt;li&gt;108.162.192.0/18&lt;/li&gt;
+&lt;li&gt;190.93.240.0/20&lt;/li&gt;
+&lt;li&gt;188.114.96.0/20&lt;/li&gt;
+&lt;li&gt;197.234.240.0/22&lt;/li&gt;
+&lt;li&gt;198.41.128.0/17&lt;/li&gt;
+&lt;li&gt;162.158.0.0/15&lt;/li&gt;
+&lt;li&gt;104.16.0.0/12&lt;/li&gt;
+&lt;li&gt;172.64.0.0/13&lt;/li&gt;
+&lt;li&gt;131.0.72.0/22&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;IPv6&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;2400:cb00::/32&lt;/li&gt;
+&lt;li&gt;2606:4700::/32&lt;/li&gt;
+&lt;li&gt;2803:f800::/32&lt;/li&gt;
+&lt;li&gt;2405:b500::/32&lt;/li&gt;
+&lt;li&gt;2405:8100::/32&lt;/li&gt;
+&lt;li&gt;2a06:98c0::/29&lt;/li&gt;
+&lt;li&gt;2c0f:f248::/32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;百度云合作线路&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;162.159.208.4-162.159.208.103&lt;/li&gt;
+&lt;li&gt;162.159.209.4-162.159.209.103&lt;/li&gt;
+&lt;li&gt;162.159.210.4-162.159.210.103&lt;/li&gt;
+&lt;li&gt;162.159.211.4-162.159.211.103&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其他线路网上有，百度云合作线路建议电信。&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/cfcus/</guid><pubDate>Fri, 28 Feb 2020 21:50:00 +0806</pubDate></item></channel></rss>
