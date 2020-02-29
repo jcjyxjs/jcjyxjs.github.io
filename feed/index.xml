@@ -1,20 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Fri, 28 Feb 2020 18:41:19 +0806</lastBuildDate><pubDate>Fri, 28 Feb 2020 18:41:19 +0806</pubDate><item><title>记一次蜗牛星际安装黑群晖过程</title><link>/archives/wnhqh/</link><description>&lt;p&gt;最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/4/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;类似这样的一个，但不是这个店家&lt;/figcaption&gt;&lt;/figure&gt;
-机子自带一个16g小固态，但这个ssd不敢恭维，渣中之渣，不过用来装系统最合适了。 
-准备好群晖镜像和DiskImage，以及一个有pe系统的U盘或者移动硬盘。&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;镜像包压缩大概有639M，解压之后大小概为14.2G&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;重启进入BIOS开启UEFI，保存重启进入pe。
-打开DiskGenius，选择自带的16g小固态，右键删除所有分区，保存关闭DG。
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/4/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-打开DiskImage，&lt;em&gt;Write Image to&lt;/em&gt;选择16g固态，注意是硬盘不是分区。&lt;em&gt;Source File&lt;/em&gt;选择镜像，点击start开始写入，这个镜像写入完成之后重启就可以用了。
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/4/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-重启之后显示器会显示如下信息并不会有任何GUI界面，重启的时候就可以拔掉显示器，u盘，键盘鼠标了
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/4/8.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-使用同网设备浏览器进入&lt;a href="http://find.synology.com"&gt;find.synology.com&lt;/a&gt;查找设备，点击联机即可。用获取到的ip访问后台就可以了。
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/4/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/wnhqh/</guid><pubDate>Thu, 12 Sep 2019 16:22:00 +0806</pubDate></item><item><title>解决宝塔nginx防火墙启动后nginx不工作</title><link>/archives/fixbtwaf/</link><description>&lt;blockquote&gt;&lt;p&gt;起因是某wp群有人发bt专业版6个月28的活动，跟风上车。&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 29 Feb 2020 11:08:31 +0806</lastBuildDate><pubDate>Sat, 29 Feb 2020 11:08:31 +0806</pubDate><item><title>解决宝塔nginx防火墙启动后nginx不工作</title><link>/archives/fixbtwaf/</link><description>&lt;blockquote&gt;&lt;p&gt;起因是某wp群有人发bt专业版6个月28的活动，跟风上车。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;一套流程下来，发现安装nginx防火墙之后nginx直接关停，无法启动，重载配置也无果。试着卸载防火墙并重启nginx成功。论坛上也没有具体解决方案，官方人员只是说规则配置问题，要去加他们技术。不得不说，还挺牛.&lt;/p&gt;
 &lt;blockquote&gt;&lt;p&gt;报错看下图&lt;/p&gt;
@@ -447,4 +432,93 @@ Swal.fire({
 &lt;li&gt;162.159.211.4-162.159.211.103&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;其他线路网上有，百度云合作线路建议电信。&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/cfcus/</guid><pubDate>Fri, 28 Feb 2020 21:50:00 +0806</pubDate></item></channel></rss>
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/cfcus/</guid><pubDate>Fri, 28 Feb 2020 21:50:00 +0806</pubDate></item><item><title>GitHub使用GPG加密提交</title><link>/archives/gpgg/</link><description>&lt;h1&gt;过程&lt;/h1&gt;
+&lt;h2&gt;一、生成密钥&lt;/h2&gt;
+&lt;p&gt;打开Git&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --gen-key&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;会提示如下内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gpg --gen-key
+gpg (GnuPG) 2.2.19-unknown; Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+gpg: directory '/c/Users/24443/.gnupg' created
+gpg: keybox '/c/Users/24443/.gnupg/pubring.kbx' created
+Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: 你的用户名
+Email address: 你的邮箱（必须跟GitHub一样）
+You selected this USER-ID:
+    "用户名 &amp;lt;邮箱&amp;gt;"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /c/Users/24443/.gnupg/trustdb.gpg: trustdb created
+gpg: key XXXXXXXXXXXXXXXX marked as ultimately trusted
+gpg: directory '/c/Users/24443/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/c/Users/24443/.gnupg/openpgp-revocs.d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.rev'
+public and secret key created and signed.
+
+pub   rsa2048 2020-02-28 [SC] [expires: 2022-02-27]
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uid                      用户名 &amp;lt;邮箱&amp;gt;
+sub   rsa2048 2020-02-28 [E] [expires: 2022-02-27]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;生成完之后，再次输入&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --list-keys --keyid-format short&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;提示如下内容&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/c/Users/24443/.gnupg/pubring.kbx
+---------------------------------
+pub   rsa2048/12345678 2020-02-28 [SC] [expires: 2022-02-27]
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uid         [ultimate] 用户名 &amp;lt;邮箱&amp;gt;
+sub   rsa2048/15558FF9 2020-02-28 [E] [expires: 2022-02-27]&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;pub是公钥，sub是私钥，pub那行的 &lt;code&gt;12345678&lt;/code&gt; 才是&lt;em&gt;GPG Key ID&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;输入如下内容获取公钥&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;gpg --armor --export pub GPG key ID&lt;/code&gt;&lt;/pre&gt;
+&lt;h2&gt;二、GitHub配置GPG公钥&lt;/h2&gt;
+&lt;p&gt;打开 &lt;a href="https://github.com/settings/keys"&gt;https://github.com/settings/keys&lt;/a&gt; 。点击 &lt;code&gt;New GPG Key&lt;/code&gt; ，输入刚刚复制的公钥，然后点击 &lt;code&gt;Add GPG Key&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;三、配置本地Git&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;设置签名时用的key &lt;code&gt;git config --global user.signingkey pub GPG key ID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;开启GPG签名: &lt;code&gt;commit：git config commit.gpgsign true&lt;/code&gt; ；关闭则是：&lt;code&gt;git config commit.gpgsign false&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;如果想让所有本地仓库都使用GPG签名：&lt;code&gt;git config --global commit.gpgsign true&lt;/code&gt; &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;（提交的时候会让你输入密码）&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;四、效果&lt;/h2&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/17/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2&gt;五、其他&lt;/h2&gt;
+&lt;p&gt;我遇到的报错&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push -u origin master
+Enumerating objects: 327, done.
+Counting objects: 100% (327/327), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (95/95), done.
+Writing objects: 100% (176/176), 43.64 KiB | 647.00 KiB/s, done.
+Total 176 (delta 86), reused 0 (delta 0)
+remote: Resolving deltas: 100% (86/86), completed with 68 local objects.
+remote: error: GH007: Your push would publish a private email address.
+remote: You can make your email public or disable this protection by visiting:
+remote: http://github.com/settings/emails
+To github.com:jcjyxjs/jcjyxjs.github.io.git
+ ! [remote rejected] master -&amp;gt; master (push declined due to email privacy restrictions)
+error: failed to push some refs to 'git@github.com:jcjyxjs/jcjyxjs.github.io.git'&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;解决方案&lt;/h3&gt;
+&lt;p&gt;打开 &lt;a href="https://github.com/settings/emails"&gt;https://github.com/settings/emails&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这两个取消勾选即可&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/17/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/gpgg/</guid><pubDate>Sat, 29 Feb 2020 12:50:00 +0806</pubDate></item></channel></rss>

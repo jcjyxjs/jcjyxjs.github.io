@@ -58,18 +58,18 @@
         }
     </script>
     
-<title>使用hexo搭建静态博客+Github Pages - 毫无作为</title>
+<title>GitHub使用GPG加密提交 - 毫无作为</title>
 <meta name="author" content="jcjyxjs" />
-<meta name="description" content="使用hexo搭建静态博客步骤" />
-<meta property="og:title" content="使用hexo搭建静态博客+Github Pages - 毫无作为" />
-<meta property="og:description" content="使用hexo搭建静态博客步骤" />
+<meta name="description" content=":D" />
+<meta property="og:title" content="GitHub使用GPG加密提交 - 毫无作为" />
+<meta property="og:description" content=":D" />
 <meta property="og:site_name" content="毫无作为" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/hexoblog/" />
+<meta property="og:url" content="/archives/gpgg/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-02-07T19:08:00+08.00" />
-<meta name="twitter:title" content="使用hexo搭建静态博客+Github Pages - 毫无作为" />
-<meta name="twitter:description" content="使用hexo搭建静态博客步骤" />
+<meta property="article:published_time" content="2020-02-29T12:50:00+08.00" />
+<meta name="twitter:title" content="GitHub使用GPG加密提交 - 毫无作为" />
+<meta name="twitter:description" content=":D" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -98,174 +98,128 @@
 <main>    
     <section class="ga-section ga-content">
         <article class="yue">
-            <h1 class="ga-post_title">使用hexo搭建静态博客+Github Pages</h1>
+            <h1 class="ga-post_title">GitHub使用GPG加密提交</h1>
             <span class="ga-post_meta ga-mono">
                 <span>jcjyxjs</span>
                 <time>
-                    2020-02-07
+                    2020-02-29
                 </time>
                 
-                in <a no-style class="category" href="/category/建站/">
-                    建站
+                in <a no-style class="category" href="/category/GPG/">
+                    GPG
                 </a>
                 
                 
                 <span class="leancloud_visitors" 
-                    id="/archives/hexoblog/" 
-                    data-flag-title="使用hexo搭建静态博客+Github Pages"> · <i class="leancloud-visitors-count"></i> Views</span>
+                    id="/archives/gpgg/" 
+                    data-flag-title="GitHub使用GPG加密提交"> · <i class="leancloud-visitors-count"></i> Views</span>
                 
             </span>
             <div class="ga-content_body">
-                <h1>使用hexo搭建静态博客步骤</h1>
-<p>1.安装Git</p>
-<p>2.安装Node.js</p>
-<p>3.安装hexo</p>
-<p><strong>其次，才是将hexo部署到例如Github等的平台</strong></p>
-<h2>1.安装Git</h2>
-<p>Windows &amp; Mac：访问Git官网 <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 下载安装即可</p>
-<p>Linux：同样访问Git官网（同上）查看安装方法</p>
-<p><strong><em>其实可以不安装Git，不安装并部署的方法放下翻。</em></strong></p>
-<h2>2.安装Node.js</h2>
-<p>访问官网 <a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a> 下载安装包下一步即可</p>
-<p><em>需要注意的是，在安装到<code>Custom Setup</code>这一步时，记得选<code>Add to Path</code></em></p>
-<h2>3.安装hexo</h2>
-<ul>
-<li><p>首先创建一个用来放置博客的文件夹，然后cd到该目录</p>
-</li>
-<li><p>然后安装hexo：<code>npm i -g hexo</code></p>
-</li>
-<li><p>安装完成之后可以输入<code>hexo -v</code>查看版本</p>
-</li>
-<li>最后输入<code>hexo init</code>初始化hexo完成安装</li>
-</ul>
-<p>安装完成之后可在目录看到以下一些文件</p>
-<table>
-<thead><tr>
-<th>node_modules</th>
-<th style="text-align:left"><strong>依赖</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>scaffolds</strong></td>
-<td style="text-align:left"><strong>生成网页的模板</strong></td>
-</tr>
-<tr>
-<td><strong>source</strong></td>
-<td style="text-align:left"><strong>Markdown文章</strong></td>
-</tr>
-<tr>
-<td><strong>themes</strong></td>
-<td style="text-align:left"><strong>主题</strong></td>
-</tr>
-<tr>
-<td><strong>_config.yml</strong></td>
-<td style="text-align:left"><strong>博客配置文件</strong></td>
-</tr>
-<tr>
-<td><strong>db.json</strong></td>
-<td style="text-align:left"><strong>source解析得到</strong></td>
-</tr>
-<tr>
-<td><strong>package.json</strong></td>
-<td style="text-align:left"><strong>所需模块项目的配置信息</strong></td>
-</tr>
-<tr>
-<td><strong>Public</strong></td>
-<td style="text-align:left"><strong>存放生成页面</strong></td>
-</tr>
-</tbody>
-</table>
-<p>这个时候输入<code>hexo s</code>就会在本地<code>localhost:4000</code>启动了</p>
-<p>常用命令 <code>hexo s</code> 启动  <code>hexo g</code> 生成网页文件  <code>hexo d</code> 部署<code>hexo clean</code>清理你之前生成的东西</p>
-<p>具体的命令参数以及解释可以在官网看到 <a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p>
-<h2>4.部署到Github</h2>
-<h3>第一种方法</h3>
-<ul>
-<li><p>首先需要安装一个部署插件 <code>npm install hexo-deployer-git --save</code></p>
-</li>
-<li><p>然后登录Github，并新建一个Repositories(仓库)，name修改成你想要的名称，注意一定要选择public，不然别人没法访问你的网站，点Create进行创建</p>
-</li>
-</ul>
-<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/12/1.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
-<ul>
-<li><p>复制你仓库的地址比方说我新建的仓库是<code>name.github.io</code>，那么你的仓库地址就是<code>https://github.com/jcjyxjs/name.github.io.git</code>，仓库链接可在仓库页面页面复制到</p>
-</li>
-<li><p>修改博客根目录下的<code>_config.yml</code> 代码第100行。type就git，repo就是上面复制的仓库地址，branch就是仓库分支，默认master。repo和branch需要手动打上去</p>
-<div class="highlight"><pre><span></span><span class="err">deploy:</span>
+                <h1>过程</h1>
+<h2>一、生成密钥</h2>
+<p>打开Git</p>
 
-<span class="err">type:</span> <span class="err">&#39;git&#39;</span>
+<pre><code>gpg --gen-key</code></pre>
+<p>会提示如下内容</p>
 
-<span class="err">repo:</span> <span class="err">https://github.com/jcjyxjs/name.github.io.git</span>
+<pre><code>$ gpg --gen-key
+gpg (GnuPG) 2.2.19-unknown; Copyright (C) 2019 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
 
-<span class="err">branch:</span> <span class="err">master</span>
-</pre></div>
-</li>
-<li><p>回到git bash，输入以下两条命令</p>
-<p><code>git config --global user.name "yourname"</code></p>
-<p><code>git config --global user.email "youremail"</code></p>
-</li>
-<li><p>创建SSH</p>
-<p><code>ssh-keygen -t rsa -C "youremail"</code></p>
-</li>
-<li><p>找到这个<code>.ssh</code>的文件夹。里面有<code>id_rsa</code>和<code>id_rsa.pub</code></p>
-</li>
-<li><p>然后在你的github settings里面新建一个SSH key，把你的<code>id_ras.pub</code>中的内容填到key里面点击生成</p>
-<p>可以验证是否成功<code>ssh -T git@github.com</code></p>
-</li>
-<li><p>cd进入博客目录，输入<code>hexo g</code>，等待网页文件生成，然后输入<code>hexo d</code>进行部署，会提示输入你的github邮箱和密码，然后就自动部署了</p>
-</li>
-</ul>
-<h3>第二种方法</h3>
-<ul>
-<li><p>安装Github Desktop，进入官网 <a href="https://desktop.github.com/">https://desktop.github.com/</a> 下载安装并打开</p>
-</li>
-<li><p>登录你的github账户</p>
-</li>
-<li><p>选择clone的仓库，会在你的本地生成一个跟仓库关联的文件夹</p>
-</li>
-<li><p>代码有改动之后生成新的网页，复制public文件夹内的文件到你仓库文件夹，打开Github Desktop</p>
-<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/12/2.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
-</li>
-<li><p>点击<code>Commit to master</code> master是你的分支名字，然后点击右上角的<code>Pull</code>就可以提交了</p>
-</li>
-</ul>
-<h3>Github仓库绑定域名</h3>
-<ul>
-<li><p>在仓库页面点击<code>Settings</code></p>
-</li>
-<li><p>往下拉可以看到<code>Github Pages</code></p>
-</li>
-<li><p>把None改成你想要显示的分支，这项操作会自动刷新页面。</p>
-</li>
-<li><p>刷新之后会出现<code>Custom domain</code>选项，填入你的域名，点击Save</p>
-</li>
-<li><p>然后修改你的域名解析CNAME为</p>
-</li>
-</ul>
-<p><code>www | CNAME | name.github.io</code></p>
-<p><code>@   | CNAME | name.github.io</code></p>
-<p>过一会儿就可以用自定义域名看到了</p>
-<h4>关于其他东西以后再说，就是这样。</h4>
+gpg: directory '/c/Users/24443/.gnupg' created
+gpg: keybox '/c/Users/24443/.gnupg/pubring.kbx' created
+Note: Use "gpg --full-generate-key" for a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: 你的用户名
+Email address: 你的邮箱（必须跟GitHub一样）
+You selected this USER-ID:
+    "用户名 &lt;邮箱&gt;"
+
+Change (N)ame, (E)mail, or (O)kay/(Q)uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action (type on the keyboard, move the mouse, utilize the
+disks) during the prime generation; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /c/Users/24443/.gnupg/trustdb.gpg: trustdb created
+gpg: key XXXXXXXXXXXXXXXX marked as ultimately trusted
+gpg: directory '/c/Users/24443/.gnupg/openpgp-revocs.d' created
+gpg: revocation certificate stored as '/c/Users/24443/.gnupg/openpgp-revocs.d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.rev'
+public and secret key created and signed.
+
+pub   rsa2048 2020-02-28 [SC] [expires: 2022-02-27]
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uid                      用户名 &lt;邮箱&gt;
+sub   rsa2048 2020-02-28 [E] [expires: 2022-02-27]</code></pre>
+<p>生成完之后，再次输入</p>
+
+<pre><code>gpg --list-keys --keyid-format short</code></pre>
+<p>提示如下内容</p>
+
+<pre><code>/c/Users/24443/.gnupg/pubring.kbx
+---------------------------------
+pub   rsa2048/12345678 2020-02-28 [SC] [expires: 2022-02-27]
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uid         [ultimate] 用户名 &lt;邮箱&gt;
+sub   rsa2048/15558FF9 2020-02-28 [E] [expires: 2022-02-27]</code></pre>
+<p>pub是公钥，sub是私钥，pub那行的 <code>12345678</code> 才是<em>GPG Key ID</em></p>
+<p>输入如下内容获取公钥</p>
+
+<pre><code>gpg --armor --export pub GPG key ID</code></pre>
+<h2>二、GitHub配置GPG公钥</h2>
+<p>打开 <a href="https://github.com/settings/keys">https://github.com/settings/keys</a> 。点击 <code>New GPG Key</code> ，输入刚刚复制的公钥，然后点击 <code>Add GPG Key</code></p>
+<h2>三、配置本地Git</h2>
+<ol>
+<li>设置签名时用的key <code>git config --global user.signingkey pub GPG key ID</code></li>
+<li>开启GPG签名: <code>commit：git config commit.gpgsign true</code> ；关闭则是：<code>git config commit.gpgsign false</code> </li>
+<li>如果想让所有本地仓库都使用GPG签名：<code>git config --global commit.gpgsign true</code> </li>
+</ol>
+<p><em>（提交的时候会让你输入密码）</em></p>
+<h2>四、效果</h2>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/17/1.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<h2>五、其他</h2>
+<p>我遇到的报错</p>
+
+<pre><code>$ git push -u origin master
+Enumerating objects: 327, done.
+Counting objects: 100% (327/327), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (95/95), done.
+Writing objects: 100% (176/176), 43.64 KiB | 647.00 KiB/s, done.
+Total 176 (delta 86), reused 0 (delta 0)
+remote: Resolving deltas: 100% (86/86), completed with 68 local objects.
+remote: error: GH007: Your push would publish a private email address.
+remote: You can make your email public or disable this protection by visiting:
+remote: http://github.com/settings/emails
+To github.com:jcjyxjs/jcjyxjs.github.io.git
+ ! [remote rejected] master -&gt; master (push declined due to email privacy restrictions)
+error: failed to push some refs to 'git@github.com:jcjyxjs/jcjyxjs.github.io.git'</code></pre>
+<h3>解决方案</h3>
+<p>打开 <a href="https://github.com/settings/emails">https://github.com/settings/emails</a></p>
+<p>这两个取消勾选即可</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/17/2.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
 
             </div>
         </article>
         <div id="ga-tags">
     
     <span class="ga-tag">
-        <a class="ga-highlight" href="/tag/hexo/">#hexo</a>
+        <a class="ga-highlight" href="/tag/GPG/">#GPG</a>
     </span>
     
     <span class="ga-tag">
-        <a class="ga-highlight" href="/tag/静态博客/">#静态博客</a>
+        <a class="ga-highlight" href="/tag/GitHub/">#GitHub</a>
     </span>
     
     <span class="ga-tag">
-        <a class="ga-highlight" href="/tag/建站/">#建站</a>
-    </span>
-    
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/tag/Github/">#Github</a>
+        <a class="ga-highlight" href="/tag/commit/">#commit</a>
     </span>
     
 </div>
@@ -275,14 +229,14 @@
 <section id="ga-content_pager">
 
     <div class="next">
-        <a class="ga-highlight" href="/archives/enhttp3/">使用LiteSpeed为网站启用HTTP/3</a>
-        <p class="yue">HTTP/3</p>
+        <h3>No More</h3>
+        <p class="yue">This is the latest one.</p>
     </div>
 
 
     <div class="prev">
-        <a class="ga-highlight" href="/archives/fixrpmdb/">解决yum报错</a>
-        <p class="yue">这是我一台Google的服务器，很久不用，准备装软件突然就这样了。</p>
+        <a class="ga-highlight" href="/archives/cfcus/">CloudFlare自选节点</a>
+        <p class="yue">主要还是太麻烦了</p>
     </div>
 
 </section>
