@@ -1,20 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 29 Feb 2020 11:21:34 +0806</lastBuildDate><pubDate>Sat, 29 Feb 2020 11:21:34 +0806</pubDate><item><title>解决宝塔nginx防火墙启动后nginx不工作</title><link>/archives/fixbtwaf/</link><description>&lt;blockquote&gt;&lt;p&gt;起因是某wp群有人发bt专业版6个月28的活动，跟风上车。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;一套流程下来，发现安装nginx防火墙之后nginx直接关停，无法启动，重载配置也无果。试着卸载防火墙并重启nginx成功。论坛上也没有具体解决方案，官方人员只是说规则配置问题，要去加他们技术。不得不说，还挺牛.&lt;/p&gt;
-&lt;blockquote&gt;&lt;p&gt;报错看下图&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/8/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/8/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/8/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;卸载bt的nginx防火墙就又正常了&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;解决方案：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mv /www/server/panel/vhost/nginx/btwaf.conf  /tmp/btwaf.conf_back
-mv /www/server/panel/vhost/nginx/total.conf  /tmp/total.conf_back
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/8/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;最终效果&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/fixbtwaf/</guid><pubDate>Sat, 09 Nov 2019 19:32:00 +0806</pubDate></item><item><title>bt下开启nginx自带lua防火墙</title><link>/archives/ngxluawaf/</link><description>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 01 Mar 2020 09:28:27 +0806</lastBuildDate><pubDate>Sun, 01 Mar 2020 09:28:27 +0806</pubDate><item><title>bt下开启nginx自带lua防火墙</title><link>/archives/ngxluawaf/</link><description>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;bt下配置nginx，搜索&lt;code&gt;#include luawaf.conf;&lt;/code&gt;取消注释，保存配置并重启nginx。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/9/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
@@ -295,7 +280,7 @@ mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
         &lt;img id="img123" src="https://cdn.elstec.cn/14/5.jpg"&gt;
 &lt;/body&gt;
 &lt;/html&gt;</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/jsimage/</guid><pubDate>Thu, 13 Feb 2020 21:50:00 +0806</pubDate></item><item><title>疫情期间在家の无聊生活</title><link>/archives/20200217/</link><description>&lt;div class="notice"&gt;我   要   无   聊   死   了  &lt;/div&gt;&lt;p&gt;如题，确实挺无聊的。但是闲着没事上RTARBG下神盾局看，不得不说那个时候的画质拿到现在来也确实不错。&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 88.89802631578948" &gt;&lt;img width="2162" height="1216" src="https://cdn.elstec.cn/15/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;div&gt;
 还有现在巨火的梨泰院class，好看是真的好看
 &lt;img style="display:inline" src="https://cdn.elstec.cn/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A1%A8%E6%83%85%E5%8C%85/doge.png" width="24" height="24"&gt;不过只在Netflix和JTBC播出，观看比较麻烦其他都挺好。
@@ -303,12 +288,12 @@ mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div class="photos"&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure style="flex: 88.76811594202898" &gt;&lt;img width="1960" height="1104" src="https://cdn.elstec.cn/15/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div class="photos"&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;虽然现在相对放开了，但出门总还是有点慌。每天大半夜睡早上10点起。学校也不开学，这还是我头一次如此盼望开学。一天到晚盯着电脑看属实没意思。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;于是日常回访友链。发现某博客现在还有防F12，防复制，防右键。防复制我觉得就挺神奇，因为ta不仅有防复制还有复制之后的弹窗脚本。&lt;/p&gt;
-&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 123.20916905444126" &gt;&lt;img width="3440" height="1396" src="https://cdn.elstec.cn/15/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;反正在家里没事做，就研究研究这个好了，反正也不难，学习一下。&lt;/p&gt;
 &lt;p&gt;进入该站之后，无法通过F12，Ctrl+Shift+I调出开发者工具，只能手动。于是我返回首页并开启debug模式。在index找到跳转脚本如下。&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;ConsoleManager&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
@@ -384,7 +369,7 @@ Swal.fire({
 &lt;p&gt;其实我觉得，现在做站，这种东西花里胡哨的没必要加。治标不治本，加载这么多js还对网站性能造成影响。不过做站还是自己开心来的好。&lt;/p&gt;
 </description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200217/</guid><pubDate>Mon, 17 Feb 2020 21:50:00 +0806</pubDate></item><item><title>CloudFlare自选节点</title><link>/archives/cfcus/</link><description>&lt;h1&gt;首先&lt;/h1&gt;
 &lt;ol&gt;
-&lt;li&gt;需要有Cloudflare Partener或使用别人的。原因很简单，因为官方只允许NS接入，CFP贼可以IP/CNAME接入。这里推荐 &lt;a href="http://cdn.bnxb.com/"&gt;http://cdn.bnxb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;需要有Cloudflare Partener或使用别人的。原因很简单，因为官方只允许NS接入，CFP则可以IP/CNAME接入。这里推荐 &lt;a href="http://cdn.bnxb.com/"&gt;http://cdn.bnxb.com/&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;自选IP原理就是国内DNS解析的时候分配最快的IP然后用A记录解析到这个IP上，国外保持不变。&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/1.svg" /&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -522,4 +507,64 @@ error: failed to push some refs to &lt;span class="s1"&gt;&amp;#39;git@github.co
 &lt;p&gt;打开 &lt;a href="https://github.com/settings/emails"&gt;https://github.com/settings/emails&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;这两个取消勾选即可&lt;/p&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/17/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/gpgg/</guid><pubDate>Sat, 29 Feb 2020 12:50:00 +0806</pubDate></item></channel></rss>
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/gpgg/</guid><pubDate>Sat, 29 Feb 2020 12:50:00 +0806</pubDate></item><item><title>群晖虚拟机安装lede软路由</title><link>/archives/qhlede/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
+&lt;p&gt;在几个月前我的k2p原地爆炸之后，我给它刷了个系统就再也进不去了。没办法只能换路由器。买了个菊花的路由器才突然想起来，菊花的路由器不能刷机。&lt;span&gt;&lt;img style="display:inline" src="https://i0.hdslb.com/bfs/emote/142409b595982b8210b2958f3d340f3b47942645.png@112w_112h.webp" width="56" height="56"&gt;&lt;/span&gt;近期我的硬盘刚到，就想到还有蜗牛星际这个nas，我想用群晖，但是又想刷lede。就在想可不可以在群晖虚拟机下装lede，虽然只有旁路由，但是lede和群晖同时有岂不是美滋滋。&lt;/p&gt;
+&lt;h1&gt;过程&lt;/h1&gt;
+&lt;h3&gt;一、安装虚拟机&lt;/h3&gt;
+&lt;p&gt;首先打开群辉的套件中心，找到 &lt;code&gt;Virtual Machine Manager&lt;/code&gt; 然后安装并打开。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下载lede虚拟机镜像， &lt;a href="http://firmware.koolshare.cn/LEDE_X64_fw867/%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AC%E7%9B%98%E6%88%96PE%E4%B8%8B%E5%86%99%E7%9B%98%E4%B8%93%E7%94%A8/"&gt;点我&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我下载的是 &lt;code&gt;openwrt-koolshare-mod-v2.31-r10822-50aa0525d1-x86-64-uefi-gpt-squashfs.img.gz&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下载完成之后解压，得到img镜像文件。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;再次回到群辉，在 &lt;code&gt;Virtual Machine Manager&lt;/code&gt; 中，依次点击 &lt;code&gt;映像→新增&lt;/code&gt; 上传刚刚解压的img镜像文件。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;上传完成之后，依次点击 &lt;code&gt;虚拟机→新增旁边的下三角，点击导入&lt;/code&gt; 。选择 &lt;code&gt;从硬盘映像导入&lt;/code&gt; ，选择刚刚上传的镜像然后下一步。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;存储位置随便你，然后到配置常用规格，由于我是蜗牛星际的B单，内存只有4GB所以就选1H1G，然后下一步。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;一直下一步直到其他设置，不要选择自动启动，有些设备会报错。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后一直下一步直到完成导入，点击上方的开机即可。&lt;/p&gt;
+&lt;h4&gt;关于网络配置&lt;/h4&gt;
+&lt;p&gt;网络可以新建一个，也可以用创建虚拟机时候的默认网络。&lt;/p&gt;
+&lt;p&gt;点击 &lt;code&gt;网络→新增&lt;/code&gt; 就可以新建一个网络了。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/7-1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;输入名称并绑定主机下一步即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/7-2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;二、配置虚拟机IP&lt;/h3&gt;
+&lt;p&gt;开机之后不能直接连接，因为lede默认的IP是 &lt;code&gt;192.168.1.1&lt;/code&gt; ，可能会和大部分用户的默认网关地址冲突，所以要先改IP。首先点击上方的连接。然后会弹出一个窗口，看到下面的状态就代表启动完成了。页面没变化敲几下回车就可以了。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;终端输入如下命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vi etc/config/network
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;随后找到 &lt;code&gt;lan&lt;/code&gt; 的设置。按下键盘的 &lt;code&gt;Ins&lt;/code&gt; ，把默认的 &lt;code&gt;192.168.1.1&lt;/code&gt; 改成自己想要的IP ，随后按下 &lt;code&gt;Esc&lt;/code&gt; 退出编辑模式，按 &lt;code&gt;:wq&lt;/code&gt; 保存并退出。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/9.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后输入 &lt;code&gt;reboot&lt;/code&gt; 重启生效。&lt;/p&gt;
+&lt;h3&gt;三、配置Openwrt&lt;/h3&gt;
+&lt;p&gt;浏览器打开刚刚改的IP，默认账号是 &lt;code&gt;root&lt;/code&gt; ，默认密码是 &lt;code&gt;koolshare&lt;/code&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;打开右侧的 &lt;code&gt;系统→管理权&lt;/code&gt; 更改web密码。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/10.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;然后点击右侧 &lt;code&gt;网络→接口&lt;/code&gt; 删除WAN和WAN6。（由于我要做旁路由所以删除这两个）&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/10-1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;3.找到LAN点击编辑。找到IPV4网关和IPV4广播，进行对应的配置。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/11.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后在当前页面最下方找到 &lt;code&gt;DHCP服务器→基本设置&lt;/code&gt; 勾选忽略此接口。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/12.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;至此，lede旁路由就配置完成了，能够做旁路由正常上网。插件什么的有酷软可以自己装也可以网上找安装包离线安装。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/13.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;Openwrt半双工配置全双工&lt;/h3&gt;
+&lt;p&gt;在OP首页可以看到默认 &lt;code&gt;eth0&lt;/code&gt; 是半双工。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/14.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这时候需要先把lede关掉。在群晖 &lt;code&gt;Virtual Machine Manager→虚拟机&lt;/code&gt; 中，点击上方的编辑，找到网络。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/15.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;编辑绑定虚拟机的网络，就是点那个齿轮。把型号改成 &lt;code&gt;e1000&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/16.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后开机看到就是全双工了。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/17.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/qhlede/</guid><pubDate>Sun, 01 Mar 2020 12:50:00 +0806</pubDate></item></channel></rss>
