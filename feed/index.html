@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 01 Mar 2020 09:28:27 +0806</lastBuildDate><pubDate>Sun, 01 Mar 2020 09:28:27 +0806</pubDate><item><title>bt下开启nginx自带lua防火墙</title><link>/archives/ngxluawaf/</link><description>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 01 Mar 2020 09:47:58 +0806</lastBuildDate><pubDate>Sun, 01 Mar 2020 09:47:58 +0806</pubDate><item><title>bt下开启nginx自带lua防火墙</title><link>/archives/ngxluawaf/</link><description>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;bt下配置nginx，搜索&lt;code&gt;#include luawaf.conf;&lt;/code&gt;取消注释，保存配置并重启nginx。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/9/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
@@ -552,7 +552,9 @@ error: failed to push some refs to &lt;span class="s1"&gt;&amp;#39;git@github.co
 &lt;li&gt;然后点击右侧 &lt;code&gt;网络→接口&lt;/code&gt; 删除WAN和WAN6。（由于我要做旁路由所以删除这两个）&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/10-1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;3.找到LAN点击编辑。找到IPV4网关和IPV4广播，进行对应的配置。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;找到LAN点击编辑。找到IPV4网关和IPV4广播，进行对应的配置。&lt;/li&gt;
+&lt;/ol&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/11.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;然后在当前页面最下方找到 &lt;code&gt;DHCP服务器→基本设置&lt;/code&gt; 勾选忽略此接口。&lt;/p&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/12.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
