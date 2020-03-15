@@ -1,27 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 08 Mar 2020 10:56:03 +0806</lastBuildDate><pubDate>Sun, 08 Mar 2020 10:56:03 +0806</pubDate><item><title>bt下开启nginx自带lua防火墙</title><link>/archives/ngxluawaf/</link><description>&lt;blockquote&gt;&lt;p&gt;上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;bt下配置nginx，搜索&lt;code&gt;#include luawaf.conf;&lt;/code&gt;取消注释，保存配置并重启nginx。
-&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/9/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
-这个waf没有界面只能修改配置文件，配置文件在&lt;code&gt;/www/server/nginx/waf&lt;/code&gt;下一个叫&lt;code&gt;config.lua&lt;/code&gt;的配置文件。
-配置文件内容如下：&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;attacklog = "on"
-logdir = "/www/wwwlogs/waf/"
-UrlDeny="on"
-Redirect="on"
-CookieMatch="off"
-postMatch="off"
-whiteModule="on"
-black_fileExt={"php","jsp"}
-ipWhitelist={"127.0.0.1"}
-ipBlocklist={"1.0.0.1"}
-CCDeny="off"
-CCrate="300/60"
-
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;我只讲怎么开这个waf，并不讲怎么配置，没必要。这个和bt的waf还是有差距的，效果嘛仁者见仁智者见智。反正能用xD&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/ngxluawaf/</guid><pubDate>Sat, 09 Nov 2019 19:59:00 +0806</pubDate></item><item><title>k2p所有lan口无法使用之后我的解决方案</title><link>/archives/20191115/</link><description>&lt;p&gt;我星期五从学校回来，晚上家里有事也没开房间的路由器。因为每次周日回学校，都会拔电源，周六早上一开，发现我的电脑无法上网，一开始以为是开机太快了，路由器还没开好，等了半天发现根本获取不到地址，不过奇怪的是WiFi是正常的，可以上网
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/tx.png</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 15 Mar 2020 10:42:37 +0806</lastBuildDate><pubDate>Sun, 15 Mar 2020 10:42:37 +0806</pubDate><item><title>k2p所有lan口无法使用之后我的解决方案</title><link>/archives/20191115/</link><description>&lt;p&gt;我星期五从学校回来，晚上家里有事也没开房间的路由器。因为每次周日回学校，都会拔电源，周六早上一开，发现我的电脑无法上网，一开始以为是开机太快了，路由器还没开好，等了半天发现根本获取不到地址，不过奇怪的是WiFi是正常的，可以上网
 不过刚好也想买一个交换机，就看了看H3C，发现 S1209F 这款还行，8千兆电口+1千兆光口，横向对比其他厂商8口千兆都超过了200块，于是就毫不犹豫的买了下来。k2p印象里是去年pdd上的灵车了，买来全新，刷的大雕魔改的高恪。&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/10/4.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
 今天周日刚刚到货。
 &lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/10/3.jpg?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
@@ -563,4 +541,35 @@ error: failed to push some refs to &lt;span class="s1"&gt;&amp;#39;git@github.co
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/16.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;然后开机看到就是全双工了。&lt;/p&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/17.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/qhlede/</guid><pubDate>Sun, 01 Mar 2020 12:50:00 +0806</pubDate></item></channel></rss>
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/qhlede/</guid><pubDate>Sun, 01 Mar 2020 12:50:00 +0806</pubDate></item><item><title>国内Github下载加速</title><link>/archives/sgclone/</link><description>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;你是否也有过这种情况， &lt;code&gt;git clone&lt;/code&gt; 基本没速度，但是无奈不能使用魔法。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;p&gt;首先复制你要 &lt;code&gt;clone&lt;/code&gt; 的github仓库地址，就像这样。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后打开 &lt;code&gt;码云&lt;/code&gt; ：&lt;a href="https://gitee.com/"&gt;点我&lt;/a&gt; ，登录账号之后，点击右上角的 &lt;code&gt;＋&lt;/code&gt; ，选择 &lt;code&gt;从Github/Gitlab导入仓库&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后一般选择从URL导入，也可以选择其他的，URL导入直接填写刚刚复制的仓库地址，没什么问题就直接导入。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;导入成功之后，直接 &lt;code&gt;git clone&lt;/code&gt; 码云的地址，国内的 &lt;code&gt;clone&lt;/code&gt; 速度还是飞快的。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;其他&lt;/h1&gt;
+&lt;p&gt;上面的只是单纯的 &lt;code&gt;clone&lt;/code&gt; 。如果还要 &lt;code&gt;commit&lt;/code&gt; 的话，需要更改根目录的 &lt;code&gt;.git&lt;/code&gt; 文件夹中的 &lt;code&gt;config&lt;/code&gt; 文件。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;每下载或者clone一个仓库，都会在其根目录生成一个 &lt;code&gt;.git&lt;/code&gt; 的文件夹。这是一个隐藏文件夹，需要系统显示隐藏文件夹（方法百度）。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;打开 &lt;code&gt;config&lt;/code&gt; 文件之后，找到URL，改成你要提交的仓库地址就行了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    ignorecase = true
+[remote "origin"]
+    url = 这里改成你的仓库URL
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master&lt;/code&gt;&lt;/pre&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/sgclone/</guid><pubDate>Sun, 15 Mar 2020 12:50:00 +0806</pubDate></item></channel></rss>
