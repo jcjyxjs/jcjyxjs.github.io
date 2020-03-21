@@ -1,0 +1,738 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 21 Mar 2020 10:35:34 +0806</lastBuildDate><pubDate>Sat, 21 Mar 2020 10:35:34 +0806</pubDate><item><title>使用hexo搭建静态博客+Github Pages</title><link>/archives/hexoblog/</link><description>&lt;h1&gt;使用hexo搭建静态博客步骤&lt;/h1&gt;
+&lt;p&gt;1.安装Git&lt;/p&gt;
+&lt;p&gt;2.安装Node.js&lt;/p&gt;
+&lt;p&gt;3.安装hexo&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;其次，才是将hexo部署到例如Github等的平台&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;1.安装Git&lt;/h2&gt;
+&lt;p&gt;Windows &amp;amp; Mac：访问Git官网 &lt;a href="https://git-scm.com/downloads"&gt;https://git-scm.com/downloads&lt;/a&gt; 下载安装即可&lt;/p&gt;
+&lt;p&gt;Linux：同样访问Git官网（同上）查看安装方法&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;其实可以不安装Git，不安装并部署的方法放下翻。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h2&gt;2.安装Node.js&lt;/h2&gt;
+&lt;p&gt;访问官网 &lt;a href="https://nodejs.org/zh-cn/download/"&gt;https://nodejs.org/zh-cn/download/&lt;/a&gt; 下载安装包下一步即可&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;需要注意的是，在安装到&lt;code&gt;Custom Setup&lt;/code&gt;这一步时，记得选&lt;code&gt;Add to Path&lt;/code&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;3.安装hexo&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先创建一个用来放置博客的文件夹，然后cd到该目录&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后安装hexo：&lt;code&gt;npm i -g hexo&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;安装完成之后可以输入&lt;code&gt;hexo -v&lt;/code&gt;查看版本&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;最后输入&lt;code&gt;hexo init&lt;/code&gt;初始化hexo完成安装&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;安装完成之后可在目录看到以下一些文件&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th&gt;node_modules&lt;/th&gt;
+&lt;th style="text-align:left"&gt;&lt;strong&gt;依赖&lt;/strong&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;scaffolds&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;strong&gt;生成网页的模板&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;source&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;strong&gt;Markdown文章&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;themes&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;strong&gt;主题&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;_config.yml&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;strong&gt;博客配置文件&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;db.json&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;strong&gt;source解析得到&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;package.json&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;strong&gt;所需模块项目的配置信息&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;strong&gt;Public&lt;/strong&gt;&lt;/td&gt;
+&lt;td style="text-align:left"&gt;&lt;strong&gt;存放生成页面&lt;/strong&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;这个时候输入&lt;code&gt;hexo s&lt;/code&gt;就会在本地&lt;code&gt;localhost:4000&lt;/code&gt;启动了&lt;/p&gt;
+&lt;p&gt;常用命令 &lt;code&gt;hexo s&lt;/code&gt; 启动  &lt;code&gt;hexo g&lt;/code&gt; 生成网页文件  &lt;code&gt;hexo d&lt;/code&gt; 部署&lt;code&gt;hexo clean&lt;/code&gt;清理你之前生成的东西&lt;/p&gt;
+&lt;p&gt;具体的命令参数以及解释可以在官网看到 &lt;a href="https://hexo.io/zh-cn/docs/commands"&gt;https://hexo.io/zh-cn/docs/commands&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;4.部署到Github&lt;/h2&gt;
+&lt;h3&gt;第一种方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;首先需要安装一个部署插件 &lt;code&gt;npm install hexo-deployer-git --save&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后登录Github，并新建一个Repositories(仓库)，name修改成你想要的名称，注意一定要选择public，不然别人没法访问你的网站，点Create进行创建&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/12/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;复制你仓库的地址比方说我新建的仓库是&lt;code&gt;name.github.io&lt;/code&gt;，那么你的仓库地址就是&lt;code&gt;https://github.com/jcjyxjs/name.github.io.git&lt;/code&gt;，仓库链接可在仓库页面页面复制到&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;修改博客根目录下的&lt;code&gt;_config.yml&lt;/code&gt; 代码第100行。type就git，repo就是上面复制的仓库地址，branch就是仓库分支，默认master。repo和branch需要手动打上去&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;deploy:&lt;/span&gt;
+
+&lt;span class="err"&gt;type:&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;git&amp;#39;&lt;/span&gt;
+
+&lt;span class="err"&gt;repo:&lt;/span&gt; &lt;span class="err"&gt;https://github.com/jcjyxjs/name.github.io.git&lt;/span&gt;
+
+&lt;span class="err"&gt;branch:&lt;/span&gt; &lt;span class="err"&gt;master&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;回到git bash，输入以下两条命令&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git config --global user.name "yourname"&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;git config --global user.email "youremail"&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;创建SSH&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;ssh-keygen -t rsa -C "youremail"&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;找到这个&lt;code&gt;.ssh&lt;/code&gt;的文件夹。里面有&lt;code&gt;id_rsa&lt;/code&gt;和&lt;code&gt;id_rsa.pub&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后在你的github settings里面新建一个SSH key，把你的&lt;code&gt;id_ras.pub&lt;/code&gt;中的内容填到key里面点击生成&lt;/p&gt;
+&lt;p&gt;可以验证是否成功&lt;code&gt;ssh -T git@github.com&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;cd进入博客目录，输入&lt;code&gt;hexo g&lt;/code&gt;，等待网页文件生成，然后输入&lt;code&gt;hexo d&lt;/code&gt;进行部署，会提示输入你的github邮箱和密码，然后就自动部署了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;第二种方法&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;安装Github Desktop，进入官网 &lt;a href="https://desktop.github.com/"&gt;https://desktop.github.com/&lt;/a&gt; 下载安装并打开&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;登录你的github账户&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;选择clone的仓库，会在你的本地生成一个跟仓库关联的文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;代码有改动之后生成新的网页，复制public文件夹内的文件到你仓库文件夹，打开Github Desktop&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/12/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;点击&lt;code&gt;Commit to master&lt;/code&gt; master是你的分支名字，然后点击右上角的&lt;code&gt;Pull&lt;/code&gt;就可以提交了&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Github仓库绑定域名&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;在仓库页面点击&lt;code&gt;Settings&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;往下拉可以看到&lt;code&gt;Github Pages&lt;/code&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;把None改成你想要显示的分支，这项操作会自动刷新页面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;刷新之后会出现&lt;code&gt;Custom domain&lt;/code&gt;选项，填入你的域名，点击Save&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;然后修改你的域名解析CNAME为&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;www | CNAME | name.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;@   | CNAME | name.github.io&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;过一会儿就可以用自定义域名看到了&lt;/p&gt;
+&lt;h4&gt;关于其他东西以后再说，就是这样。&lt;/h4&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/hexoblog/</guid><pubDate>Fri, 07 Feb 2020 19:08:00 +0806</pubDate></item><item><title>使用LiteSpeed为网站启用HTTP/3</title><link>/archives/enhttp3/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
+&lt;p&gt;关于HTTP/3我就不介绍了，网上有，多说无益。真的。
+就目前浏览器支持情况真的也就一般。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 149.80940279542565" &gt;&lt;img width="2358" height="787" src="https://cdn.elstec.cn/13/0.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;p&gt;目前支持HTTP/3的只有LiteSpeed和Caddy，Nginx暂时还不支持，已知可行方法都需要通过Doker，也就是Nginx+Caddy实现，或者通过CloudFlare的开源项目实现，稳定性肯定不如前者。&lt;/p&gt;
+&lt;h1&gt;过程&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;本次需要在服务器安全组或防火墙放通&lt;/strong&gt; &lt;code&gt;TCP:7080&lt;/code&gt; &lt;strong&gt;和&lt;/strong&gt; &lt;code&gt;UDP:443&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;我这次采用的是LiteSpeed的开源项目OpenLiteSpeed。&lt;/p&gt;
+&lt;p&gt;OpenLiteSpeed有多种安装方式，我就采用第4种也就是命令行一键安装。
+&lt;figure style="flex: 273.84393063583815" &gt;&lt;img width="1895" height="346" src="https://cdn.elstec.cn/13/3.png" /&gt;&lt;/figure&gt;
+根据官方说法，OpenLiteSpeed仅支持具有64位平台的Centos（6-7），Debian（7-9）和Ubuntu（14,16,18）。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;wget --no-check-certificate https://raw.githubusercontent.com/litespeedtech/ols1clk/master/ols1clk.sh &amp;amp;&amp;amp; bash ols1clk.sh&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;如果需要安装WordPress,就在命令后面加&lt;code&gt;-w&lt;/code&gt;。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 140.06462035541196" &gt;&lt;img width="1734" height="619" src="https://cdn.elstec.cn/13/4.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;安装完成之后，会把后台账号密码存储在&lt;code&gt;/usr/local/lsws/password&lt;/code&gt;。
+这时可以用&lt;a href="https://ip:7080访问后台。"&gt;https://ip:7080访问后台。&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;首先需要在ssh中，cd到&lt;code&gt;/usr/local/lsws/&lt;/code&gt;该目录下，然后新建一个文件夹，名字随便。比方我叫&lt;code&gt;http3test&lt;/code&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;mkdir http3test
+mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;访问web后台 &lt;em&gt;（后台可以改简体中文）&lt;/em&gt; 点击虚拟主机，再点击➕号进行新建虚拟主机。
+虚拟主机名使用域名就行，虚拟主机根目录就是刚刚创建的文件夹名称，配置文件就这么填&lt;code&gt;$SERVER_ROOT/conf/vhosts/http3test.elstec.cn/vhconf.conf&lt;/code&gt;要把文件夹名称改成自己的。先填写完整之后点击保存，会提示没有配置文件，点击旁边的&lt;code&gt;CLICK TO CREATE&lt;/code&gt;进行创建，再次保存就可以了。&lt;em&gt;（启用脚本/外部应用程序和访问管制随你一般没什么用就选否。）&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 140.01883239171374" &gt;&lt;img width="2974" height="1062" src="https://cdn.elstec.cn/13/5.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;新建虚拟机之后先不要平滑重启。点击查看进入虚拟机设置，查看就是一个放大镜图标。点击SSL选项，找到安全，点击修改，把&lt;code&gt;Enable QUIC&lt;/code&gt;改为是，并保存。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 162.56771397616467" &gt;&lt;img width="3001" height="923" src="https://cdn.elstec.cn/13/6.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;找到监听器，就是虚拟主机选项上面那个。默认有80和443，443点击查看。找到SSL，找到SSL私钥和证书，点击编辑，填入你的证书地址，然后保存。再次找到安全和特性选项，把&lt;code&gt;Allow QUIC&lt;/code&gt;改是就行。
+退回到443的常规，最下方有一个虚拟主机映射，新建映射，把虚拟主机和域名进行绑定，保存即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 179.08653846153845" &gt;&lt;img width="2980" height="832" src="https://cdn.elstec.cn/13/7.png" /&gt;&lt;/figure&gt;
+然后进行平滑重启。页面索引什么的我就不说了没意思。
+最后就是测试结果+HTTP/3 CHECK的结果。
+&lt;figure style="flex: 43.511146496815286" &gt;&lt;img width="1093" height="1256" src="https://cdn.elstec.cn/13/1.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 66.52587117212249" &gt;&lt;img width="1260" height="947" src="https://cdn.elstec.cn/13/2.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;需要浏览器支持的话，Chrome打开&lt;code&gt;chrome://flags/&lt;/code&gt;，找到&lt;code&gt;Experimental QUIC protocol&lt;/code&gt;选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到&lt;code&gt;edge://flags/&lt;/code&gt;步骤同上就行。&lt;/p&gt;
+&lt;h1&gt;最后&lt;/h1&gt;
+&lt;p&gt;我想说，我评论区的评论通知有时候会鬼畜发不出去我也没办法，到时候再说:P&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/enhttp3/</guid><pubDate>Wed, 12 Feb 2020 21:50:00 +0806</pubDate></item><item><title>DOM实现JavaScript图片库</title><link>/archives/jsimage/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
+&lt;blockquote&gt;&lt;p&gt;我比较菜（小声bb）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;h3&gt;HTML部分&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;en&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;UTF-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;viewport&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;content&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;width=device-width, initial-scale=1.0&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;test1&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;title&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;tupianku.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;Test&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;h1&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;ul&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt; &lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1.jpg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;onclick&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;showpic(this);&lt;/span&gt;
+&lt;span class="s"&gt;                 return false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;image1&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;2.jpg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;onclick&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;showpic(this);&lt;/span&gt;
+&lt;span class="s"&gt;                 return false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;image2&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+                &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;3.jpg&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;onclick&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;showpic(this);&lt;/span&gt;
+&lt;span class="s"&gt;                 return false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;image3&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;a&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;li&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;ul&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;img&lt;/span&gt; &lt;span class="na"&gt;id&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;img123&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://cdn.elstec.cn/14/5.jpg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;JS部分&lt;/h3&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;showpic&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;whitchpic&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;bianliang&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;whitchpic&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getAttribute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;href&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;place&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;getElementById&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;img123&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+    &lt;span class="nx"&gt;place&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAttribute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;src&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;bianliang&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;原理&lt;/h1&gt;
+&lt;p&gt;创建一个函数名为 &lt;code&gt;showpic&lt;/code&gt; ， &lt;code&gt;whitchpic&lt;/code&gt; 为参数。&lt;code&gt;whitchpic&lt;/code&gt; 通过调用 &lt;code&gt;getAttribute&lt;/code&gt; ，把 &lt;code&gt;"href"&lt;/code&gt; 作为参数传递给 &lt;code&gt;getAttribute&lt;/code&gt; ，声明一个变量并把语句赋给它。
+接下来获取占位图，需要在 &lt;code&gt;html&lt;/code&gt; 部分进行修改。 &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 元素添加 &lt;code&gt;id&lt;/code&gt; ，调用 &lt;code&gt;document.getElementById&lt;/code&gt; ，再次声明一个变量并把语句赋给它。最后通过 &lt;code&gt;setAttribute&lt;/code&gt; 进行实现。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;变量2&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;setAttribute&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;src&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="nx"&gt;变量1&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;html部分中，都是采用 &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; 元素,添加处理函数 &lt;code&gt;showpic(this); return false&lt;/code&gt; ，防止被带到新窗口。&lt;/p&gt;
+&lt;h1&gt;效果&lt;/h1&gt;
+&lt;html&gt;
+&lt;!--在这里插入内容--&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;test1&lt;/title&gt;
+    &lt;script type="text/javascript" src="https://cdn.elstec.cn/14/tupianku.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+        &lt;ul&gt;
+            &lt;li &gt;
+                &lt;a href="https://cdn.elstec.cn/14/1.jpg" onclick="showpic(this);
+                 return false"&gt;image1&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="https://cdn.elstec.cn/14/2.jpg" onclick="showpic(this);
+                 return false"&gt;image2&lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href="https://cdn.elstec.cn/14/3.jpg" onclick="showpic(this);
+                 return false"&gt;image3&lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;img id="img123" src="https://cdn.elstec.cn/14/5.jpg"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/jsimage/</guid><pubDate>Thu, 13 Feb 2020 21:50:00 +0806</pubDate></item><item><title>疫情期间在家の无聊生活</title><link>/archives/20200217/</link><description>&lt;div class="notice"&gt;我   要   无   聊   死   了  &lt;/div&gt;&lt;p&gt;如题，确实挺无聊的。但是闲着没事上RTARBG下神盾局看，不得不说那个时候的画质拿到现在来也确实不错。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 88.89802631578948" &gt;&lt;img width="2162" height="1216" src="https://cdn.elstec.cn/15/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;div&gt;
+还有现在巨火的梨泰院class，好看是真的好看
+&lt;img style="display:inline" src="https://cdn.elstec.cn/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A1%A8%E6%83%85%E5%8C%85/doge.png" width="24" height="24"&gt;不过只在Netflix和JTBC播出，观看比较麻烦其他都挺好。
+&lt;/div&gt;&lt;div class="dplayer"  data-url="https://media.elstec.cn/15/1.mp4"&gt;&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;figure style="flex: 88.76811594202898" &gt;&lt;img width="1960" height="1104" src="https://cdn.elstec.cn/15/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;
+&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/15/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;blockquote&gt;&lt;p&gt;虽然现在相对放开了，但出门总还是有点慌。每天大半夜睡早上10点起。学校也不开学，这还是我头一次如此盼望开学。一天到晚盯着电脑看属实没意思。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;于是日常回访友链。发现某博客现在还有防F12，防复制，防右键。防复制我觉得就挺神奇，因为ta不仅有防复制还有复制之后的弹窗脚本。&lt;/p&gt;
+&lt;p&gt;&lt;figure style="flex: 123.20916905444126" &gt;&lt;img width="3440" height="1396" src="https://cdn.elstec.cn/15/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;反正在家里没事做，就研究研究这个好了，反正也不难，学习一下。&lt;/p&gt;
+&lt;p&gt;进入该站之后，无法通过F12，Ctrl+Shift+I调出开发者工具，只能手动。于是我返回首页并开启debug模式。在index找到跳转脚本如下。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;ConsoleManager&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;onOpen&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;href&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;href&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;./back.html&amp;quot;&lt;/span&gt;
+            &lt;span class="p"&gt;},&lt;/span&gt;
+            &lt;span class="nx"&gt;onClose&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="k"&gt;break&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="p"&gt;},&lt;/span&gt;
+            &lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;self&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="k"&gt;this&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;createElement&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;div&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+                &lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;isOpening&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
+                    &lt;span class="nx"&gt;isOpened&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                &lt;span class="nb"&gt;Object&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;defineProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;id&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="nx"&gt;get&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;isOpening&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                            &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onOpen&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                            &lt;span class="nx"&gt;isOpening&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                        &lt;span class="p"&gt;}&lt;/span&gt;
+                        &lt;span class="nx"&gt;isOpened&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;true&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                    &lt;span class="p"&gt;}&lt;/span&gt;
+                &lt;span class="p"&gt;});&lt;/span&gt;
+                &lt;span class="nx"&gt;setInterval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                    &lt;span class="nx"&gt;isOpened&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;info&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+                    &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;clear&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;isOpened&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nx"&gt;isOpening&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+                        &lt;span class="nx"&gt;self&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onClose&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+                        &lt;span class="nx"&gt;isOpening&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+                    &lt;span class="p"&gt;}&lt;/span&gt;
+                &lt;span class="p"&gt;},&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="nx"&gt;e3&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+            &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+        &lt;span class="nx"&gt;ConsoleManager&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;init&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;然后在找防F12脚本的时候，看到了他的两个好兄弟 &lt;code&gt;复制弹窗和防复制&lt;/code&gt; 。这时候有意思的事情就来了，ta的站防复制为什么还有复制弹窗，反正挺迷的&lt;img style="display:inline" src="https://cdn.elstec.cn/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A1%A8%E6%83%85%E5%8C%85/doge.png" width="24" height="24"&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;&amp;lt;!-- 复制弹窗sweetalert2 直接访问有防盗链--&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;https://typecho-1257629916.file.myqcloud.com/sweetalert2.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;lt;!-- 防F12 --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;type&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onkeydown&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+        &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;event&lt;/span&gt; &lt;span class="o"&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class="nb"&gt;window&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="mi"&gt;123&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+            &lt;span class="nx"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;keyCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="nx"&gt;event&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;returnValue&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="kc"&gt;false&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+        &lt;span class="p"&gt;}&lt;/span&gt;
+    &lt;span class="p"&gt;};&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;lt;!-- 防复制 --&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;language&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;Javascript&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;oncontextmenu&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;Function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;event.returnValue=false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nb"&gt;document&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;onselectstart&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;new&lt;/span&gt; &lt;span class="nb"&gt;Function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;event.returnValue=false&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+&lt;span class="c"&gt;&amp;lt;!-- 复制弹窗 --&amp;gt;&lt;/span&gt;
+document.body.oncopy = function()
+{
+Swal.fire({
+  allowOutsideClick:false,
+  allowEscapeKey:false,
+  showConfirmButton: false,
+  icon:&amp;#39;warning&amp;#39;,
+  timer: 2000,
+  title: &amp;#39;复制成功！转载请注明出处！&amp;#39;,
+});
+};
+&lt;/pre&gt;&lt;/div&gt;
+&lt;hr&gt;
+&lt;p&gt;其实我觉得，现在做站，这种东西花里胡哨的没必要加。治标不治本，加载这么多js还对网站性能造成影响。不过做站还是自己开心来的好。&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200217/</guid><pubDate>Mon, 17 Feb 2020 21:50:00 +0806</pubDate></item><item><title>CloudFlare自选节点</title><link>/archives/cfcus/</link><description>&lt;h1&gt;首先&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;需要有Cloudflare Partener或使用别人的。原因很简单，因为官方只允许NS接入，CFP则可以IP/CNAME接入。这里推荐 &lt;a href="http://cdn.bnxb.com/"&gt;http://cdn.bnxb.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;自选IP原理就是国内DNS解析的时候分配最快的IP然后用A记录解析到这个IP上，国外保持不变。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/1.svg" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;p&gt;首先添加域名（我是用的奔牛，用什么其实原理都一样）&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后可以在解析设置看到需要解析的地址，先CNAME解析然后等待SSL签发。默认IP直接ping这条CNAME记录就行。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/16/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;SSL签发之后，进入dns解析把CNAME解析删掉，国内根据情况分线路进行解析。境外默认分配IP就行。&lt;/p&gt;
+&lt;h1&gt;其他&lt;/h1&gt;
+&lt;p&gt;CloudFlare官方公示IP
+&lt;a href="https://www.cloudflare.com/zh-cn/ips/"&gt;https://www.cloudflare.com/zh-cn/ips/&lt;/a&gt;&lt;/p&gt;
+&lt;h3&gt;IPv4&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;173.245.48.0/20&lt;/li&gt;
+&lt;li&gt;103.21.244.0/22&lt;/li&gt;
+&lt;li&gt;103.22.200.0/22&lt;/li&gt;
+&lt;li&gt;103.31.4.0/22&lt;/li&gt;
+&lt;li&gt;141.101.64.0/18&lt;/li&gt;
+&lt;li&gt;108.162.192.0/18&lt;/li&gt;
+&lt;li&gt;190.93.240.0/20&lt;/li&gt;
+&lt;li&gt;188.114.96.0/20&lt;/li&gt;
+&lt;li&gt;197.234.240.0/22&lt;/li&gt;
+&lt;li&gt;198.41.128.0/17&lt;/li&gt;
+&lt;li&gt;162.158.0.0/15&lt;/li&gt;
+&lt;li&gt;104.16.0.0/12&lt;/li&gt;
+&lt;li&gt;172.64.0.0/13&lt;/li&gt;
+&lt;li&gt;131.0.72.0/22&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;IPv6&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;2400:cb00::/32&lt;/li&gt;
+&lt;li&gt;2606:4700::/32&lt;/li&gt;
+&lt;li&gt;2803:f800::/32&lt;/li&gt;
+&lt;li&gt;2405:b500::/32&lt;/li&gt;
+&lt;li&gt;2405:8100::/32&lt;/li&gt;
+&lt;li&gt;2a06:98c0::/29&lt;/li&gt;
+&lt;li&gt;2c0f:f248::/32&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;百度云合作线路&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;162.159.208.4-162.159.208.103&lt;/li&gt;
+&lt;li&gt;162.159.209.4-162.159.209.103&lt;/li&gt;
+&lt;li&gt;162.159.210.4-162.159.210.103&lt;/li&gt;
+&lt;li&gt;162.159.211.4-162.159.211.103&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;其他线路网上有，百度云合作线路建议电信。&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/cfcus/</guid><pubDate>Fri, 28 Feb 2020 21:50:00 +0806</pubDate></item><item><title>GitHub使用GPG加密提交</title><link>/archives/gpgg/</link><description>&lt;h1&gt;过程&lt;/h1&gt;
+&lt;h2&gt;一、生成密钥&lt;/h2&gt;
+&lt;p&gt;打开Git&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gpg --gen-key
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;会提示如下内容&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ gpg --gen-key
+gpg &lt;span class="o"&gt;(&lt;/span&gt;GnuPG&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="m"&gt;2&lt;/span&gt;.2.19-unknown&lt;span class="p"&gt;;&lt;/span&gt; Copyright &lt;span class="o"&gt;(&lt;/span&gt;C&lt;span class="o"&gt;)&lt;/span&gt; &lt;span class="m"&gt;2019&lt;/span&gt; Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+gpg: directory &lt;span class="s1"&gt;&amp;#39;/c/Users/24443/.gnupg&amp;#39;&lt;/span&gt; created
+gpg: keybox &lt;span class="s1"&gt;&amp;#39;/c/Users/24443/.gnupg/pubring.kbx&amp;#39;&lt;/span&gt; created
+Note: Use &lt;span class="s2"&gt;&amp;quot;gpg --full-generate-key&amp;quot;&lt;/span&gt; &lt;span class="k"&gt;for&lt;/span&gt; a full featured key generation dialog.
+
+GnuPG needs to construct a user ID to identify your key.
+
+Real name: 你的用户名
+Email address: 你的邮箱（必须跟GitHub一样）
+You selected this USER-ID:
+    &lt;span class="s2"&gt;&amp;quot;用户名 &amp;lt;邮箱&amp;gt;&amp;quot;&lt;/span&gt;
+
+Change &lt;span class="o"&gt;(&lt;/span&gt;N&lt;span class="o"&gt;)&lt;/span&gt;ame, &lt;span class="o"&gt;(&lt;/span&gt;E&lt;span class="o"&gt;)&lt;/span&gt;mail, or &lt;span class="o"&gt;(&lt;/span&gt;O&lt;span class="o"&gt;)&lt;/span&gt;kay/&lt;span class="o"&gt;(&lt;/span&gt;Q&lt;span class="o"&gt;)&lt;/span&gt;uit? o
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt; on the keyboard, move the mouse, utilize the
+disks&lt;span class="o"&gt;)&lt;/span&gt; during the prime generation&lt;span class="p"&gt;;&lt;/span&gt; this gives the random number
+generator a better chance to gain enough entropy.
+We need to generate a lot of random bytes. It is a good idea to perform
+some other action &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;type&lt;/span&gt; on the keyboard, move the mouse, utilize the
+disks&lt;span class="o"&gt;)&lt;/span&gt; during the prime generation&lt;span class="p"&gt;;&lt;/span&gt; this gives the random number
+generator a better chance to gain enough entropy.
+gpg: /c/Users/24443/.gnupg/trustdb.gpg: trustdb created
+gpg: key XXXXXXXXXXXXXXXX marked as ultimately trusted
+gpg: directory &lt;span class="s1"&gt;&amp;#39;/c/Users/24443/.gnupg/openpgp-revocs.d&amp;#39;&lt;/span&gt; created
+gpg: revocation certificate stored as &lt;span class="s1"&gt;&amp;#39;/c/Users/24443/.gnupg/openpgp-revocs.d/XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.rev&amp;#39;&lt;/span&gt;
+public and secret key created and signed.
+
+pub   rsa2048 &lt;span class="m"&gt;2020&lt;/span&gt;-02-28 &lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: &lt;span class="m"&gt;2022&lt;/span&gt;-02-27&lt;span class="o"&gt;]&lt;/span&gt;
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uid                      用户名 &amp;lt;邮箱&amp;gt;
+sub   rsa2048 &lt;span class="m"&gt;2020&lt;/span&gt;-02-28 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: &lt;span class="m"&gt;2022&lt;/span&gt;-02-27&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;生成完之后，再次输入&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gpg --list-keys --keyid-format short
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;提示如下内容&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;/c/Users/24443/.gnupg/pubring.kbx
+---------------------------------
+pub   rsa2048/12345678 &lt;span class="m"&gt;2020&lt;/span&gt;-02-28 &lt;span class="o"&gt;[&lt;/span&gt;SC&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: &lt;span class="m"&gt;2022&lt;/span&gt;-02-27&lt;span class="o"&gt;]&lt;/span&gt;
+      XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+uid         &lt;span class="o"&gt;[&lt;/span&gt;ultimate&lt;span class="o"&gt;]&lt;/span&gt; 用户名 &amp;lt;邮箱&amp;gt;
+sub   rsa2048/15558FF9 &lt;span class="m"&gt;2020&lt;/span&gt;-02-28 &lt;span class="o"&gt;[&lt;/span&gt;E&lt;span class="o"&gt;]&lt;/span&gt; &lt;span class="o"&gt;[&lt;/span&gt;expires: &lt;span class="m"&gt;2022&lt;/span&gt;-02-27&lt;span class="o"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;pub是公钥，sub是私钥，pub那行的 &lt;code&gt;12345678&lt;/code&gt; 才是&lt;em&gt;GPG Key ID&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;输入如下内容获取公钥&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;gpg --armor --export pub GPG key ID
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;二、GitHub配置GPG公钥&lt;/h2&gt;
+&lt;p&gt;打开 &lt;a href="https://github.com/settings/keys"&gt;https://github.com/settings/keys&lt;/a&gt; 。点击 &lt;code&gt;New GPG Key&lt;/code&gt; ，输入刚刚复制的公钥，然后点击 &lt;code&gt;Add GPG Key&lt;/code&gt;&lt;/p&gt;
+&lt;h2&gt;三、配置本地Git&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;设置签名时用的key &lt;code&gt;git config --global 用户名.signingkey pub GPG key ID&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;开启GPG签名: &lt;code&gt;commit：git config commit.gpgsign true&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;关闭则是：&lt;code&gt;git config commit.gpgsign false&lt;/code&gt; &lt;/li&gt;
+&lt;li&gt;如果想让所有本地仓库都使用GPG签名：&lt;code&gt;git config --global commit.gpgsign true&lt;/code&gt; &lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;em&gt;（提交的时候会让你输入密码）&lt;/em&gt;&lt;/p&gt;
+&lt;h2&gt;四、效果&lt;/h2&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/17/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2&gt;五、其他&lt;/h2&gt;
+&lt;p&gt;我遇到的报错&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git push -u origin master
+Enumerating objects: &lt;span class="m"&gt;327&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
+Counting objects: &lt;span class="m"&gt;100&lt;/span&gt;% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;327&lt;/span&gt;/327&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
+Delta compression using up to &lt;span class="m"&gt;12&lt;/span&gt; threads
+Compressing objects: &lt;span class="m"&gt;100&lt;/span&gt;% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;95&lt;/span&gt;/95&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
+Writing objects: &lt;span class="m"&gt;100&lt;/span&gt;% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;176&lt;/span&gt;/176&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="m"&gt;43&lt;/span&gt;.64 KiB &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;647&lt;/span&gt;.00 KiB/s, &lt;span class="k"&gt;done&lt;/span&gt;.
+Total &lt;span class="m"&gt;176&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta &lt;span class="m"&gt;86&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;, reused &lt;span class="m"&gt;0&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta &lt;span class="m"&gt;0&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+remote: Resolving deltas: &lt;span class="m"&gt;100&lt;/span&gt;% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;86&lt;/span&gt;/86&lt;span class="o"&gt;)&lt;/span&gt;, completed with &lt;span class="m"&gt;68&lt;/span&gt; &lt;span class="nb"&gt;local&lt;/span&gt; objects.
+remote: error: GH007: Your push would publish a private email address.
+remote: You can make your email public or disable this protection by visiting:
+remote: http://github.com/settings/emails
+To github.com:jcjyxjs/jcjyxjs.github.io.git
+ ! &lt;span class="o"&gt;[&lt;/span&gt;remote rejected&lt;span class="o"&gt;]&lt;/span&gt; master -&amp;gt; master &lt;span class="o"&gt;(&lt;/span&gt;push declined due to email privacy restrictions&lt;span class="o"&gt;)&lt;/span&gt;
+error: failed to push some refs to &lt;span class="s1"&gt;&amp;#39;git@github.com:jcjyxjs/jcjyxjs.github.io.git&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;解决方案&lt;/h3&gt;
+&lt;p&gt;打开 &lt;a href="https://github.com/settings/emails"&gt;https://github.com/settings/emails&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;这两个取消勾选即可&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/17/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/gpgg/</guid><pubDate>Sat, 29 Feb 2020 12:50:00 +0806</pubDate></item><item><title>群晖虚拟机安装lede软路由</title><link>/archives/qhlede/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
+&lt;p&gt;在几个月前我的k2p原地爆炸之后，我给它刷了个系统就再也进不去了。没办法只能换路由器。买了个菊花的路由器才突然想起来，菊花的路由器不能刷机。&lt;span&gt;&lt;img style="display:inline" src="https://cdn.elstec.cn/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9%E8%A1%A8%E6%83%85%E5%8C%85/murm.png" width="56" height="56"&gt;&lt;/span&gt;近期我的硬盘刚到，就想到还有蜗牛星际这个nas，我想用群晖，但是又想刷lede。就在想可不可以在群晖虚拟机下装lede，虽然只有旁路由，但是lede和群晖同时有岂不是美滋滋。&lt;/p&gt;
+&lt;h1&gt;过程&lt;/h1&gt;
+&lt;h3&gt;一、安装虚拟机&lt;/h3&gt;
+&lt;p&gt;首先打开群辉的套件中心，找到 &lt;code&gt;Virtual Machine Manager&lt;/code&gt; 然后安装并打开。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下载lede虚拟机镜像， &lt;a href="http://firmware.koolshare.cn/LEDE_X64_fw867/%E8%99%9A%E6%8B%9F%E6%9C%BA%E8%BD%AC%E7%9B%98%E6%88%96PE%E4%B8%8B%E5%86%99%E7%9B%98%E4%B8%93%E7%94%A8/"&gt;点我&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我下载的是 &lt;code&gt;openwrt-koolshare-mod-v2.31-r10822-50aa0525d1-x86-64-uefi-gpt-squashfs.img.gz&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;下载完成之后解压，得到img镜像文件。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;再次回到群辉，在 &lt;code&gt;Virtual Machine Manager&lt;/code&gt; 中，依次点击 &lt;code&gt;映像→新增&lt;/code&gt; 上传刚刚解压的img镜像文件。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;上传完成之后，依次点击 &lt;code&gt;虚拟机→新增旁边的下三角，点击导入&lt;/code&gt; 。选择 &lt;code&gt;从硬盘映像导入&lt;/code&gt; ，选择刚刚上传的镜像然后下一步。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;存储位置随便你，然后到配置常用规格，由于我是蜗牛星际的B单，内存只有4GB所以就选1H1G，然后下一步。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;一直下一步直到其他设置，不要选择自动启动，有些设备会报错。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后一直下一步直到完成导入，点击上方的开机即可。&lt;/p&gt;
+&lt;h4&gt;关于网络配置&lt;/h4&gt;
+&lt;p&gt;网络可以新建一个，也可以用创建虚拟机时候的默认网络。&lt;/p&gt;
+&lt;p&gt;点击 &lt;code&gt;网络→新增&lt;/code&gt; 就可以新建一个网络了。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/7-1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;输入名称并绑定主机下一步即可。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/7-2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;二、配置虚拟机IP&lt;/h3&gt;
+&lt;p&gt;开机之后不能直接连接，因为lede默认的IP是 &lt;code&gt;192.168.1.1&lt;/code&gt; ，可能会和大部分用户的默认网关地址冲突，所以要先改IP。首先点击上方的连接。然后会弹出一个窗口，看到下面的状态就代表启动完成了。页面没变化敲几下回车就可以了。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;终端输入如下命令&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;vi etc/config/network
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;随后找到 &lt;code&gt;lan&lt;/code&gt; 的设置。按下键盘的 &lt;code&gt;Ins&lt;/code&gt; ，把默认的 &lt;code&gt;192.168.1.1&lt;/code&gt; 改成自己想要的IP ，随后按下 &lt;code&gt;Esc&lt;/code&gt; 退出编辑模式，按 &lt;code&gt;:wq&lt;/code&gt; 保存并退出。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/9.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后输入 &lt;code&gt;reboot&lt;/code&gt; 重启生效。&lt;/p&gt;
+&lt;h3&gt;三、配置Openwrt&lt;/h3&gt;
+&lt;p&gt;浏览器打开刚刚改的IP，默认账号是 &lt;code&gt;root&lt;/code&gt; ，默认密码是 &lt;code&gt;koolshare&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;打开右侧的 &lt;code&gt;系统→管理权&lt;/code&gt; 更改web密码。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/10.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后点击右侧 &lt;code&gt;网络→接口&lt;/code&gt; 删除WAN和WAN6。（由于我要做旁路由所以删除这两个）&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/10-1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;找到LAN点击编辑。找到IPV4网关和IPV4广播，进行对应的配置。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/11.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后在当前页面最下方找到 &lt;code&gt;DHCP服务器→基本设置&lt;/code&gt; 勾选忽略此接口。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/12.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;至此，lede旁路由就配置完成了，能够做旁路由正常上网。插件什么的有酷软可以自己装也可以网上找安装包离线安装。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/13.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;Openwrt半双工配置全双工&lt;/h3&gt;
+&lt;p&gt;在OP首页可以看到默认 &lt;code&gt;eth0&lt;/code&gt; 是半双工。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/14.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;这时候需要先把lede关掉。在群晖 &lt;code&gt;Virtual Machine Manager→虚拟机&lt;/code&gt; 中，点击上方的编辑，找到网络。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/15.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;编辑绑定虚拟机的网络，就是点那个齿轮。把型号改成 &lt;code&gt;e1000&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/16.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后开机看到就是全双工了。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/18/17.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/qhlede/</guid><pubDate>Sun, 01 Mar 2020 12:50:00 +0806</pubDate></item><item><title>国内Github下载加速</title><link>/archives/sgclone/</link><description>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;你是否也有过这种情况， &lt;code&gt;git clone&lt;/code&gt; 基本没速度，但是无奈不能使用魔法。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;p&gt;首先复制你要 &lt;code&gt;clone&lt;/code&gt; 的github仓库地址，就像这样。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后打开 &lt;code&gt;码云&lt;/code&gt; ：&lt;a href="https://gitee.com/"&gt;点我&lt;/a&gt; ，登录账号之后，点击右上角的 &lt;code&gt;＋&lt;/code&gt; ，选择 &lt;code&gt;从Github/Gitlab导入仓库&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后一般选择从URL导入，也可以选择其他的，URL导入直接填写刚刚复制的仓库地址，没什么问题就直接导入。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;导入成功之后，直接 &lt;code&gt;git clone&lt;/code&gt; 码云的地址，国内的 &lt;code&gt;clone&lt;/code&gt; 速度还是飞快的。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;其他&lt;/h1&gt;
+&lt;p&gt;上面的只是单纯的 &lt;code&gt;clone&lt;/code&gt; 。如果还要 &lt;code&gt;commit&lt;/code&gt; 的话，需要更改根目录的 &lt;code&gt;.git&lt;/code&gt; 文件夹中的 &lt;code&gt;config&lt;/code&gt; 文件。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;每下载或者clone一个仓库，都会在其根目录生成一个 &lt;code&gt;.git&lt;/code&gt; 的文件夹。这是一个隐藏文件夹，需要系统显示隐藏文件夹（方法百度）。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/19/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;打开 &lt;code&gt;config&lt;/code&gt; 文件之后，找到URL，改成你要提交的仓库地址就行了。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;[core]
+    repositoryformatversion = 0
+    filemode = false
+    bare = false
+    logallrefupdates = true
+    ignorecase = true
+[remote "origin"]
+    url = 这里改成你的仓库URL
+    fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+    remote = origin
+    merge = refs/heads/master&lt;/code&gt;&lt;/pre&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/sgclone/</guid><pubDate>Sun, 15 Mar 2020 12:50:00 +0806</pubDate></item><item><title>Github+jsDelivr全球静态文件加速</title><link>/archives/spasses/</link><description>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;GitHub作为全球最大的代码托管平台，众所周知，GitHub又有GitHub Pages这个功能，使得很多静态网站都托管在GitHub上，国内访问速度一直上不去。但是jsDelivr这家CDN支持加速npm，GitHub和WordPress，jsDelivr在国外是CloudFlare节点，国内都是网速的CDN节点，速度还是飞快的，真正的全球高速。&lt;/p&gt;
+&lt;h1&gt;注意&lt;/h1&gt;
+&lt;p&gt;建议只用作静态文件加速，例如 &lt;code&gt;JS/CSS/Image&lt;/code&gt; 。并不适合大文件分发，大文件分发还是移步国内各厂的对象存储。&lt;/p&gt;
+&lt;h1&gt;实现&lt;/h1&gt;
+&lt;p&gt;首先需要一个GitHub仓库，我就新建一个仓库为例。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/20/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后我随便上传一张图片并创建一个 &lt;code&gt;releases&lt;/code&gt; 。&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;&lt;strong&gt;创建 &lt;code&gt;releases&lt;/code&gt; 这步嫌麻烦可以省略，不是必要的。&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/20/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;官方的访问方法就是：&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名或版本号/文件名&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;例如我在repo根目录下传了一张名为 &lt;code&gt;1.jpg&lt;/code&gt; 的图片，那么文件链接就是&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@1.0/1.jpg&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;上面说了也可以不创建 &lt;code&gt;releases&lt;/code&gt; ，就直接用分支代替版本号也是可以的。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/1.jpg&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;jsdelivr也可以直接获取仓库目录，格式如下。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名或版本号/&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/20/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在目录页面选择文件右键复制地址就可以直接拿来用了。&lt;/p&gt;
+&lt;h1&gt;演示&lt;/h1&gt;
+&lt;p&gt;&lt;figure style="flex: 75.0733137829912" &gt;&lt;img width="2048" height="1364" src="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/1.jpg" /&gt;&lt;figcaption&gt;twitter@iiikawa__&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;图片来源：&lt;a href="https://twitter.com/iiikawa__/status/1150995627003674625"&gt;https://twitter.com/iiikawa__/status/1150995627003674625&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;10M视频下载测速：&lt;a href="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/dl1.mp4"&gt;点我&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;测试结果来自：17ce.com&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/20/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/20/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;测试结果来自：站长工具&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;&lt;tr&gt;
+&lt;th&gt;线路&lt;/th&gt;
+&lt;th&gt;最快节点&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;所有&lt;/td&gt;
+&lt;td&gt;江苏泰州[电信]36ms   &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;电信&lt;/td&gt;
+&lt;td&gt;江苏泰州36ms   &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;多线&lt;/td&gt;
+&lt;td&gt;北京41ms &lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;联通&lt;/td&gt;
+&lt;td&gt;山东济南46ms&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;移动&lt;/td&gt;
+&lt;td&gt;安徽合肥48ms&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/spasses/</guid><pubDate>Tue, 17 Mar 2020 23:50:00 +0806</pubDate></item><item><title>利用Github Actions进行云编译lede固件</title><link>/archives/glede/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
+&lt;p&gt;碍于国内的网络环境，本地编译出错概率极高，我本地编译出错好几次，于是便转向了 &lt;code&gt;Github&lt;/code&gt; 云编译（这应该也算一种曲线救国hhhh）。由于 &lt;code&gt;Github&lt;/code&gt; 本身就处在国外，编译出错的几率大大降低。不过 &lt;code&gt;Github Actions&lt;/code&gt; 有免费额度，超出需要额外收费。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/1.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;figcaption&gt;https://github.com/features/actions&lt;/figcaption&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h1&gt;需要准备的&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;脑子&lt;/li&gt;
+&lt;li&gt;耐心&lt;/li&gt;
+&lt;li&gt;GitHub账号&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h1&gt;过程&lt;/h1&gt;
+&lt;h3&gt;不过利用 &lt;code&gt;Github Actions&lt;/code&gt; 进行云编译有多种方法，我就举两例。区别就是，一种需要更改 &lt;code&gt;openwrt-ci.yml&lt;/code&gt; 文件达到自定义编译，另一种则是需要在编译开始过程中通过SSH连接 &lt;code&gt;Github Actions&lt;/code&gt; 的服务器手动选择配置LuCI，就跟本地编译差不多。&lt;/h3&gt;
+&lt;h3&gt;目录&lt;/h3&gt;
+&lt;p&gt;&lt;a href="#jump1"&gt;方法一:不需要SSH&lt;/a&gt;
+&lt;a href="#jump2"&gt;方法二:需要SSH&lt;/a&gt;
+&lt;a href="#jump3"&gt;下载编译好的包&lt;/a&gt;&lt;/p&gt;
+&lt;h1&gt;过程&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;两种方法均在有GitHub账号前提下进行操作，如果没有，请自行注册一个。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&amp;lt;/h3&amp;gt;&lt;span id="jump1"&gt;方法一&lt;/span&gt;&amp;lt;/h3&amp;gt;&lt;/p&gt;
+&lt;p&gt;首先打开大雕的仓库。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://github.com/coolsnowwolf/lede&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/2.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后点击右上角的 &lt;code&gt;Fork&lt;/code&gt; 。看到 &lt;code&gt;Forking&lt;/code&gt; 等待&lt;code&gt;Fork&lt;/code&gt;结束。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/3.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Fork&lt;/code&gt;结束。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/4.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;随即打开 &lt;a href="https://raw.githubusercontent.com/KFERMercer/OpenWrt-by-lean/CI-demo/.github/workflows/openwrt-ci.yml"&gt;正确的编写示例&lt;/a&gt;。这个链接可以在该项目找到 &lt;a href="https://github.com/KFERMercer/OpenWrt-CI"&gt;KFERMercer&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;打开 &lt;code&gt;正确的编写示例之后&lt;/code&gt; 全选，复制。然后打开刚刚 &lt;code&gt;Fork&lt;/code&gt; 的大雕的项目，有一个 &lt;code&gt;Actions&lt;/code&gt; ，点击，出现如下情况，无视警告，点 &lt;code&gt;I understand my workflows, go ahead and run them&lt;/code&gt; 进行激活 &lt;code&gt;Actions&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/6.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后找到该项目的这个文件。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;lede/.github/workflows/openwrt-ci.yml&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后点 &lt;code&gt;Edit this file&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/5.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;把刚刚复制的内容粘贴进来，更改代码第15行，第30行。把 &lt;code&gt;CI-demo&lt;/code&gt; 改成 &lt;ruby&gt;默认分支master&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;没有骚操作就改这个&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/7.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;完成之后点击右上角的 &lt;code&gt;Start commit&lt;/code&gt; → &lt;code&gt;Commit changes&lt;/code&gt; ，触发编译。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/8.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后重新回到 &lt;code&gt;Actions&lt;/code&gt; 界面，就会看到一个编译进程。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/9.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;编译时间较长，一般2-3小时不等，但是编译成功率比较高。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/10.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h3&gt;&lt;span id="jump2"&gt;方法二&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;打开，并 &lt;code&gt;Fork&lt;/code&gt; 这个项目。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://github.com/jcjyxjs/Actions-OpenWrt&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;首先，你需要编辑固件的 &lt;code&gt;IP地址&lt;/code&gt; 建议你改一下，不改的话也没事。打开并编辑下面这个文件。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;Actions-OpenWrt/diy.sh&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;在第10行中，有一个 &lt;code&gt;192.168.1.200&lt;/code&gt; 就是编译好的固件地址。你可以按需更改。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+#=================================================
+# Description: DIY script
+# Lisence: MIT
+# Author: P3TERX
+# Blog: https://p3terx.com
+#=================================================
+# Modify default IP
+#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.1.200/g' package/base-files/files/bin/config_generate&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;改完IP地址之后。点击下方的 &lt;code&gt;Commit changes&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/12.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;然后打开你项目的 &lt;code&gt;Actions&lt;/code&gt; 。无视警告，点 &lt;code&gt;I understand my workflows, go ahead and run them&lt;/code&gt; 进行激活 &lt;code&gt;Actions&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/11.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;完成之后，点击右上角的 Star 触发编译。&lt;/p&gt;
+&lt;p&gt;然后请不要关闭页面，等待编译到 &lt;code&gt;SSH connection to Actions&lt;/code&gt; 之后，会给你一个SSH地址，和一个浏览器的https&lt;ruby&gt;地址的一个网页端&lt;rp&gt;(&lt;/rp&gt;&lt;rt&gt;建议用网页&lt;/rt&gt;&lt;rp&gt;)&lt;/rp&gt;&lt;/ruby&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/13.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;浏览器配置SSH，打开链接之后会黑屏，按 &lt;code&gt;Ctrl+C&lt;/code&gt; 解除封印，然后terminal输入。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;cd openwrt &amp;amp;&amp;amp; make menuconfig&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;手动选择需要编译哪些软件，就跟本地编译一样。&lt;/p&gt;
+&lt;p&gt;操作方法：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;选择：Y&lt;/li&gt;
+&lt;li&gt;取消选择：Space&lt;/li&gt;
+&lt;li&gt;最下方的5个选项：键盘上下左右，选择用回车&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/14.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;软路由的话，第一个 &lt;code&gt;x86&lt;/code&gt; ,第二个 &lt;code&gt;x64&lt;/code&gt; 其他什么都不用改，最重要的还是 &lt;code&gt;LuCI&lt;/code&gt; → &lt;code&gt;Applications&lt;/code&gt; 选择你要保留哪些插件功能。&lt;/p&gt;
+&lt;p&gt;这里有一个对照表，对照LuCI中的名称对应哪些软件。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://www.right.com.cn/forum/thread-344825-1-1.html&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;全部更改完成之后，在最下方选择 &lt;code&gt;&amp;lt; Save &amp;gt;&lt;/code&gt; 进行保存。&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/15.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;不要更改名字，直接下一步下一步。最后 &lt;code&gt;&amp;lt; Exit &amp;gt;&lt;/code&gt; 退出。退回到这个界面之后，按 &lt;code&gt;Ctrl+D&lt;/code&gt; 退出终端。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;------------------------------------
+ ____ __________ _____ ____  __  __
+|  _ \___ /_   _| ____|  _ \ \ \/ /
+| |_) ||_ \ | | |  _| | |_) | \  /
+|  __/___) || | | |___|  _ &amp;lt;  /  \
+|_|  |____/ |_| |_____|_| \_\/_/\_\
+
+Brought to you by P3TERX
+GitHub: https://github.com/P3TERX
+Blog: https://p3terx.com (chinese)
+------------------------------------
+
+# runner @ fv-az117 in ~/work/Actions-OpenWrt/Actions-OpenWrt [10:07:06]
+$ cd openwrt &amp;amp;&amp;amp; make menuconfig
+fatal: Invalid revision range 97a4ffcc125611dd5f307d54570373832a73e62d..HEAD
+fatal: Invalid revision range 97a4ffcc125611dd5f307d54570373832a73e62d..65cdb1918bf8ab2e880acf952c46b92d139df97d
+fatal: Invalid revision range 97a4ffcc125611dd5f307d54570373832a73e62d..HEAD
+fatal: Invalid revision range 97a4ffcc125611dd5f307d54570373832a73e62d..65cdb1918bf8ab2e880acf952c46b92d139df97d
+
+
+*** End of the configuration.
+*** Execute 'make' to start the build or try 'make help'.
+
+# runner @ fv-az117 in ~/work/Actions-OpenWrt/Actions-OpenWrt/openwrt [10:11:00]
+$&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后 &lt;code&gt;Actions&lt;/code&gt; 会继续进行下一步，直到编译完成。&lt;/p&gt;
+&lt;p&gt;编译时间较长，一般2-3小时不等，但是编译成功率比较高。&lt;/p&gt;
+&lt;h1&gt;其他&lt;/h1&gt;
+&lt;h3&gt;&lt;span id="jump3"&gt;下载编译好的包&lt;/span&gt;&lt;/h3&gt;&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/16.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;在 &lt;code&gt;Actions&lt;/code&gt; 编译的这个任务中有下载地址。&lt;/p&gt;
+&lt;h1&gt;最后&lt;/h1&gt;
+&lt;p&gt;如果我哪里说错了或者哪里有问题可以在评论区指出。&lt;/p&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/glede/</guid><pubDate>Fri, 20 Mar 2020 23:50:00 +0806</pubDate></item></channel></rss>
