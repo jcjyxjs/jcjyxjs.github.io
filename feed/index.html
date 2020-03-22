@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 21 Mar 2020 10:35:34 +0806</lastBuildDate><pubDate>Sat, 21 Mar 2020 10:35:34 +0806</pubDate><item><title>使用hexo搭建静态博客+Github Pages</title><link>/archives/hexoblog/</link><description>&lt;h1&gt;使用hexo搭建静态博客步骤&lt;/h1&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 22 Mar 2020 08:41:54 +0806</lastBuildDate><pubDate>Sun, 22 Mar 2020 08:41:54 +0806</pubDate><item><title>使用hexo搭建静态博客+Github Pages</title><link>/archives/hexoblog/</link><description>&lt;h1&gt;使用hexo搭建静态博客步骤&lt;/h1&gt;
 &lt;p&gt;1.安装Git&lt;/p&gt;
 &lt;p&gt;2.安装Node.js&lt;/p&gt;
 &lt;p&gt;3.安装hexo&lt;/p&gt;
@@ -627,14 +627,14 @@ error: failed to push some refs to &lt;span class="s1"&gt;&amp;#39;git@github.co
 &lt;li&gt;GitHub账号&lt;/li&gt;
 &lt;/ol&gt;
 &lt;h1&gt;过程&lt;/h1&gt;
-&lt;h3&gt;不过利用 &lt;code&gt;Github Actions&lt;/code&gt; 进行云编译有多种方法，我就举两例。区别就是，一种需要更改 &lt;code&gt;openwrt-ci.yml&lt;/code&gt; 文件达到自定义编译，另一种则是需要在编译开始过程中通过SSH连接 &lt;code&gt;Github Actions&lt;/code&gt; 的服务器手动选择配置LuCI，就跟本地编译差不多。&lt;/h3&gt;
+&lt;p&gt;不过利用 &lt;code&gt;Github Actions&lt;/code&gt; 进行云编译有多种方法，我就举两例。区别就是，一种需要更改 &lt;code&gt;openwrt-ci.yml&lt;/code&gt; 文件达到自定义编译，另一种则是需要在编译开始过程中通过SSH连接 &lt;code&gt;Github Actions&lt;/code&gt; 的服务器手动选择配置LuCI，就跟本地编译差不多。&lt;/p&gt;
 &lt;h3&gt;目录&lt;/h3&gt;
-&lt;p&gt;&lt;a href="#jump1"&gt;方法一:不需要SSH&lt;/a&gt;
-&lt;a href="#jump2"&gt;方法二:需要SSH&lt;/a&gt;
-&lt;a href="#jump3"&gt;下载编译好的包&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="#jump1"&gt;方法一:不需要SSH&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="#jump2"&gt;方法二:需要SSH&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="#jump3"&gt;下载编译好的包&lt;/a&gt;&lt;/p&gt;
 &lt;h1&gt;过程&lt;/h1&gt;
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;两种方法均在有GitHub账号前提下进行操作，如果没有，请自行注册一个。&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&amp;lt;/h3&amp;gt;&lt;span id="jump1"&gt;方法一&lt;/span&gt;&amp;lt;/h3&amp;gt;&lt;/p&gt;
+&lt;p&gt;&lt;span id="jump1"&gt;&lt;h3&gt;方法一&lt;/h3&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;p&gt;首先打开大雕的仓库。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;https://github.com/coolsnowwolf/lede&lt;/code&gt;&lt;/pre&gt;
@@ -665,7 +665,7 @@ error: failed to push some refs to &lt;span class="s1"&gt;&amp;#39;git@github.co
 &lt;p&gt;首先，你需要编辑固件的 &lt;code&gt;IP地址&lt;/code&gt; 建议你改一下，不改的话也没事。打开并编辑下面这个文件。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;Actions-OpenWrt/diy.sh&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;在第10行中，有一个 &lt;code&gt;192.168.1.200&lt;/code&gt; 就是编译好的固件地址。你可以按需更改。&lt;/p&gt;
+&lt;p&gt;最后一行中，有一个 &lt;code&gt;192.168.1.200&lt;/code&gt; 就是编译好固件的后台地址。你可以按需更改。&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;#!/bin/bash
 #=================================================
@@ -675,7 +675,6 @@ error: failed to push some refs to &lt;span class="s1"&gt;&amp;#39;git@github.co
 # Blog: https://p3terx.com
 #=================================================
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/192.168.1.200/g' package/base-files/files/bin/config_generate&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;改完IP地址之后。点击下方的 &lt;code&gt;Commit changes&lt;/code&gt; 。&lt;/p&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/21/12.png?imageMogr2/format/webp/interlace/1/quality/100" /&gt;&lt;/figure&gt;&lt;/p&gt;
@@ -735,4 +734,4 @@ $&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;在 &lt;code&gt;Actions&lt;/code&gt; 编译的这个任务中有下载地址。&lt;/p&gt;
 &lt;h1&gt;最后&lt;/h1&gt;
 &lt;p&gt;如果我哪里说错了或者哪里有问题可以在评论区指出。&lt;/p&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/glede/</guid><pubDate>Fri, 20 Mar 2020 23:50:00 +0806</pubDate></item></channel></rss>
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/glede/</guid><pubDate>Sat, 21 Mar 2020 23:50:00 +0806</pubDate></item></channel></rss>

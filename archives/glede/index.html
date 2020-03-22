@@ -42,7 +42,7 @@
 	<script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/d51b76552b9cc26da92d2d975cf09790.json"
+            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/18567d349875beefe46e80edb1284204.json"
         }
     </script>
     
@@ -55,7 +55,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/archives/glede/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-03-20T23:50:00+08.00" />
+<meta property="article:published_time" content="2020-03-21T23:50:00+08.00" />
 <meta name="twitter:title" content="利用Github Actions进行云编译lede固件 - 毫无作为" />
 <meta name="twitter:description" content="我想说的" />
 <meta name="twitter:card" content="summary" />
@@ -90,7 +90,7 @@
             <span class="ga-post_meta ga-mono">
                 <span>jcjyxjs</span>
                 <time>
-                    2020-03-20
+                    2020-03-21
                 </time>
                 
                 in <a no-style class="category" href="/category/Github/">
@@ -114,14 +114,14 @@
 <li>GitHub账号</li>
 </ol>
 <h1>过程</h1>
-<h3>不过利用 <code>Github Actions</code> 进行云编译有多种方法，我就举两例。区别就是，一种需要更改 <code>openwrt-ci.yml</code> 文件达到自定义编译，另一种则是需要在编译开始过程中通过SSH连接 <code>Github Actions</code> 的服务器手动选择配置LuCI，就跟本地编译差不多。</h3>
+<p>不过利用 <code>Github Actions</code> 进行云编译有多种方法，我就举两例。区别就是，一种需要更改 <code>openwrt-ci.yml</code> 文件达到自定义编译，另一种则是需要在编译开始过程中通过SSH连接 <code>Github Actions</code> 的服务器手动选择配置LuCI，就跟本地编译差不多。</p>
 <h3>目录</h3>
-<p><a href="#jump1">方法一:不需要SSH</a>
-<a href="#jump2">方法二:需要SSH</a>
-<a href="#jump3">下载编译好的包</a></p>
+<p><a href="#jump1">方法一:不需要SSH</a></p>
+<p><a href="#jump2">方法二:需要SSH</a></p>
+<p><a href="#jump3">下载编译好的包</a></p>
 <h1>过程</h1>
 <p><strong><em>两种方法均在有GitHub账号前提下进行操作，如果没有，请自行注册一个。</em></strong></p>
-<p>&lt;/h3&gt;<span id="jump1">方法一</span>&lt;/h3&gt;</p>
+<p><span id="jump1"><h3>方法一</h3></span></p>
 <p>首先打开大雕的仓库。</p>
 
 <pre><code>https://github.com/coolsnowwolf/lede</code></pre>
@@ -152,7 +152,7 @@
 <p>首先，你需要编辑固件的 <code>IP地址</code> 建议你改一下，不改的话也没事。打开并编辑下面这个文件。</p>
 
 <pre><code>Actions-OpenWrt/diy.sh</code></pre>
-<p>在第10行中，有一个 <code>192.168.1.200</code> 就是编译好的固件地址。你可以按需更改。</p>
+<p>最后一行中，有一个 <code>192.168.1.200</code> 就是编译好固件的后台地址。你可以按需更改。</p>
 
 <pre><code>#!/bin/bash
 #=================================================
@@ -162,7 +162,6 @@
 # Blog: https://p3terx.com
 #=================================================
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.50.5/g' package/base-files/files/bin/config_generate
 sed -i 's/192.168.1.1/192.168.1.200/g' package/base-files/files/bin/config_generate</code></pre>
 <p>改完IP地址之后。点击下方的 <code>Commit changes</code> 。</p>
 <p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/21/12.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
