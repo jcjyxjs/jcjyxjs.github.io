@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "a";
+    src: url("a.eot"); /* IE9 */
+    src: url("a.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+    
+    url("a.woff") format("woff"), /* chrome、firefox */
+    url("a.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+    
+    url("a.svg#a") format("svg"); /* iOS 4.1- */
+    font-style: normal;
+    font-weight: normal;
+}
+
+
