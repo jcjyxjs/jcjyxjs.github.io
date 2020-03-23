@@ -46,17 +46,18 @@
         }
     </script>
     
-<title>毫无作为</title>
-<meta name="author" content="JCJYXJS" />
-<meta name="description" content="Personal blog" />
-<meta property="og:title" content="毫无作为" />
-<meta property="og:description" content="Personal blog" />
+<title>CloudFlare自选节点 - 毫无作为</title>
+<meta name="author" content="jcjyxjs" />
+<meta name="description" content="主要还是太麻烦了" />
+<meta property="og:title" content="CloudFlare自选节点 - 毫无作为" />
+<meta property="og:description" content="主要还是太麻烦了" />
 <meta property="og:site_name" content="毫无作为" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/" />
-<meta property="og:image" content="毫无作为" />
-<meta name="twitter:title" content="毫无作为" />
-<meta name="twitter:description" content="Personal blog" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/cfcus/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-02-28T21:50:00+08.00" />
+<meta name="twitter:title" content="CloudFlare自选节点 - 毫无作为" />
+<meta name="twitter:description" content="主要还是太麻烦了" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -83,186 +84,134 @@
             <div class="wrapper">
                 
 <main>    
-    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">CloudFlare自选节点</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>jcjyxjs</span>
+                <time>
+                    2020-02-28
+                </time>
+                
+                in <a no-style class="category" href="/category/CDN/">
+                    CDN
+                </a>
+                
+                
+                <span class="leancloud_visitors" 
+                    id="/archives/cfcus/" 
+                    data-flag-title="CloudFlare自选节点"> · <i class="leancloud-visitors-count"></i> Views</span>
+                
+            </span>
+            <div class="ga-content_body">
+                <h1>首先</h1>
+<ol>
+<li>需要有Cloudflare Partener或使用别人的。原因很简单，因为官方只允许NS接入，CFP则可以IP/CNAME接入。这里推荐 <a href="http://cdn.bnxb.com/">http://cdn.bnxb.com/</a></li>
+<li>自选IP原理就是国内DNS解析的时候分配最快的IP然后用A记录解析到这个IP上，国外保持不变。</li>
+</ol>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/16/1.svg" /></figure></p>
+<h1>实现</h1>
+<p>首先添加域名（我是用的奔牛，用什么其实原理都一样）</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/16/2.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>然后可以在解析设置看到需要解析的地址，先CNAME解析然后等待SSL签发。默认IP直接ping这条CNAME记录就行。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/16/3.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>SSL签发之后，进入dns解析把CNAME解析删掉，国内根据情况分线路进行解析。境外默认分配IP就行。</p>
+<h1>其他</h1>
+<p>CloudFlare官方公示IP
+<a href="https://www.cloudflare.com/zh-cn/ips/">https://www.cloudflare.com/zh-cn/ips/</a></p>
+<h3>IPv4</h3>
+<ul>
+<li>173.245.48.0/20</li>
+<li>103.21.244.0/22</li>
+<li>103.22.200.0/22</li>
+<li>103.31.4.0/22</li>
+<li>141.101.64.0/18</li>
+<li>108.162.192.0/18</li>
+<li>190.93.240.0/20</li>
+<li>188.114.96.0/20</li>
+<li>197.234.240.0/22</li>
+<li>198.41.128.0/17</li>
+<li>162.158.0.0/15</li>
+<li>104.16.0.0/12</li>
+<li>172.64.0.0/13</li>
+<li>131.0.72.0/22</li>
+</ul>
+<h3>IPv6</h3>
+<ul>
+<li>2400:cb00::/32</li>
+<li>2606:4700::/32</li>
+<li>2803:f800::/32</li>
+<li>2405:b500::/32</li>
+<li>2405:8100::/32</li>
+<li>2a06:98c0::/29</li>
+<li>2c0f:f248::/32</li>
+</ul>
+<h3>百度云合作线路</h3>
+<ul>
+<li>162.159.208.4-162.159.208.103</li>
+<li>162.159.209.4-162.159.209.103</li>
+<li>162.159.210.4-162.159.210.103</li>
+<li>162.159.211.4-162.159.211.103</li>
+</ul>
+<p>其他线路网上有，百度云合作线路建议电信。</p>
 
-<section id="ga-post_list" class="ga-section" data-title="Posts">
-    <ul>
-        
-        <li>
-            <article class="yue">
-                <h1>利用Github Actions进行云编译lede固件</h1>
-                
-                    <blockquote>我想说的</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/glede/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-03-21
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>Github+jsDelivr全球静态文件加速</h1>
-                
-                    <blockquote>前言</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/spasses/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-03-17
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>国内Github下载加速</h1>
-                
-                    <blockquote>前言</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/sgclone/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-03-15
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>群晖虚拟机安装lede软路由</h1>
-                
-                    <blockquote>插件用起来真爽，不过可惜了我的机器只能做旁路由。</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/qhlede/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-03-01
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>GitHub使用GPG加密提交</h1>
-                
-                    <blockquote>:D</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/gpgg/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-02-29
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>CloudFlare自选节点</h1>
-                
-                    <blockquote>主要还是太麻烦了</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/cfcus/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-02-28
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>疫情期间在家の无聊生活</h1>
-                
-                    <blockquote>梨泰院class真好看:D</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/20200217/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-02-17
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>DOM实现JavaScript图片库</h1>
-                
-                    <blockquote>日常学习js，不喜勿喷</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/jsimage/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-02-13
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>使用LiteSpeed为网站启用HTTP/3</h1>
-                
-                    <blockquote>HTTP/3</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/enhttp3/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-02-12
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-        <li>
-            <article class="yue">
-                <h1>使用hexo搭建静态博客+Github Pages</h1>
-                
-                    <blockquote>使用hexo搭建静态博客步骤</blockquote>
-                
-                <footer>
-                    <span class="ga-read_more"><a class="ga-highlight" href="/archives/hexoblog/">Read More</a></span>
-                    <time class="ga-mono">
-                        2020-02-07
-                    </time>
-                </footer>
-            </article>
-        </li>
-        
-    </ul>
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/HTTP/">#HTTP</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/CloudFlare/">#CloudFlare</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/建站/">#建站</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/网络/">#网络</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/网站/">#网站</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/CDN/">#CDN</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <a class="ga-highlight" href="/archives/gpgg/">GitHub使用GPG加密提交</a>
+        <p class="yue">:D</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/20200217/">疫情期间在家の无聊生活</a>
+        <p class="yue">梨泰院class真好看:D</p>
+    </div>
+
 </section>
 
-<section class="ga-section ga-mono" id="ga-pager">
-    
-    <span>Page 1 of 3</span>
-    
-        <a next class="ga-highlight" href="/page/2/">Next</a>
-    
-</section>
 
-<section id="ga-external_links" class="ga-section" data-title="Links">
-    <ul>
-        
-        <li>
-            <a class="ga-highlight" target="_blank" href="https://elstec.cn">jcjyxjs</a>：Home
-        </li>
-        
-        <li>
-            <a class="ga-highlight" target="_blank" href="http://wobisheng.top">发明家</a>：Friends
-        </li>
-        
-    </ul>
-</section>
-
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "6IbSkySz1sFtHscRpUnjah3J-gzGzoHsz", "appKey": "TuXcNNNCp9UkJuPnpYN538zT", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
 
 </main>
 
