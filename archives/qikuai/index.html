@@ -1,0 +1,278 @@
+<!DOCTYPE HTML>
+<html lang="english">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="jcjyxjs,毫无作为" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Galileo" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+	<link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/galileo-1c8f2638f2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/katex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
+	<link rel="stylesheet" href="https://cdn.elstec.cn/test/f.css" />
+	<link rel="stylesheet" href="https://cdn.elstec.cn/test/f-embed.css" />
+	<style>.brand{font-family:'f';font-weight:normal;}</style>
+    <script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+	</script>
+	<script type="text/javascript" src="//js.users.51.la/20666133.js"></script>
+	<script src="https://cdn.elstec.cn/1.js"></script>
+</script>
+	<script>
+        var ExSearchConfig = {
+            root: "",
+            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/7f01e735e59e928fd4d6ddec9fc9e9e9.json"
+        }
+    </script>
+    
+<title>群晖安装ikuai（爱快）软路由 - 毫无作为</title>
+<meta name="author" content="jcjyxjs" />
+<meta name="description" content="我想说的" />
+<meta property="og:title" content="群晖安装ikuai（爱快）软路由 - 毫无作为" />
+<meta property="og:description" content="我想说的" />
+<meta property="og:site_name" content="毫无作为" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/qikuai/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-03-25T23:50:00+08.00" />
+<meta name="twitter:title" content="群晖安装ikuai（爱快）软路由 - 毫无作为" />
+<meta name="twitter:description" content="我想说的" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.elstec.cn/favicon.png?imageMogr2/format/webp/interlace/1/quality/100" />
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/">毫无作为</a></h1>
+                        <p>Personal blog</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/" target="_self">Home</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">Archives</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/links/" target="_self">Links</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">About</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">Search</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">群晖安装ikuai（爱快）软路由</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>jcjyxjs</span>
+                <time>
+                    2020-03-25
+                </time>
+                
+                in <a no-style class="category" href="/category/群晖/">
+                    群晖
+                </a>
+                
+                
+                <span class="leancloud_visitors" 
+                    id="/archives/qikuai/" 
+                    data-flag-title="群晖安装ikuai（爱快）软路由"> · <i class="leancloud-visitors-count"></i> Views</span>
+                
+            </span>
+            <div class="ga-content_body">
+                <h1>我想说的</h1>
+<p>其实和安装lede没什么区别，就是配置上面会有一点区别。</p>
+<h1>过程</h1>
+<ol>
+<li>下载镜像</li>
+</ol>
+<p>打开 <a href="https://www.ikuai8.com/component/download">https://www.ikuai8.com/component/download</a> 并下载适用于虚拟机的镜像。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/1.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>下载 <code>IMG</code> 的32位，如果你的群晖内存大于4G可以下载64位。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/2.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p><code>iKuai8_x32_3.3.4_Build202003231122.img.gz</code> 文件解压得到 <code>iKuai8_x32_3.3.4_Build202003231122.img</code>。</p>
+<ol>
+<li>上传镜像</li>
+</ol>
+<p>打开群晖管理页面，并打开 <code>VMM</code> → <code>映像</code> → <code>新增</code> ，上传刚刚解压好的镜像。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/3.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<ol>
+<li>安装</li>
+</ol>
+<p>再点击 <code>虚拟机</code> → <code>新增</code> → <code>导入</code> → <code>从硬盘映像导入</code> 导入刚刚上传的镜像。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/4.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>CPU和内存分配看各种需求，我群晖是 <code>j1900 + 4GB</code> 所以分 <code>1H1G</code></p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/5.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>分配两个网卡，一个连 <code>Internet</code> 一个连内网。并且全部改成 <code>e1000</code> （全双工）。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/6.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<ol>
+<li>配置爱快</li>
+</ol>
+<p>然后无脑下一步。创建完成之后，点击上方的 <code>连接</code> 。</p>
+<p>安装完成之后会出现如下界面。会看到两张网卡，默认 <code>lan1</code> 会连接 <code>eth0</code> 也就是进网口网卡。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/7.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>现在需要对网卡进行解绑，键盘输入 <code>1</code> ，进行网卡解绑。</p>
+<div class="highlight"><pre><span></span>del lan1
+</pre></div>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/8.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>然后把 <code>lan1</code> 绑定到第二张网卡 。</p>
+<div class="highlight"><pre><span></span><span class="nb">set</span> lan1 eth0
+</pre></div>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/9.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>然后退回到主控制台，输入 <code>2</code> ，设置 <code>lan1</code> IP地址。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/10.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>最终效果。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/11.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>然后把本地地址改到跟 <code>ikuai</code> 一个网段，网关就是刚刚设置的IP地址。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/12.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>然后通过IP访问，初次登陆需要修改默认密码。</p>
+
+<pre><code>账号：admin
+密码：admin</code></pre>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/13.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>然后就是进行网络配置。首先设置 <code>WAN</code> 口绑定网卡。</p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/14.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>然后配置静态地址上网。在高级设置中配置如下</p>
+
+<pre><code>工作模式：全双工
+网卡速率：1000M</code></pre>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/16.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/22/17.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
+<p>其他配置自己后续研究，至此可以愉快的上网了。</p>
+
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/群晖/">#群晖</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/爱快/">#爱快</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/黑群晖/">#黑群晖</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/白群晖/">#白群晖</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/软路由/">#软路由</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/VMM/">#VMM</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/虚拟机/">#虚拟机</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>No More</h3>
+        <p class="yue">This is the latest one.</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/glede/">利用Github Actions进行云编译lede固件</a>
+        <p class="yue">我想说的</p>
+    </div>
+
+</section>
+
+
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "6IbSkySz1sFtHscRpUnjah3J-gzGzoHsz", "appKey": "TuXcNNNCp9UkJuPnpYN538zT", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">毫无作为</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2020 JCJYXJS</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+						<div class="copyright">
+							<span class="footer-addon">
+                                
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="Twitter" href="https://twitter.com/jcjyxjs" target="_blank"><i class="gi gi-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/JCJYXJS" target="_blank"><i class="gi gi-github"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Weibo" href="https://weibo.com/JCJYXJS/" target="_blank"><i class="gi gi-weibo"></i>Weibo</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2019-08-20T12:00+00:00"
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/galileo-dc4baa7cf4.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+    </body>
+</html>

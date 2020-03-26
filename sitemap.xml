@@ -19,6 +19,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+    <loc>/archives/qikuai/</loc>
+    <lastmod>2020-03-25</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>/archives/glede/</loc>
     <lastmod>2020-03-21</lastmod>
     <changefreq>always</changefreq>
