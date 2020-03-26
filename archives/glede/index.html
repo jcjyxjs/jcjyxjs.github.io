@@ -42,7 +42,7 @@
 	<script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/7f01e735e59e928fd4d6ddec9fc9e9e9.json"
+            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/debcbd32584dece9977a7303c6b8db3a.json"
         }
     </script>
     
@@ -112,6 +112,10 @@
 <li>脑子</li>
 <li>耐心</li>
 <li>GitHub账号</li>
+</ol>
+<h1>已知情况</h1>
+<ol>
+<li>当一个仓库进行编译工作之后，该仓库无法进行第二个编译工作，也就是SSH列表无法展开。</li>
 </ol>
 <h1>过程</h1>
 <p>不过利用 <code>Github Actions</code> 进行云编译有多种方法，我就举两例。区别就是，一种需要更改 <code>openwrt-ci.yml</code> 文件达到自定义编译，另一种则是需要在编译开始过程中通过SSH连接 <code>Github Actions</code> 的服务器手动选择配置LuCI，就跟本地编译差不多。</p>
@@ -220,7 +224,7 @@ $</code></pre>
 <h3><span id="jump3">下载编译好的包</span></h3><p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/21/16.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure></p>
 <p>在 <code>Actions</code> 编译的这个任务中有下载地址。</p>
 <h1>最后</h1>
-<p>如果我哪里说错了或者哪里有问题可以在评论区指出。</p>
+<h4>看完了全文为什么不评论一下呢？xd</h4>
 
             </div>
         </article>

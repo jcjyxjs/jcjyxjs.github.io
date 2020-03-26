@@ -42,7 +42,7 @@
 	<script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/7f01e735e59e928fd4d6ddec9fc9e9e9.json"
+            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/debcbd32584dece9977a7303c6b8db3a.json"
         }
     </script>
     
@@ -108,6 +108,7 @@
 事情是这样的，碍于GCP线路对国内不太友好。我入了一台香港阿里云，ssh连上准备安装bt，敲下enter之后发现香港的对应节点<code>103.224.251.67 time out</code>，一开始我以为是阿里云屏蔽了这个ip，用备用的广东节点装进去了，一顿操作之后，安装nginx只用了5秒，我透，这怎么可能呢。于是又重复安装了好几遍，又试了其他环境，还是无法安装的状态。
 无奈之下又只好用那台GCP进行测试安装，我上午优化的时候想到可以试试Alisql因为我提升了服务器配置，备份了数据库，准备卸载mysql，提示说要删掉原先的库，我直接就点了删除数据库，删完才记起来数据库备份没下载，整个人就呆坐了半天，一生气直接<code>rm -rf</code>。删完之后尝试安装Alisql，发现安不进，看log也连的<code>103.224.251.67</code>这个节点。我就ping了这个ip，全部提示<code>time out</code>，逛了一圈bt论坛，发现也有人跟我情况一样，那就是bt的问题，估计又被打了，我于是仔细看了log，发现他不是直接连这个ip，是个域名，那肯定是cdn鸭，站长工具ping了一下果然有这么多节点，bt后台首页看到又Linux工具箱，突然想起来可以通过改dns指定host来更改请求的ip，一波114完美安装所有环境。
 于是我从0开始写博客，准备引用图片了，看到bucket上有今天备份的数据库，我的妈，激动哭了，我昨天安装的腾讯云cos，设置了自动备份，今天早上手动执行了一遍，还没太当回事，不仅有数据库备份还有根目录备份。</p>
+<h4>看完了全文为什么不评论一下呢？xd</h4>
 
             </div>
         </article>
