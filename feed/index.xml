@@ -1,43 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Mon, 30 Mar 2020 10:20:48 +0806</lastBuildDate><pubDate>Mon, 30 Mar 2020 10:20:48 +0806</pubDate><item><title>使用LiteSpeed为网站启用HTTP/3</title><link>/archives/enhttp3/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
-&lt;p&gt;关于HTTP/3我就不介绍了，网上有，多说无益。真的。
-就目前浏览器支持情况真的也就一般。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 149.80940279542565" &gt;&lt;img width="2358" height="787" src="https://cdn.elstec.cn/13/0.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;h1&gt;实现&lt;/h1&gt;
-&lt;p&gt;目前支持HTTP/3的只有LiteSpeed和Caddy，Nginx暂时还不支持，已知可行方法都需要通过Doker，也就是Nginx+Caddy实现，或者通过CloudFlare的开源项目实现，稳定性肯定不如前者。&lt;/p&gt;
-&lt;h1&gt;过程&lt;/h1&gt;
-&lt;p&gt;&lt;strong&gt;本次需要在服务器安全组或防火墙放通&lt;/strong&gt; &lt;code&gt;TCP:7080&lt;/code&gt; &lt;strong&gt;和&lt;/strong&gt; &lt;code&gt;UDP:443&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;我这次采用的是LiteSpeed的开源项目OpenLiteSpeed。&lt;/p&gt;
-&lt;p&gt;OpenLiteSpeed有多种安装方式，我就采用第4种也就是命令行一键安装。
-&lt;figure style="flex: 273.84393063583815" &gt;&lt;img width="1895" height="346" src="https://cdn.elstec.cn/13/3.png" /&gt;&lt;/figure&gt;
-根据官方说法，OpenLiteSpeed仅支持具有64位平台的Centos（6-7），Debian（7-9）和Ubuntu（14,16,18）。&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;wget --no-check-certificate https://raw.githubusercontent.com/litespeedtech/ols1clk/master/ols1clk.sh &amp;amp;&amp;amp; bash ols1clk.sh&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;如果需要安装WordPress,就在命令后面加&lt;code&gt;-w&lt;/code&gt;。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 140.06462035541196" &gt;&lt;img width="1734" height="619" src="https://cdn.elstec.cn/13/4.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;安装完成之后，会把后台账号密码存储在&lt;code&gt;/usr/local/lsws/password&lt;/code&gt;。
-这时可以用&lt;a href="https://ip:7080访问后台。"&gt;https://ip:7080访问后台。&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;首先需要在ssh中，cd到&lt;code&gt;/usr/local/lsws/&lt;/code&gt;该目录下，然后新建一个文件夹，名字随便。比方我叫&lt;code&gt;http3test&lt;/code&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;mkdir http3test
-mkdir http3test/{conf,html,logs}&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;访问web后台 &lt;em&gt;（后台可以改简体中文）&lt;/em&gt; 点击虚拟主机，再点击➕号进行新建虚拟主机。
-虚拟主机名使用域名就行，虚拟主机根目录就是刚刚创建的文件夹名称，配置文件就这么填&lt;code&gt;$SERVER_ROOT/conf/vhosts/http3test.elstec.cn/vhconf.conf&lt;/code&gt;要把文件夹名称改成自己的。先填写完整之后点击保存，会提示没有配置文件，点击旁边的&lt;code&gt;CLICK TO CREATE&lt;/code&gt;进行创建，再次保存就可以了。&lt;em&gt;（启用脚本/外部应用程序和访问管制随你一般没什么用就选否。）&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 140.01883239171374" &gt;&lt;img width="2974" height="1062" src="https://cdn.elstec.cn/13/5.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;新建虚拟机之后先不要平滑重启。点击查看进入虚拟机设置，查看就是一个放大镜图标。点击SSL选项，找到安全，点击修改，把&lt;code&gt;Enable QUIC&lt;/code&gt;改为是，并保存。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 162.56771397616467" &gt;&lt;img width="3001" height="923" src="https://cdn.elstec.cn/13/6.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;找到监听器，就是虚拟主机选项上面那个。默认有80和443，443点击查看。找到SSL，找到SSL私钥和证书，点击编辑，填入你的证书地址，然后保存。再次找到安全和特性选项，把&lt;code&gt;Allow QUIC&lt;/code&gt;改是就行。
-退回到443的常规，最下方有一个虚拟主机映射，新建映射，把虚拟主机和域名进行绑定，保存即可。&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 179.08653846153845" &gt;&lt;img width="2980" height="832" src="https://cdn.elstec.cn/13/7.png" /&gt;&lt;/figure&gt;
-然后进行平滑重启。页面索引什么的我就不说了没意思。
-最后就是测试结果+HTTP/3 CHECK的结果。
-&lt;figure style="flex: 43.511146496815286" &gt;&lt;img width="1093" height="1256" src="https://cdn.elstec.cn/13/1.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;&lt;figure style="flex: 66.52587117212249" &gt;&lt;img width="1260" height="947" src="https://cdn.elstec.cn/13/2.png" /&gt;&lt;/figure&gt;&lt;/p&gt;
-&lt;p&gt;需要浏览器支持的话，Chrome打开&lt;code&gt;chrome://flags/&lt;/code&gt;，找到&lt;code&gt;Experimental QUIC protocol&lt;/code&gt;选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到&lt;code&gt;edge://flags/&lt;/code&gt;步骤同上就行。&lt;/p&gt;
-&lt;h1&gt;最后&lt;/h1&gt;
-&lt;p&gt;我想说，我评论区的评论通知有时候会鬼畜发不出去我也没办法，到时候再说:P&lt;/p&gt;
-&lt;h4&gt;看完了全文为什么不评论一下呢？xd&lt;/h4&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/enhttp3/</guid><pubDate>Wed, 12 Feb 2020 21:50:00 +0806</pubDate></item><item><title>DOM实现JavaScript图片库</title><link>/archives/jsimage/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>Personal blog</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url></url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Mon, 30 Mar 2020 10:50:33 +0806</lastBuildDate><pubDate>Mon, 30 Mar 2020 10:50:33 +0806</pubDate><item><title>DOM实现JavaScript图片库</title><link>/archives/jsimage/</link><description>&lt;h1&gt;我想说的&lt;/h1&gt;
 &lt;blockquote&gt;&lt;p&gt;我比较菜（小声bb）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;h1&gt;实现&lt;/h1&gt;
@@ -677,4 +639,39 @@ $&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/22/17.png!webp" /&gt;&lt;/figure&gt;&lt;/p&gt;
 &lt;p&gt;其他配置自己后续研究，至此可以愉快的上网了。&lt;/p&gt;
 &lt;h4&gt;看完了全文为什么不评论一下呢？xd&lt;/h4&gt;
-</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/qikuai/</guid><pubDate>Wed, 25 Mar 2020 23:50:00 +0806</pubDate></item></channel></rss>
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/qikuai/</guid><pubDate>Wed, 25 Mar 2020 23:50:00 +0806</pubDate></item><item><title>解决  git push Permission denied</title><link>/archives/20200330/</link><description>&lt;h1&gt;前言&lt;/h1&gt;
+&lt;p&gt;我重装了系统啥都没了hhhh，然后今天提交的时候报错。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ git push
+git@github.com: Permission denied &lt;span class="o"&gt;(&lt;/span&gt;publickey&lt;span class="o"&gt;)&lt;/span&gt;.
+fatal: Could not &lt;span class="nb"&gt;read&lt;/span&gt; from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;解决方法&lt;/h1&gt;
+&lt;p&gt;我是在 &lt;code&gt;Windows10&lt;/code&gt; 下用 &lt;code&gt;Git Bash&lt;/code&gt; 操作的其他平台也差不多。&lt;/p&gt;
+&lt;p&gt;重新生成 &lt;code&gt;SSH Key&lt;/code&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ssh-keygen -t rsa -C GitHub绑定的邮箱
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;$ ssh-keygen -t rsa -C GitHub绑定的邮箱
+Generating public/private rsa key pair.
+Enter file in which to save the key &lt;span class="o"&gt;(&lt;/span&gt;/c/Users/用户名/.ssh/id_rsa&lt;span class="o"&gt;)&lt;/span&gt;:
+Enter passphrase &lt;span class="o"&gt;(&lt;/span&gt;empty &lt;span class="k"&gt;for&lt;/span&gt; no passphrase&lt;span class="o"&gt;)&lt;/span&gt;:
+Enter same passphrase again:
+Your identification has been saved in /c/Users/用户名/.ssh/id_rsa
+Your public key has been saved in /c/Users/用户名/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:KI0NCK6lOpAvHOT9RPtpobmj3/08V4i+Bbg756Zh8+Q GitHub绑定的邮箱
+The key&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;s randomart image is:
++---&lt;span class="o"&gt;[&lt;/span&gt;RSA &lt;span class="m"&gt;3072&lt;/span&gt;&lt;span class="o"&gt;]&lt;/span&gt;----+
+...
++----&lt;span class="o"&gt;[&lt;/span&gt;SHA256&lt;span class="o"&gt;]&lt;/span&gt;-----+
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;然后找到这个位置，编辑这个文件，全选然后复制。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;/c/Users/用户名/.ssh/id_rsa.pub&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;然后打开 &lt;a href="https://github.com/settings/keys"&gt;https://github.com/settings/keys&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;figure  size-undefined&gt;&lt;img width="-1" height="-1" src="https://cdn.elstec.cn/23/1.png!webp" /&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;p&gt;点 &lt;code&gt;New SSH key&lt;/code&gt; ，把刚刚 &lt;code&gt;id_rsa.pub&lt;/code&gt; 这个文件的内容粘贴进来，保存即可。&lt;/p&gt;
+&lt;h4&gt;看完了全文为什么不评论一下呢？xd&lt;/h4&gt;
+</description><author>admin@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200330/</guid><pubDate>Mon, 30 Mar 2020 23:50:00 +0806</pubDate></item></channel></rss>
