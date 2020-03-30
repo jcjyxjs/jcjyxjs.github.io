@@ -107,8 +107,8 @@
                 <blockquote><p>建议本文搭配 <em><a href="https://elstec.cn/archives/fwbf/">使用Fontmin生成WebFont压缩字体</a></em> 食用更佳</p>
 </blockquote>
 <p>今天看到主题作者主页大标题用了这个字体，我一想哇还挺好看，也想自己整一个，看了看主题设置并没有更改字体的设置，只有头部标签引用,又回头看了看原页面，注意到了这两行代码，翻遍了他所有的评论知道这个字体叫<strong>方正粗金陵繁体</strong></p>
-<blockquote><p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/font.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption>①</figcaption></figure>
-<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/branda.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption>②</figcaption></figure></p>
+<blockquote><p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/font.png!webp" /><figcaption>①</figcaption></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/branda.png!webp" /><figcaption>②</figcaption></figure></p>
 </blockquote>
 <p>于是我从方正官网下到了这个字体的ttf版本，并相应转成了<strong><em>.eot</em></strong>和<strong><em>.woff</em></strong>格式。
 新建一个css，码入以下代码，因为针对<code>class</code>为<code>brand</code>的文字字体替换，所以直接定义</p>
@@ -131,7 +131,7 @@
 
 </code></pre>
 <p>我直接把字体重命名为f，因为好打。刷新一看，字体没更新，看到不允许跨域访问。
-<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/er1.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption> ￣﹃￣ </figcaption></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/er1.png!webp" /><figcaption> ￣﹃￣ </figcaption></figure>
 解决方案如下:
 在<code>nginx</code>配置文件中做如下配置</p>
 

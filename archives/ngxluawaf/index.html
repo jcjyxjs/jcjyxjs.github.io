@@ -107,7 +107,7 @@
                 <blockquote><p>上一篇文章的事情发生后，就在看server目录。server下有一个btwaf应该是宝塔的付费插件，进入nginx文件夹下，有一个waf，就是被bt注释掉的自带lua防火墙。</p>
 </blockquote>
 <p>bt下配置nginx，搜索<code>#include luawaf.conf;</code>取消注释，保存配置并重启nginx。
-<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/9/1.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/9/1.png!webp" /></figure>
 这个waf没有界面只能修改配置文件，配置文件在<code>/www/server/nginx/waf</code>下一个叫<code>config.lua</code>的配置文件。
 配置文件内容如下：</p>
 

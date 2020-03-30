@@ -105,7 +105,7 @@
             </span>
             <div class="ga-content_body">
                 <p>目前我的博客使用<code>Typecho + VOID</code>(主题)部署在GCP香港上，访问速度不能说很慢，但是移动全线路绕美个人体验很差。之前直接套了nodecache的香港CDN，反而变成了减速器，之后又安装了魔改版BBR，腾讯TCPA加速80，443，图片懒加载并上传到腾讯云cos用国内CDN加速，但是总体速度依旧不尽人意。直接压缩成WebP并不是所有浏览器都支持，不支持的浏览器直接不显示图片，所以要让支持的浏览器加载WebP格式，不持支的浏览器加载原格式。
-<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/6-0.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption>webP浏览器支持度</figcaption></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/6-0.png!webp" /><figcaption>webP浏览器支持度</figcaption></figure>
 在CDN无法满足需求后，我又想到了一个更给力的方案，就是利用腾讯云对象存储(COS) + 数据万象(CI)。(腾讯云每月都有赠送免费额度，个人小站完全够用)详情:<a href="https://cloud.tencent.com/document/product/460/6970">点我</a></p>
 <blockquote><p>数据万象基于对象存储提供优化服务，也可以同时使用CDN进行加速。可以按照我的步骤来，也可自行发挥。</p>
 </blockquote>
@@ -122,13 +122,13 @@
 </blockquote>
 <h2>3.最终测试</h2>
 <p>生成结束之后，会得到如下图所示的内容。点击预览，会访问腾讯自带的测试网址。
-<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/3.png?imageMogr2/format/webp/interlace/1/quality/100" /><figcaption> |´・ω・)ノ </figcaption></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/3.png!webp" /><figcaption> |´・ω・)ノ </figcaption></figure>
 所有操作结束之后可以用如下格式访问:</p>
 <blockquote><p><strong>[图片处理域名或图片加速域名或自定义域名]+[文件路径]+[?]+[描述]</strong>
 (描述内容详见上图)
-<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/5.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/5.png!webp" /></figure>
 这是使用数据万象优化之前，1.6M大小
-<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/4.png?imageMogr2/format/webp/interlace/1/quality/100" /></figure>
+<figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/4.png!webp" /></figure>
 这是优化之后，只有437KB
 加载速度明显提升
 以上全部设置完成之后可以逐一设置防盗链，原图保护等功能。这只是一个非常简单快速的部署使用，省略了很多功能的配置。</p>
