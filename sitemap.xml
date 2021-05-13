@@ -19,6 +19,90 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+    <loc>/archives/20210512/</loc>
+    <lastmod>2021-05-12</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/20200730/</loc>
+    <lastmod>2020-07-30</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/20200718/</loc>
+    <lastmod>2020-07-18</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/brotli/</loc>
+    <lastmod>2020-07-13</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/20200711/</loc>
+    <lastmod>2020-07-11</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/20200710/</loc>
+    <lastmod>2020-07-11</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/op-no-luci-app-ssr-plus/</loc>
+    <lastmod>2020-06-13</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/dark/</loc>
+    <lastmod>2020-05-20</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/34/</loc>
+    <lastmod>2020-05-15</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/10-14-5-mac1-2/</loc>
+    <lastmod>2020-05-15</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/20200409/</loc>
+    <lastmod>2020-04-09</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
+    <loc>/archives/20200403/</loc>
+    <lastmod>2020-04-03</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>/archives/20200330/</loc>
     <lastmod>2020-03-30</lastmod>
     <changefreq>always</changefreq>
@@ -89,15 +173,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/enhttp3/</loc>
+    <loc>/archives/hexoblog/</loc>
     <lastmod>2020-02-12</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/archives/hexoblog/</loc>
-    <lastmod>2020-02-07</lastmod>
+    <loc>/archives/enhttp3/</loc>
+    <lastmod>2020-02-12</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
@@ -117,14 +201,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/ngxluawaf/</loc>
-    <lastmod>2019-11-09</lastmod>
+    <loc>/archives/fixbtwaf/</loc>
+    <lastmod>2019-11-16</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/archives/fixbtwaf/</loc>
+    <loc>/archives/ngxluawaf/</loc>
     <lastmod>2019-11-09</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>

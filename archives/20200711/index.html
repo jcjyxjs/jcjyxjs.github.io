@@ -1,0 +1,187 @@
+<!DOCTYPE HTML>
+<html lang="english">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="blog,jcjyxjs,毫无作为,永远年轻,永远热泪盈眶" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Lighthouse" />
+    <link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="/assets/lighthouse.css">
+    <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="/assets/katex.min.css">
+    <link rel="stylesheet" href="/assets/jcjyxjs.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+        <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.elstec.cn/favicon.png" />
+    <meta name="chinaz-site-verification" content="3EC3C9BC99F337AE">
+    <meta name="sogou_site_verification" content="M91y3JaB22"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+    <script>
+        console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
+	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+	<script>LA.init({id: "JJNPePzoBCdUIbEU",ck: "JJNPePzoBCdUIbEU"})</script>
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?d4466dc980f6de0a0843d45f467695c4";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&amp;display=swap" rel="stylesheet">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "/ce8d205614150044f13cae097759698d.json"
+        }
+    </script>
+    
+<title>记一次Centos7翻车+升级内核开启BBR过程 - 毫无作为</title>
+<meta name="author" content="jcjyxjs" />
+<meta name="description" content="rpmdb报错解决方案如下rpmdb报错参考文章：https://elstec.cn/archives/fixrpmdb/" />
+<meta property="og:title" content="记一次Centos7翻车+升级内核开启BBR过程 - 毫无作为" />
+<meta property="og:description" content="rpmdb报错解决方案如下rpmdb报错参考文章：https://elstec.cn/archives/fixrpmdb/" />
+<meta property="og:site_name" content="毫无作为" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/20200711/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-07-11T19:50:00+08.00" />
+<meta name="twitter:title" content="记一次Centos7翻车+升级内核开启BBR过程 - 毫无作为" />
+<meta name="twitter:description" content="rpmdb报错解决方案如下rpmdb报错参考文章：https://elstec.cn/archives/fixrpmdb/" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div class="author_image"><img src="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@latest/tx/1.jpg"></div>
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="index-title" href="/">毫无作为</a></h1>
+                        <p>永远年轻，永远热泪盈眶。</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <a title="Twitter" href="https://twitter.com/jcjyxjs" target="_blank"><i class="ri-twitter-line"></i></a>
+                        <a title="GitHub" href="https://github.com/jcjyxjs" target="_blank"><i class="ri-github-line"></i></a>
+                        <a title="Links" href="/links/" ><i class="ri-group-2-line"></i></a>
+                        <a title="About" href="/about/" ><i class="ri-ghost-line"></i></a>
+                        <a title="Status" href="https://up.04030201.xyz" ><i class="ri-tools-fill"></i></a>
+                        <a href="#" target="_self" class="search-form-input"><i class="ri-search-line"></i></a>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">记一次Centos7翻车+升级内核开启BBR过程</h1>
+            <span class="ga-post_meta ga-mono">
+                <time>
+                    2020-07-11
+                </time>
+                <span class="mid">jcjyxjs</span>
+            </span>
+            <div class="ga-content_body">
+                        <div class="notice"><strong>rpmdb报错解决方案如下</strong></div><h4>rpmdb报错参考文章：<a href="https://elstec.cn/archives/fixrpmdb/"><a href="https://elstec.cn/archives/fixrpmdb/">https://elstec.cn/archives/fixrpmdb/</a></a></h4>
+<p>我本来想着国内机器装个BBR玩玩，然后直接找了一键脚本，就像这种</p><figure style="flex: 103.63423212192262" ><img loading="lazy" width="1768" height="853" src="https://cdn.elstec.cn/30/1.png" /><figcaption>一键脚本</figcaption></figure><p>然后我选了BBR/BBR魔改版，因为机器就1M带宽反正装啥都一样。安装之后很快就提示我重启，再然后就开不了机了。</p><p>重装之后我就换种方法，用升级内核来开启BBR。</p><p>先升级软件最新</p><div class="highlight"><pre><span></span>yum update -y
+</pre></div>
+<p>然后导入 <code>elrepo</code> 软件源的 <code>key</code> 并安装</p><div class="highlight"><pre><span></span>rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
+rpm -Uvh https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+</pre></div>
+<p>安装最新内核</p><div class="highlight"><pre><span></span>yum -y --enablerepo<span class="o">=</span>elrepo-kernel install kernel-ml-devel kernel-ml
+</pre></div>
+<p>查看系统启动项并修改新内核为默认启动方式</p><div class="highlight"><pre><span></span>grep menuentry /boot/grub2/grub.cfg
+//把最新的那个内核名称复制下来，并设置新内核为第一启动方式（引导）
+grub2-set-default <span class="s1">&#39;CentOS Linux (5.7.8-1.el7.elrepo.x86_64) 7 (Core)&#39;</span>
+</pre></div>
+<p>删除旧内核并生成新配置文件之后重启</p><div class="highlight"><pre><span></span>grub2-mkconfig --output /boot/grub2/grub.cfg
+</pre></div>
+<p>重启进入系统查看当前内核</p><div class="highlight"><pre><span></span>uname -a
+Linux VM-0-7-centos <span class="m">5</span>.7.8-1.el7.elrepo.x86_64 <span class="c1">#1 SMP Tue Jul 7 18:43:16 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux</span>
+</pre></div>
+<p>开启BBR</p><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;net.core.default_qdisc=fq&quot;</span> &gt;&gt; /etc/sysctl.conf
+<span class="nb">echo</span> <span class="s2">&quot;net.ipv4.tcp_congestion_control=bbr&quot;</span> &gt;&gt; /etc/sysctl.conf
+//保存并生效
+sysctl -p
+//检查BBR是否运行
+lsmod <span class="p">|</span>grep bbr
+tcp_bbr                <span class="m">20480</span>  <span class="m">14</span>
+</pre></div>
+
+            </div>
+        </article>
+        
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/20200710/">2020年7月10日-记录网站重新搬迁</a>
+    </div>
+
+</section>
+
+
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "6IbSkySz1sFtHscRpUnjah3J-gzGzoHsz", "appKey": "TuXcNNNCp9UkJuPnpYN538zT", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
+
+</main>
+
+                    <div class="index-footer">
+                        <p class="copyright">
+                            <span class="ba"><a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备18034167号-1</a></span>
+                            <span>© 2021 JCJYXJS · <a href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick</a> · <a href="/feed/index.xml">RSS</a></span>
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="/assets/ExSearch/jquery.min.js"></script>
+    <script src="/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+
+    </body>
+</html>

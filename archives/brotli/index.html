@@ -1,0 +1,197 @@
+<!DOCTYPE HTML>
+<html lang="english">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="blog,jcjyxjs,毫无作为,永远年轻,永远热泪盈眶" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Lighthouse" />
+    <link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="/assets/lighthouse.css">
+    <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="/assets/katex.min.css">
+    <link rel="stylesheet" href="/assets/jcjyxjs.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- require APlayer -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+        <!-- require MetingJS -->
+    <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.elstec.cn/favicon.png" />
+    <meta name="chinaz-site-verification" content="3EC3C9BC99F337AE">
+    <meta name="sogou_site_verification" content="M91y3JaB22"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+    <script>
+        console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
+	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+	<script>LA.init({id: "JJNPePzoBCdUIbEU",ck: "JJNPePzoBCdUIbEU"})</script>
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?d4466dc980f6de0a0843d45f467695c4";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&amp;display=swap" rel="stylesheet">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "/ce8d205614150044f13cae097759698d.json"
+        }
+    </script>
+    
+<title>宝塔Tengine（2.3.2）编译Brotli模块 - 毫无作为</title>
+<meta name="author" content="jcjyxjs" />
+<meta name="description" content="前言" />
+<meta property="og:title" content="宝塔Tengine（2.3.2）编译Brotli模块 - 毫无作为" />
+<meta property="og:description" content="前言" />
+<meta property="og:site_name" content="毫无作为" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/brotli/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-07-13T00:09:00+08.00" />
+<meta name="twitter:title" content="宝塔Tengine（2.3.2）编译Brotli模块 - 毫无作为" />
+<meta name="twitter:description" content="前言" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div class="author_image"><img src="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@latest/tx/1.jpg"></div>
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="index-title" href="/">毫无作为</a></h1>
+                        <p>永远年轻，永远热泪盈眶。</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <a title="Twitter" href="https://twitter.com/jcjyxjs" target="_blank"><i class="ri-twitter-line"></i></a>
+                        <a title="GitHub" href="https://github.com/jcjyxjs" target="_blank"><i class="ri-github-line"></i></a>
+                        <a title="Links" href="/links/" ><i class="ri-group-2-line"></i></a>
+                        <a title="About" href="/about/" ><i class="ri-ghost-line"></i></a>
+                        <a title="Status" href="https://up.04030201.xyz" ><i class="ri-tools-fill"></i></a>
+                        <a href="#" target="_self" class="search-form-input"><i class="ri-search-line"></i></a>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">宝塔Tengine（2.3.2）编译Brotli模块</h1>
+            <span class="ga-post_meta ga-mono">
+                <time>
+                    2020-07-13
+                </time>
+                <span class="mid">jcjyxjs</span>
+            </span>
+            <div class="ga-content_body">
+                        <h2>前言</h2>
+<p>我建站没几个钱，买 <code>1M</code> 服务器，又贪图速度，想加载快点。之前是静动分离， <code>BBR，CDN，webp自适应</code> 。</p><p>老早看到 <code>CDN</code> 控制台 <code>Gzip</code> 旁边的 <code>Brotli</code> ，但是又不给用 :%(酷安_tiebaemotion76)</p><figure style="flex: 125.85836909871244" ><img loading="lazy" width="1173" height="466" src="https://cdn.elstec.cn/31/1.png" /><figcaption>如图，永远在升级</figcaption></figure><p>无奈之下，只好各种查资料。查到的都是复制粘贴的水文，不是水文就是特别早的文章，也不怎么适用。</p><p>但大多数都是先 <code>Git clone Brotli</code> 的仓库，然后 <code>git submodule update --init</code> 升级 <code>Brotli</code> 。最后编译安装 <code>Nginx</code> 的时候添加一条编译 <code>Brotli</code> 的语句。</p><p>兼容性方面，感觉还是可以的，毕竟好几年前出的。</p><figure style="flex: 140.625" ><img loading="lazy" width="1890" height="672" src="https://cdn.elstec.cn/31/4.png" /><figcaption>兼容性</figcaption></figure><h2>遇到的问题</h2>
+<ol>
+<li>前期 <code>Nginx</code> 需要编译安装（宝塔无视即可）。</li>
+<li>国内 <code>Git Clone</code> 速度比较慢，可以改 <code>DNS</code> 跟我一样 <code>20kb/s</code> （海外机器无视即可）</li>
+</ol>
+<h2>过程</h2>
+<p>首先 <code>Clone brotli</code> 仓库</p><div class="highlight"><pre><span></span>git clone https://github.com/google/ngx_brotli.git
+</pre></div>
+<p>进入目录</p><div class="highlight"><pre><span></span><span class="nb">cd</span> ngx_brotli
+</pre></div>
+<p>升级 <code>Brotli</code></p><div class="highlight"><pre><span></span>git submodule update --init
+</pre></div>
+<p>应该会这么提示</p><div class="highlight"><pre><span></span><span class="o">[</span>root@VM-0-7-centos ngx_brotli<span class="o">]</span><span class="c1"># git submodule update --init</span>
+Cloning into <span class="s1">&#39;deps/brotli&#39;</span>...
+remote: Enumerating objects: <span class="m">8</span>, <span class="k">done</span>.
+remote: Counting objects: <span class="m">100</span>% <span class="o">(</span><span class="m">8</span>/8<span class="o">)</span>, <span class="k">done</span>.
+remote: Compressing objects: <span class="m">100</span>% <span class="o">(</span><span class="m">7</span>/7<span class="o">)</span>, <span class="k">done</span>.
+remote: Total <span class="m">6096</span> <span class="o">(</span>delta <span class="m">1</span><span class="o">)</span>, reused <span class="m">2</span> <span class="o">(</span>delta <span class="m">1</span><span class="o">)</span>, pack-reused <span class="m">6088</span>
+Receiving objects: <span class="m">100</span>% <span class="o">(</span><span class="m">6096</span>/6096<span class="o">)</span>, <span class="m">30</span>.64 MiB <span class="p">|</span> <span class="m">24</span>.00 KiB/s, <span class="k">done</span>.
+Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">3914</span>/3914<span class="o">)</span>, <span class="k">done</span>.
+Submodule path <span class="s1">&#39;deps/brotli&#39;</span>: checked out <span class="s1">&#39;d6d98957ca8ccb1ef45922e978bb10efca0ea541&#39;</span>
+</pre></div>
+<p>由于我是宝塔用户，所以不需要读取编译信息。直接在 <code>软件商店→Nginx→编译安装→添加自定义模块</code></p><p>添加自定义模块时，加入如下参数，其中， <code>/www/server/ngx_brotli</code> 是刚刚 <code>Clone</code> 的位置。按需替换，位置在哪都一样。然后直接开始编译安装。</p>
+<pre><code>--add-module=/www/server/ngx_brotli
+</code></pre>
+<p>安装完成之后。配置文件添加如下属性，然后 <code>Nginx</code> 重载配置生效。</p>
+<pre><code>brotli on; 
+brotli_comp_level 6; 
+brotli_min_length 512; 
+brotli_types text/plain text/javascript text/css text/xml text/x-component application/javascript application/x-javascript application/xml application/json application/xhtml+xml application/rss+xml application/atom+xml application/x-font-ttf application/vnd.ms-fontobject image/svg+xml image/x-icon font/opentype; 
+brotli_static always;
+brotli_window 512k;
+</code></pre>
+<p>看到 <code>content-encoding: br</code> 就代表生效。至于效果怎么样看人。据说它的 <code>Level 1</code> 比 <code>Gzip</code> 的 <code>Level 9</code> 还要牛逼 :%(酷安_emotion1018) 这么编译的好处就是 <code>Brotli</code> 和 <code>Gzip</code> 可以同时运行。</p><figure style="flex: 36.72496025437202" ><img loading="lazy" width="924" height="1258" src="https://cdn.elstec.cn/31/2.png" /><figcaption>Final</figcaption></figure><hr />
+<p>参考：<a href="http://bbs.chenruo.net/thread-20205-1-1.html">http://bbs.chenruo.net/thread-20205-1-1.html</a></p>
+            </div>
+        </article>
+        
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/20200711/">记一次Centos7翻车+升级内核开启BBR过程</a>
+    </div>
+
+</section>
+
+
+    
+        <script>
+            var initValine = function () {
+                new Valine({"enable": true, "el": "#vcomments", "appId": "6IbSkySz1sFtHscRpUnjah3J-gzGzoHsz", "appKey": "TuXcNNNCp9UkJuPnpYN538zT", "visitor": true, "recordIP": true});
+            }
+        </script>
+        <script defer src='https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js' onload="initValine()"></script>
+        <div id="vcomments"></div>
+    
+
+</main>
+
+                    <div class="index-footer">
+                        <p class="copyright">
+                            <span class="ba"><a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备18034167号-1</a></span>
+                            <span>© 2021 JCJYXJS · <a href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick</a> · <a href="/feed/index.xml">RSS</a></span>
+                        </p>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="/assets/ExSearch/jquery.min.js"></script>
+    <script src="/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+
+    </body>
+</html>

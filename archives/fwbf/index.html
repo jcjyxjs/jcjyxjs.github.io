@@ -6,78 +6,85 @@
     <meta name="renderer" content="webkit">
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="jcjyxjs,毫无作为" />
+    <meta name="keywords" content="blog,jcjyxjs,毫无作为,永远年轻,永远热泪盈眶" />
     <meta name="generator" content="Maverick 1.1" />
-    <meta name="template" content="Galileo" />
+    <meta name="template" content="Lighthouse" />
+    <link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="/assets/lighthouse.css">
+    <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="/assets/katex.min.css">
+    <link rel="stylesheet" href="/assets/jcjyxjs.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+        <!-- require APlayer -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+        <!-- require MetingJS -->
     <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-	<link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
-    <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/galileo-1c8f2638f2.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/ExSearch/ExSearch-182e5a8868.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/katex.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
-	<link rel="stylesheet" href="https://cdn.elstec.cn/test/f.css" />
-	<link rel="stylesheet" href="https://cdn.elstec.cn/test/f-embed.css" />
-	<style>.brand{font-family:'f';font-weight:normal;}</style>
+    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.elstec.cn/favicon.png" />
+    <meta name="chinaz-site-verification" content="3EC3C9BC99F337AE">
+    <meta name="sogou_site_verification" content="M91y3JaB22"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
     <script>
-(function(){
-    var bp = document.createElement('script');
-    var curProtocol = window.location.protocol.split(':')[0];
-    if (curProtocol === 'https') {
-        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
-    }
-    else {
-        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
-    }
-    var s = document.getElementsByTagName("script")[0];
-    s.parentNode.insertBefore(bp, s);
-})();
-	</script>
-	<script type="text/javascript" src="//js.users.51.la/20666133.js"></script>
-	<script src="https://cdn.elstec.cn/1.js"></script>
-</script>
-	<script>
+        console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
+	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+	<script>LA.init({id: "JJNPePzoBCdUIbEU",ck: "JJNPePzoBCdUIbEU"})</script>
+    <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?d4466dc980f6de0a0843d45f467695c4";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&amp;display=swap" rel="stylesheet">
+    <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/65f602d0f1da72c739bc54ebcccaff80.json"
+            api: "/ce8d205614150044f13cae097759698d.json"
         }
     </script>
     
 <title>使用Fontmin生成WebFont压缩字体 - 毫无作为</title>
 <meta name="author" content="jcjyxjs" />
-<meta name="description" content="Fontmin" />
+<meta name="description" content="我上一篇文章(记一次改字体的辛酸史，解决CDN跨域问题)讲的是我改字体的一个过程，用了@font-face的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是Font-Spider(字蛛)，看了网上各种教程，无一例外全是一模一样的。" />
 <meta property="og:title" content="使用Fontmin生成WebFont压缩字体 - 毫无作为" />
-<meta property="og:description" content="Fontmin" />
+<meta property="og:description" content="我上一篇文章(记一次改字体的辛酸史，解决CDN跨域问题)讲的是我改字体的一个过程，用了@font-face的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是Font-Spider(字蛛)，看了网上各种教程，无一例外全是一模一样的。" />
 <meta property="og:site_name" content="毫无作为" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/archives/fwbf/" />
-<meta property="og:image" content="None" />
+<meta property="og:image" content="" />
 <meta property="article:published_time" content="2019-08-15T09:17:00+08.00" />
 <meta name="twitter:title" content="使用Fontmin生成WebFont压缩字体 - 毫无作为" />
-<meta name="twitter:description" content="Fontmin" />
+<meta name="twitter:description" content="我上一篇文章(记一次改字体的辛酸史，解决CDN跨域问题)讲的是我改字体的一个过程，用了@font-face的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是Font-Spider(字蛛)，看了网上各种教程，无一例外全是一模一样的。" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="None" />
+<meta name="twitter:image" content="" />
 
 
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.elstec.cn/favicon.png?imageMogr2/format/webp/interlace/1/quality/100" />
+    
     </head>
     
     <body>
         
         <div class="container">
             <header id="ga-header">
+                <div class="author_image"><img src="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@latest/tx/1.jpg"></div>
                 <div first>
                     <aside id="ga-brand">
-                        <h1 class="brand"><a class="no-style" href="/">毫无作为</a></h1>
-                        <p>Personal blog</p>
+                        <h1 class="brand"><a class="index-title" href="/">毫无作为</a></h1>
+                        <p>永远年轻，永远热泪盈眶。</p>
                     </aside>
                 </div>
                 <div second id="ga-nav">
                     <nav class="navs">
-                        <ul><li><a class="ga-highlight" href="/" target="_self">Home</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">Archives</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/links/" target="_self">Links</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">About</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">Search</a></li></ul>
+                        <a title="Twitter" href="https://twitter.com/jcjyxjs" target="_blank"><i class="ri-twitter-line"></i></a>
+                        <a title="GitHub" href="https://github.com/jcjyxjs" target="_blank"><i class="ri-github-line"></i></a>
+                        <a title="Links" href="/links/" ><i class="ri-group-2-line"></i></a>
+                        <a title="About" href="/about/" ><i class="ri-ghost-line"></i></a>
+                        <a title="Status" href="https://up.04030201.xyz" ><i class="ri-tools-fill"></i></a>
+                        <a href="#" target="_self" class="search-form-input"><i class="ri-search-line"></i></a>
                     </nav>
                 </div>
             </header>
@@ -88,88 +95,58 @@
         <article class="yue">
             <h1 class="ga-post_title">使用Fontmin生成WebFont压缩字体</h1>
             <span class="ga-post_meta ga-mono">
-                <span>jcjyxjs</span>
                 <time>
                     2019-08-15
                 </time>
-                
-                in <a no-style class="category" href="/category/网站/">
-                    网站
-                </a>
-                
-                
-                <span class="leancloud_visitors" 
-                    id="/archives/fwbf/" 
-                    data-flag-title="使用Fontmin生成WebFont压缩字体"> · <i class="leancloud-visitors-count"></i> Views</span>
-                
+                <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                <p>我上一篇文章<strong><em><a href="https://jcjyxjs.me/archives/cfont.html">(记一次改字体的辛酸史，解决CDN跨域问题)</a></em></strong>讲的是我改字体的一个过程，用了<code>@font-face</code>的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是<a href="https://github.com/aui/font-spider/blob/master/README-ZH-CN.md">Font-Spider(字蛛)</a>，看了网上各种教程，无一例外全是一模一样的。
-昨天我测试字体的时候用过<strong><a href="https://www.webfont.com/">有字库</a></strong>，有字库就是一个典型的webfont，我就在想有没有跟有字库差不多的webfont引用方式，不直接引用整个字体，而是引用需要用到字，终于，我在GitHub上找到了这个15年的项目<code>Fontmin</code>，我直接下载了他的客户端，<code>Fontmin</code>提供了Mac os &amp; Windows客户端。只需要将ttf原字体拖入客户端，输入需要用到的字，即可一键生成字体和css配置。
-<figure style="flex: 74.11971830985915" ><img width="842" height="568" src="https://cdn.elstec.cn/gif/3.gif" /></figure></p>
-<blockquote><p>生成之后，会创建以你原字体名开头的<code>eot，ttf，woff，css</code>文件</p>
-</blockquote>
-<p><figure  size-undefined><img width="-1" height="-1" src="https://cdn.elstec.cn/6.png!webp" /></figure>
-由于我源站国内访问并不是很快，我修改了css内容，上传字体到我的腾讯云cos并链接，有两个css，一个是<code>name.css</code>，一个是<code>name-embed.css</code>，以下是我的配置</p>
+                        <p>我上一篇文章<a href="https://elstec.cn/archives/cfont.html">(记一次改字体的辛酸史，解决CDN跨域问题)</a>讲的是我改字体的一个过程，用了<code>@font-face</code>的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是<a href="https://github.com/aui/font-spider/blob/master/README-ZH-CN.md">Font-Spider(字蛛)</a>，看了网上各种教程，无一例外全是一模一样的。
+昨天我测试字体的时候用过<a href="https://www.webfont.com/">有字库</a>，有字库就是一个典型的webfont，我就在想有没有跟有字库差不多的webfont引用方式，不直接引用整个字体，而是引用需要用到字，终于，我在GitHub上找到了这个15年的项目<code>Fontmin</code>，我直接下载了他的客户端，<code>Fontmin</code>提供了Mac os &amp; Windows客户端。只需要将ttf原字体拖入客户端，输入需要用到的字，即可一键生成字体和css配置。
+<figure style="flex: 74.11971830985915" ><img loading="lazy" width="842" height="568" src="https://cdn.elstec.cn/gif/3.gif" /></figure></p><blockquote>
+<p>生成之后，会创建以你原字体名开头的<code>eot，ttf，woff，css</code>文件</p></blockquote>
+<figure style="flex: 269.04761904761904" ><img loading="lazy" width="791" height="147" src="https://cdn.elstec.cn/6.png" /></figure>
+由于我源站国内访问并不是很快，我修改了css内容，上传字体到我的腾讯云cos并链接，有两个css，一个是<code>name.css</code>，一个是<code>name-embed.css</code>，以下是我的配置<div class="highlight"><pre><span></span><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+        <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&quot;f&quot;</span><span class="o">;</span>
+        <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.eot&quot;</span><span class="o">);</span> <span class="c">/* IE9 */</span>
+        <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.eot?#iefix&quot;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s2">&quot;embedded-opentype&quot;</span><span class="o">),</span> <span class="c">/* IE6-IE8 */</span>
 
-<pre><code>@font-face {
-    font-family: "f";
-    src: url("cdn.elstec.cn/test/f.eot"); /* IE9 */
-    src: url("cdn.elstec.cn/test/f.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+        <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.woff&quot;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s2">&quot;woff&quot;</span><span class="o">),</span> <span class="c">/* chrome、firefox */</span>
+        <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.ttf&quot;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s2">&quot;truetype&quot;</span><span class="o">),</span> <span class="c">/* chrome、firefox、opera、Safari, Android, iOS 4.2+ */</span>
 
-    url("cdn.elstec.cn/test/f.woff") format("woff"), /* chrome、firefox */
-    url("cdn.elstec.cn/test/f.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+        <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.svg#f&quot;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s2">&quot;svg&quot;</span><span class="o">);</span> <span class="c">/* iOS 4.1- */</span>
+        <span class="nt">font-style</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
+        <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
+    <span class="p">}</span>
+</pre></div>
+<blockquote>
+<p>以下是embed文件</p></blockquote>
+<div class="highlight"><pre><span></span><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+        <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&quot;f&quot;</span><span class="o">;</span>
+        <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.eot&quot;</span><span class="o">);</span> <span class="c">/* IE9 */</span>
+        <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.eot?#iefix&quot;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s2">&quot;embedded-opentype&quot;</span><span class="o">),</span> <span class="c">/* IE6-IE8 */</span>
 
-    url("cdn.elstec.cn/test/f.svg#f") format("svg"); /* iOS 4.1- */
-    font-style: normal;
-    font-weight: normal;
-}
+        <span class="nt">url</span><span class="o">(</span><span class="nt">data</span><span class="p">:</span><span class="nd">application</span><span class="o">/</span><span class="nt">x-font-ttf</span><span class="o">;</span><span class="nt">charset</span><span class="o">=</span><span class="nt">utf-8</span><span class="o">;</span><span class="nt">base64</span><span class="o">,</span><span class="nt">AAEAAAAKAIAAAwAgT1MvMmAtawkAAACsAAAAYGNtYXCvY9BaAAABDAAAAYpnbHlmEnhSBAAAApgAABF0aGVhZAr97</span><span class="o">/</span><span class="nt">0AABQMAAAANmhoZWEB2ADPAAAURAAAACRobXR4BVkAVwAAFGgAAAAmbG9jYQ</span><span class="o">+</span><span class="nt">kE4IAABSQAAAAGG1heHAAFQFIAAAUqAAAACBuYW1lYxsmxwAAFMgAAAM6cG9zdPWDr3QAABgEAAAAWAAEALkBkAAFAAgAgACAAAAAEACAAIAAAACAAAsAQAoHAgAAAAAAAAAAAKAAEr8QAAAAAAgAEgAAAABCREZaAEAAQ2vrAN</span><span class="o">//</span><span class="nt">3wAXAN8AOgAEAAEAAAAAAAAAAAAAACAAAAAAAAMAAAADAAAAHAABAAAAAACEAAMAAQAAABwABABoAAAAFgAQAAMABgBDAEoAUwBZAHxOOk9cZeBr6</span><span class="o">/////</span><span class="nt">8AAABDAEoAUwBYAHxOOk9cZeBr6</span><span class="o">///////</span><span class="nt">vv</span><span class="o">+</span><span class="nt">4</span><span class="o">/</span><span class="nt">7D</span><span class="o">/</span><span class="nt">rP</span><span class="o">+</span><span class="nt">Ksc2wrJoplB8AAQABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAgAAAAAAAAAAAwAAAAAEBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA0AAQCmAK4ANwAANzAHBgcwBwYHBiMiJyY1NDc2MzIXMhcWFRYXFCMwBwYnJicmIyIHBhUUFxYXFjMyNzY3Njc2FzKlAwECAgMDFhcnGxsdGygYFgIBAQIBAgECAQECDSEeEA8OCQwMDxINCQcBAwEDAzAZCQEBAgEIFxgnJhkYBwQDAwkQAwEBAQEDHxgVHh0VDQYHCwkNAwMCAgAAAQAA</span><span class="o">/</span><span class="nt">9IAaQCqAEEAADcVFAcGBwYjIicmNSY3NjMyFxYzMjc2NzQ1Nj0BNCcmJyYnIiM0IyYjJjc0MzAzFjMyMzYxMBcyFRYHFCMGIwYHBlIEBAsSGgcFBgEFAwUGBwYDBwYDAQEEAQQDAgIDAQEBAwIDBhMJCAsPAQECAgQJAQQCAYtjGwwPChYDAwYJBAIHBhAIDwMHCQVsDwMBAQEBAQEBAwMBAQECAgICAwEFBgABAAwAAQB6AK4ATgAAPwE0NzYXFhUWFRYzMjc2NTQnJicmJyYnJicmJyY1NDc2MzIXFhcwFRYVFhUUBwYjIicmJyYjIgcGFRQXMhcWFxYXFgcUBwYHBiMiJyY1NA0BAgICAgEJHBAJCQcBAwYFAgYFAxEJCxEPFxIOBAMBAQEBAgMBAQIJFgsJCRMBAgoJEgcMAQsKEQsPGg8EJAoGAQICAQQDAyAHBw0MCgEDBQMCAwQBDAcLExYMCgYBAwUBCwgFAwEBAgMEGgYGCw8NAgYFCgkPEhEMDAQCCgMFBgAAAAEAAgAEAKwAqgCrAAA3FiMGIyIjJiMiIyIjIgciIyI1NDcyNzI3MjEyNTQnJicGBwYVFhcyMzAzFhUUFQYjNCMiIyIjIhUiNSY3NDMyNzI3Njc2NzY1NCcmJyYnJicmJyYnIiMmNTQ3MhcyMzIzNiMWFxYjIgciBwYVFBcWFzY3NjU0JzAjJiMiJzA1Jjc0MxYzMjMyMzYxFhcUBxQjBiMiBwYHBgcGFQYVFBcWFxYXFhcWFxYzFjMyqQMEAQUBAwcGCQQFCgQGBAEFBQIFAQIBAQcDGQ8NBgEHAwQBAgECDwcIBgcMAgEBBAIEBAMICgkUBAQBCAQCDAUHCAMHAwICBAYLDAUCDxMDAwEBBAEDBgICBAQVEgYFBAEDAwIDAQEDBxAHBgUGCAIBAQMDAQoGDBMHAgEBAgIBBA8NCAcIAQICAQMKBQEBAQQDAgEBAgMLByQVGAkDAwEBAgEDAgEBAwEDAgECBBALHwYCAgYDCwYDEwYMBAIBAQMEAQEBAQIGAQEBAgMGCR4ZDAkDAgEBAQECAQQBAQEDAwEBAQUKHQoCAQICAQIDAgMFFxQNCgIBAQABAAEABAChAKoAgwAANwcUBwYHBh0BFBcWFxYXMhcwFRYVFAciJyIjIiMGMSY1NDMyNzIzNjc2PQE0JzQnJi8BJicmIyYnJiciJyY3NDMyFzIzMjM2MzIVFCMiByIHIgcwFRYVFBcWFxYXFhcWFzY3Njc2JyInIicmNTYzMhcyMzIzNjMyFxQVBiMGBwYHBgcGexUBBAECAgIDBQYDAQEDBgsLBgcMDgMEAgQCAQYCAQQBAQMcAQIBAQMDAwUDBAICAggHCQQGDAsFBAQCAgMCAwEBAgIBBggCBgQDBA8KAwMGAwMCAgECAQMEDgQDCAgDAwECAwQFBwYCBwF</span><span class="o">+</span><span class="nt">JgEBBgQFCRkMBAQBAQICAQEBAwEBAQEDBQECBAMOFwwIAQEBBzQDAwMFAgIBAQQCAgEBBAUBAQIBAgIBAgQCDBEECQgFCRoTBwgDAQIBAwMBAQMCAgIBAwQIBAsDAAABAB7</span><span class="o">/</span><span class="nt">4AAxALoAAwAAFyM1MzETEyDaAAAJAAz</span><span class="o">/</span><span class="nt">5QDpANEApwCwAMYA0QDrAQUBGQErAUUAADcUBwYHBgcGBwYHBiMGJzQnJicmJyY3NhcWFxYzFjcyNzY3NjcHBgcGBwYHBicwNTQ3Njc2NzY1JjUGBwYHBiMiMSY3Bjc2NzY3Njc2NwY3FhcWFxYXFhc2NzY3FhcWFxYVFAcGIyYjJiMGBwYHBgc2BwYHFBUGBwYHFCMWFzc2NxYXFhcWFRQHBgcUBwYVNzY3FhcWFxYxFAcGBwYHMzY3NjcWFxYxFiciBwYHNzQ3NjcWBwYjIicmJyYnJicWJyYnJjc2FxYPARQHBhUyNzI3NAcUBwYjIicmNTQ3Njc2NzY3NDc0MzYXJhcWNxQHBgcGJzQ1Jic0JyY1NDMyFxYzFhcWFxYHFAcGIyI1NBU0JyY3NBcmFxYXFhcGBwYnJicmJyYzNhcWFxYXFjcGBwYnJicmJyY1JicmJyY1NhcyFxYXFBUW6QoBAQEBBAsHCAUHBAMBAgEECQYBAQYDBgcCBgMDAwYDAwFxAwMKERESBwEGDhAWAwEBCwwCAgQDAQEBAQIBAgEBDgkCBAMEAgQDAwIDAwIZEAsKAwQEAgUCAQMBAwEDAgQHBQQOCxAJCgELBggCDA8uBAYCBQQCCQQBBQEBBgIIAwkEAwEEAwMBAgkBAwMCBQkBCj4UOQEDTQECKwMEBgYDBQMDBAMDCQcJAwMDAQINIjsyAQEIEREHKgMDBwcDAgIBAgEBBQECAQICAQIDLAQEBQwBAQICAgIBBAMCAQMHAwYLAwMECgMBAQMDBQsDBB4CBQkDAQMCAwMBAQUJBwYCAhoBBQMEAwIBAgEBAgIBAwIDCQgIAQE7AwUDCQkGEw0JBQQBBgECBAIGBwUBAgIBAQIBAQUJCgsWBQkGEg8PCAMCAQEFCRMcKw0PCAsMCAEBAwECAgMBAgIBExsEDgsPAgIBAwEDAwEIDAYKAwUFAggDAQIBAQEBAQMBAQMDBQECAQEDAQsJAgUJAgMIAQQCAQYCAwIBAgMHBAMBAgkDBgMEAQIDAQIJBwIFBAIDBgEIGgMMCgMCBQlACQUGAwIHCAcECAYHAgECAQMECCwCBQ0EAgEBCVgHCAoEAwYEAgEDAgEFBAMFBAEEBAUHcwYDAwEBCwMGBgMCAQIBAQEBAQEEAwWFBgMFDA8BBgQEAQEBAQIGBwYDBAICDAgDBQQEAgIBBgUGBgYEAgIDAQQDBQIBAQMCAQMCAQEFBAUBAwQAAAACAAX</span><span class="o">/</span><span class="nt">4AD0ANAAhwC2AAA3IiMGIyIHBgcyFxYXFhUWBwYHFBU3NjcWFxYXFhcWFxYVBisBIgciIyIHFBUyNzYzNjcWFxYXFhcWFQYjIgciDwEWFRQHBgcGJzA1NDU2NTY1NjU0JzUjBgcGBwYHBgcGBwYjJjc2NzY3Njc0NzY3FhcWFRQHBgcGBzc2NzY3MhcWFxYVFAciJxQHBgcWHQEUBwYHBgcGIyY1Njc2NzY1BgcGBwYHBiMmNzY3Njc2NzY3FhcWFxbmAwgKBQUMFA0CBAQCCQEDAgIXAwgCBAUEAgMDAQIBBAgICgMBCBEHCwYGAwgDBgQCBgIDAQQCBgkNIAEHBAUGBAEBAQEDBAUBBAUEAQMIBgIDAgMFCQYGBgYCAgIKCQkDAwQDCTcBBQQDAQEGDAgGA3oKCQgBAQIJAwUHAwICAQUBAgQJBQIUDwQBAQMCAw4KExEFBgMHBAIMlgEBAgECAQEDAgMCAgIFFQIFDAEDBAIBAwIBAwIDAQEOHgEBBQwBBQMBBQIDAgIBAQIZFgoGBQEDAgoCBAcDJQ9AAwMKEAYHAgQGBQEDCQMDAgQGDwsNEBUBBQsIBgYGAwMBAwEJEAMCBwYEAQMJBwIDAR4FAw8LLyYYDAoMCAMDAwEIBQkeFxojBQgFAhAJAQIDAgMOCxcgChUCAwIBBwAAAAAIABH</span><span class="o">/</span><span class="nt">4wDvANAAuADMAOYA</span><span class="o">/</span><span class="nt">gEUARoBHwEmAAA3BiMiJyIjBwYHMzcWFxYXFgcGKwEiIwYjBgciBycWNzIzNCcmJwciByczNzQnNDUmJwYHBgcGByI1NDc2NzY3Njc2NzY3FhcWFxYXFhcWFRQHBgc2NzIzNjc2NxYXFhcWFQYjBiMiBwYHBgcWFxYVFgc2BwYHFBc3NDU0JyYnFhcWMxYXFhUWBxQVNzQ1NDUyFxYVFAcwByIHFAcGFTc2NzQ1NjUWFxYXFgcUBxQHFAczMDc2NxYXFgcUIwYnJicmJyYnJjU2MzIXFhcWJzAVBhUGBwYHBicmNTY3Njc2NzY3MDc2FzIXFAcGJyInJjU0NTYjNCcmNTIXFhcWFxYXFAcGIyInNCcmNTQnNCcmMTYXFhcWJwcGBzc2JyMXMzYHNDUmNQcX7wELAQ4JBQsEBQwMAgYGAgkBAQMGAwsSBhtSCQ8FBxEFAgECAQwGGQchEAEBAgQDAQECAwEDAQECAQoHAQMCAQIECAUCAgICAwsECyAoBAIBAgEKCAsCAQcCDAkRBAsKPgYGBAkJAQEBAgECAQ4BAQEDBgQCBgIDAQYQBAwKAgEBAgEBEQIBAQIGBgMMAQcBAwkCBgYIDQcIDwcEAgMDBQQHBQIEEgwJBQWmAQIGBQYJBggBAwEIBAILBgECAQM3BQYHCAIBAQECAgIEBwYFAwYxAwQICQMDAQQBAQIEDwcJAxABAgwEIA4BCwIfAQ4DYgQBAR4REgIEBQIGBAIBAgQDCwEBBA0SDAEEDAEEBQMBBgwEAwEBAQECAgQBAwQCERsFDQgEAQIEAgEBAQECAwUDCRMBAwEEAw8GCAIBBgQDAQEBAwkGAQICAwECAgMBAwUMAQwFAgYJBwEBAgECAQIDBQURAQ4HEAYFBAQCAgEDAgkHBAELBwMGCgYBAwIBBQMDBAIDAwwDCQgECwZmEAEGBgYGBgQGAwIBBgQGBg4CAwMMCwgEBgMCDgcEAQMCAQQJAQQBGwoDBgEJBAYCAwQJBgQBAQMEAwUGBQYFBgoEDAUCAgQCAQICAgMHCFMBER4BERwvFxgECxQMAS8AAAAABAAW</span><span class="o">//</span><span class="nt">AA9wDPANIBAQEiAS0AADcUBwYHBgciIyInIicmJyYnNDU0NwciBwYHJzY3Nj8BNDUGBwYHBgcnNjc2MzY3Njc0NQYHBgcjIjUiNTQ3NjcHBgcGByI1ND8BNjcyNTY1NDMyFxYVFhU3Njc2NxYXFhcWBwYjJgcGBwYnJjc2NwcWFxYXFhUWIyInBgcWFxQHFTc2NzY3FhcWFxYVFAcGBwYHIiMGBxUyNzY3Njc2NxYXFhcWFRQjIgciByIHBgcGBwYHFRYxFjMWNzIzNjc2NzY3NDc2NzYzFgcUFQYVFBcWFxYnFAcwFQYVFxYVFCMiDwEGBwYjBiciNTQ1NCcmNTQnJjUyFzIXFhc2PwEWFxYzFjcGKwEiBwYHMCcyMzYzNjM1NCcWFxYXFAcVPwEWFxYXFgciBwYHFBcWFTY39wYJCRYcEBYCBAMECAMCAQEvAQMUCQcEDQwIMgQJDAcKFwcIEgYDBg0MBgUJDg8IAQILOBpeAQIFDAwECQYCAQECAwIBAYQBBAUEAgYJBg8DAQ8LCQMIBgIBAwIEHgIEBAIGAQYEBA4PAwEHHwEDAgECBwYDCgoECwkGAQIJDgMFExkBBAIBAwYHBQcEAgMDAgIGCwcJEg4HAQIMAwcEAhULCQcGBwQCAgMDAgIBAgEEAzgIAQMECwgMOQEJAwQEAQIBAQEBBQ4BAwUCIRQKBggBAQkbAgMJKVcJFgUJGwYODQcBBw8MAQciDQMGBwQJQAUOFg8BASEUBgYDBQIFAQEBAQQBBgIBAwoIAQMDCwEBAQEJBA8BAQICAQYKAQMBAQICAQgHAQEBAQEBAwINEgUGCA8BEAUFCQgGAwMBBAoCBAQCBgIECAUCBAYFCwUEAgUCAwQBAQYGCQICAwMCBgQDAQQDAQMDAwcFAwgEAgEDAgIHAwMBAQEBAQEDEwEEAwMKBAIBBAQCBQMDAQEBAQECAwIBBgYCAQECAQIEBA8BCgcFCgIJAwYIBAwEAwMEiwMFAQMCAgMDAwECBgQCAQEFAgYECgUDAwkEAgUCAQECAQ0DBwEGFgIFAQILAQENCwkBBQMEAwULARMCBAUDBh4BAQEDBwQDAgEAAQAAAAAAAGx3K1lfDzz1AAkBAAAAAADRwS21AAAAANkpg5wAAP</span><span class="o">/</span><span class="nt">SAPcA0QAAABQAAgAAAAAAAAABAAAA3</span><span class="o">//</span><span class="nt">GAAABAAAAAAAA9wABAAAAAAAAAAAAAAAAAAAACAEAAAAArAANAHAAAACEAAwArAACAKMAAQBPAB4BAAAMAAUAEQAWAAAAAAAAAFAAqAEYAfICoAKsBIAFggccCLoAAQAAAAsBRgAJAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAABAAxgABAAAAAAAAADUAAAABAAAAAAABABMANQABAAAAAAACAAcASAABAAAAAAADACMATwABAAAAAAAEABMAcgABAAAAAAAFAAQAhQABAAAAAAAGABEAiQABAAAAAAAHAEQAmgADAAEECQAAAGoA3gADAAEECQABABwBSAADAAEECQACAA4BZAADAAEECQADADwBcgADAAEECQAEABwBrgADAAEECQAFAAgBygADAAEECQAGACIB0gADAAEECQAHAIAB9ENvcHlyaWdodChjKSBCZWlqaW5nIEZvdW5kZXIgRWxlY3Ryb25pY3MgQ28uLEx0ZC4yMDE1ZcK5a2N8wpfCkcORwpZ1fkFPU1JlZ3VsYXJGb3VuZGVyOmXCuWtjfMKXwpHDkcKWdX5BT1MJUmVndWxhcmXCuWtjfMKXwpHDkcKWdX5BT1MxLjAwRlpDVUpJTkxGVy0tR0IxLTBCeSBCZWlqaW5nIEZvdW5kZXIgRWxlY3Ryb25pY3MgQ28uLEx0ZC4gUxdOwqxTF1knZcK5a2N1NVtQZwnCllBRbFPDuABDAG8AcAB5AHIAaQBnAGgAdAAoAGMAKQAgAEIAZQBpAGoAaQBuAGcAIABGAG8AdQBuAGQAZQByACAARQBsAGUAYwB0AHIAbwBuAGkAYwBzACAAQwBvAC4ALABMAHQAZAAuADIAMAAxADUAZQC5AGsAYwB8AJcAkQDRAJYAdQB</span><span class="o">+</span><span class="nt">AEEATwBTAFIAZQBnAHUAbABhAHIARgBvAHUAbgBkAGUAcgA6AGUAuQBrAGMAfACXAJEA0QCWAHUAfgBBAE8AUwAJAFIAZQBnAHUAbABhAHIAZQC5AGsAYwB8AJcAkQDRAJYAdQB</span><span class="o">+</span><span class="nt">AEEATwBTADEALgAwADAARgBaAEMAVQBKAEkATgBMAEYAVwAtAC0ARwBCADEALQAwAEIAeQAgAEIAZQBpAGoAaQBuAGcAIABGAG8AdQBuAGQAZQByACAARQBsAGUAYwB0AHIAbwBuAGkAYwBzACAAQwBvAC4ALABMAHQAZAAuACAAUwAXAE4ArABTABcAWQAnAGUAuQBrAGMAdQA1AFsAUABnAAkAlgBQAFEAbABTAPgAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALAAsAAAAmAC0ANgA7ADwAXwECAQMBBAEFB3VuaTRFM0EHdW5pNEY1Qwd1bmk2NUUwB3VuaTZCRUI</span><span class="o">=)</span> <span class="nt">format</span><span class="o">(</span><span class="s2">&quot;truetype&quot;</span><span class="o">),</span> <span class="c">/* chrome、firefox、opera、Safari, Android, iOS 4.2+ */</span>
 
-</code></pre>
-<blockquote><p>以下是embed文件</p>
-</blockquote>
-
-<pre><code>@font-face {
-    font-family: "f";
-    src: url("cdn.elstec.cn/test/f.eot"); /* IE9 */
-    src: url("cdn.elstec.cn/test/f.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-
-    url(data:application/x-font-ttf;charset=utf-8;base64,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) format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
-
-    url("cdn.elstec.cn/test/f.svg#f") format("svg"); /* iOS 4.1- */
-    font-style: normal;
-    font-weight: normal;
-}
-
-</code></pre>
-<p>我又上传这两个css到cos，用这两句代码引用</p>
-
-<pre><code>&lt;link rel="stylesheet" href="https://cdn.elstec.cn/test/f.css" /&gt;
-&lt;link rel="stylesheet" href="https://cdn.elstec.cn/test/f-embed.css" /&gt;
-
-</code></pre>
+        <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.svg#f&quot;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s2">&quot;svg&quot;</span><span class="o">);</span> <span class="c">/* iOS 4.1- */</span>
+        <span class="nt">font-style</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
+        <span class="nt">font-weight</span><span class="o">:</span> <span class="nt">normal</span><span class="o">;</span>
+    <span class="p">}</span>
+</pre></div>
+<p>我又上传这两个css到cos，用这两句代码引用</p><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.elstec.cn/test/f.css&quot;</span> <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.elstec.cn/test/f-embed.css&quot;</span> <span class="p">/&gt;</span>
+</pre></div>
 <p>刷新就看到效果啦。(跨域报错的话，请看我上一篇文章)</p>
-<h4>看完了全文为什么不评论一下呢？xd</h4>
-
             </div>
         </article>
-        <div id="ga-tags">
-    
-</div>
+        
     </section>
 
     
 <section id="ga-content_pager">
 
-    <div class="next">
-        <a class="ga-highlight" href="/archives/2019816/">今天差点文章重写了</a>
-        <p class="yue">现在回过头想想，真是会吓出一身冷汗 :@(吐血倒地) </p>
-    </div>
-
-
     <div class="prev">
         <a class="ga-highlight" href="/archives/cfont/">记一次改字体的辛酸史，解决CDN跨域问题</a>
-        <p class="yue">改字体</p>
     </div>
 
 </section>
@@ -187,36 +164,18 @@
 
 </main>
 
-                <footer class="ga-mono" id="ga-footer">
-                    <section>
-                        <span id="ga-uptime"></span>
-                        <span class="brand">毫无作为</span>
-                    </section>
-                    <section>
+                    <div class="index-footer">
                         <p class="copyright">
-                            <span>Copyright © 2020 JCJYXJS</span>
-                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                            <span class="ba"><a href="http://www.beian.miit.gov.cn/" target="_blank">浙ICP备18034167号-1</a></span>
+                            <span>© 2021 JCJYXJS · <a href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick</a> · <a href="/feed/index.xml">RSS</a></span>
                         </p>
-						<div class="copyright">
-							<span class="footer-addon">
-                                
-                            </span>
-                            <nav class="social-links">
-                                <ul><li><a class="no-style" title="Twitter" href="https://twitter.com/jcjyxjs" target="_blank"><i class="gi gi-twitter"></i>Twitter</a></li><span class="separator">·</span><li><a class="no-style" title="GitHub" href="https://github.com/JCJYXJS" target="_blank"><i class="gi gi-github"></i>GitHub</a></li><span class="separator">·</span><li><a class="no-style" title="Weibo" href="https://weibo.com/JCJYXJS/" target="_blank"><i class="gi gi-weibo"></i>Weibo</a></li></ul>
-                            </nav>
-                        </div>
-                    </section>
-                    <script>
-                        var site_build_date = "2019-08-20T12:00+00:00"
-                    </script>
-                    <script src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/galileo-dc4baa7cf4.js"></script>
-                </footer>
+                    </div>
             </div>
         </div>
     </div>
 
     <!--katex-->
-    <script defer src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/katex.min.js"></script>
+    <script defer src="/assets/katex.min.js"></script>
     <script>
     mathOpts = {
         delimiters: [
@@ -227,11 +186,12 @@
         ]
     };
     </script>
-    <script defer src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+    <script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
 
-    <script src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/ExSearch/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/jcjyxjs/jcjyxjs.github.io@master/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+    <script src="/assets/ExSearch/jquery.min.js"></script>
+    <script src="/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
 
     
+
     </body>
 </html>

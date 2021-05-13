@@ -1,0 +1,337 @@
+.author_image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 24px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+a {
+    transition: 0.3s color;
+}
+
+i {
+    transition: 0.3s color;
+}
+
+.author_image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+#ga-header div[first] aside#ga-brand h1 a {
+    color:#000000;
+}
+
+#ga-header div[first] aside#ga-brand h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 24px;
+    margin-top: 24px;
+    color: #495057;
+}
+
+#ga-vav {
+    padding:16px;
+}
+
+body {
+    line-height: 1.42;
+    font-family: 'Noto Serif SC', serif;
+    letter-spacing: 0.05em;
+}
+
+.ga-nav,.navs {
+    padding: 16px;
+}
+
+.navs a {
+    margin: 4px 8px;
+    color: #868e96!important;
+}
+
+#ga-header div[first] aside#ga-brand h1 a:hover {
+    transition: 0.3s color;
+}
+
+.ga-section#ga-post_list>ul>li a:hover {
+    transition: 0.3s color;
+}
+
+.ga-section#ga-pager a[next]:hover,.ga-section#ga-pager a[prev]:hover {
+    transition: 0.3s color;
+    color: #006CFF;
+}
+
+.time {
+    text-align: center;
+}
+
+.copyright a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 12px;
+    font-family: 'Noto Serif SC', serif;
+}
+
+.copyright a:hover {
+    color: #006CFF;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.copyright span {
+    font-size: 12px;
+    font-family: 'Noto Serif SC', serif;
+}
+
+.index-footer {
+    font-size: 12px;
+    text-align: center;
+    padding-bottom: 25px;
+    color: #868e96;
+}
+
+.brand a:hover {
+    color: #006CFF!important;
+}
+
+.mid:before {
+    content: "/ ";
+    font-size: 10px;
+    color: rgba(0, 0, 0, 0.1);
+    margin: 0 4px;
+}
+
+span.ga-post_meta {
+   color:#5e5e5e!important;
+}
+
+.next-post {
+    margin-bottom: 24px;
+    color: #343a40;
+    font-weight: lighter;
+}
+
+#ga-content_pager>div.prev::before {
+    content: "Next";
+}
+
+#ga-content_pager>div a:hover {
+    color: #006CFF;
+    -webkit-transition: 0.3s color;
+    transition: 0.3s color;
+}
+
+.ba {
+    display:block;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    html {
+        background: rgb(34,39,46);
+    }
+
+    body {
+        color: rgb(173,186,199);
+    }
+
+    #ga-header div[first] aside#ga-brand h1 a {
+        color: rgb(173,186,199);
+    }
+
+    #ga-header div[first] aside#ga-brand p, .ga-section#ga-post_list > ul > li time {
+        color: #aaaaaa;
+    }
+
+    span.ga-post_meta {
+        color: #aaaaaa!important;
+    }
+
+    .ga-section#ga-post_list > ul > li a, .ga-section#ga-pager > *, .ga-section#ga-pager a, h1.ga-post_title {
+        color: rgb(173,186,199);
+    }
+
+    .copyright a {
+        color: rgb(173,186,199);
+    }
+
+    .index-footer {
+        color: #aaaaaa;
+    }
+
+    .yue a {
+        color: rgb(173,186,199);
+    }
+
+    #ga-content_pager>div a {
+        color: rgb(173,186,199);
+    }
+
+    .yue figure figcaption {
+        color: #aaaaaa;
+    }
+
+    .yue pre {
+        background: rgb(29,33,38);
+        color:#ffffff;
+    }
+
+    .yue pre code {
+        color: rgb(173,186,199)!important;
+    }
+
+    .yue pre tt {
+        color: #ffffff;
+    }
+
+    .v .vbtn {
+        color:#aaaaaa!important;
+        background:rgb(37,43,53)!important;
+        border-color: #333333!important;
+    }
+
+    #ga-content_pager>div.prev::before {
+        content: "Next";
+        color:#aaaaaa;
+    }
+
+    .v .vlist .vcard .vhead .vsys {
+        background: rgb(37,43,53)!important;
+    }
+
+    .v .vlist .vcard .vquote {
+        border-color: #333333!important;
+    }
+
+    .v .vlist .vcard .vh {
+        border-color: #333333!important;
+    }
+
+    .vat {
+        color: #aaaaaa!important;
+    }
+
+    .v * {
+        color: #aaaaaa!important;
+    }
+
+    .aplayer {
+        background: #333333;
+    }
+
+    strong {
+        color: rgb(164 207 250)!important;
+    }
+
+    .ga-content div.links .board-item {
+        background: #ffffff05;
+    }
+
+    .ga-content div.links .board-item .board-title {
+        color: rgb(164 207 250)!important;
+    }
+
+    .yue blockquote::before {
+        color: #ffffff2e;
+    }
+
+    .yue blockquote {
+        color: #ffffff82;
+    }
+
+    .yue code, .yue tt {
+        color: #f6c2d2;
+        background-color: #ffffff12;
+    }
+
+    .ins-search-input {
+        background: rgb(34,39,46);
+        border-bottom: 1px solid rgb(34,39,46);
+    }
+
+    .ins-search {
+        color: rgb(205,217,229);
+    }
+
+    .ins-section-container {
+        background: rgb(34,39,46);
+    }
+
+    .ins-section .ins-section-header {
+        border-bottom: 1px solid rgb(34,39,46);
+    }
+
+    input {
+        caret-color: #fff;
+    }
+
+    .aplayer {
+        background: #649df20a!important;
+    }
+
+    .aplayer .aplayer-lrc:before,.aplayer .aplayer-lrc:after {
+        background: rgb(37,43,53)!important;
+    }
+
+    .aplayer .aplayer-list ol li.aplayer-list-light {
+        background: rgb(37,43,53)!important;
+    }
+
+    .aplayer .aplayer-list ol li .aplayer-list-author {
+        color: #8b8b8b!important;
+    }
+
+    .aplayer .aplayer-list ol li:hover {
+        background: rgb(69 81 101)!important;
+    }
+
+    .aplayer .aplayer-list ol::-webkit-scrollbar-thumb {
+        background-color: #00000036!important;
+    }
+
+    .aplayer .aplayer-list ol::-webkit-scrollbar-thumb:hover {
+        background-color: #c1c1c130!important;
+    }
+
+    .aplayer .aplayer-list ol li {
+        border-top: 1px solid #505050!important;
+    }
+
+    .aplayer.aplayer-withlist .aplayer-info {
+        border-bottom: 1px solid #505050!important;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgb(68 74 82);
+    }
+    ::-webkit-scrollbar {
+        width: 5px;
+    }
+    ::-webkit-scrollbar-track {
+        background: rgb(34,39,46);
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgb(84 93 106);
+    }
+
+    .v .vlist .vcard .vcontent.expand:after,.v .vlist .vcard .vcontent.expand:before {
+        content: none!important;
+    }
+
+    .v .vbtn:active, .v .vbtn:hover {
+        background: rgb(51,59,71)!important;
+        border: 1px solid rgb(83,155,245)!important;
+        transition: 0.3s color;
+    }
+
+    .v .vlist .vcard .vcontent.expand:before {
+        background: linear-gradient(180deg,hsl(0deg 0% 0% / 0%),hsl(0deg 0% 0% / 33%;))!important;
+    }
+
+    .v .vlist .vcard .vcontent.expand:after {
+        background: hsl(0deg 0% 0% / 33%)!important;
+    }
+}
