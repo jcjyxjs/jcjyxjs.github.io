@@ -26,6 +26,12 @@
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+	
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script> 	
+	
     <script>
         console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
 	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
@@ -43,7 +49,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4799275ec9215dc7869455689256b2d3.json"
+            api: "/72deece61f17b18f2e6996216b9b278b.json"
         }
     </script>
     
@@ -88,7 +94,7 @@
                     </nav>
                 </div>
             </header>
-            <div class="wrapper">
+            <div class="wrapper pswp-gallery" data-pswp-gid="1">
                 
 <main>    
     <section class="ga-section ga-content">
@@ -103,21 +109,21 @@
             <div class="ga-content_body">
                         <h1>我想说的</h1>
 <p>关于HTTP/3我就不介绍了，网上有，多说无益。真的。
-就目前浏览器支持情况真的也就一般。</p><figure style="flex: 149.80940279542565" ><img loading="lazy" width="2358" height="787" src="https://cdn.elstec.cn/13/0.png" /></figure><h1>实现</h1>
+就目前浏览器支持情况真的也就一般。</p><figure class="pswp-item" style="flex: 149.80940279542565" ><img loading="lazy" width="2358" height="787" src="https://cdn.elstec.cn/13/0.png" /></figure><h1>实现</h1>
 <p>目前支持HTTP/3的只有LiteSpeed和Caddy，Nginx暂时还不支持，已知可行方法都需要通过Doker，也就是Nginx+Caddy实现，或者通过CloudFlare的开源项目实现，稳定性肯定不如前者。</p><h1>过程</h1>
 <p><strong>本次需要在服务器安全组或防火墙放通</strong> <code>TCP:7080</code> <strong>和</strong> <code>UDP:443</code></p><p>我这次采用的是LiteSpeed的开源项目OpenLiteSpeed。</p><p>OpenLiteSpeed有多种安装方式，我就采用第4种也就是命令行一键安装。
-<figure style="flex: 273.84393063583815" ><img loading="lazy" width="1895" height="346" src="https://cdn.elstec.cn/13/3.png" /></figure>
+<figure class="pswp-item" style="flex: 273.84393063583815" ><img loading="lazy" width="1895" height="346" src="https://cdn.elstec.cn/13/3.png" /></figure>
 根据官方说法，OpenLiteSpeed仅支持具有64位平台的Centos（6-7），Debian（7-9）和Ubuntu（14,16,18）。</p>
 <pre><code>wget --no-check-certificate https://raw.githubusercontent.com/litespeedtech/ols1clk/master/ols1clk.sh &amp;&amp; bash ols1clk.sh
 </code></pre>
-<p>如果需要安装WordPress,就在命令后面加<code>-w</code>。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。</p><figure style="flex: 140.06462035541196" ><img loading="lazy" width="1734" height="619" src="https://cdn.elstec.cn/13/4.png" /></figure><p>安装完成之后，会把后台账号密码存储在<code>/usr/local/lsws/password</code>。
+<p>如果需要安装WordPress,就在命令后面加<code>-w</code>。运行的时候会告诉你后台密码，后台邮件，PHP版本，数据库版本以及两个端口。</p><figure class="pswp-item" style="flex: 140.06462035541196" ><img loading="lazy" width="1734" height="619" src="https://cdn.elstec.cn/13/4.png" /></figure><p>安装完成之后，会把后台账号密码存储在<code>/usr/local/lsws/password</code>。
 这时可以用<a href="https://ip:7080%E8%AE%BF%E9%97%AE%E5%90%8E%E5%8F%B0%E3%80%82">https://ip:7080%E8%AE%BF%E9%97%AE%E5%90%8E%E5%8F%B0%E3%80%82</a></p><p>首先需要在ssh中，cd到<code>/usr/local/lsws/</code>该目录下，然后新建一个文件夹，名字随便。比方我叫<code>http3test</code></p><div class="highlight"><pre><span></span>mkdir http3test
 mkdir http3test/<span class="o">{</span>conf,html,logs<span class="o">}</span>
 </pre></div>
 <p>访问web后台 <em>（后台可以改简体中文）</em> 点击虚拟主机，再点击➕号进行新建虚拟主机。
-虚拟主机名使用域名就行，虚拟主机根目录就是刚刚创建的文件夹名称，配置文件就这么填<code>$SERVER_ROOT/conf/vhosts/http3test.elstec.cn/vhconf.conf</code>要把文件夹名称改成自己的。先填写完整之后点击保存，会提示没有配置文件，点击旁边的<code>CLICK TO CREATE</code>进行创建，再次保存就可以了。<em>（启用脚本/外部应用程序和访问管制随你一般没什么用就选否。）</em></p><figure style="flex: 140.01883239171374" ><img loading="lazy" width="2974" height="1062" src="https://cdn.elstec.cn/13/5.png" /></figure><p>新建虚拟机之后先不要平滑重启。点击查看进入虚拟机设置，查看就是一个放大镜图标。点击SSL选项，找到安全，点击修改，把<code>Enable QUIC</code>改为是，并保存。</p><figure style="flex: 162.56771397616467" ><img loading="lazy" width="3001" height="923" src="https://cdn.elstec.cn/13/6.png" /></figure><p>找到监听器，就是虚拟主机选项上面那个。默认有80和443，443点击查看。找到SSL，找到SSL私钥和证书，点击编辑，填入你的证书地址，然后保存。再次找到安全和特性选项，把<code>Allow QUIC</code>改是就行。
-退回到443的常规，最下方有一个虚拟主机映射，新建映射，把虚拟主机和域名进行绑定，保存即可。</p><figure style="flex: 179.08653846153845" ><img loading="lazy" width="2980" height="832" src="https://cdn.elstec.cn/13/7.png" /></figure><p>然后进行平滑重启。页面索引什么的我就不说了没意思。
-最后就是测试结果+HTTP/3 CHECK的结果。</p><figure style="flex: 43.511146496815286" ><img loading="lazy" width="1093" height="1256" src="https://cdn.elstec.cn/13/1.png" /></figure><figure style="flex: 66.52587117212249" ><img loading="lazy" width="1260" height="947" src="https://cdn.elstec.cn/13/2.png" /></figure><p>需要浏览器支持的话，Chrome打开<code>chrome://flags/</code>，找到<code>Experimental QUIC protocol</code>选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到<code>edge://flags/</code>步骤同上就行。</p>
+虚拟主机名使用域名就行，虚拟主机根目录就是刚刚创建的文件夹名称，配置文件就这么填<code>$SERVER_ROOT/conf/vhosts/http3test.elstec.cn/vhconf.conf</code>要把文件夹名称改成自己的。先填写完整之后点击保存，会提示没有配置文件，点击旁边的<code>CLICK TO CREATE</code>进行创建，再次保存就可以了。<em>（启用脚本/外部应用程序和访问管制随你一般没什么用就选否。）</em></p><figure class="pswp-item" style="flex: 140.01883239171374" ><img loading="lazy" width="2974" height="1062" src="https://cdn.elstec.cn/13/5.png" /></figure><p>新建虚拟机之后先不要平滑重启。点击查看进入虚拟机设置，查看就是一个放大镜图标。点击SSL选项，找到安全，点击修改，把<code>Enable QUIC</code>改为是，并保存。</p><figure class="pswp-item" style="flex: 162.56771397616467" ><img loading="lazy" width="3001" height="923" src="https://cdn.elstec.cn/13/6.png" /></figure><p>找到监听器，就是虚拟主机选项上面那个。默认有80和443，443点击查看。找到SSL，找到SSL私钥和证书，点击编辑，填入你的证书地址，然后保存。再次找到安全和特性选项，把<code>Allow QUIC</code>改是就行。
+退回到443的常规，最下方有一个虚拟主机映射，新建映射，把虚拟主机和域名进行绑定，保存即可。</p><figure class="pswp-item" style="flex: 179.08653846153845" ><img loading="lazy" width="2980" height="832" src="https://cdn.elstec.cn/13/7.png" /></figure><p>然后进行平滑重启。页面索引什么的我就不说了没意思。
+最后就是测试结果+HTTP/3 CHECK的结果。</p><figure class="pswp-item" style="flex: 43.511146496815286" ><img loading="lazy" width="1093" height="1256" src="https://cdn.elstec.cn/13/1.png" /></figure><figure class="pswp-item" style="flex: 66.52587117212249" ><img loading="lazy" width="1260" height="947" src="https://cdn.elstec.cn/13/2.png" /></figure><p>需要浏览器支持的话，Chrome打开<code>chrome://flags/</code>，找到<code>Experimental QUIC protocol</code>选择Enabled。新版Edge也可以直接复制打开，页面会自动跳转到<code>edge://flags/</code>步骤同上就行。</p>
             </div>
         </article>
         
@@ -154,6 +160,225 @@ mkdir http3test/<span class="o">{</span>conf,html,logs<span class="o">}</span>
             </div>
         </div>
     </div>
+
+
+<script>
+    (function(){
+        var wrap = function(el, wrapper) {
+            el.parentNode.insertBefore(wrapper, el);
+            wrapper.appendChild(el);
+        }
+        // Parse iframes
+        var iframes = document.querySelectorAll('.post-content iframe');
+        for (var index = 0; index < iframes.length; index++) {
+            var el = iframes[index],
+                width = parseInt(el.getAttribute('width') || 16),
+                height = parseInt(el.getAttribute('height') || 9);
+            var padding = String(100*height/width) + '%';
+
+            var wrapper1 = document.createElement('div');
+            wrapper1.classList.add('iframe-wrapper-inner');
+            wrapper1.style.paddingTop = padding;
+
+            var wrapper2 = document.createElement('figure');
+            wrapper2.classList.add('iframe-wrapper');
+
+            wrap(el, wrapper1);
+            wrap(wrapper1, wrapper2);
+        }
+    })();
+</script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+(function (gallerySelector, itemSelector) {
+    var openPhotoSwipe = function (galleryIndex, itemIndex) {
+        var gallery = this.gallerys[galleryIndex];
+        var options = {
+            galleryUID: String(galleryIndex + 1),
+            index: itemIndex,
+            getThumbBoundsFn: function (index) {
+                var thumbnail = gallery[index].el,
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect();
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+            }
+        }
+        var pswp = new PhotoSwipe(document.querySelectorAll('.pswp')[0],
+            PhotoSwipeUI_Default, gallery, options);
+        pswp.init();
+    };
+
+    var figureClick = function (e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        var eTarget = e.target || e.srcElement;  // figure
+
+        // 找到最近的 item
+        var figure = eTarget;
+        while (!figure.matches(itemSelector)) {
+            figure = figure.parentNode;
+        }
+
+        // 找到最近的 gallery
+        var gallery = figure;
+        while (!gallery.matches(gallerySelector)) {
+            gallery = gallery.parentNode;
+        }
+
+        var galleryIndex = parseInt(gallery.dataset.pswpGid) - 1;
+        var itemIndex = parseInt(figure.dataset.pswpPid) - 1;
+        openPhotoSwipe(galleryIndex, itemIndex);
+    }
+
+    var initPhotoSwipeFromDOM = function () {
+        this.gallerys = [];
+
+        var gallyers = document.querySelectorAll(gallerySelector);
+        for (var i = 0; i < gallyers.length; i++) {
+            var gallery = gallyers[i];
+            gallery.setAttribute('data-pswp-gid', i + 1);
+            var currentList = []
+
+            var figures = gallery.querySelectorAll(itemSelector);
+            for (var j = 0; j < figures.length; j++) {
+                var figure = figures[j];
+                figure.setAttribute('data-pswp-pid', j + 1);
+                figure.onclick = figureClick;
+                img = figure.firstChild;
+                currentList.push({
+                    src: img.src,
+                    h: parseInt(img.getAttribute('height')),
+                    w: parseInt(img.getAttribute('width')),
+                    el: img
+                })
+            }
+
+            this.gallerys.push(currentList);
+        }
+    }
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function () {
+        var hash = window.location.hash.substring(1),
+            params = {};
+
+        if (hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            if (!vars[i]) {
+                continue;
+            }
+            var pair = vars[i].split('=');
+            if (pair.length < 2) {
+                continue;
+            }
+            params[pair[0]] = pair[1];
+        }
+
+        if (params.gid) {
+            params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+    };
+
+    var openFromUrl = function () {
+        var hashData = photoswipeParseHash();
+        if (hashData.gid && hashData.pid) {
+            openPhotoSwipe(hashData.gid - 1, hashData.pid - 1);
+        }
+    }
+
+    initPhotoSwipeFromDOM();
+    openFromUrl();
+})('.pswp-gallery', '.pswp-item');
+</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      (function () {
+        var domain = document.domain;
+        var els = document.getElementsByTagName('a');
+        for (var index = 0; index < els.length; index++) {
+          var element = els[index];
+          var target = element.getAttribute('target');
+          if (typeof target === 'undefined' || (target != '' && target != '_self')) {
+            if (element.hostname != domain) {
+              element.setAttribute('target', '_blank');
+            }
+          }
+        }
+      })();
+    });
+  </script>
 
     <!--katex-->
     <script defer src="/assets/katex.min.js"></script>

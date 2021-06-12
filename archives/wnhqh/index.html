@@ -26,6 +26,12 @@
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+	
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script> 	
+	
     <script>
         console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
 	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
@@ -43,7 +49,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4799275ec9215dc7869455689256b2d3.json"
+            api: "/72deece61f17b18f2e6996216b9b278b.json"
         }
     </script>
     
@@ -88,7 +94,7 @@
                     </nav>
                 </div>
             </header>
-            <div class="wrapper">
+            <div class="wrapper pswp-gallery" data-pswp-gid="1">
                 
 <main>    
     <section class="ga-section ga-content">
@@ -102,19 +108,19 @@
             </span>
             <div class="ga-content_body">
                         <p>最近跟风入手了一台蜗牛星际B单，网口是i211原生千兆。不做软路由，纯粹安装黑群晖玩，换了静音风扇，闲鱼收了一个航嘉电源。买这个风扇的时候，找了家tm销量高的店，问那个卖家最便宜那个3针包不包邮。他居然告诉我最便宜这个不包邮其他都包邮，wdnmd，一算这样很亏，于是我买了一个白光的风扇10块
-<figure style="flex: 94.04553415061297" ><img loading="lazy" width="1074" height="571" src="https://cdn.elstec.cn/4/4.png" /><figcaption>类似这样的一个，但不是这个店家</figcaption></figure>
+<figure class="pswp-item" style="flex: 94.04553415061297" ><img loading="lazy" width="1074" height="571" src="https://cdn.elstec.cn/4/4.png" /><figcaption>类似这样的一个，但不是这个店家</figcaption></figure>
 机子自带一个16g小固态，但这个ssd不敢恭维，渣中之渣，不过用来装系统最合适了。 
 准备好群晖镜像和DiskImage，以及一个有pe系统的U盘或者移动硬盘。</p><blockquote>
 <p>镜像包压缩大概有639M，解压之后大小概为14.2G</p></blockquote>
 <p>重启进入BIOS开启UEFI，保存重启进入pe。
 打开DiskGenius，选择自带的16g小固态，右键删除所有分区，保存关闭DG。
-<figure style="flex: 86.08247422680412" ><img loading="lazy" width="2004" height="1164" src="https://cdn.elstec.cn/4/5.png" /></figure>
+<figure class="pswp-item" style="flex: 86.08247422680412" ><img loading="lazy" width="2004" height="1164" src="https://cdn.elstec.cn/4/5.png" /></figure>
 打开DiskImage，<em>Write Image to</em>选择16g固态，注意是硬盘不是分区。<em>Source File</em>选择镜像，点击start开始写入，这个镜像写入完成之后重启就可以用了。
-<figure style="flex: 86.08247422680412" ><img loading="lazy" width="2004" height="1164" src="https://cdn.elstec.cn/4/6.png" /></figure>
+<figure class="pswp-item" style="flex: 86.08247422680412" ><img loading="lazy" width="2004" height="1164" src="https://cdn.elstec.cn/4/6.png" /></figure>
 重启之后显示器会显示如下信息并不会有任何GUI界面，重启的时候就可以拔掉显示器，u盘，键盘鼠标了
-<figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/4/8.jpg" /></figure>
+<figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/4/8.jpg" /></figure>
 使用同网设备浏览器进入<a href="http://find.synology.com">find.synology.com</a>查找设备，点击联机即可。用获取到的ip访问后台就可以了。
-<figure style="flex: 88.88888888888889" ><img loading="lazy" width="1920" height="1080" src="https://cdn.elstec.cn/4/7.png" /></figure></p>
+<figure class="pswp-item" style="flex: 88.88888888888889" ><img loading="lazy" width="1920" height="1080" src="https://cdn.elstec.cn/4/7.png" /></figure></p>
             </div>
         </article>
         
@@ -151,6 +157,225 @@
             </div>
         </div>
     </div>
+
+
+<script>
+    (function(){
+        var wrap = function(el, wrapper) {
+            el.parentNode.insertBefore(wrapper, el);
+            wrapper.appendChild(el);
+        }
+        // Parse iframes
+        var iframes = document.querySelectorAll('.post-content iframe');
+        for (var index = 0; index < iframes.length; index++) {
+            var el = iframes[index],
+                width = parseInt(el.getAttribute('width') || 16),
+                height = parseInt(el.getAttribute('height') || 9);
+            var padding = String(100*height/width) + '%';
+
+            var wrapper1 = document.createElement('div');
+            wrapper1.classList.add('iframe-wrapper-inner');
+            wrapper1.style.paddingTop = padding;
+
+            var wrapper2 = document.createElement('figure');
+            wrapper2.classList.add('iframe-wrapper');
+
+            wrap(el, wrapper1);
+            wrap(wrapper1, wrapper2);
+        }
+    })();
+</script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+(function (gallerySelector, itemSelector) {
+    var openPhotoSwipe = function (galleryIndex, itemIndex) {
+        var gallery = this.gallerys[galleryIndex];
+        var options = {
+            galleryUID: String(galleryIndex + 1),
+            index: itemIndex,
+            getThumbBoundsFn: function (index) {
+                var thumbnail = gallery[index].el,
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect();
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+            }
+        }
+        var pswp = new PhotoSwipe(document.querySelectorAll('.pswp')[0],
+            PhotoSwipeUI_Default, gallery, options);
+        pswp.init();
+    };
+
+    var figureClick = function (e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        var eTarget = e.target || e.srcElement;  // figure
+
+        // 找到最近的 item
+        var figure = eTarget;
+        while (!figure.matches(itemSelector)) {
+            figure = figure.parentNode;
+        }
+
+        // 找到最近的 gallery
+        var gallery = figure;
+        while (!gallery.matches(gallerySelector)) {
+            gallery = gallery.parentNode;
+        }
+
+        var galleryIndex = parseInt(gallery.dataset.pswpGid) - 1;
+        var itemIndex = parseInt(figure.dataset.pswpPid) - 1;
+        openPhotoSwipe(galleryIndex, itemIndex);
+    }
+
+    var initPhotoSwipeFromDOM = function () {
+        this.gallerys = [];
+
+        var gallyers = document.querySelectorAll(gallerySelector);
+        for (var i = 0; i < gallyers.length; i++) {
+            var gallery = gallyers[i];
+            gallery.setAttribute('data-pswp-gid', i + 1);
+            var currentList = []
+
+            var figures = gallery.querySelectorAll(itemSelector);
+            for (var j = 0; j < figures.length; j++) {
+                var figure = figures[j];
+                figure.setAttribute('data-pswp-pid', j + 1);
+                figure.onclick = figureClick;
+                img = figure.firstChild;
+                currentList.push({
+                    src: img.src,
+                    h: parseInt(img.getAttribute('height')),
+                    w: parseInt(img.getAttribute('width')),
+                    el: img
+                })
+            }
+
+            this.gallerys.push(currentList);
+        }
+    }
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function () {
+        var hash = window.location.hash.substring(1),
+            params = {};
+
+        if (hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            if (!vars[i]) {
+                continue;
+            }
+            var pair = vars[i].split('=');
+            if (pair.length < 2) {
+                continue;
+            }
+            params[pair[0]] = pair[1];
+        }
+
+        if (params.gid) {
+            params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+    };
+
+    var openFromUrl = function () {
+        var hashData = photoswipeParseHash();
+        if (hashData.gid && hashData.pid) {
+            openPhotoSwipe(hashData.gid - 1, hashData.pid - 1);
+        }
+    }
+
+    initPhotoSwipeFromDOM();
+    openFromUrl();
+})('.pswp-gallery', '.pswp-item');
+</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      (function () {
+        var domain = document.domain;
+        var els = document.getElementsByTagName('a');
+        for (var index = 0; index < els.length; index++) {
+          var element = els[index];
+          var target = element.getAttribute('target');
+          if (typeof target === 'undefined' || (target != '' && target != '_self')) {
+            if (element.hostname != domain) {
+              element.setAttribute('target', '_blank');
+            }
+          }
+        }
+      })();
+    });
+  </script>
 
     <!--katex-->
     <script defer src="/assets/katex.min.js"></script>

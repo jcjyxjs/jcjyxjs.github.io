@@ -26,6 +26,12 @@
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+	
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script> 	
+	
     <script>
         console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
 	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
@@ -43,7 +49,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4799275ec9215dc7869455689256b2d3.json"
+            api: "/72deece61f17b18f2e6996216b9b278b.json"
         }
     </script>
     
@@ -88,7 +94,7 @@
                     </nav>
                 </div>
             </header>
-            <div class="wrapper">
+            <div class="wrapper pswp-gallery" data-pswp-gid="1">
                 
 <main>    
     <section class="ga-section ga-content">
@@ -108,9 +114,9 @@
 <p>直译过来大致意思就是：滥用服务及其资源，或使用 jsDelivr 作为通用文件或媒体托管服务，包括:运行图像托管网站并使用 jsDelivr 作为所有上传图像的存储。</p><p>*** 2020年3月30日更新：***</p><p>如果直接使用分支进行访问，例： <code>https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/1.jpg#vwid=2048&amp;vhei=1364</code> 。</p><p><code>master</code> 分支会有缓存，缓存应该是一天更新一次。如果想进行及时更新，可以把 <code>master</code> 直接改成 <code>latest</code> 即可。</p><p>格式如下： <code>https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@latest/1.jpg</code></p><h1>前言</h1>
 <p>GitHub作为全球最大的代码托管平台，众所周知，GitHub又有GitHub Pages这个功能，使得很多静态网站都托管在GitHub上，国内访问速度一直上不去。但是jsDelivr这家CDN支持加速npm，GitHub和WordPress，jsDelivr在国外是CloudFlare节点，国内都是网速的CDN节点，速度还是飞快的，真正的全球高速。</p><h1>注意</h1>
 <p>建议只用作静态文件加速，例如 <code>JS/CSS/Image</code> 。并不适合大文件分发，大文件分发还是移步国内各厂的对象存储。</p><h1>实现</h1>
-<p>首先需要一个GitHub仓库，我就新建一个仓库为例。</p><figure style="flex: 57.6278659611993" ><img loading="lazy" width="1307" height="1134" src="https://cdn.elstec.cn/20/1.png" /></figure><p>然后我随便上传一张图片并创建一个 <code>releases</code> 。</p><blockquote>
+<p>首先需要一个GitHub仓库，我就新建一个仓库为例。</p><figure class="pswp-item" style="flex: 57.6278659611993" ><img loading="lazy" width="1307" height="1134" src="https://cdn.elstec.cn/20/1.png" /></figure><p>然后我随便上传一张图片并创建一个 <code>releases</code> 。</p><blockquote>
 <p><strong>创建 <code>releases</code> 这步嫌麻烦可以省略，不是必要的。</strong></p></blockquote>
-<figure style="flex: 55.02325581395349" ><img loading="lazy" width="1183" height="1075" src="https://cdn.elstec.cn/20/2.png" /></figure><p>官方的访问方法就是：</p>
+<figure class="pswp-item" style="flex: 55.02325581395349" ><img loading="lazy" width="1183" height="1075" src="https://cdn.elstec.cn/20/2.png" /></figure><p>官方的访问方法就是：</p>
 <pre><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名或版本号/文件名
 </code></pre>
 <p>例如我在repo根目录下传了一张名为 <code>1.jpg</code> 的图片，那么文件链接就是</p>
@@ -122,10 +128,10 @@
 <p>jsdelivr也可以直接获取仓库目录，格式如下。</p>
 <pre><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名或版本号/
 </code></pre>
-<figure style="flex: 110.55304740406321" ><img loading="lazy" width="1959" height="886" src="https://cdn.elstec.cn/20/3.png" /></figure><p>在目录页面选择文件右键复制地址就可以直接拿来用了。</p><h1>演示</h1>
-<figure style="flex: 75.0733137829912" ><img loading="lazy" width="2048" height="1364" src="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/1.jpg" /><figcaption>twitter@iiikawa__</figcaption></figure><blockquote>
+<figure class="pswp-item" style="flex: 110.55304740406321" ><img loading="lazy" width="1959" height="886" src="https://cdn.elstec.cn/20/3.png" /></figure><p>在目录页面选择文件右键复制地址就可以直接拿来用了。</p><h1>演示</h1>
+<figure class="pswp-item" style="flex: 75.0733137829912" ><img loading="lazy" width="2048" height="1364" src="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/1.jpg" /><figcaption>twitter@iiikawa__</figcaption></figure><blockquote>
 <p>图片来源：<a href="https://twitter.com/iiikawa__/status/1150995627003674625"><a href="https://twitter.com/iiikawa__/status/1150995627003674625">https://twitter.com/iiikawa__/status/1150995627003674625</a></a></p></blockquote>
-<p>10M视频下载测速：<a href="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/dl1.mp4">点我</a></p><p>测试结果来自：17ce.com</p><figure style="flex: 119.8300283286119" ><img loading="lazy" width="2538" height="1059" src="https://cdn.elstec.cn/20/4.png" /></figure><figure style="flex: 119.92445703493863" ><img loading="lazy" width="2540" height="1059" src="https://cdn.elstec.cn/20/5.png" /></figure><p>测试结果来自：站长工具</p><table>
+<p>10M视频下载测速：<a href="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/dl1.mp4">点我</a></p><p>测试结果来自：17ce.com</p><figure class="pswp-item" style="flex: 119.8300283286119" ><img loading="lazy" width="2538" height="1059" src="https://cdn.elstec.cn/20/4.png" /></figure><figure class="pswp-item" style="flex: 119.92445703493863" ><img loading="lazy" width="2540" height="1059" src="https://cdn.elstec.cn/20/5.png" /></figure><p>测试结果来自：站长工具</p><table>
 <thead>
 <tr>
   <th>线路</th>
@@ -192,6 +198,225 @@
             </div>
         </div>
     </div>
+
+
+<script>
+    (function(){
+        var wrap = function(el, wrapper) {
+            el.parentNode.insertBefore(wrapper, el);
+            wrapper.appendChild(el);
+        }
+        // Parse iframes
+        var iframes = document.querySelectorAll('.post-content iframe');
+        for (var index = 0; index < iframes.length; index++) {
+            var el = iframes[index],
+                width = parseInt(el.getAttribute('width') || 16),
+                height = parseInt(el.getAttribute('height') || 9);
+            var padding = String(100*height/width) + '%';
+
+            var wrapper1 = document.createElement('div');
+            wrapper1.classList.add('iframe-wrapper-inner');
+            wrapper1.style.paddingTop = padding;
+
+            var wrapper2 = document.createElement('figure');
+            wrapper2.classList.add('iframe-wrapper');
+
+            wrap(el, wrapper1);
+            wrap(wrapper1, wrapper2);
+        }
+    })();
+</script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+(function (gallerySelector, itemSelector) {
+    var openPhotoSwipe = function (galleryIndex, itemIndex) {
+        var gallery = this.gallerys[galleryIndex];
+        var options = {
+            galleryUID: String(galleryIndex + 1),
+            index: itemIndex,
+            getThumbBoundsFn: function (index) {
+                var thumbnail = gallery[index].el,
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect();
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+            }
+        }
+        var pswp = new PhotoSwipe(document.querySelectorAll('.pswp')[0],
+            PhotoSwipeUI_Default, gallery, options);
+        pswp.init();
+    };
+
+    var figureClick = function (e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        var eTarget = e.target || e.srcElement;  // figure
+
+        // 找到最近的 item
+        var figure = eTarget;
+        while (!figure.matches(itemSelector)) {
+            figure = figure.parentNode;
+        }
+
+        // 找到最近的 gallery
+        var gallery = figure;
+        while (!gallery.matches(gallerySelector)) {
+            gallery = gallery.parentNode;
+        }
+
+        var galleryIndex = parseInt(gallery.dataset.pswpGid) - 1;
+        var itemIndex = parseInt(figure.dataset.pswpPid) - 1;
+        openPhotoSwipe(galleryIndex, itemIndex);
+    }
+
+    var initPhotoSwipeFromDOM = function () {
+        this.gallerys = [];
+
+        var gallyers = document.querySelectorAll(gallerySelector);
+        for (var i = 0; i < gallyers.length; i++) {
+            var gallery = gallyers[i];
+            gallery.setAttribute('data-pswp-gid', i + 1);
+            var currentList = []
+
+            var figures = gallery.querySelectorAll(itemSelector);
+            for (var j = 0; j < figures.length; j++) {
+                var figure = figures[j];
+                figure.setAttribute('data-pswp-pid', j + 1);
+                figure.onclick = figureClick;
+                img = figure.firstChild;
+                currentList.push({
+                    src: img.src,
+                    h: parseInt(img.getAttribute('height')),
+                    w: parseInt(img.getAttribute('width')),
+                    el: img
+                })
+            }
+
+            this.gallerys.push(currentList);
+        }
+    }
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function () {
+        var hash = window.location.hash.substring(1),
+            params = {};
+
+        if (hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            if (!vars[i]) {
+                continue;
+            }
+            var pair = vars[i].split('=');
+            if (pair.length < 2) {
+                continue;
+            }
+            params[pair[0]] = pair[1];
+        }
+
+        if (params.gid) {
+            params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+    };
+
+    var openFromUrl = function () {
+        var hashData = photoswipeParseHash();
+        if (hashData.gid && hashData.pid) {
+            openPhotoSwipe(hashData.gid - 1, hashData.pid - 1);
+        }
+    }
+
+    initPhotoSwipeFromDOM();
+    openFromUrl();
+})('.pswp-gallery', '.pswp-item');
+</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      (function () {
+        var domain = document.domain;
+        var els = document.getElementsByTagName('a');
+        for (var index = 0; index < els.length; index++) {
+          var element = els[index];
+          var target = element.getAttribute('target');
+          if (typeof target === 'undefined' || (target != '' && target != '_self')) {
+            if (element.hostname != domain) {
+              element.setAttribute('target', '_blank');
+            }
+          }
+        }
+      })();
+    });
+  </script>
 
     <!--katex-->
     <script defer src="/assets/katex.min.js"></script>

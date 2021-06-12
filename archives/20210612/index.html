@@ -53,18 +53,18 @@
         }
     </script>
     
-<title>使用hexo搭建静态博客+Github Pages - 毫无作为</title>
+<title>瑞幸冰镇杨梅瑞纳冰 - 毫无作为</title>
 <meta name="author" content="jcjyxjs" />
-<meta name="description" content="使用hexo搭建静态博客步骤" />
-<meta property="og:title" content="使用hexo搭建静态博客+Github Pages - 毫无作为" />
-<meta property="og:description" content="使用hexo搭建静态博客步骤" />
+<meta name="description" content="" />
+<meta property="og:title" content="瑞幸冰镇杨梅瑞纳冰 - 毫无作为" />
+<meta property="og:description" content="" />
 <meta property="og:site_name" content="毫无作为" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/hexoblog/" />
+<meta property="og:url" content="/archives/20210612/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-02-12T21:50:00+08.00" />
-<meta name="twitter:title" content="使用hexo搭建静态博客+Github Pages - 毫无作为" />
-<meta name="twitter:description" content="使用hexo搭建静态博客步骤" />
+<meta property="article:published_time" content="2021-06-12T12:00:00+08.00" />
+<meta name="twitter:title" content="瑞幸冰镇杨梅瑞纳冰 - 毫无作为" />
+<meta name="twitter:description" content="" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -99,104 +99,19 @@
 <main>    
     <section class="ga-section ga-content">
         <article class="yue">
-            <h1 class="ga-post_title">使用hexo搭建静态博客+Github Pages</h1>
+            <h1 class="ga-post_title">瑞幸冰镇杨梅瑞纳冰</h1>
             <span class="ga-post_meta ga-mono">
                 <time>
-                    2020-02-12
+                    2021-06-12
                 </time>
                 <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                        <h1>使用hexo搭建静态博客步骤</h1>
-<p>1.安装Git</p><p>2.安装Node.js</p><p>3.安装hexo</p><p><strong>其次，才是将hexo部署到例如Github等的平台</strong></p><h2>1.安装Git</h2>
-<p>Windows &amp; Mac：访问Git官网 <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a> 下载安装即可</p><p>Linux：同样访问Git官网（同上）查看安装方法</p><p>*<strong>其实可以不安装Git，不安装并部署的方法放下翻。</strong>*</p><h2>2.安装Node.js</h2>
-<p>访问官网 <a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a> 下载安装包下一步即可</p><p><em>需要注意的是，在安装到<code>Custom Setup</code>这一步时，记得选<code>Add to Path</code></em></p><h2>3.安装hexo</h2>
-<ul>
-<li><p>首先创建一个用来放置博客的文件夹，然后cd到该目录</p></li>
-<li><p>然后安装hexo：<code>npm i -g hexo</code></p></li>
-<li><p>安装完成之后可以输入<code>hexo -v</code>查看版本</p></li>
-<li><p>最后输入<code>hexo init</code>初始化hexo完成安装</p></li>
-</ul>
-<p>安装完成之后可在目录看到以下一些文件</p><table>
-<thead>
-<tr>
-  <th>node_modules</th>
-  <th style="text-align:left"><strong>依赖</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td><strong>scaffolds</strong></td>
-  <td style="text-align:left"><strong>生成网页的模板</strong></td>
-</tr>
-<tr>
-  <td><strong>source</strong></td>
-  <td style="text-align:left"><strong>Markdown文章</strong></td>
-</tr>
-<tr>
-  <td><strong>themes</strong></td>
-  <td style="text-align:left"><strong>主题</strong></td>
-</tr>
-<tr>
-  <td><strong>_config.yml</strong></td>
-  <td style="text-align:left"><strong>博客配置文件</strong></td>
-</tr>
-<tr>
-  <td><strong>db.json</strong></td>
-  <td style="text-align:left"><strong>source解析得到</strong></td>
-</tr>
-<tr>
-  <td><strong>package.json</strong></td>
-  <td style="text-align:left"><strong>所需模块项目的配置信息</strong></td>
-</tr>
-<tr>
-  <td><strong>Public</strong></td>
-  <td style="text-align:left"><strong>存放生成页面</strong></td>
-</tr>
-</tbody>
-</table>
-<p>这个时候输入<code>hexo s</code>就会在本地<code>localhost:4000</code>启动了</p><p>常用命令 <code>hexo s</code> 启动  <code>hexo g</code> 生成网页文件  <code>hexo d</code> 部署<code>hexo clean</code>清理你之前生成的东西</p><p>具体的命令参数以及解释可以在官网看到 <a href="https://hexo.io/zh-cn/docs/commands">https://hexo.io/zh-cn/docs/commands</a></p><h2>4.部署到Github</h2>
-<h3>第一种方法</h3>
-<ul>
-<li><p>首先需要安装一个部署插件 <code>npm install hexo-deployer-git --save</code></p></li>
-<li><p>然后登录Github，并新建一个Repositories(仓库)，name修改成你想要的名称，注意一定要选择public，不然别人没法访问你的网站，点Create进行创建</p></li>
-</ul>
-<figure class="pswp-item" style="flex: 54.848046309696095" ><img loading="lazy" width="758" height="691" src="https://cdn.elstec.cn/12/1.png" /></figure><ul>
-<li><p>复制你仓库的地址比方说我新建的仓库是<code>name.github.io</code>，那么你的仓库地址就是<code>https://github.com/jcjyxjs/name.github.io.git</code>，仓库链接可在仓库页面页面复制到</p></li>
-<li><p>修改博客根目录下的<code>_config.yml</code> 代码第100行。type就git，repo就是上面复制的仓库地址，branch就是仓库分支，默认master。repo和branch需要手动打上去</p><div class="highlight"><pre><span></span><span class="err">deploy</span><span class="p">:</span>
-
-<span class="kc">t</span><span class="err">ype</span><span class="p">:</span> <span class="err">&#39;gi</span><span class="kc">t</span><span class="err">&#39;</span>
-
-<span class="err">repo</span><span class="p">:</span> <span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="err">//gi</span><span class="kc">t</span><span class="err">hub.com/jcjyxjs/</span><span class="kc">na</span><span class="err">me.gi</span><span class="kc">t</span><span class="err">hub.io.gi</span><span class="kc">t</span>
-
-<span class="err">bra</span><span class="kc">n</span><span class="err">ch</span><span class="p">:</span> <span class="err">mas</span><span class="kc">ter</span>
-</pre></div>
-</li>
-<li><p>回到git bash，输入以下两条命令</p><p><code>git config --global user.name &quot;yourname&quot;</code></p><p><code>git config --global user.email &quot;youremail&quot;</code></p></li>
-<li><p>创建SSH</p></li>
-<li><p><code>ssh-keygen -t rsa -C &quot;youremail&quot;</code></p></li>
-<li><p>找到这个<code>.ssh</code>的文件夹。里面有<code>id_rsa</code>和<code>id_rsa.pub</code></p></li>
-<li><p>然后在你的github settings里面新建一个SSH key，把你的<code>id_ras.pub</code>中的内容填到key里面点击生成</p><p>可以验证是否成功<code>ssh -T git@github.com</code></p></li>
-<li><p>cd进入博客目录，输入<code>hexo g</code>，等待网页文件生成，然后输入<code>hexo d</code>进行部署，会提示输入你的github邮箱和密码，然后就自动部署了</p></li>
-</ul>
-<h3>第二种方法</h3>
-<ul>
-<li><p>安装Github Desktop，进入官网 <a href="https://desktop.github.com/">https://desktop.github.com/</a> 下载安装并打开</p></li>
-<li><p>登录你的github账户</p></li>
-<li><p>选择clone的仓库，会在你的本地生成一个跟仓库关联的文件夹</p></li>
-<li><p>代码有改动之后生成新的网页，复制public文件夹内的文件到你仓库文件夹，打开Github Desktop</p><figure class="pswp-item" style="flex: 72.72727272727273" ><img loading="lazy" width="960" height="660" src="https://cdn.elstec.cn/12/2.png" /></figure></li>
-<li><p>点击<code>Commit to master</code> master是你的分支名字，然后点击右上角的<code>Pull</code>就可以提交了</p></li>
-</ul>
-<h3>Github仓库绑定域名</h3>
-<ul>
-<li><p>在仓库页面点击<code>Settings</code></p></li>
-<li><p>往下拉可以看到<code>Github Pages</code></p></li>
-<li><p>把None改成你想要显示的分支，这项操作会自动刷新页面。</p></li>
-<li><p>刷新之后会出现<code>Custom domain</code>选项，填入你的域名，点击Save</p></li>
-<li><p>然后修改你的域名解析CNAME为</p></li>
-</ul>
-<p><code>www | CNAME | name.github.io</code></p><p><code>@ | CNAME | name.github.io</code></p><p>过一会儿就可以用自定义域名看到了</p><h4>关于其他东西以后再说，就是这样。</h4>
-
+                        <html>
+<p style="display:inline;">铺天盖地的宣传让从来么有喝过的我尝试了一下，跟酸梅汁味道一模一样，太难喝了。太亏了，顶着个大太阳特地去买。</p>
+<img src="https://cdn.elstec.cn/36/3.jpg" style="display: inline;">
+</html>
+<div class="photoset"><div class="photos"><figure class="pswp-item" style="flex: 23.104265402843602" ><img loading="lazy" width="1170" height="2532" src="https://cdn.elstec.cn/36/2.jpg" /></figure><figure class="pswp-item" style="flex: 28.12349252291365" ><img loading="lazy" width="1166" height="2073" src="https://cdn.elstec.cn/36/1.jpg" /></figure></div></div>
             </div>
         </article>
         
@@ -206,7 +121,7 @@
 <section id="ga-content_pager">
 
     <div class="prev">
-        <a class="ga-highlight" href="/archives/enhttp3/">使用LiteSpeed为网站启用HTTP/3</a>
+        <a class="ga-highlight" href="/archives/20210605/">群晖重启SSL被自动重置解决方案</a>
     </div>
 
 </section>

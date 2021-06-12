@@ -26,6 +26,12 @@
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+	
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script> 	
+	
     <script>
         console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
 	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
@@ -43,7 +49,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4799275ec9215dc7869455689256b2d3.json"
+            api: "/72deece61f17b18f2e6996216b9b278b.json"
         }
     </script>
     
@@ -88,7 +94,7 @@
                     </nav>
                 </div>
             </header>
-            <div class="wrapper">
+            <div class="wrapper pswp-gallery" data-pswp-gid="1">
                 
 <main>    
     <section class="ga-section ga-content">
@@ -104,7 +110,7 @@
                         <p>我的群晖每次重启之后SSL都会变成默认的证书，浏览器访问都要手动点击忽略，删除默认证书也没用，暂时不知道是什么原因导致的，可能是黑群晖的某些奇奇怪怪的bug（prpr）。</p><p>先进入到群晖上传证书的存放点，然后<code>ls</code>查看你的证书被放在哪个随机名称文件夹里了。群晖webui上传的SSL证书都会被放到随机名称文件夹里，为了方便起见我只传了一张SSL，找起来就方便。</p><div class="highlight"><pre><span></span><span class="k">cd</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>
 <span class="k">ls</span>
 </pre></div>
-<figure style="flex: 360.1503759398496" ><img loading="lazy" width="958" height="133" src="https://cdn.elstec.cn/35/1.png" /></figure><p>可以看到我的证书被放到<code>C2lZL4</code>文件夹里了，以及<code>default</code>文件夹。既然重启会加载使用默认证书，那可以<code>任务计划</code>设置把默认证书替换成我上传的证书，然后重启webui生效。</p><div class="highlight"><pre><span></span><span class="k">cp</span> <span class="p">-</span><span class="k">f</span> <span class="p">-</span><span class="k">p</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>C2lZL4<span class="sr">/cert.pem /</span>usr<span class="sr">/syno/</span>etc<span class="sr">/certificate/</span>system<span class="sr">/default/</span>cert.pem
+<figure class="pswp-item" style="flex: 360.1503759398496" ><img loading="lazy" width="958" height="133" src="https://cdn.elstec.cn/35/1.png" /></figure><p>可以看到我的证书被放到<code>C2lZL4</code>文件夹里了，以及<code>default</code>文件夹。既然重启会加载使用默认证书，那可以<code>任务计划</code>设置把默认证书替换成我上传的证书，然后重启webui生效。</p><div class="highlight"><pre><span></span><span class="k">cp</span> <span class="p">-</span><span class="k">f</span> <span class="p">-</span><span class="k">p</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>C2lZL4<span class="sr">/cert.pem /</span>usr<span class="sr">/syno/</span>etc<span class="sr">/certificate/</span>system<span class="sr">/default/</span>cert.pem
 <span class="k">cp</span> <span class="p">-</span><span class="k">f</span> <span class="p">-</span><span class="k">p</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>C2lZL4<span class="sr">/fullchain.pem /</span>usr<span class="sr">/syno/</span>etc<span class="sr">/certificate/</span>system<span class="sr">/default/</span>fullchain.pem
 <span class="k">cp</span> <span class="p">-</span><span class="k">f</span> <span class="p">-</span><span class="k">p</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>C2lZL4<span class="sr">/privkey.pem /</span>usr<span class="sr">/syno/</span>etc<span class="sr">/certificate/</span>system<span class="sr">/default/</span>privkey.pem
 <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>rc.sysv/nginx.<span class="k">sh</span> reload
@@ -146,6 +152,225 @@
             </div>
         </div>
     </div>
+
+
+<script>
+    (function(){
+        var wrap = function(el, wrapper) {
+            el.parentNode.insertBefore(wrapper, el);
+            wrapper.appendChild(el);
+        }
+        // Parse iframes
+        var iframes = document.querySelectorAll('.post-content iframe');
+        for (var index = 0; index < iframes.length; index++) {
+            var el = iframes[index],
+                width = parseInt(el.getAttribute('width') || 16),
+                height = parseInt(el.getAttribute('height') || 9);
+            var padding = String(100*height/width) + '%';
+
+            var wrapper1 = document.createElement('div');
+            wrapper1.classList.add('iframe-wrapper-inner');
+            wrapper1.style.paddingTop = padding;
+
+            var wrapper2 = document.createElement('figure');
+            wrapper2.classList.add('iframe-wrapper');
+
+            wrap(el, wrapper1);
+            wrap(wrapper1, wrapper2);
+        }
+    })();
+</script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+(function (gallerySelector, itemSelector) {
+    var openPhotoSwipe = function (galleryIndex, itemIndex) {
+        var gallery = this.gallerys[galleryIndex];
+        var options = {
+            galleryUID: String(galleryIndex + 1),
+            index: itemIndex,
+            getThumbBoundsFn: function (index) {
+                var thumbnail = gallery[index].el,
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect();
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+            }
+        }
+        var pswp = new PhotoSwipe(document.querySelectorAll('.pswp')[0],
+            PhotoSwipeUI_Default, gallery, options);
+        pswp.init();
+    };
+
+    var figureClick = function (e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        var eTarget = e.target || e.srcElement;  // figure
+
+        // 找到最近的 item
+        var figure = eTarget;
+        while (!figure.matches(itemSelector)) {
+            figure = figure.parentNode;
+        }
+
+        // 找到最近的 gallery
+        var gallery = figure;
+        while (!gallery.matches(gallerySelector)) {
+            gallery = gallery.parentNode;
+        }
+
+        var galleryIndex = parseInt(gallery.dataset.pswpGid) - 1;
+        var itemIndex = parseInt(figure.dataset.pswpPid) - 1;
+        openPhotoSwipe(galleryIndex, itemIndex);
+    }
+
+    var initPhotoSwipeFromDOM = function () {
+        this.gallerys = [];
+
+        var gallyers = document.querySelectorAll(gallerySelector);
+        for (var i = 0; i < gallyers.length; i++) {
+            var gallery = gallyers[i];
+            gallery.setAttribute('data-pswp-gid', i + 1);
+            var currentList = []
+
+            var figures = gallery.querySelectorAll(itemSelector);
+            for (var j = 0; j < figures.length; j++) {
+                var figure = figures[j];
+                figure.setAttribute('data-pswp-pid', j + 1);
+                figure.onclick = figureClick;
+                img = figure.firstChild;
+                currentList.push({
+                    src: img.src,
+                    h: parseInt(img.getAttribute('height')),
+                    w: parseInt(img.getAttribute('width')),
+                    el: img
+                })
+            }
+
+            this.gallerys.push(currentList);
+        }
+    }
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function () {
+        var hash = window.location.hash.substring(1),
+            params = {};
+
+        if (hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            if (!vars[i]) {
+                continue;
+            }
+            var pair = vars[i].split('=');
+            if (pair.length < 2) {
+                continue;
+            }
+            params[pair[0]] = pair[1];
+        }
+
+        if (params.gid) {
+            params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+    };
+
+    var openFromUrl = function () {
+        var hashData = photoswipeParseHash();
+        if (hashData.gid && hashData.pid) {
+            openPhotoSwipe(hashData.gid - 1, hashData.pid - 1);
+        }
+    }
+
+    initPhotoSwipeFromDOM();
+    openFromUrl();
+})('.pswp-gallery', '.pswp-item');
+</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      (function () {
+        var domain = document.domain;
+        var els = document.getElementsByTagName('a');
+        for (var index = 0; index < els.length; index++) {
+          var element = els[index];
+          var target = element.getAttribute('target');
+          if (typeof target === 'undefined' || (target != '' && target != '_self')) {
+            if (element.hostname != domain) {
+              element.setAttribute('target', '_blank');
+            }
+          }
+        }
+      })();
+    });
+  </script>
 
     <!--katex-->
     <script defer src="/assets/katex.min.js"></script>

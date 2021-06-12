@@ -26,6 +26,12 @@
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+	
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script> 	
+	
     <script>
         console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
 	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
@@ -43,7 +49,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4799275ec9215dc7869455689256b2d3.json"
+            api: "/72deece61f17b18f2e6996216b9b278b.json"
         }
     </script>
     
@@ -88,7 +94,7 @@
                     </nav>
                 </div>
             </header>
-            <div class="wrapper">
+            <div class="wrapper pswp-gallery" data-pswp-gid="1">
                 
 <main>    
     <section class="ga-section ga-content">
@@ -102,12 +108,12 @@
             </span>
             <div class="ga-content_body">
                         <p>我星期五从学校回来，晚上家里有事也没开房间的路由器。因为每次周日回学校，都会拔电源，周六早上一开，发现我的电脑无法上网，一开始以为是开机太快了，路由器还没开好，等了半天发现根本获取不到地址，不过奇怪的是WiFi是正常的，可以上网
-不过刚好也想买一个交换机，就看了看H3C，发现 S1209F 这款还行，8千兆电口+1千兆光口，横向对比其他厂商8口千兆都超过了200块，于是就毫不犹豫的买了下来。k2p印象里是去年pdd上的灵车了，买来全新，刷的大雕魔改的高恪。<figure style="flex: 23.68421052631579" ><img loading="lazy" width="1080" height="2280" src="https://cdn.elstec.cn/10/4.jpg" /></figure>
+不过刚好也想买一个交换机，就看了看H3C，发现 S1209F 这款还行，8千兆电口+1千兆光口，横向对比其他厂商8口千兆都超过了200块，于是就毫不犹豫的买了下来。k2p印象里是去年pdd上的灵车了，买来全新，刷的大雕魔改的高恪。<figure class="pswp-item" style="flex: 23.68421052631579" ><img loading="lazy" width="1080" height="2280" src="https://cdn.elstec.cn/10/4.jpg" /></figure>
 今天周日刚刚到货。
-<figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/10/3.jpg" /></figure>
+<figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/10/3.jpg" /></figure>
 因为我是从其他房间光猫拉线到我房间，所以先接入交换机，然后分一根给路由器，一根给PC。
-<figure style="flex: 44.534412955465584" ><img loading="lazy" width="880" height="988" src="https://cdn.elstec.cn/10/1.png" /></figure>
-<figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/10/2.jpg" /></figure>
+<figure class="pswp-item" style="flex: 44.534412955465584" ><img loading="lazy" width="880" height="988" src="https://cdn.elstec.cn/10/1.png" /></figure>
+<figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/10/2.jpg" /></figure>
 具体就这么接，反正能用</p>
             </div>
         </article>
@@ -145,6 +151,225 @@
             </div>
         </div>
     </div>
+
+
+<script>
+    (function(){
+        var wrap = function(el, wrapper) {
+            el.parentNode.insertBefore(wrapper, el);
+            wrapper.appendChild(el);
+        }
+        // Parse iframes
+        var iframes = document.querySelectorAll('.post-content iframe');
+        for (var index = 0; index < iframes.length; index++) {
+            var el = iframes[index],
+                width = parseInt(el.getAttribute('width') || 16),
+                height = parseInt(el.getAttribute('height') || 9);
+            var padding = String(100*height/width) + '%';
+
+            var wrapper1 = document.createElement('div');
+            wrapper1.classList.add('iframe-wrapper-inner');
+            wrapper1.style.paddingTop = padding;
+
+            var wrapper2 = document.createElement('figure');
+            wrapper2.classList.add('iframe-wrapper');
+
+            wrap(el, wrapper1);
+            wrap(wrapper1, wrapper2);
+        }
+    })();
+</script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+(function (gallerySelector, itemSelector) {
+    var openPhotoSwipe = function (galleryIndex, itemIndex) {
+        var gallery = this.gallerys[galleryIndex];
+        var options = {
+            galleryUID: String(galleryIndex + 1),
+            index: itemIndex,
+            getThumbBoundsFn: function (index) {
+                var thumbnail = gallery[index].el,
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect();
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+            }
+        }
+        var pswp = new PhotoSwipe(document.querySelectorAll('.pswp')[0],
+            PhotoSwipeUI_Default, gallery, options);
+        pswp.init();
+    };
+
+    var figureClick = function (e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        var eTarget = e.target || e.srcElement;  // figure
+
+        // 找到最近的 item
+        var figure = eTarget;
+        while (!figure.matches(itemSelector)) {
+            figure = figure.parentNode;
+        }
+
+        // 找到最近的 gallery
+        var gallery = figure;
+        while (!gallery.matches(gallerySelector)) {
+            gallery = gallery.parentNode;
+        }
+
+        var galleryIndex = parseInt(gallery.dataset.pswpGid) - 1;
+        var itemIndex = parseInt(figure.dataset.pswpPid) - 1;
+        openPhotoSwipe(galleryIndex, itemIndex);
+    }
+
+    var initPhotoSwipeFromDOM = function () {
+        this.gallerys = [];
+
+        var gallyers = document.querySelectorAll(gallerySelector);
+        for (var i = 0; i < gallyers.length; i++) {
+            var gallery = gallyers[i];
+            gallery.setAttribute('data-pswp-gid', i + 1);
+            var currentList = []
+
+            var figures = gallery.querySelectorAll(itemSelector);
+            for (var j = 0; j < figures.length; j++) {
+                var figure = figures[j];
+                figure.setAttribute('data-pswp-pid', j + 1);
+                figure.onclick = figureClick;
+                img = figure.firstChild;
+                currentList.push({
+                    src: img.src,
+                    h: parseInt(img.getAttribute('height')),
+                    w: parseInt(img.getAttribute('width')),
+                    el: img
+                })
+            }
+
+            this.gallerys.push(currentList);
+        }
+    }
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function () {
+        var hash = window.location.hash.substring(1),
+            params = {};
+
+        if (hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            if (!vars[i]) {
+                continue;
+            }
+            var pair = vars[i].split('=');
+            if (pair.length < 2) {
+                continue;
+            }
+            params[pair[0]] = pair[1];
+        }
+
+        if (params.gid) {
+            params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+    };
+
+    var openFromUrl = function () {
+        var hashData = photoswipeParseHash();
+        if (hashData.gid && hashData.pid) {
+            openPhotoSwipe(hashData.gid - 1, hashData.pid - 1);
+        }
+    }
+
+    initPhotoSwipeFromDOM();
+    openFromUrl();
+})('.pswp-gallery', '.pswp-item');
+</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      (function () {
+        var domain = document.domain;
+        var els = document.getElementsByTagName('a');
+        for (var index = 0; index < els.length; index++) {
+          var element = els[index];
+          var target = element.getAttribute('target');
+          if (typeof target === 'undefined' || (target != '' && target != '_self')) {
+            if (element.hostname != domain) {
+              element.setAttribute('target', '_blank');
+            }
+          }
+        }
+      })();
+    });
+  </script>
 
     <!--katex-->
     <script defer src="/assets/katex.min.js"></script>

@@ -26,6 +26,12 @@
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+	
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
+	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script> 
+	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script> 	
+	
     <script>
         console.log('\n' + ' %c Elstec & REDESIGN By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');    </script>
 	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
@@ -43,7 +49,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4799275ec9215dc7869455689256b2d3.json"
+            api: "/72deece61f17b18f2e6996216b9b278b.json"
         }
     </script>
     
@@ -88,7 +94,7 @@
                     </nav>
                 </div>
             </header>
-            <div class="wrapper">
+            <div class="wrapper pswp-gallery" data-pswp-gid="1">
                 
 <main>    
     <section class="ga-section ga-content">
@@ -102,8 +108,8 @@
             </span>
             <div class="ga-content_body">
                         <h1>前言</h1>
-<p>学校电脑是政府统一采购的品牌机，本来抱着试一试的想法装，结果直接就成功引导进安装了。</p><figure style="flex: 69.51909476661952" ><img loading="lazy" width="983" height="707" src="https://cdn.elstec.cn/27/1.png" /></figure><p>具体型号是： <code>HP ProDesk 480 G4 MT Business PC</code></p><p>7代i3，H110的板子。加一张从来没听过的 <code>R7 430</code> .(750TI是我之前加的)。我的想法是拔掉独显，用7代的 <code>HD630</code> 驱动。</p><figure style="flex: 37.5" ><img loading="lazy" width="3492" height="4656" src="https://cdn.elstec.cn/27/2.jpg" /></figure><p>不过这块板子板载只有 <code>VGA</code> 和 <code>DP</code> ， <code>VGA</code> 肯定不用想了，能点亮但是不能驱动，学校显示器又只有 <code>VGA</code> 和 <code>24+1</code> 。所以我就买了一个 <code>DP</code> 转 <code>VGA</code> 。</p><h1>过程</h1>
-<p>我下载的镜像是<a href="https://blog.daliansky.net/macOS-Mojave-10.14.5-18F132-official-version-with-Clover-4928-original-image.html">黑果小兵的10.14.5-18F132</a> 。</p><figure style="flex: 84.50854700854701" ><img loading="lazy" width="791" height="468" src="https://cdn.elstec.cn/27/2-1.png" /><figcaption>制作镜像</figcaption></figure><p>镜像制作完成之后，重新进入BIOS设置时间为 <code>2017</code> 或 <code>2015</code> 。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/3.jpg" /></figure><p>保存重启使用 <code>U盘</code> 启动 。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/4.jpg" /></figure><p>选择 <code>Boot macOS Install from Install macOS Mojave</code> 。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/5.jpg" /></figure><p><code>-v</code> 跑完命令行直接就进了安装界面。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/6.jpg" /></figure><p>首先还是要抹盘。磁盘工具直接把整个盘抹了，我不是双系统所以不在意。抹盘两种格式都行，不影响。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/7.jpg" /></figure><p>然后就是下一步下一步，选择安装盘安装。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/10.jpg" /></figure><p>安装完后会重启。再次选择 <code>U盘</code> 启动。选择 <code>Boot macOS Install from mac</code> 。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/11.jpg" /></figure><p>然后就进入了安装界面，进行漫长等待，有些机器进入安装之后会重启一次，继续选择 <code>Boot macOS Install from mac</code> 就行了。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/12.jpg" /></figure><p>跑完之后就进入到了熟悉的设置界面。下一步下一步设置就可以了。</p><figure style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/13.jpg" /></figure><p>再次重启进入 <code>clover</code> 按 <code>o</code> 选择 <code>config</code> 引导文件。直接使用 <code>HD630</code> 进行引导。进系统之后显卡驱动。</p><figure style="flex: 87.00305810397553" ><img loading="lazy" width="569" height="327" src="https://cdn.elstec.cn/27/15.png" /></figure><p>百度随便搜一个 <code>clover</code> 安装，然后挂载系统 <code>EFI</code> 分区和 <code>U盘EFI</code> 分区 。把 <code>U盘EFI</code> 分区的内容全部拷贝到系统 <code>EFI</code> 分区中，把需要的引导文件名改成 <code>config.plist</code>  然后启动系统就不需要 <code>U盘</code> 了。</p><figure style="flex: 96.70750382848392" ><img loading="lazy" width="1263" height="653" src="https://cdn.elstec.cn/27/16.png" /></figure><p>结束之后，基本能用。但我这品牌机声卡是科胜讯的，网上找不到相关驱动，我也不会做，就买了一个 <code>usb</code> 声卡驱动凑合着用[doge]。</p>
+<p>学校电脑是政府统一采购的品牌机，本来抱着试一试的想法装，结果直接就成功引导进安装了。</p><figure class="pswp-item" style="flex: 69.51909476661952" ><img loading="lazy" width="983" height="707" src="https://cdn.elstec.cn/27/1.png" /></figure><p>具体型号是： <code>HP ProDesk 480 G4 MT Business PC</code></p><p>7代i3，H110的板子。加一张从来没听过的 <code>R7 430</code> .(750TI是我之前加的)。我的想法是拔掉独显，用7代的 <code>HD630</code> 驱动。</p><figure class="pswp-item" style="flex: 37.5" ><img loading="lazy" width="3492" height="4656" src="https://cdn.elstec.cn/27/2.jpg" /></figure><p>不过这块板子板载只有 <code>VGA</code> 和 <code>DP</code> ， <code>VGA</code> 肯定不用想了，能点亮但是不能驱动，学校显示器又只有 <code>VGA</code> 和 <code>24+1</code> 。所以我就买了一个 <code>DP</code> 转 <code>VGA</code> 。</p><h1>过程</h1>
+<p>我下载的镜像是<a href="https://blog.daliansky.net/macOS-Mojave-10.14.5-18F132-official-version-with-Clover-4928-original-image.html">黑果小兵的10.14.5-18F132</a> 。</p><figure class="pswp-item" style="flex: 84.50854700854701" ><img loading="lazy" width="791" height="468" src="https://cdn.elstec.cn/27/2-1.png" /><figcaption>制作镜像</figcaption></figure><p>镜像制作完成之后，重新进入BIOS设置时间为 <code>2017</code> 或 <code>2015</code> 。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/3.jpg" /></figure><p>保存重启使用 <code>U盘</code> 启动 。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/4.jpg" /></figure><p>选择 <code>Boot macOS Install from Install macOS Mojave</code> 。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/5.jpg" /></figure><p><code>-v</code> 跑完命令行直接就进了安装界面。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/6.jpg" /></figure><p>首先还是要抹盘。磁盘工具直接把整个盘抹了，我不是双系统所以不在意。抹盘两种格式都行，不影响。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/7.jpg" /></figure><p>然后就是下一步下一步，选择安装盘安装。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/10.jpg" /></figure><p>安装完后会重启。再次选择 <code>U盘</code> 启动。选择 <code>Boot macOS Install from mac</code> 。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/11.jpg" /></figure><p>然后就进入了安装界面，进行漫长等待，有些机器进入安装之后会重启一次，继续选择 <code>Boot macOS Install from mac</code> 就行了。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/12.jpg" /></figure><p>跑完之后就进入到了熟悉的设置界面。下一步下一步设置就可以了。</p><figure class="pswp-item" style="flex: 66.66666666666667" ><img loading="lazy" width="4656" height="3492" src="https://cdn.elstec.cn/27/13.jpg" /></figure><p>再次重启进入 <code>clover</code> 按 <code>o</code> 选择 <code>config</code> 引导文件。直接使用 <code>HD630</code> 进行引导。进系统之后显卡驱动。</p><figure class="pswp-item" style="flex: 87.00305810397553" ><img loading="lazy" width="569" height="327" src="https://cdn.elstec.cn/27/15.png" /></figure><p>百度随便搜一个 <code>clover</code> 安装，然后挂载系统 <code>EFI</code> 分区和 <code>U盘EFI</code> 分区 。把 <code>U盘EFI</code> 分区的内容全部拷贝到系统 <code>EFI</code> 分区中，把需要的引导文件名改成 <code>config.plist</code>  然后启动系统就不需要 <code>U盘</code> 了。</p><figure class="pswp-item" style="flex: 96.70750382848392" ><img loading="lazy" width="1263" height="653" src="https://cdn.elstec.cn/27/16.png" /></figure><p>结束之后，基本能用。但我这品牌机声卡是科胜讯的，网上找不到相关驱动，我也不会做，就买了一个 <code>usb</code> 声卡驱动凑合着用[doge]。</p>
             </div>
         </article>
         
@@ -140,6 +146,225 @@
             </div>
         </div>
     </div>
+
+
+<script>
+    (function(){
+        var wrap = function(el, wrapper) {
+            el.parentNode.insertBefore(wrapper, el);
+            wrapper.appendChild(el);
+        }
+        // Parse iframes
+        var iframes = document.querySelectorAll('.post-content iframe');
+        for (var index = 0; index < iframes.length; index++) {
+            var el = iframes[index],
+                width = parseInt(el.getAttribute('width') || 16),
+                height = parseInt(el.getAttribute('height') || 9);
+            var padding = String(100*height/width) + '%';
+
+            var wrapper1 = document.createElement('div');
+            wrapper1.classList.add('iframe-wrapper-inner');
+            wrapper1.style.paddingTop = padding;
+
+            var wrapper2 = document.createElement('figure');
+            wrapper2.classList.add('iframe-wrapper');
+
+            wrap(el, wrapper1);
+            wrap(wrapper1, wrapper2);
+        }
+    })();
+</script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<script>
+(function (gallerySelector, itemSelector) {
+    var openPhotoSwipe = function (galleryIndex, itemIndex) {
+        var gallery = this.gallerys[galleryIndex];
+        var options = {
+            galleryUID: String(galleryIndex + 1),
+            index: itemIndex,
+            getThumbBoundsFn: function (index) {
+                var thumbnail = gallery[index].el,
+                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+                    rect = thumbnail.getBoundingClientRect();
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
+            }
+        }
+        var pswp = new PhotoSwipe(document.querySelectorAll('.pswp')[0],
+            PhotoSwipeUI_Default, gallery, options);
+        pswp.init();
+    };
+
+    var figureClick = function (e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        var eTarget = e.target || e.srcElement;  // figure
+
+        // 找到最近的 item
+        var figure = eTarget;
+        while (!figure.matches(itemSelector)) {
+            figure = figure.parentNode;
+        }
+
+        // 找到最近的 gallery
+        var gallery = figure;
+        while (!gallery.matches(gallerySelector)) {
+            gallery = gallery.parentNode;
+        }
+
+        var galleryIndex = parseInt(gallery.dataset.pswpGid) - 1;
+        var itemIndex = parseInt(figure.dataset.pswpPid) - 1;
+        openPhotoSwipe(galleryIndex, itemIndex);
+    }
+
+    var initPhotoSwipeFromDOM = function () {
+        this.gallerys = [];
+
+        var gallyers = document.querySelectorAll(gallerySelector);
+        for (var i = 0; i < gallyers.length; i++) {
+            var gallery = gallyers[i];
+            gallery.setAttribute('data-pswp-gid', i + 1);
+            var currentList = []
+
+            var figures = gallery.querySelectorAll(itemSelector);
+            for (var j = 0; j < figures.length; j++) {
+                var figure = figures[j];
+                figure.setAttribute('data-pswp-pid', j + 1);
+                figure.onclick = figureClick;
+                img = figure.firstChild;
+                currentList.push({
+                    src: img.src,
+                    h: parseInt(img.getAttribute('height')),
+                    w: parseInt(img.getAttribute('width')),
+                    el: img
+                })
+            }
+
+            this.gallerys.push(currentList);
+        }
+    }
+
+    // parse picture index and gallery index from URL (#&pid=1&gid=2)
+    var photoswipeParseHash = function () {
+        var hash = window.location.hash.substring(1),
+            params = {};
+
+        if (hash.length < 5) {
+            return params;
+        }
+
+        var vars = hash.split('&');
+        for (var i = 0; i < vars.length; i++) {
+            if (!vars[i]) {
+                continue;
+            }
+            var pair = vars[i].split('=');
+            if (pair.length < 2) {
+                continue;
+            }
+            params[pair[0]] = pair[1];
+        }
+
+        if (params.gid) {
+            params.gid = parseInt(params.gid, 10);
+        }
+
+        return params;
+    };
+
+    var openFromUrl = function () {
+        var hashData = photoswipeParseHash();
+        if (hashData.gid && hashData.pid) {
+            openPhotoSwipe(hashData.gid - 1, hashData.pid - 1);
+        }
+    }
+
+    initPhotoSwipeFromDOM();
+    openFromUrl();
+})('.pswp-gallery', '.pswp-item');
+</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      (function () {
+        var domain = document.domain;
+        var els = document.getElementsByTagName('a');
+        for (var index = 0; index < els.length; index++) {
+          var element = els[index];
+          var target = element.getAttribute('target');
+          if (typeof target === 'undefined' || (target != '' && target != '_self')) {
+            if (element.hostname != domain) {
+              element.setAttribute('target', '_blank');
+            }
+          }
+        }
+      })();
+    });
+  </script>
 
     <!--katex-->
     <script defer src="/assets/katex.min.js"></script>
