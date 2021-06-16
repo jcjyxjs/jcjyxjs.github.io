@@ -1,9 +1,11 @@
+#ga-header {
+	padding-top: 48px 0;
+}
+
 .author_image {
     width: 120px;
     height: 120px;
     margin: 0 auto 24px;
-    margin-top: 24px;
-    margin-bottom: 24px;
 }
 
 a {
