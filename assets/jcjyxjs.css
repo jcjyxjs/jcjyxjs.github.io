@@ -128,7 +128,7 @@ span.ga-post_meta {
 }
 
 #ga-content_pager>div.prev::before {
-    content: "Next";
+    content: "下一篇";
 }
 
 #ga-content_pager>div a:hover {
@@ -143,6 +143,17 @@ span.ga-post_meta {
 
 span.vsys {
     background: #33333312;
+}
+
+.cupage {
+    padding: 6px 0;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    margin: 0 32px;
+}
+
+.cupage:hover {
+    border-bottom: 2px solid;
 }
 
 @media screen and (prefers-color-scheme: dark) {
@@ -210,8 +221,8 @@ span.vsys {
     }
 
     #ga-content_pager>div.prev::before {
-        content: "Next";
-        color:#aaaaaa;
+        content: "下一篇";
+        color: #aaaaaa;
     }
 
     .v .vlist .vcard .vhead .vsys {
@@ -366,5 +377,21 @@ span.vsys {
 	
 	del:hover {
 		color:rgb(173,186,199);
+	}
+	
+	.highlight .nx,.highlight .p{
+		color: rgb(173,186,199);
+	}
+	
+	.highlight .nf,.highlight .n {
+		color: #fff;
+	}
+	
+	td {
+		background: rgb(35 44 56);
+	}
+	
+	.yue .notice {
+		background: #7cb3fe26;
 	}
 }
