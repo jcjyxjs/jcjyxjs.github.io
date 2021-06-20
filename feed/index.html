@@ -1,19 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 19 Jun 2021 17:59:24 +0806</lastBuildDate><pubDate>Sat, 19 Jun 2021 17:59:24 +0806</pubDate><item><title>编译OpenWrt固件中找不到luci-app-ssr-plus</title><link>/archives/op-no-luci-app-ssr-plus/</link><description>&lt;h1&gt;我的解决方案&lt;/h1&gt;
-&lt;h3&gt;我是云编译，所以是 &lt;code&gt;Fork&lt;/code&gt; 仓库，本地编译的话需要编辑的文件一样。&lt;/h3&gt;
-&lt;p&gt;1.&lt;code&gt;Fork&lt;/code&gt; 大雕的 &lt;code&gt;Lede&lt;/code&gt; 仓库。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/coolsnowwolf/lede
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;2.在源码根目录可以看到 &lt;code&gt;feeds.conf.default&lt;/code&gt; 这个文件，打开编辑。&lt;/p&gt;&lt;p&gt;3.找到被注释掉的代码。取消注释然后就跟平常编译是一样的。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c"&gt;#src-git helloworld https://github.com/fw876/helloworld&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;4.改完之后如下&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nf"&gt;src-git packages https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;//&lt;span class="n"&gt;github&lt;/span&gt;.&lt;span class="n"&gt;com&lt;/span&gt;/&lt;span class="n"&gt;coolsnowwolf&lt;/span&gt;/&lt;span class="n"&gt;packages&lt;/span&gt;
-&lt;span class="nf"&gt;src-git luci https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;//&lt;span class="n"&gt;github&lt;/span&gt;.&lt;span class="n"&gt;com&lt;/span&gt;/&lt;span class="n"&gt;coolsnowwolf&lt;/span&gt;/&lt;span class="n"&gt;luci&lt;/span&gt;
-&lt;span class="nf"&gt;src-git routing https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;//&lt;span class="n"&gt;git&lt;/span&gt;.&lt;span class="n"&gt;openwrt&lt;/span&gt;.&lt;span class="n"&gt;org&lt;/span&gt;/&lt;span class="n"&gt;feed&lt;/span&gt;/&lt;span class="n"&gt;routing&lt;/span&gt;.&lt;span class="n"&gt;git&lt;/span&gt;;&lt;span class="n"&gt;openwrt&lt;/span&gt;-19.07
-&lt;span class="c"&gt;#src-git telephony https://git.openwrt.org/feed/telephony.git;openwrt-19.07&lt;/span&gt;
-&lt;span class="nf"&gt;src-git helloworld https&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;//&lt;span class="n"&gt;github&lt;/span&gt;.&lt;span class="n"&gt;com&lt;/span&gt;/&lt;span class="n"&gt;fw&lt;/span&gt;876/&lt;span class="n"&gt;helloworld&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;h4&gt;看完了全文为什么不评论一下呢？xd&lt;/h4&gt;
-</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/op-no-luci-app-ssr-plus/</guid><pubDate>Sat, 13 Jun 2020 19:50:00 +0806</pubDate></item><item><title>2020年7月10日-记录网站重新搬迁</title><link>/archives/20200710/</link><description>&lt;h2&gt;前言&lt;/h2&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 20 Jun 2021 16:51:14 +0806</lastBuildDate><pubDate>Sun, 20 Jun 2021 16:51:14 +0806</pubDate><item><title>2020年7月10日-记录网站重新搬迁</title><link>/archives/20200710/</link><description>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;一开始我是使用阿里云香港轻量，也是 &lt;code&gt;Typecho + VOID&lt;/code&gt; 的形式，搭建的博客，那时候的域名是 &lt;code&gt;jcjyxjs.me&lt;/code&gt; ，是 &lt;code&gt;Github&lt;/code&gt; 学生包里送的。3个月之后发现阿里云香港不走 &lt;code&gt;CN2&lt;/code&gt; 了，加上晚上一直检测到无法访问。我就想转到国内，突然就想到还有这么一个备案域名。&lt;/p&gt;&lt;p&gt;于是我使用 &lt;a href="https://github.com/AlanDecode/Maverick"&gt;Maverick&lt;/a&gt; 这个程序搭建的静态博客，因为正好这个主题的作者也在推 &lt;code&gt;Maverick&lt;/code&gt; ，类似于 &lt;code&gt;Hexo&lt;/code&gt; ， &lt;code&gt;Hugo&lt;/code&gt; 等。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 31.515711645101664" &gt;&lt;img loading="lazy" width="341" height="541" src="https://cdn.elstec.cn/30/2.png" /&gt;&lt;figcaption&gt;流程图&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;使用腾讯云对象存储（COS）+内容分发网络（CDN）的形式。&lt;code&gt;COS&lt;/code&gt; 开启静态网站支持。就这样持续了有个大半年。我突然意识到，
 &lt;code&gt;Maverick&lt;/code&gt; 主题有点少，而且没有暗黑模式自适应（没说Maverick不好），我又太菜，只会一个暗黑模式自适应。最近就看到腾讯云新用户 &lt;code&gt;1H2G1M 99/年&lt;/code&gt;  :%(酷安_doge呵斥)  果断入手。&lt;/p&gt;&lt;p&gt;7月10号中午入手，装完环境，配置好CDN，我就开冲了。&lt;/p&gt;&lt;hr /&gt;
 &lt;h2&gt;首先&lt;/h2&gt;
@@ -143,4 +129,64 @@ autoplay="true"&gt;
 &lt;p&gt;其中&lt;code&gt;img.t.sinajs.cn/t4/appstyle/expression/ext/normal/&lt;/code&gt;就是&lt;code&gt;emojiCDN&lt;/code&gt;，&lt;code&gt;2c/2018new_qinqin_thumb.png&lt;/code&gt;就是&lt;code&gt;emojiMaps&lt;/code&gt;。其中&lt;code&gt;emojiMaps&lt;/code&gt;部分需要按照格式，例：&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;s2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;alu/2.png&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="c1"&gt;//表情包名称无空格可以不加引号&lt;/span&gt;
 &lt;span class="s2"&gt;&amp;quot;sss 2&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;alu/2.png&amp;quot;&lt;/span&gt;&lt;span class="c1"&gt;//表情包名称含空格需加引号&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;发一条评论试试吧~&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210615/</guid><pubDate>Tue, 15 Jun 2021 20:00:00 +0806</pubDate></item></channel></rss>
+&lt;p&gt;发一条评论试试吧~&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210615/</guid><pubDate>Tue, 15 Jun 2021 20:00:00 +0806</pubDate></item><item><title>Grafana+Prometheus监控服务器</title><link>/archives/20210620/</link><description>&lt;div class="notice"&gt;环境：Centos7，Supervisor持久化运行&lt;/div&gt;&lt;p&gt;下载以及安装Grafana，需要放通&lt;code&gt;3000&lt;/code&gt;端口用于Grafana的网页后台控制。&lt;em&gt;（IP:3000）&lt;/em&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm
+sudo yum install grafana-8.0.3-1.x86_64.rpm
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;用&lt;code&gt;.deb&lt;/code&gt;或&lt;code&gt;.rpm&lt;/code&gt;安装完成之后可以用&lt;code&gt;systemd&lt;/code&gt;或&lt;code&gt;init.d&lt;/code&gt;控制。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo systemctl daemon-reload
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;登入后台，默认用户名密码&lt;code&gt;admin&lt;/code&gt;，首次登录会被要求强制修改密码。&lt;/p&gt;&lt;p&gt;安装Prometheus，找到最新版，截至目前是2.28.0 &lt;code&gt;https://github.com/prometheus/prometheus/releases/&lt;/code&gt; &lt;em&gt;（外网访问需要放通9090端口）&lt;/em&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-amd64.tar.gz
+tar -xzvf prometheus-2.28.0-rc.0.linux-amd64.tar.gz
+&lt;span class="nb"&gt;cd&lt;/span&gt; prometheus-2.28.0-rc.0.linux-amd64
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;编辑&lt;code&gt;prometheus.yml&lt;/code&gt;文件，官方默认配置文件如下，默认监控Prometheus自身。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# my global config&lt;/span&gt;
+&lt;span class="nt"&gt;global&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;scrape_interval&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;     &lt;span class="l l-Scalar l-Scalar-Plain"&gt;15s&lt;/span&gt; &lt;span class="c1"&gt;# Set the scrape interval to every 15 seconds. Default is every 1 minute.&lt;/span&gt;
+  &lt;span class="nt"&gt;evaluation_interval&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="l l-Scalar l-Scalar-Plain"&gt;15s&lt;/span&gt; &lt;span class="c1"&gt;# Evaluate rules every 15 seconds. The default is every 1 minute.&lt;/span&gt;
+  &lt;span class="c1"&gt;# scrape_timeout is set to the global default (10s).&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Alertmanager configuration&lt;/span&gt;
+&lt;span class="nt"&gt;alerting&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="nt"&gt;alertmanagers&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;static_configs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;targets&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+      &lt;span class="c1"&gt;# - alertmanager:9093&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Load rules once and periodically evaluate them according to the global &amp;#39;evaluation_interval&amp;#39;.&lt;/span&gt;
+&lt;span class="nt"&gt;rule_files&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="c1"&gt;# - &amp;quot;first_rules.yml&amp;quot;&lt;/span&gt;
+  &lt;span class="c1"&gt;# - &amp;quot;second_rules.yml&amp;quot;&lt;/span&gt;
+
+&lt;span class="c1"&gt;# A scrape configuration containing exactly one endpoint to scrape:&lt;/span&gt;
+&lt;span class="c1"&gt;# Here it&amp;#39;s Prometheus itself.&lt;/span&gt;
+&lt;span class="nt"&gt;scrape_configs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+  &lt;span class="c1"&gt;# The job name is added as a label `job=` to any timeseries scraped from this config.&lt;/span&gt;
+  &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;job_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;prometheus&amp;#39;&lt;/span&gt;
+
+    &lt;span class="c1"&gt;# metrics_path defaults to &amp;#39;/metrics&amp;#39;&lt;/span&gt;
+    &lt;span class="c1"&gt;# scheme defaults to &amp;#39;http&amp;#39;.&lt;/span&gt;
+
+    &lt;span class="nt"&gt;static_configs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;targets&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;localhost:9090&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;#全局时间间隔&lt;/span&gt;
+scrape_interval: 15s 
+&lt;span class="c1"&gt;#规则扫描时间间隔&lt;/span&gt;
+evaluation_interval: 15s 
+&lt;span class="c1"&gt;#超时时间&lt;/span&gt;
+scrape_timeout: 5s
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;更详细的可以参考官方文档：&lt;a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/"&gt;&lt;a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/"&gt;https://prometheus.io/docs/prometheus/latest/configuration/configuration/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;./prometheus
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;网页后台：&lt;code&gt;IP:9090&lt;/code&gt;可以看到自身的状态是&lt;code&gt;UP&lt;/code&gt;。&lt;/p&gt;&lt;p&gt;node_exporter就是获取宿主机的资源信息，CPU占用，内存占用等&lt;/p&gt;&lt;p&gt;安装node_exporter，找到最新版，截至目前是1.1.2 
+&lt;code&gt;https://github.com/prometheus/node_exporter/releases/&lt;/code&gt;  &lt;em&gt;（外网访问需要放通9100端口）&lt;/em&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+tar -xzvf node_exporter-1.1.2.linux-amd64.tar.gz
+&lt;span class="nb"&gt;cd&lt;/span&gt; node_exporter-1.1.2.linux-amd64
+./node_exporter
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Prometheus创建job获取node_exporter的数据，&lt;code&gt;job_name&lt;/code&gt;可以随便取。修改yml文件一定要严格注意格式（缩进）。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;job_name&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;exporter&amp;#39;&lt;/span&gt;
+    &lt;span class="nt"&gt;static_configs&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="p p-Indicator"&gt;-&lt;/span&gt; &lt;span class="nt"&gt;targets&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="p p-Indicator"&gt;[&lt;/span&gt;&lt;span class="s"&gt;&amp;#39;localhost:9100&amp;#39;&lt;/span&gt;&lt;span class="p p-Indicator"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;然后重启Prometheus，网页后台可以看到这个job上线了。&lt;/p&gt;&lt;p&gt;重新回到Grafana网页后台，可以自己创建Dashboard，也可以用现成的。进入官方库：&lt;a href="https://grafana.com/grafana/dashboards"&gt;&lt;a href="https://grafana.com/grafana/dashboards"&gt;https://grafana.com/grafana/dashboards&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;也可以用这个：&lt;a href="https://grafana.com/grafana/dashboards/8919"&gt;&lt;a href="https://grafana.com/grafana/dashboards/8919"&gt;https://grafana.com/grafana/dashboards/8919&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 63.57827476038339" &gt;&lt;img loading="lazy" width="398" height="313" src="https://cdn.elstec.cn/37/1.png" /&gt;&lt;/figure&gt;&lt;p&gt;复制数字，回到后台，点左侧加号然后&lt;code&gt;Import&lt;/code&gt;，输入数字ID点&lt;code&gt;Load&lt;/code&gt;，&lt;code&gt;VictoriaMetrics&lt;/code&gt;选择&lt;code&gt;Prometheus&lt;/code&gt;，最后&lt;code&gt;Import&lt;/code&gt;即可。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 52.17391304347826" &gt;&lt;img loading="lazy" width="1128" height="1081" src="https://cdn.elstec.cn/37/2.png" /&gt;&lt;/figure&gt;&lt;p&gt;最终效果可以观看我的：&lt;a href="https://status.elstec.cn/d/fcJIWBR7z/jcjyxjs?orgId=1"&gt;&lt;a href="https://status.elstec.cn/d/fcJIWBR7z/jcjyxjs?orgId=1"&gt;https://status.elstec.cn/d/fcJIWBR7z/jcjyxjs?orgId=1&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210620/</guid><pubDate>Sun, 20 Jun 2021 20:00:00 +0806</pubDate></item></channel></rss>

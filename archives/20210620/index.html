@@ -42,18 +42,18 @@
         }
     </script>
     
-<title>记一次Centos7翻车+升级内核开启BBR过程 - 毫无作为</title>
+<title>Grafana+Prometheus监控服务器 - 毫无作为</title>
 <meta name="author" content="jcjyxjs" />
-<meta name="description" content="rpmdb报错解决方案如下rpmdb报错参考文章：https://elstec.cn/archives/fixrpmdb/" />
-<meta property="og:title" content="记一次Centos7翻车+升级内核开启BBR过程 - 毫无作为" />
-<meta property="og:description" content="rpmdb报错解决方案如下rpmdb报错参考文章：https://elstec.cn/archives/fixrpmdb/" />
+<meta name="description" content="环境：Centos7，Supervisor持久化运行下载以及安装Grafana，需要放通3000端口用于Grafana的网页后台控制。（IP:3000）wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm" />
+<meta property="og:title" content="Grafana+Prometheus监控服务器 - 毫无作为" />
+<meta property="og:description" content="环境：Centos7，Supervisor持久化运行下载以及安装Grafana，需要放通3000端口用于Grafana的网页后台控制。（IP:3000）wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm" />
 <meta property="og:site_name" content="毫无作为" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/20200711/" />
+<meta property="og:url" content="/archives/20210620/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-07-11T19:50:00+08.00" />
-<meta name="twitter:title" content="记一次Centos7翻车+升级内核开启BBR过程 - 毫无作为" />
-<meta name="twitter:description" content="rpmdb报错解决方案如下rpmdb报错参考文章：https://elstec.cn/archives/fixrpmdb/" />
+<meta property="article:published_time" content="2021-06-20T20:00:00+08.00" />
+<meta name="twitter:title" content="Grafana+Prometheus监控服务器 - 毫无作为" />
+<meta name="twitter:description" content="环境：Centos7，Supervisor持久化运行下载以及安装Grafana，需要放通3000端口用于Grafana的网页后台控制。（IP:3000）wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -89,40 +89,75 @@
 <main>    
     <section class="ga-section ga-content">
         <article class="yue">
-            <h1 class="ga-post_title">记一次Centos7翻车+升级内核开启BBR过程</h1>
+            <h1 class="ga-post_title">Grafana+Prometheus监控服务器</h1>
             <span class="ga-post_meta ga-mono">
                 <time>
-                    2020-07-11
+                    2021-06-20
                 </time>
                 <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                        <div class="notice"><strong>rpmdb报错解决方案如下</strong></div><h4>rpmdb报错参考文章：<a href="https://elstec.cn/archives/fixrpmdb/"><a href="https://elstec.cn/archives/fixrpmdb/">https://elstec.cn/archives/fixrpmdb/</a></a></h4>
-<p>我本来想着国内机器装个BBR玩玩，然后直接找了一键脚本，就像这种</p><figure class="pswp-item" style="flex: 103.63423212192262" ><img loading="lazy" width="1768" height="853" src="https://cdn.elstec.cn/30/1.png" /><figcaption>一键脚本</figcaption></figure><p>然后我选了BBR/BBR魔改版，因为机器就1M带宽反正装啥都一样。安装之后很快就提示我重启，再然后就开不了机了。</p><p>重装之后我就换种方法，用升级内核来开启BBR。</p><p>先升级软件最新</p><div class="highlight"><pre><span></span>yum update -y
+                        <div class="notice">环境：Centos7，Supervisor持久化运行</div><p>下载以及安装Grafana，需要放通<code>3000</code>端口用于Grafana的网页后台控制。<em>（IP:3000）</em></p><div class="highlight"><pre><span></span>wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm
+sudo yum install grafana-8.0.3-1.x86_64.rpm
 </pre></div>
-<p>然后导入 <code>elrepo</code> 软件源的 <code>key</code> 并安装</p><div class="highlight"><pre><span></span>rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-rpm -Uvh https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
+<p>用<code>.deb</code>或<code>.rpm</code>安装完成之后可以用<code>systemd</code>或<code>init.d</code>控制。</p><div class="highlight"><pre><span></span>sudo systemctl daemon-reload
+sudo systemctl start grafana-server
+sudo systemctl status grafana-server
 </pre></div>
-<p>安装最新内核</p><div class="highlight"><pre><span></span>yum -y --enablerepo<span class="o">=</span>elrepo-kernel install kernel-ml-devel kernel-ml
+<p>登入后台，默认用户名密码<code>admin</code>，首次登录会被要求强制修改密码。</p><p>安装Prometheus，找到最新版，截至目前是2.28.0 <code>https://github.com/prometheus/prometheus/releases/</code> <em>（外网访问需要放通9090端口）</em></p><div class="highlight"><pre><span></span>wget https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-amd64.tar.gz
+tar -xzvf prometheus-2.28.0-rc.0.linux-amd64.tar.gz
+<span class="nb">cd</span> prometheus-2.28.0-rc.0.linux-amd64
 </pre></div>
-<p>查看系统启动项并修改新内核为默认启动方式</p><div class="highlight"><pre><span></span>grep menuentry /boot/grub2/grub.cfg
-//把最新的那个内核名称复制下来，并设置新内核为第一启动方式（引导）
-grub2-set-default <span class="s1">&#39;CentOS Linux (5.7.8-1.el7.elrepo.x86_64) 7 (Core)&#39;</span>
-</pre></div>
-<p>删除旧内核并生成新配置文件之后重启</p><div class="highlight"><pre><span></span>grub2-mkconfig --output /boot/grub2/grub.cfg
-</pre></div>
-<p>重启进入系统查看当前内核</p><div class="highlight"><pre><span></span>uname -a
-Linux VM-0-7-centos <span class="m">5</span>.7.8-1.el7.elrepo.x86_64 <span class="c1">#1 SMP Tue Jul 7 18:43:16 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux</span>
-</pre></div>
-<p>开启BBR</p><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="s2">&quot;net.core.default_qdisc=fq&quot;</span> &gt;&gt; /etc/sysctl.conf
-<span class="nb">echo</span> <span class="s2">&quot;net.ipv4.tcp_congestion_control=bbr&quot;</span> &gt;&gt; /etc/sysctl.conf
-//保存并生效
-sysctl -p
-//检查BBR是否运行
-lsmod <span class="p">|</span>grep bbr
-tcp_bbr                <span class="m">20480</span>  <span class="m">14</span>
-</pre></div>
+<p>编辑<code>prometheus.yml</code>文件，官方默认配置文件如下，默认监控Prometheus自身。</p><div class="highlight"><pre><span></span><span class="c1"># my global config</span>
+<span class="nt">global</span><span class="p">:</span>
+  <span class="nt">scrape_interval</span><span class="p">:</span>     <span class="l l-Scalar l-Scalar-Plain">15s</span> <span class="c1"># Set the scrape interval to every 15 seconds. Default is every 1 minute.</span>
+  <span class="nt">evaluation_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15s</span> <span class="c1"># Evaluate rules every 15 seconds. The default is every 1 minute.</span>
+  <span class="c1"># scrape_timeout is set to the global default (10s).</span>
 
+<span class="c1"># Alertmanager configuration</span>
+<span class="nt">alerting</span><span class="p">:</span>
+  <span class="nt">alertmanagers</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">static_configs</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span>
+      <span class="c1"># - alertmanager:9093</span>
+
+<span class="c1"># Load rules once and periodically evaluate them according to the global &#39;evaluation_interval&#39;.</span>
+<span class="nt">rule_files</span><span class="p">:</span>
+  <span class="c1"># - &quot;first_rules.yml&quot;</span>
+  <span class="c1"># - &quot;second_rules.yml&quot;</span>
+
+<span class="c1"># A scrape configuration containing exactly one endpoint to scrape:</span>
+<span class="c1"># Here it&#39;s Prometheus itself.</span>
+<span class="nt">scrape_configs</span><span class="p">:</span>
+  <span class="c1"># The job name is added as a label `job=` to any timeseries scraped from this config.</span>
+  <span class="p p-Indicator">-</span> <span class="nt">job_name</span><span class="p">:</span> <span class="s">&#39;prometheus&#39;</span>
+
+    <span class="c1"># metrics_path defaults to &#39;/metrics&#39;</span>
+    <span class="c1"># scheme defaults to &#39;http&#39;.</span>
+
+    <span class="nt">static_configs</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;localhost:9090&#39;</span><span class="p p-Indicator">]</span>
+</pre></div>
+<div class="highlight"><pre><span></span><span class="c1">#全局时间间隔</span>
+scrape_interval: 15s 
+<span class="c1">#规则扫描时间间隔</span>
+evaluation_interval: 15s 
+<span class="c1">#超时时间</span>
+scrape_timeout: 5s
+</pre></div>
+<p>更详细的可以参考官方文档：<a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/"><a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">https://prometheus.io/docs/prometheus/latest/configuration/configuration/</a></a></p><div class="highlight"><pre><span></span>./prometheus
+</pre></div>
+<p>网页后台：<code>IP:9090</code>可以看到自身的状态是<code>UP</code>。</p><p>node_exporter就是获取宿主机的资源信息，CPU占用，内存占用等</p><p>安装node_exporter，找到最新版，截至目前是1.1.2 
+<code>https://github.com/prometheus/node_exporter/releases/</code>  <em>（外网访问需要放通9100端口）</em></p><div class="highlight"><pre><span></span>wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+tar -xzvf node_exporter-1.1.2.linux-amd64.tar.gz
+<span class="nb">cd</span> node_exporter-1.1.2.linux-amd64
+./node_exporter
+</pre></div>
+<p>Prometheus创建job获取node_exporter的数据，<code>job_name</code>可以随便取。修改yml文件一定要严格注意格式（缩进）。</p><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">job_name</span><span class="p">:</span> <span class="s">&#39;exporter&#39;</span>
+    <span class="nt">static_configs</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;localhost:9100&#39;</span><span class="p p-Indicator">]</span>
+</pre></div>
+<p>然后重启Prometheus，网页后台可以看到这个job上线了。</p><p>重新回到Grafana网页后台，可以自己创建Dashboard，也可以用现成的。进入官方库：<a href="https://grafana.com/grafana/dashboards"><a href="https://grafana.com/grafana/dashboards">https://grafana.com/grafana/dashboards</a></a></p><p>也可以用这个：<a href="https://grafana.com/grafana/dashboards/8919"><a href="https://grafana.com/grafana/dashboards/8919">https://grafana.com/grafana/dashboards/8919</a></a></p><figure class="pswp-item" style="flex: 63.57827476038339" ><img loading="lazy" width="398" height="313" src="https://cdn.elstec.cn/37/1.png" /></figure><p>复制数字，回到后台，点左侧加号然后<code>Import</code>，输入数字ID点<code>Load</code>，<code>VictoriaMetrics</code>选择<code>Prometheus</code>，最后<code>Import</code>即可。</p><figure class="pswp-item" style="flex: 52.17391304347826" ><img loading="lazy" width="1128" height="1081" src="https://cdn.elstec.cn/37/2.png" /></figure><p>最终效果可以观看我的：<a href="https://status.elstec.cn/d/fcJIWBR7z/jcjyxjs?orgId=1"><a href="https://status.elstec.cn/d/fcJIWBR7z/jcjyxjs?orgId=1">https://status.elstec.cn/d/fcJIWBR7z/jcjyxjs?orgId=1</a></a></p>
             </div>
         </article>
         
@@ -132,7 +167,7 @@ tcp_bbr                <span class="m">20480</span>  <span class="m">14</span>
 <section id="ga-content_pager">
 
     <div class="prev">
-        <a class="ga-highlight" href="/archives/20200710/">2020年7月10日-记录网站重新搬迁</a>
+        <a class="ga-highlight" href="/archives/20210615/">Valine自定义表情包</a>
     </div>
 
 </section>
