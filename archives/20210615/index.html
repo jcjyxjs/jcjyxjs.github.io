@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
         <!-- require MetingJS -->
     <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.elstec.cn/favicon.png" />
+	<meta http-equiv="x-dns-prefetch-control" content="on">
     <meta name="chinaz-site-verification" content="3EC3C9BC99F337AE">
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
 	<meta name="bytedance-verification-code" content="ocVFOTgNQ+2VVhqMA+/M" />
@@ -29,6 +29,7 @@
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
 	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
 	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<script async defer data-website-id="295ab065-dd40-46b7-af8b-4c427d8b15f9" src="https://analytics.elstec.cn/umami.js" data-auto-track="false"></script>
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script> 
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script> 	
     <script>
@@ -113,7 +114,7 @@
 </code></pre>
 <p>搜索<code>sina</code>字段。</p><div class="highlight"><pre><span></span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
                     <span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
-                    <span class="nx">t</span><span class="p">.</span><span class="nx">__esModule</span> <span class="o">=</span> <span class="o">!</span><span class="mf">0</span><span class="p">;</span>
+                    <span class="nx">t</span><span class="p">.</span><span class="nx">__esModule</span> <span class="o">=</span> <span class="o">!</span><span class="mi">0</span><span class="p">;</span>
                     <span class="nx">t</span><span class="p">.</span><span class="nx">DEFAULT_EMOJI_CDN</span> <span class="o">=</span> <span class="s2">&quot;//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/&quot;</span><span class="p">,</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">DB_NAME</span> <span class="o">=</span> <span class="s2">&quot;Comment&quot;</span><span class="p">,</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">defaultConfig</span> <span class="o">=</span> <span class="p">{</span>
@@ -125,19 +126,19 @@
                             <span class="nx">meta</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;nick&quot;</span><span class="p">,</span> <span class="s2">&quot;mail&quot;</span><span class="p">,</span> <span class="s2">&quot;link&quot;</span><span class="p">],</span>
                             <span class="nx">path</span><span class="o">:</span> <span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">,</span>
                             <span class="nx">placeholder</span><span class="o">:</span> <span class="s2">&quot;Just Go Go&quot;</span><span class="p">,</span>
-                            <span class="nx">pageSize</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
-                            <span class="nx">recordIP</span><span class="o">:</span> <span class="o">!</span><span class="mf">0</span><span class="p">,</span>
+                            <span class="nx">pageSize</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                            <span class="nx">recordIP</span><span class="o">:</span> <span class="o">!</span><span class="mi">0</span><span class="p">,</span>
                             <span class="nx">serverURLs</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                            <span class="nx">visitor</span><span class="o">:</span> <span class="o">!</span><span class="mf">1</span><span class="p">,</span>
+                            <span class="nx">visitor</span><span class="o">:</span> <span class="o">!</span><span class="mi">1</span><span class="p">,</span>
                             <span class="nx">emojiCDN</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                            <span class="nx">emojiMaps</span><span class="o">:</span> <span class="k">void</span> <span class="mf">0</span><span class="p">,</span>
-                            <span class="nx">enableQQ</span><span class="o">:</span> <span class="o">!</span><span class="mf">1</span><span class="p">,</span>
+                            <span class="nx">emojiMaps</span><span class="o">:</span> <span class="k">void</span> <span class="mi">0</span><span class="p">,</span>
+                            <span class="nx">enableQQ</span><span class="o">:</span> <span class="o">!</span><span class="mi">1</span><span class="p">,</span>
                             <span class="nx">requiredFields</span><span class="o">:</span> <span class="p">[]</span>
                         <span class="p">},</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">defaultMeta</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nick&quot;</span><span class="p">,</span> <span class="s2">&quot;mail&quot;</span><span class="p">,</span> <span class="s2">&quot;link&quot;</span><span class="p">],</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">QQCacheKey</span> <span class="o">=</span> <span class="s2">&quot;_v_Cache_Q&quot;</span><span class="p">,</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">MetaCacheKey</span> <span class="o">=</span> <span class="s2">&quot;_v_Cache_Meta&quot;</span><span class="p">,</span>
-                        <span class="nx">t</span><span class="p">.</span><span class="nx">RandomStr</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">1e3</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())).</span><span class="nx">toString</span><span class="p">(</span><span class="mf">32</span><span class="p">),</span>
+                        <span class="nx">t</span><span class="p">.</span><span class="nx">RandomStr</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mi">1</span><span class="nx">e3</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">VERSION</span> <span class="o">=</span> <span class="s2">&quot;1.4.14&quot;</span>
                 <span class="p">},</span>
 </pre></div>
@@ -248,7 +249,6 @@
 
                 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
                 <!-- element will get class pswp__preloader--active when preloader is running -->
                 <div class="pswp__preloader">
                     <div class="pswp__preloader__icn">

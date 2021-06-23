@@ -21,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
         <!-- require MetingJS -->
     <script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="https://cdn.elstec.cn/favicon.png" />
+	<meta http-equiv="x-dns-prefetch-control" content="on">
     <meta name="chinaz-site-verification" content="3EC3C9BC99F337AE">
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
 	<meta name="bytedance-verification-code" content="ocVFOTgNQ+2VVhqMA+/M" />
@@ -29,6 +29,7 @@
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
 	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
 	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<script async defer data-website-id="295ab065-dd40-46b7-af8b-4c427d8b15f9" src="https://analytics.elstec.cn/umami.js" data-auto-track="false"></script>
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script> 
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script> 	
     <script>
@@ -164,13 +165,13 @@
 </ul>
 <figure class="pswp-item" style="flex: 54.848046309696095" ><img loading="lazy" width="758" height="691" src="https://cdn.elstec.cn/12/1.png" /></figure><ul>
 <li><p>复制你仓库的地址比方说我新建的仓库是<code>name.github.io</code>，那么你的仓库地址就是<code>https://github.com/jcjyxjs/name.github.io.git</code>，仓库链接可在仓库页面页面复制到</p></li>
-<li><p>修改博客根目录下的<code>_config.yml</code> 代码第100行。type就git，repo就是上面复制的仓库地址，branch就是仓库分支，默认master。repo和branch需要手动打上去</p><div class="highlight"><pre><span></span><span class="err">deploy</span><span class="p">:</span>
+<li><p>修改博客根目录下的<code>_config.yml</code> 代码第100行。type就git，repo就是上面复制的仓库地址，branch就是仓库分支，默认master。repo和branch需要手动打上去</p><div class="highlight"><pre><span></span><span class="err">deploy:</span>
 
-<span class="kc">t</span><span class="err">ype</span><span class="p">:</span> <span class="err">&#39;gi</span><span class="kc">t</span><span class="err">&#39;</span>
+<span class="err">type:</span> <span class="err">&#39;git&#39;</span>
 
-<span class="err">repo</span><span class="p">:</span> <span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="err">//gi</span><span class="kc">t</span><span class="err">hub.com/jcjyxjs/</span><span class="kc">na</span><span class="err">me.gi</span><span class="kc">t</span><span class="err">hub.io.gi</span><span class="kc">t</span>
+<span class="err">repo:</span> <span class="err">https://github.com/jcjyxjs/name.github.io.git</span>
 
-<span class="err">bra</span><span class="kc">n</span><span class="err">ch</span><span class="p">:</span> <span class="err">mas</span><span class="kc">ter</span>
+<span class="err">branch:</span> <span class="err">master</span>
 </pre></div>
 </li>
 <li><p>回到git bash，输入以下两条命令</p><p><code>git config --global user.name &quot;yourname&quot;</code></p><p><code>git config --global user.email &quot;youremail&quot;</code></p></li>
@@ -299,7 +300,6 @@
 
                 <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
 
-                <!-- Preloader demo https://codepen.io/dimsemenov/pen/yyBWoR -->
                 <!-- element will get class pswp__preloader--active when preloader is running -->
                 <div class="pswp__preloader">
                     <div class="pswp__preloader__icn">
