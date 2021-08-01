@@ -1,30 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 03 Jul 2021 08:10:11 +0806</lastBuildDate><pubDate>Sat, 03 Jul 2021 08:10:11 +0806</pubDate><item><title>记一次Centos7翻车+升级内核开启BBR过程</title><link>/archives/20200711/</link><description>&lt;div class="notice"&gt;&lt;strong&gt;rpmdb报错解决方案如下&lt;/strong&gt;&lt;/div&gt;&lt;h4&gt;rpmdb报错参考文章：&lt;a href="https://elstec.cn/archives/fixrpmdb/"&gt;&lt;a href="https://elstec.cn/archives/fixrpmdb/"&gt;https://elstec.cn/archives/fixrpmdb/&lt;/a&gt;&lt;/a&gt;&lt;/h4&gt;
-&lt;p&gt;我本来想着国内机器装个BBR玩玩，然后直接找了一键脚本，就像这种&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 103.63423212192262" &gt;&lt;img loading="lazy" width="1768" height="853" src="https://cdn.elstec.cn/30/1.png" /&gt;&lt;figcaption&gt;一键脚本&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;然后我选了BBR/BBR魔改版，因为机器就1M带宽反正装啥都一样。安装之后很快就提示我重启，再然后就开不了机了。&lt;/p&gt;&lt;p&gt;重装之后我就换种方法，用升级内核来开启BBR。&lt;/p&gt;&lt;p&gt;先升级软件最新&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yum update -y
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;然后导入 &lt;code&gt;elrepo&lt;/code&gt; 软件源的 &lt;code&gt;key&lt;/code&gt; 并安装&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
-rpm -Uvh https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;安装最新内核&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;yum -y --enablerepo&lt;span class="o"&gt;=&lt;/span&gt;elrepo-kernel install kernel-ml-devel kernel-ml
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;查看系统启动项并修改新内核为默认启动方式&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grep menuentry /boot/grub2/grub.cfg
-//把最新的那个内核名称复制下来，并设置新内核为第一启动方式（引导）
-grub2-set-default &lt;span class="s1"&gt;&amp;#39;CentOS Linux (5.7.8-1.el7.elrepo.x86_64) 7 (Core)&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;删除旧内核并生成新配置文件之后重启&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;grub2-mkconfig --output /boot/grub2/grub.cfg
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;重启进入系统查看当前内核&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;uname -a
-Linux VM-0-7-centos &lt;span class="m"&gt;5&lt;/span&gt;.7.8-1.el7.elrepo.x86_64 &lt;span class="c1"&gt;#1 SMP Tue Jul 7 18:43:16 EDT 2020 x86_64 x86_64 x86_64 GNU/Linux&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;开启BBR&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;net.core.default_qdisc=fq&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/sysctl.conf
-&lt;span class="nb"&gt;echo&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;net.ipv4.tcp_congestion_control=bbr&amp;quot;&lt;/span&gt; &amp;gt;&amp;gt; /etc/sysctl.conf
-//保存并生效
-sysctl -p
-//检查BBR是否运行
-lsmod &lt;span class="p"&gt;|&lt;/span&gt;grep bbr
-tcp_bbr                &lt;span class="m"&gt;20480&lt;/span&gt;  &lt;span class="m"&gt;14&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200711/</guid><pubDate>Sat, 11 Jul 2020 19:50:00 +0806</pubDate></item><item><title>宝塔Tengine（2.3.2）编译Brotli模块</title><link>/archives/brotli/</link><description>&lt;h2&gt;前言&lt;/h2&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 01 Aug 2021 17:32:12 +0806</lastBuildDate><pubDate>Sun, 01 Aug 2021 17:32:12 +0806</pubDate><item><title>宝塔Tengine（2.3.2）编译Brotli模块</title><link>/archives/brotli/</link><description>&lt;h2&gt;前言&lt;/h2&gt;
 &lt;p&gt;我建站没几个钱，买 &lt;code&gt;1M&lt;/code&gt; 服务器，又贪图速度，想加载快点。之前是静动分离， &lt;code&gt;BBR，CDN，webp自适应&lt;/code&gt; 。&lt;/p&gt;&lt;p&gt;老早看到 &lt;code&gt;CDN&lt;/code&gt; 控制台 &lt;code&gt;Gzip&lt;/code&gt; 旁边的 &lt;code&gt;Brotli&lt;/code&gt; ，但是又不给用 :%(酷安_tiebaemotion76)&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 125.85836909871244" &gt;&lt;img loading="lazy" width="1173" height="466" src="https://cdn.elstec.cn/31/1.png" /&gt;&lt;figcaption&gt;如图，永远在升级&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;无奈之下，只好各种查资料。查到的都是复制粘贴的水文，不是水文就是特别早的文章，也不怎么适用。&lt;/p&gt;&lt;p&gt;但大多数都是先 &lt;code&gt;Git clone Brotli&lt;/code&gt; 的仓库，然后 &lt;code&gt;git submodule update --init&lt;/code&gt; 升级 &lt;code&gt;Brotli&lt;/code&gt; 。最后编译安装 &lt;code&gt;Nginx&lt;/code&gt; 的时候添加一条编译 &lt;code&gt;Brotli&lt;/code&gt; 的语句。&lt;/p&gt;&lt;p&gt;兼容性方面，感觉还是可以的，毕竟好几年前出的。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 140.625" &gt;&lt;img loading="lazy" width="1890" height="672" src="https://cdn.elstec.cn/31/4.png" /&gt;&lt;figcaption&gt;兼容性&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2&gt;遇到的问题&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;前期 &lt;code&gt;Nginx&lt;/code&gt; 需要编译安装（宝塔无视即可）。&lt;/li&gt;
@@ -187,4 +162,17 @@ tar -xzvf node_exporter-1.1.2.linux-amd64.tar.gz
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;浏览器中选择tunnel绑定那个域名，点击授权。首次运行&lt;code&gt;cloudflared&lt;/code&gt;之后会在同目录下生成&lt;code&gt;config.yml&lt;/code&gt;，运行多条隧道需要配置该文件。&lt;/p&gt;&lt;p&gt;比方运行单条隧道，跳过&lt;code&gt;config.yml&lt;/code&gt;。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;cloudflared tunnel --hostname 访问的域名 --url IP:端口
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;配合自选IP可以达到速度最大化。配置文件开多条隧道试了一下一直失败，但是多开几个cmd或者powershell就可以成功。（bad）内网服务不仅限于web，也可以ssh等。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210628/</guid><pubDate>Mon, 28 Jun 2021 20:00:00 +0806</pubDate></item></channel></rss>
+&lt;p&gt;配合自选IP可以达到速度最大化。配置文件开多条隧道试了一下一直失败，但是多开几个cmd或者powershell就可以成功。（bad）内网服务不仅限于web，也可以ssh等。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210628/</guid><pubDate>Mon, 28 Jun 2021 20:00:00 +0806</pubDate></item><item><title>自提100周年纪念品（邮折和纪念封）</title><link>/archives/20210801/</link><description>&lt;p&gt;发这篇文的时候已经是有点晚了，100周年纪念品预售时间是&lt;code&gt;2021年6月24日上午9点-6月28日下午6点&lt;/code&gt;，自提开始时间是&lt;code&gt;2021年7月23日下午5点&lt;/code&gt;。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 23.106546854942234" &gt;&lt;img loading="lazy" width="1080" height="2337" src="https://cdn.elstec.cn/38/3.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 23.104265402843602" &gt;&lt;img loading="lazy" width="1170" height="2532" src="https://cdn.elstec.cn/38/9.png" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;我买了一个邮折和一个纪念封，早知道纪念封可以买3份就全买了（BAD），不过有一说一设计和做工都还不错。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="1440" height="1080" src="https://cdn.elstec.cn/38/1.jpg" /&gt;&lt;figcaption&gt;下暴雨钱塘江的水直接漫出来&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 23.104265402843602" &gt;&lt;img loading="lazy" width="1170" height="2532" src="https://cdn.elstec.cn/38/2.png" /&gt;&lt;figcaption&gt;我还在台风影响范围内哭了&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;由于台风影响周五并没有去提货，周六去被告知集邮公司双休md，顶着台风白跑一趟。&lt;/p&gt;&lt;p&gt;我就准备周一自提，周一刚好麦当劳是麦麦脆汁鸡的活动，微信支付宝各领一张券下两次单，免费的东西必须要领的hhh。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 23.106546854942234" &gt;&lt;img loading="lazy" width="1080" height="2337" src="https://cdn.elstec.cn/38/4.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 23.106546854942234" &gt;&lt;img loading="lazy" width="1080" height="2337" src="https://cdn.elstec.cn/38/5.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="1440" height="1080" src="https://cdn.elstec.cn/38/6.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;最后是上手，手感非常不错，加6块买的壳还是很好的。30块这个是有一个壳，24块只有邮票，就像图二，图一就有一个壳，不过刚好下雨邮票没坏就行。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 37.5" &gt;&lt;img loading="lazy" width="3024" height="4032" src="https://cdn.elstec.cn/38/7-2.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 37.5" &gt;&lt;img loading="lazy" width="3024" height="4032" src="https://cdn.elstec.cn/38/8-2.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;其实买一个也没啥不好的，主要还是做纪念，也没人会把这个拿去用，这辈子可能也遇不到第二个100年了。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210801/</guid><pubDate>Sun, 01 Aug 2021 00:00:00 +0806</pubDate></item></channel></rss>

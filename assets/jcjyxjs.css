@@ -160,11 +160,11 @@ span.vsys {
 
 @media screen and (prefers-color-scheme: dark) {
     html {
-        background: rgb(34,39,46);
+        background: rgb(13,17,23);
     }
 
     body {
-        color: rgb(173,186,199);
+        color: rgb(210,209,217);
     }
 
     #ga-header div[first] aside#ga-brand h1 a {
@@ -205,7 +205,15 @@ span.vsys {
 
     .yue pre {
         background: rgb(29,33,38);
-        color:#ffffff;
+        color:rgb(201,209,217);
+    }
+
+    .yue em {
+        color: rgb(201,209,217);
+    }
+
+    .highlight .l {
+        color: rgb(201,209,217);
     }
 
     .yue pre code {
@@ -213,7 +221,7 @@ span.vsys {
     }
 
     .yue pre tt {
-        color: #ffffff;
+        color: rgb(210,209,217);
     }
 
     .v .vbtn {
@@ -256,7 +264,7 @@ span.vsys {
     }
 
     .ga-content div.links .board-item .board-title {
-        color: rgb(164 207 250)!important;
+        color: rgb(201,209,217)!important;
     }
 
     .yue blockquote::before {
@@ -273,8 +281,8 @@ span.vsys {
     }
 
     .ins-search-input {
-        background: rgb(34,39,46);
-        border-bottom: 1px solid rgb(34,39,46);
+        background: rgb(13,17,23);
+        border-bottom: 1px solid rgb(13,17,23);
     }
 
     .ins-search {
@@ -282,11 +290,11 @@ span.vsys {
     }
 
     .ins-section-container {
-        background: rgb(34,39,46);
+        background: rgb(13,17,23);
     }
 
     .ins-section .ins-section-header {
-        border-bottom: 1px solid rgb(34,39,46);
+        border-bottom: 1px solid rgb(13,17,23);
     }
 
     input {
@@ -294,15 +302,15 @@ span.vsys {
     }
 
     .aplayer {
-        background: #649df20a!important;
+        background: rgb(23,27,34)!important;
     }
 
     .aplayer .aplayer-lrc:before,.aplayer .aplayer-lrc:after {
-        background: rgb(37,43,53)!important;
+        background: rgb(23,27,34)!important;
     }
 
     .aplayer .aplayer-list ol li.aplayer-list-light {
-        background: rgb(37,43,53)!important;
+        background: rgb(23,27,34)!important;
     }
 
     .aplayer .aplayer-list ol li .aplayer-list-author {
@@ -336,7 +344,7 @@ span.vsys {
         width: 5px;
     }
     ::-webkit-scrollbar-track {
-        background: rgb(34,39,46);
+        background: rgb(13,17,23);
     }
 
     ::-webkit-scrollbar-thumb:hover {
@@ -386,14 +394,22 @@ span.vsys {
 	}
 	
 	.highlight .nf,.highlight .n {
-		color: #fff;
+        color: rgb(210,209,217);
 	}
-	
+
 	td {
 		background: rgb(35 44 56);
 	}
 	
 	.yue .notice {
-		background: #7cb3fe26;
+		background: rgb(33,38,45);
 	}
+
+    .v[data-class=v] a {
+        color: #00a987;
+    }
+
+    .v[data-class=v] a:hover {
+        color: #d38081;
+    }
 }
