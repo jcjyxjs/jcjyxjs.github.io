@@ -1,40 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 01 Aug 2021 21:46:16 +0806</lastBuildDate><pubDate>Sun, 01 Aug 2021 21:46:16 +0806</pubDate><item><title>宝塔Tengine（2.3.2）编译Brotli模块</title><link>/archives/brotli/</link><description>&lt;h2&gt;前言&lt;/h2&gt;
-&lt;p&gt;我建站没几个钱，买 &lt;code&gt;1M&lt;/code&gt; 服务器，又贪图速度，想加载快点。之前是静动分离， &lt;code&gt;BBR，CDN，webp自适应&lt;/code&gt; 。&lt;/p&gt;&lt;p&gt;老早看到 &lt;code&gt;CDN&lt;/code&gt; 控制台 &lt;code&gt;Gzip&lt;/code&gt; 旁边的 &lt;code&gt;Brotli&lt;/code&gt; ，但是又不给用 :%(酷安_tiebaemotion76)&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 125.85836909871244" &gt;&lt;img loading="lazy" width="1173" height="466" src="https://cdn.elstec.cn/31/1.png" /&gt;&lt;figcaption&gt;如图，永远在升级&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;无奈之下，只好各种查资料。查到的都是复制粘贴的水文，不是水文就是特别早的文章，也不怎么适用。&lt;/p&gt;&lt;p&gt;但大多数都是先 &lt;code&gt;Git clone Brotli&lt;/code&gt; 的仓库，然后 &lt;code&gt;git submodule update --init&lt;/code&gt; 升级 &lt;code&gt;Brotli&lt;/code&gt; 。最后编译安装 &lt;code&gt;Nginx&lt;/code&gt; 的时候添加一条编译 &lt;code&gt;Brotli&lt;/code&gt; 的语句。&lt;/p&gt;&lt;p&gt;兼容性方面，感觉还是可以的，毕竟好几年前出的。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 140.625" &gt;&lt;img loading="lazy" width="1890" height="672" src="https://cdn.elstec.cn/31/4.png" /&gt;&lt;figcaption&gt;兼容性&lt;/figcaption&gt;&lt;/figure&gt;&lt;h2&gt;遇到的问题&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;前期 &lt;code&gt;Nginx&lt;/code&gt; 需要编译安装（宝塔无视即可）。&lt;/li&gt;
-&lt;li&gt;国内 &lt;code&gt;Git Clone&lt;/code&gt; 速度比较慢，可以改 &lt;code&gt;DNS&lt;/code&gt; 跟我一样 &lt;code&gt;20kb/s&lt;/code&gt; （海外机器无视即可）&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2&gt;过程&lt;/h2&gt;
-&lt;p&gt;首先 &lt;code&gt;Clone brotli&lt;/code&gt; 仓库&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/google/ngx_brotli.git
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;进入目录&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;cd&lt;/span&gt; ngx_brotli
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;升级 &lt;code&gt;Brotli&lt;/code&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git submodule update --init
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;应该会这么提示&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;[&lt;/span&gt;root@VM-0-7-centos ngx_brotli&lt;span class="o"&gt;]&lt;/span&gt;&lt;span class="c1"&gt;# git submodule update --init&lt;/span&gt;
-Cloning into &lt;span class="s1"&gt;&amp;#39;deps/brotli&amp;#39;&lt;/span&gt;...
-remote: Enumerating objects: &lt;span class="m"&gt;8&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
-remote: Counting objects: &lt;span class="m"&gt;100&lt;/span&gt;% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;8&lt;/span&gt;/8&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
-remote: Compressing objects: &lt;span class="m"&gt;100&lt;/span&gt;% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;7&lt;/span&gt;/7&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
-remote: Total &lt;span class="m"&gt;6096&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;, reused &lt;span class="m"&gt;2&lt;/span&gt; &lt;span class="o"&gt;(&lt;/span&gt;delta &lt;span class="m"&gt;1&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;, pack-reused &lt;span class="m"&gt;6088&lt;/span&gt;
-Receiving objects: &lt;span class="m"&gt;100&lt;/span&gt;% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;6096&lt;/span&gt;/6096&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="m"&gt;30&lt;/span&gt;.64 MiB &lt;span class="p"&gt;|&lt;/span&gt; &lt;span class="m"&gt;24&lt;/span&gt;.00 KiB/s, &lt;span class="k"&gt;done&lt;/span&gt;.
-Resolving deltas: &lt;span class="m"&gt;100&lt;/span&gt;% &lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="m"&gt;3914&lt;/span&gt;/3914&lt;span class="o"&gt;)&lt;/span&gt;, &lt;span class="k"&gt;done&lt;/span&gt;.
-Submodule path &lt;span class="s1"&gt;&amp;#39;deps/brotli&amp;#39;&lt;/span&gt;: checked out &lt;span class="s1"&gt;&amp;#39;d6d98957ca8ccb1ef45922e978bb10efca0ea541&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;由于我是宝塔用户，所以不需要读取编译信息。直接在 &lt;code&gt;软件商店→Nginx→编译安装→添加自定义模块&lt;/code&gt;&lt;/p&gt;&lt;p&gt;添加自定义模块时，加入如下参数，其中， &lt;code&gt;/www/server/ngx_brotli&lt;/code&gt; 是刚刚 &lt;code&gt;Clone&lt;/code&gt; 的位置。按需替换，位置在哪都一样。然后直接开始编译安装。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;--add-module=/www/server/ngx_brotli
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;安装完成之后。配置文件添加如下属性，然后 &lt;code&gt;Nginx&lt;/code&gt; 重载配置生效。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;brotli on; 
-brotli_comp_level 6; 
-brotli_min_length 512; 
-brotli_types text/plain text/javascript text/css text/xml text/x-component application/javascript application/x-javascript application/xml application/json application/xhtml+xml application/rss+xml application/atom+xml application/x-font-ttf application/vnd.ms-fontobject image/svg+xml image/x-icon font/opentype; 
-brotli_static always;
-brotli_window 512k;
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;看到 &lt;code&gt;content-encoding: br&lt;/code&gt; 就代表生效。至于效果怎么样看人。据说它的 &lt;code&gt;Level 1&lt;/code&gt; 比 &lt;code&gt;Gzip&lt;/code&gt; 的 &lt;code&gt;Level 9&lt;/code&gt; 还要牛逼 :%(酷安_emotion1018) 这么编译的好处就是 &lt;code&gt;Brotli&lt;/code&gt; 和 &lt;code&gt;Gzip&lt;/code&gt; 可以同时运行。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 36.72496025437202" &gt;&lt;img loading="lazy" width="924" height="1258" src="https://cdn.elstec.cn/31/2.png" /&gt;&lt;figcaption&gt;Final&lt;/figcaption&gt;&lt;/figure&gt;&lt;hr /&gt;
-&lt;p&gt;参考：&lt;a href="http://bbs.chenruo.net/thread-20205-1-1.html"&gt;http://bbs.chenruo.net/thread-20205-1-1.html&lt;/a&gt;&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/brotli/</guid><pubDate>Mon, 13 Jul 2020 00:09:00 +0806</pubDate></item><item><title>我也有北极开源贡献者奖章啦~</title><link>/archives/20200718/</link><description>&lt;p&gt;今天看微信公众号的时候，突然看到这么一条东西。于是我就点进去看了。&lt;/p&gt;&lt;p&gt;大致意思就是： &lt;code&gt;GitHub&lt;/code&gt; 在 &lt;code&gt;2020&lt;/code&gt; 年 &lt;code&gt;2&lt;/code&gt; 月 &lt;code&gt;2&lt;/code&gt; 日，对每个活跃的公共存储库进行快照捕获，并保存在 &lt;code&gt;GitHub Arctic Code Vault&lt;/code&gt; 中。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 23.68421052631579" &gt;&lt;img loading="lazy" width="1080" height="2280" src="https://cdn.elstec.cn/32/1.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;并且仓库被快照获取的用户，会给一个 &lt;code&gt;GitHub Arctic Code Vault&lt;/code&gt; 奖章，就像这样。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 21.274131274131275" &gt;&lt;img loading="lazy" width="551" height="1295" src="https://cdn.elstec.cn/32/4.png" /&gt;&lt;/figure&gt;&lt;p&gt;然后这些被快照获取的仓库源代码，会被永久保存到 &lt;code&gt;the Arctic（北极圈）&lt;/code&gt; 。&lt;/p&gt;&lt;hr /&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Wed, 18 Aug 2021 12:50:28 +0806</lastBuildDate><pubDate>Wed, 18 Aug 2021 12:50:28 +0806</pubDate><item><title>我也有北极开源贡献者奖章啦~</title><link>/archives/20200718/</link><description>&lt;p&gt;今天看微信公众号的时候，突然看到这么一条东西。于是我就点进去看了。&lt;/p&gt;&lt;p&gt;大致意思就是： &lt;code&gt;GitHub&lt;/code&gt; 在 &lt;code&gt;2020&lt;/code&gt; 年 &lt;code&gt;2&lt;/code&gt; 月 &lt;code&gt;2&lt;/code&gt; 日，对每个活跃的公共存储库进行快照捕获，并保存在 &lt;code&gt;GitHub Arctic Code Vault&lt;/code&gt; 中。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 23.68421052631579" &gt;&lt;img loading="lazy" width="1080" height="2280" src="https://cdn.elstec.cn/32/1.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;并且仓库被快照获取的用户，会给一个 &lt;code&gt;GitHub Arctic Code Vault&lt;/code&gt; 奖章，就像这样。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 21.274131274131275" &gt;&lt;img loading="lazy" width="551" height="1295" src="https://cdn.elstec.cn/32/4.png" /&gt;&lt;/figure&gt;&lt;p&gt;然后这些被快照获取的仓库源代码，会被永久保存到 &lt;code&gt;the Arctic（北极圈）&lt;/code&gt; 。&lt;/p&gt;&lt;hr /&gt;
 &lt;p&gt;具体可以查看官方介绍 &lt;a href="https://archiveprogram.github.com/"&gt;&lt;a href="https://archiveprogram.github.com/"&gt;https://archiveprogram.github.com/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200718/</guid><pubDate>Sat, 18 Jul 2020 14:07:00 +0806</pubDate></item><item><title>R⭐终于要开始反外挂了？以及暑假大更新</title><link>/archives/20200730/</link><description>&lt;p&gt;2020年7月24日的时候，R⭐发了条公告，大概意思就是说GTA在线模式大表哥2在线模式要更新了，大表哥首当其冲，GTA紧跟其后。&lt;/p&gt;&lt;div class="photos"&gt;
 &lt;figure class="pswp-item" style="flex: 89.11483253588517" &gt;&lt;img loading="lazy" width="2235" height="1254" src="https://cdn.elstec.cn/33/1.png" /&gt;&lt;/figure&gt;
 &lt;figure class="pswp-item" style="flex: 55.6883759274526" &gt;&lt;img loading="lazy" width="1351" height="1213" src="https://cdn.elstec.cn/33/2.png" /&gt;&lt;/figure&gt;
@@ -175,4 +140,94 @@ tar -xzvf node_exporter-1.1.2.linux-amd64.tar.gz
 &lt;/div&gt;&lt;p&gt;最后是上手，手感非常不错，加6块买的壳还是很好的。30块这个是有一个壳，24块只有邮票，就像图二，图一就有一个壳，不过刚好下雨邮票没坏就行。&lt;/p&gt;&lt;div class="photos"&gt;
 &lt;figure class="pswp-item" style="flex: 37.5" &gt;&lt;img loading="lazy" width="3024" height="4032" src="https://cdn.elstec.cn/38/7-2.jpg" /&gt;&lt;/figure&gt;
 &lt;figure class="pswp-item" style="flex: 37.5" &gt;&lt;img loading="lazy" width="3024" height="4032" src="https://cdn.elstec.cn/38/8-2.jpg" /&gt;&lt;/figure&gt;
-&lt;/div&gt;&lt;p&gt;其实买一个也没啥不好的，主要还是做纪念，也没人会把这个拿去用，这辈子可能也遇不到第二个100年了。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210801/</guid><pubDate>Sun, 01 Aug 2021 00:00:00 +0806</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;p&gt;其实买一个也没啥不好的，主要还是做纪念，也没人会把这个拿去用，这辈子可能也遇不到第二个100年了。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210801/</guid><pubDate>Sun, 01 Aug 2021 00:00:00 +0806</pubDate></item><item><title>敦煌-西宁反向6日游</title><link>/archives/20210815/</link><description>&lt;div id="aplayer"&gt;
+&lt;meting-js
+server="netease"
+type="song"
+id="346089"
+autoplay="false"&gt;
+&lt;/meting-js&gt;
+&lt;/div&gt;
+&lt;p&gt;完整的路线不是我定的，全程跟着亲戚。首先好像是找了一个本地旅行社，加我大概4个人算是开了一个小团，一个本地人兼驾驶员兼（半吊子）导游。机票买的&lt;code&gt;萧山→敦煌&lt;/code&gt;，所以只能制定一条反向旅游线路。本来应该是&lt;code&gt;西宁→敦煌&lt;/code&gt;。&lt;/p&gt;&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+  &lt;th style="text-align:center"&gt;7月8日&lt;/th&gt;
+  &lt;th style="text-align:center"&gt;7月9日&lt;/th&gt;
+  &lt;th style="text-align:center"&gt;7月10日&lt;/th&gt;
+  &lt;th style="text-align:center"&gt;7月11日&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+  &lt;td style="text-align:center"&gt;敦煌&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;敦煌&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;大柴旦&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;茶卡&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td style="text-align:center"&gt;莫高窟&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;阳关遗址&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;翡翠湖&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;青海湖&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td style="text-align:center"&gt;鸣沙山月牙泉&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;石油小镇&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;茶卡盐湖&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;倒淌河&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td style="text-align:center"&gt;沙州夜市&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;青海雅丹&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;茶卡&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;日月山&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td style="text-align:center"&gt;敦煌市&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;大柴旦&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;塔尔寺&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+  &lt;td style="text-align:center"&gt;&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;&lt;/td&gt;
+  &lt;td style="text-align:center"&gt;西宁&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;计划是7月7日-7月12日，6天。去程买的7号早上06:10，也就是我要3点起来，4点多出发走高速到萧山机场（具体时间我也忘记了），中途要在咸阳转机最后才到敦煌。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 23.104265402843602" &gt;&lt;img loading="lazy" width="1170" height="2532" src="https://cdn.elstec.cn/39/1.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 23.104265402843602" &gt;&lt;img loading="lazy" width="1170" height="2532" src="https://cdn.elstec.cn/39/2.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;html&gt;
+&lt;p style="display:inline;"&gt;上午的航班08:35就到咸阳机场，但是下午转机的班次在15:10，要在机场等大半天真无语到了0，太无聊了md&lt;/p&gt;
+&lt;img src="https://cdn.elstec.cn/images/file_1016383.jpg" width="55px" height="55px" style="display: inline;"&gt;
+&lt;/html&gt;
+&lt;p&gt;晚上入住了一个不知名的商务酒店，两个标间加起来一晚800+，反正我个人觉得并不划算，但好像那边物价都比较高，买了一碗炒青菜根花了&lt;code&gt;32￥&lt;/code&gt;，炒的味道还可以，就是贵。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 37.5" &gt;&lt;img loading="lazy" width="3024" height="4032" src="https://cdn.elstec.cn/39/3.jpg" /&gt;&lt;figcaption&gt;晚上9点左右&lt;/figcaption&gt;&lt;/figure&gt;&lt;p&gt;其他就是太阳落山时间太晚了，不看手机都不知道已经7，8点多了（捂脸）。&lt;/p&gt;&lt;p&gt;7月8日正式开始旅游，上午去了必去景区&lt;code&gt;莫高窟&lt;/code&gt;，由于我不太拍照就照片超级少。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="4032" height="3024" src="https://cdn.elstec.cn/39/4.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 28.12370278123703" &gt;&lt;img loading="lazy" width="1355" height="2409" src="https://cdn.elstec.cn/39/5.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 37.5" &gt;&lt;img loading="lazy" width="3024" height="4032" src="https://cdn.elstec.cn/39/6.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 28.122448979591837" &gt;&lt;img loading="lazy" width="1378" height="2450" src="https://cdn.elstec.cn/39/7.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;下午去的&lt;code&gt;鸣沙山月牙泉&lt;/code&gt;，出来已经晚上7点多，太阳还是好晒，但晚上真的太晚了夜市才探索了一半，还有一半超级好没去就感觉挺亏的。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 95.93345656192237" &gt;&lt;img loading="lazy" width="3114" height="1623" src="https://cdn.elstec.cn/39/8.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="4032" height="3024" src="https://cdn.elstec.cn/39/9.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 37.5" &gt;&lt;img loading="lazy" width="3024" height="4032" src="https://cdn.elstec.cn/39/10.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="4032" height="3024" src="https://cdn.elstec.cn/39/11.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="4032" height="3024" src="https://cdn.elstec.cn/39/12.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="4032" height="3024" src="https://cdn.elstec.cn/39/13.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;拍的第一张给我有一种&lt;code&gt;macOS Mojave&lt;/code&gt;的错觉，后面也坐了骆驼，动物毛发都很顺摸着很舒服，坐着的体验就差强人意了，风景还是超级好的，但是出去已经很晚了，大概19:30。&lt;/p&gt;&lt;p&gt;9号的日程里面，&lt;code&gt;石油小镇&lt;/code&gt;感觉没意思就没有去，天气不是很好，拍照也没怎么拍。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 37.5" &gt;&lt;img loading="lazy" width="1080" height="1440" src="https://cdn.elstec.cn/39/14.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;阳关遗址&lt;/code&gt;路上拍的唐僧西行。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 77.71084337349397" &gt;&lt;img loading="lazy" width="1677" height="1079" src="https://cdn.elstec.cn/39/15.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;下午快到&lt;code&gt;雅丹地貌&lt;/code&gt;的时候已经开始下小雨了，结果也没怎么看，随便拍了几张照片就回酒店了。&lt;/p&gt;&lt;p&gt;10号主要就是去两个地方，&lt;code&gt;翡翠湖&lt;/code&gt;和&lt;code&gt;茶卡盐湖&lt;/code&gt;，但是由于当天晚上下雨了，早上去的&lt;code&gt;翡翠湖&lt;/code&gt;路上就算坐在车里也很难受，但好在门票免费，风景超好，云也很好看，不过鞋子要刷一下了，全是泥。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 96.33580705009277" &gt;&lt;img loading="lazy" width="2077" height="1078" src="https://cdn.elstec.cn/39/16.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 88.8682745825603" &gt;&lt;img loading="lazy" width="1916" height="1078" src="https://cdn.elstec.cn/39/17.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;下午就去了&lt;code&gt;茶卡盐湖&lt;/code&gt;，还好带了一件冲锋衣，风真的好大，温度也很低。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 96.93877551020408" &gt;&lt;img loading="lazy" width="2090" height="1078" src="https://cdn.elstec.cn/39/18.jpg" /&gt;&lt;figcaption&gt;路上拍的&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 28.098958333333332" &gt;&lt;img loading="lazy" width="1079" height="1920" src="https://cdn.elstec.cn/39/19.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;茶卡盐湖&lt;/code&gt;里面我们选择做观光小火车。&lt;/p&gt;&lt;p&gt;11号就主要是&lt;code&gt;青海湖&lt;/code&gt;以及&lt;code&gt;塔尔寺&lt;/code&gt;，其他都选择不去了。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 79.17439703153988" &gt;&lt;img loading="lazy" width="1707" height="1078" src="https://cdn.elstec.cn/39/20.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 28.128258602711156" &gt;&lt;img loading="lazy" width="1079" height="1918" src="https://cdn.elstec.cn/39/21.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;路上手机随便拍了两张，西北地区风景真的好，经济也是真的不发达，厕所也是年久失修。&lt;/p&gt;&lt;p&gt;到了&lt;code&gt;青海湖景区&lt;/code&gt;，先是买了观光车到轮船处，买了船票，坐船用时大概1个小时，&lt;code&gt;青海湖&lt;/code&gt;的景色那是真的很震撼了。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;figure class="pswp-item" style="flex: 78.20037105751392" &gt;&lt;img loading="lazy" width="1686" height="1078" src="https://cdn.elstec.cn/39/22.jpg" /&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="1440" height="1080" src="https://cdn.elstec.cn/39/23.jpg" /&gt;&lt;/figure&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;青海湖&lt;/code&gt;回来的中午找了一家清真饭馆买了一碗牛肉面，给脸了，就一片牛肉，吃完上厕所还被收1块md&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="1440" height="1080" src="https://cdn.elstec.cn/39/24.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;塔尔寺&lt;/code&gt;我没拍照，除了大了一点，看起来就跟普通寺庙没啥区别。&lt;/p&gt;&lt;p&gt;最后一天坐国航的&lt;code&gt;CA1910&lt;/code&gt;，航班延误了3个半小时，成功登机之后还没有空调，整一个桑拿飞机，不过一部电影消磨时光非常好。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 23.106546854942234" &gt;&lt;img loading="lazy" width="1080" height="2337" src="https://cdn.elstec.cn/39/25.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;到萧山机场走高速大概50分钟到家。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210815/</guid><pubDate>Sun, 15 Aug 2021 00:00:00 +0806</pubDate></item></channel></rss>
