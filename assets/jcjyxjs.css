@@ -158,6 +158,43 @@ span.vsys {
     border-bottom: 2px solid;
 }
 
+.uttpl {
+    background-color:#2da44e;
+    border-color: rgba(27, 31 ,36 ,0.15);
+    box-shadow: 0 1px 0 rgba(27 ,31 ,36 ,0.1),inset 0 1px 0 rgba(255,255,255,0.03);
+    transition: .2s cubic-bezier(.3,0,.5,1);
+    transition-property: color,background-color,border-color;
+    border-radius: 6px;
+    height:30px;
+    width: 145px;
+    margin: 0 auto;
+}
+
+a#utp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:30px;
+    width: 145px;
+    color: #fff;
+    font-size: 14px;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+}
+
+a#utp:hover {
+    color: #fff!important;
+}
+
+.uttpl:hover {
+    background-color:rgb(44 ,151 ,75);
+}
+
+.warn {
+    padding: .5rem;
+    background: rgba(255,0,0,0.07);
+    margin-bottom: 1.24em;
+}
+
 @media screen and (prefers-color-scheme: dark) {
     html {
         background: rgb(13,17,23);

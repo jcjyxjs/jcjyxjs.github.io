@@ -1,6 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Wed, 18 Aug 2021 12:50:28 +0806</lastBuildDate><pubDate>Wed, 18 Aug 2021 12:50:28 +0806</pubDate><item><title>我也有北极开源贡献者奖章啦~</title><link>/archives/20200718/</link><description>&lt;p&gt;今天看微信公众号的时候，突然看到这么一条东西。于是我就点进去看了。&lt;/p&gt;&lt;p&gt;大致意思就是： &lt;code&gt;GitHub&lt;/code&gt; 在 &lt;code&gt;2020&lt;/code&gt; 年 &lt;code&gt;2&lt;/code&gt; 月 &lt;code&gt;2&lt;/code&gt; 日，对每个活跃的公共存储库进行快照捕获，并保存在 &lt;code&gt;GitHub Arctic Code Vault&lt;/code&gt; 中。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 23.68421052631579" &gt;&lt;img loading="lazy" width="1080" height="2280" src="https://cdn.elstec.cn/32/1.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;并且仓库被快照获取的用户，会给一个 &lt;code&gt;GitHub Arctic Code Vault&lt;/code&gt; 奖章，就像这样。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 21.274131274131275" &gt;&lt;img loading="lazy" width="551" height="1295" src="https://cdn.elstec.cn/32/4.png" /&gt;&lt;/figure&gt;&lt;p&gt;然后这些被快照获取的仓库源代码，会被永久保存到 &lt;code&gt;the Arctic（北极圈）&lt;/code&gt; 。&lt;/p&gt;&lt;hr /&gt;
-&lt;p&gt;具体可以查看官方介绍 &lt;a href="https://archiveprogram.github.com/"&gt;&lt;a href="https://archiveprogram.github.com/"&gt;https://archiveprogram.github.com/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200718/</guid><pubDate>Sat, 18 Jul 2020 14:07:00 +0806</pubDate></item><item><title>R⭐终于要开始反外挂了？以及暑假大更新</title><link>/archives/20200730/</link><description>&lt;p&gt;2020年7月24日的时候，R⭐发了条公告，大概意思就是说GTA在线模式大表哥2在线模式要更新了，大表哥首当其冲，GTA紧跟其后。&lt;/p&gt;&lt;div class="photos"&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Fri, 20 Aug 2021 19:54:20 +0806</lastBuildDate><pubDate>Fri, 20 Aug 2021 19:54:20 +0806</pubDate><item><title>R⭐终于要开始反外挂了？以及暑假大更新</title><link>/archives/20200730/</link><description>&lt;p&gt;2020年7月24日的时候，R⭐发了条公告，大概意思就是说GTA在线模式大表哥2在线模式要更新了，大表哥首当其冲，GTA紧跟其后。&lt;/p&gt;&lt;div class="photos"&gt;
 &lt;figure class="pswp-item" style="flex: 89.11483253588517" &gt;&lt;img loading="lazy" width="2235" height="1254" src="https://cdn.elstec.cn/33/1.png" /&gt;&lt;/figure&gt;
 &lt;figure class="pswp-item" style="flex: 55.6883759274526" &gt;&lt;img loading="lazy" width="1351" height="1213" src="https://cdn.elstec.cn/33/2.png" /&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;p&gt;我也不玩大表哥，其实对R⭐更新大表哥也不是很在意。其实我也想玩，但大表哥太贵了。毕竟家境贫寒学生党。主要还是玩GTA5。这次更新官方宣称是史上最大更新，包含新的抢劫任务dlc，可能是一直在传的小偷和条子  （狗头保命）。不过我发现R⭐尤其喜欢在周二更新各项内容，这个月肯定没戏了，周二更新大表哥了。暑期更新肯定不会超过下个月，大概率是下个月的各个周二。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 114.3253234750462" &gt;&lt;img loading="lazy" width="1237" height="541" src="https://cdn.elstec.cn/33/3.png" /&gt;&lt;/figure&gt;&lt;p&gt;R⭐一直被诟病的外挂问题这次居然被拿上台面了实在没想到。R⭐居然在我活着的时候更新反外挂，爷青结。这次更新反外挂也是号称所有线上模式外挂在今年结束（包括GTA5和大表哥2），看样子是来真的了，以后大概率就没有大罗金仙追我战局了,真好。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 38.850174216027874" &gt;&lt;img loading="lazy" width="892" height="1148" src="https://cdn.elstec.cn/33/4.png" /&gt;&lt;/figure&gt;&lt;hr /&gt;
@@ -224,10 +223,63 @@ autoplay="false"&gt;
 &lt;/div&gt;&lt;p&gt;下午就去了&lt;code&gt;茶卡盐湖&lt;/code&gt;，还好带了一件冲锋衣，风真的好大，温度也很低。&lt;/p&gt;&lt;div class="photos"&gt;
 &lt;figure class="pswp-item" style="flex: 96.93877551020408" &gt;&lt;img loading="lazy" width="2090" height="1078" src="https://cdn.elstec.cn/39/18.jpg" /&gt;&lt;figcaption&gt;路上拍的&lt;/figcaption&gt;&lt;/figure&gt;
 &lt;figure class="pswp-item" style="flex: 28.098958333333332" &gt;&lt;img loading="lazy" width="1079" height="1920" src="https://cdn.elstec.cn/39/19.jpg" /&gt;&lt;/figure&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;茶卡盐湖&lt;/code&gt;里面我们选择做观光小火车。&lt;/p&gt;&lt;p&gt;11号就主要是&lt;code&gt;青海湖&lt;/code&gt;以及&lt;code&gt;塔尔寺&lt;/code&gt;，其他都选择不去了。&lt;/p&gt;&lt;div class="photos"&gt;
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;茶卡盐湖&lt;/code&gt;里面我们选择做观光小火车。酒店住的汉庭，前台还有奶茶服务，买了一杯黑糖啥的，齁甜。&lt;/p&gt;&lt;p&gt;11号就主要是&lt;code&gt;青海湖&lt;/code&gt;以及&lt;code&gt;塔尔寺&lt;/code&gt;，其他都选择不去了。&lt;/p&gt;&lt;div class="photos"&gt;
 &lt;figure class="pswp-item" style="flex: 79.17439703153988" &gt;&lt;img loading="lazy" width="1707" height="1078" src="https://cdn.elstec.cn/39/20.jpg" /&gt;&lt;/figure&gt;
 &lt;figure class="pswp-item" style="flex: 28.128258602711156" &gt;&lt;img loading="lazy" width="1079" height="1918" src="https://cdn.elstec.cn/39/21.jpg" /&gt;&lt;/figure&gt;
 &lt;/div&gt;&lt;p&gt;路上手机随便拍了两张，西北地区风景真的好，经济也是真的不发达，厕所也是年久失修。&lt;/p&gt;&lt;p&gt;到了&lt;code&gt;青海湖景区&lt;/code&gt;，先是买了观光车到轮船处，买了船票，坐船用时大概1个小时，&lt;code&gt;青海湖&lt;/code&gt;的景色那是真的很震撼了。&lt;/p&gt;&lt;div class="photos"&gt;
 &lt;figure class="pswp-item" style="flex: 78.20037105751392" &gt;&lt;img loading="lazy" width="1686" height="1078" src="https://cdn.elstec.cn/39/22.jpg" /&gt;&lt;/figure&gt;
 &lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="1440" height="1080" src="https://cdn.elstec.cn/39/23.jpg" /&gt;&lt;/figure&gt;
-&lt;/div&gt;&lt;p&gt;&lt;code&gt;青海湖&lt;/code&gt;回来的中午找了一家清真饭馆买了一碗牛肉面，给脸了，就一片牛肉，吃完上厕所还被收1块md&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="1440" height="1080" src="https://cdn.elstec.cn/39/24.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;塔尔寺&lt;/code&gt;我没拍照，除了大了一点，看起来就跟普通寺庙没啥区别。&lt;/p&gt;&lt;p&gt;最后一天坐国航的&lt;code&gt;CA1910&lt;/code&gt;，航班延误了3个半小时，成功登机之后还没有空调，整一个桑拿飞机，不过一部电影消磨时光非常好。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 23.106546854942234" &gt;&lt;img loading="lazy" width="1080" height="2337" src="https://cdn.elstec.cn/39/25.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;到萧山机场走高速大概50分钟到家。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210815/</guid><pubDate>Sun, 15 Aug 2021 00:00:00 +0806</pubDate></item></channel></rss>
+&lt;/div&gt;&lt;p&gt;&lt;code&gt;青海湖&lt;/code&gt;回来的中午找了一家清真饭馆买了一碗牛肉面，给脸了，就一片牛肉，吃完上厕所还被收1块md&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 66.66666666666667" &gt;&lt;img loading="lazy" width="1440" height="1080" src="https://cdn.elstec.cn/39/24.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;&lt;code&gt;塔尔寺&lt;/code&gt;我没拍照，除了大了一点，看起来就跟普通寺庙没啥区别。&lt;/p&gt;&lt;p&gt;最后一天坐国航的&lt;code&gt;CA1910&lt;/code&gt;，航班延误了3个半小时，成功登机之后还没有空调，整一个桑拿飞机，不过一部电影消磨时光非常好。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 23.106546854942234" &gt;&lt;img loading="lazy" width="1080" height="2337" src="https://cdn.elstec.cn/39/25.jpg" /&gt;&lt;/figure&gt;&lt;p&gt;下飞机从萧山机场走高速大概50分钟到家。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210815/</guid><pubDate>Sun, 15 Aug 2021 00:00:00 +0806</pubDate></item><item><title>关于使用GitHub Actions云编译LEDE固件更新说明</title><link>/archives/20210821/</link><description>&lt;html&gt;
+    &lt;div class="warn"&gt;
+        &lt;strong&gt;
+            教程类文章具有时效性，看清楚发布日期，超过一定日子文章内容可能失效，仅仅作为参考。
+        &lt;/strong&gt;
+    &lt;/div&gt;
+&lt;/html&gt;
+&lt;p&gt;点击&lt;code&gt;Use this template&lt;/code&gt;按钮，创建&lt;code&gt;repo&lt;/code&gt;。然后给该&lt;code&gt;repo&lt;/code&gt;启用&lt;code&gt;Actions&lt;/code&gt;功能。&lt;/p&gt;&lt;html&gt;
+&lt;div class="uttpl"&gt;
+    &lt;a href="https://github.com/P3TERX/Actions-OpenWrt/generate" id="utp"&gt;Use this template&lt;/a&gt;
+&lt;/div&gt;
+&lt;/html&gt;
+&lt;p&gt;项目&lt;code&gt;GitHub&lt;/code&gt;地址：&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/P3TERX/Actions-OpenWrt
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;编辑&lt;code&gt;diy-part1.sh&lt;/code&gt;文件，可以更改固件是&lt;code&gt;XXRPlus&lt;/code&gt;还是&lt;code&gt;Passwall&lt;/code&gt;，想用什么就给倒数两行其中一行取消注释就生效。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Copyright (c) 2019-2020 P3TERX &amp;lt;https://p3terx.com&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# This is free software, licensed under the MIT License.&lt;/span&gt;
+&lt;span class="c1"&gt;# See /LICENSE for more information.&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# https://github.com/P3TERX/Actions-OpenWrt&lt;/span&gt;
+&lt;span class="c1"&gt;# File name: diy-part1.sh&lt;/span&gt;
+&lt;span class="c1"&gt;# Description: OpenWrt DIY script part 1 (Before Update feeds)&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Uncomment a feed source&lt;/span&gt;
+&lt;span class="c1"&gt;#sed -i &amp;#39;s/^#\(.*helloworld\)/\1/&amp;#39; feeds.conf.default&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Add a feed source&lt;/span&gt;
+&lt;span class="c1"&gt;#echo &amp;#39;src-git helloworld https://github.com/fw876/helloworld&amp;#39; &amp;gt;&amp;gt;feeds.conf.default&lt;/span&gt;
+&lt;span class="c1"&gt;#echo &amp;#39;src-git passwall https://github.com/xiaorouji/openwrt-passwall&amp;#39; &amp;gt;&amp;gt;feeds.conf.default&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;编辑&lt;code&gt;diy-part2.sh&lt;/code&gt;文件，修改最后一行可以更改固件默认后台地址。这个无关紧要反正在shell里面也可以通过&lt;code&gt;vi etc/config/network&lt;/code&gt;命令更改。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# Copyright (c) 2019-2020 P3TERX &amp;lt;https://p3terx.com&amp;gt;&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# This is free software, licensed under the MIT License.&lt;/span&gt;
+&lt;span class="c1"&gt;# See /LICENSE for more information.&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+&lt;span class="c1"&gt;# https://github.com/P3TERX/Actions-OpenWrt&lt;/span&gt;
+&lt;span class="c1"&gt;# File name: diy-part2.sh&lt;/span&gt;
+&lt;span class="c1"&gt;# Description: OpenWrt DIY script part 2 (After Update feeds)&lt;/span&gt;
+&lt;span class="c1"&gt;#&lt;/span&gt;
+
+&lt;span class="c1"&gt;# Modify default IP&lt;/span&gt;
+&lt;span class="c1"&gt;#sed -i &amp;#39;s/192.168.1.1/192.168.50.5/g&amp;#39; package/base-files/files/bin/config_generate&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;然后进入&lt;code&gt;actions&lt;/code&gt;，选&lt;code&gt;Build OpenWrt&lt;/code&gt;任务，单击&lt;code&gt;Run workflow&lt;/code&gt;，可以选择分支和是否启用&lt;code&gt;SSH&lt;/code&gt;，默认是&lt;code&gt;false&lt;/code&gt;，改成&lt;code&gt;true&lt;/code&gt;就可以使用&lt;code&gt;SSH&lt;/code&gt;功能，最后运行即可。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 108.89781859931114" &gt;&lt;img loading="lazy" width="1897" height="871" src="https://cdn.elstec.cn/40/1.png" /&gt;&lt;/figure&gt;&lt;html&gt;
+&lt;p style="display:inline;"&gt;希望本文可以帮到你&lt;/p&gt;
+&lt;img src="https://cdn.elstec.cn/images/file_1016567.jpg" width="55px" height="55px" style="display: inline;"&gt;
+&lt;/html&gt;
+</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210821/</guid><pubDate>Sat, 21 Aug 2021 00:00:00 +0806</pubDate></item></channel></rss>

@@ -58,17 +58,17 @@
         }
     </script>
     
-<title>关于 - 毫无作为</title>
+<title>关于使用GitHub Actions云编译LEDE固件更新说明 - 毫无作为</title>
 <meta name="author" content="jcjyxjs" />
 <meta name="description" content="" />
-<meta property="og:title" content="关于 - 毫无作为" />
+<meta property="og:title" content="关于使用GitHub Actions云编译LEDE固件更新说明 - 毫无作为" />
 <meta property="og:description" content="" />
 <meta property="og:site_name" content="毫无作为" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/about/" />
+<meta property="og:url" content="/archives/20210821/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2019-08-13T16:51:00+08.00" />
-<meta name="twitter:title" content="关于 - 毫无作为" />
+<meta property="article:published_time" content="2021-08-21T00:00:00+08.00" />
+<meta name="twitter:title" content="关于使用GitHub Actions云编译LEDE固件更新说明 - 毫无作为" />
 <meta name="twitter:description" content="" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
@@ -104,40 +104,82 @@
 <main>    
     <section class="ga-section ga-content">
         <article class="yue">
-            <h1 class="ga-post_title">关于</h1>
+            <h1 class="ga-post_title">关于使用GitHub Actions云编译LEDE固件更新说明</h1>
             <span class="ga-post_meta ga-mono">
                 <time>
-                    2019-08-13
+                    2021-08-21
                 </time>
                 <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                        <div id="aplayer">
-<meting-js
-server="tencent"
-type="song"
-id="0042H1J40QhLx5"
-autoplay="true">
-</meting-js>
+                        <html>
+    <div class="warn">
+        <strong>
+            教程类文章具有时效性，看清楚发布日期，超过一定日子文章内容可能失效，仅仅作为参考。
+        </strong>
+    </div>
+</html>
+<p>点击<code>Use this template</code>按钮，创建<code>repo</code>。然后给该<code>repo</code>启用<code>Actions</code>功能。</p><html>
+<div class="uttpl">
+    <a href="https://github.com/P3TERX/Actions-OpenWrt/generate" id="utp">Use this template</a>
 </div>
-<h1>关于我</h1>
-<p>沿海城市的一只大一狗🏫，博客更新生活向内容，也会夹杂技术内容。</p><ul>
-<li>📷摄影（影视后期）爱好者</li>
-<li>Minecraft，GTAV，RDR2，R6玩家🎮</li>
-<li>懒癌晚期重症病患💤</li>
-</ul>
-<h1>为什么要写博客</h1>
-<blockquote>
-<p>写博客的初衷只是记录生活中的琐事。我本来也想过，用博客园，简书，CSDN等之类的单纯写写技术文章。但后面想了想，在大平台写文还要考虑到各个平台之间的规则，倒不如自己建一个博客，畅所欲言，不受平台束缚，毕竟这个时代，发在公众号，微博，知乎上的内容随时都有可能消失。</p></blockquote>
-<hr />
-<h1>联系方式</h1>
-<p>邮箱：<del>i#elstec.cn</del>（#替换@）<code>（如果想联系我请通过邮箱，其他平台不关注，谢谢。）</code></p>
+</html>
+<p>项目<code>GitHub</code>地址：</p>
+<pre><code>https://github.com/P3TERX/Actions-OpenWrt
+</code></pre>
+<p>编辑<code>diy-part1.sh</code>文件，可以更改固件是<code>XXRPlus</code>还是<code>Passwall</code>，想用什么就给倒数两行其中一行取消注释就生效。</p><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2019-2020 P3TERX &lt;https://p3terx.com&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># This is free software, licensed under the MIT License.</span>
+<span class="c1"># See /LICENSE for more information.</span>
+<span class="c1">#</span>
+<span class="c1"># https://github.com/P3TERX/Actions-OpenWrt</span>
+<span class="c1"># File name: diy-part1.sh</span>
+<span class="c1"># Description: OpenWrt DIY script part 1 (Before Update feeds)</span>
+<span class="c1">#</span>
+
+<span class="c1"># Uncomment a feed source</span>
+<span class="c1">#sed -i &#39;s/^#\(.*helloworld\)/\1/&#39; feeds.conf.default</span>
+
+<span class="c1"># Add a feed source</span>
+<span class="c1">#echo &#39;src-git helloworld https://github.com/fw876/helloworld&#39; &gt;&gt;feeds.conf.default</span>
+<span class="c1">#echo &#39;src-git passwall https://github.com/xiaorouji/openwrt-passwall&#39; &gt;&gt;feeds.conf.default</span>
+</pre></div>
+<p>编辑<code>diy-part2.sh</code>文件，修改最后一行可以更改固件默认后台地址。这个无关紧要反正在shell里面也可以通过<code>vi etc/config/network</code>命令更改。</p><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
+<span class="c1">#</span>
+<span class="c1"># Copyright (c) 2019-2020 P3TERX &lt;https://p3terx.com&gt;</span>
+<span class="c1">#</span>
+<span class="c1"># This is free software, licensed under the MIT License.</span>
+<span class="c1"># See /LICENSE for more information.</span>
+<span class="c1">#</span>
+<span class="c1"># https://github.com/P3TERX/Actions-OpenWrt</span>
+<span class="c1"># File name: diy-part2.sh</span>
+<span class="c1"># Description: OpenWrt DIY script part 2 (After Update feeds)</span>
+<span class="c1">#</span>
+
+<span class="c1"># Modify default IP</span>
+<span class="c1">#sed -i &#39;s/192.168.1.1/192.168.50.5/g&#39; package/base-files/files/bin/config_generate</span>
+</pre></div>
+<p>然后进入<code>actions</code>，选<code>Build OpenWrt</code>任务，单击<code>Run workflow</code>，可以选择分支和是否启用<code>SSH</code>，默认是<code>false</code>，改成<code>true</code>就可以使用<code>SSH</code>功能，最后运行即可。</p><figure class="pswp-item" style="flex: 108.89781859931114" ><img loading="lazy" width="1897" height="871" src="https://cdn.elstec.cn/40/1.png" /></figure><html>
+<p style="display:inline;">希望本文可以帮到你</p>
+<img src="https://cdn.elstec.cn/images/file_1016567.jpg" width="55px" height="55px" style="display: inline;">
+</html>
+
             </div>
         </article>
         
     </section>
 
     
+<section id="ga-content_pager">
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/20210815/">敦煌-西宁反向6日游</a>
+    </div>
+
+</section>
+
 
     
         <script>
