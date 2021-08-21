@@ -1,9 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 21 Aug 2021 11:50:54 +0806</lastBuildDate><pubDate>Sat, 21 Aug 2021 11:50:54 +0806</pubDate><item><title>R⭐终于要开始反外挂了？以及暑假大更新</title><link>/archives/20200730/</link><description>&lt;p&gt;2020年7月24日的时候，R⭐发了条公告，大概意思就是说GTA在线模式大表哥2在线模式要更新了，大表哥首当其冲，GTA紧跟其后。&lt;/p&gt;&lt;div class="photos"&gt;
-&lt;figure class="pswp-item" style="flex: 89.11483253588517" &gt;&lt;img loading="lazy" width="2235" height="1254" src="https://cdn.elstec.cn/33/1.png" /&gt;&lt;/figure&gt;
-&lt;figure class="pswp-item" style="flex: 55.6883759274526" &gt;&lt;img loading="lazy" width="1351" height="1213" src="https://cdn.elstec.cn/33/2.png" /&gt;&lt;/figure&gt;
-&lt;/div&gt;&lt;p&gt;我也不玩大表哥，其实对R⭐更新大表哥也不是很在意。其实我也想玩，但大表哥太贵了。毕竟家境贫寒学生党。主要还是玩GTA5。这次更新官方宣称是史上最大更新，包含新的抢劫任务dlc，可能是一直在传的小偷和条子  （狗头保命）。不过我发现R⭐尤其喜欢在周二更新各项内容，这个月肯定没戏了，周二更新大表哥了。暑期更新肯定不会超过下个月，大概率是下个月的各个周二。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 114.3253234750462" &gt;&lt;img loading="lazy" width="1237" height="541" src="https://cdn.elstec.cn/33/3.png" /&gt;&lt;/figure&gt;&lt;p&gt;R⭐一直被诟病的外挂问题这次居然被拿上台面了实在没想到。R⭐居然在我活着的时候更新反外挂，爷青结。这次更新反外挂也是号称所有线上模式外挂在今年结束（包括GTA5和大表哥2），看样子是来真的了，以后大概率就没有大罗金仙追我战局了,真好。&lt;/p&gt;&lt;figure class="pswp-item" style="flex: 38.850174216027874" &gt;&lt;img loading="lazy" width="892" height="1148" src="https://cdn.elstec.cn/33/4.png" /&gt;&lt;/figure&gt;&lt;hr /&gt;
-&lt;p&gt;R⭐原文地址：&lt;a href="https://www.rockstargames.com/zh/newswire/article/61639/GTA-Online-and-Red-Dead-Online-Updates-Coming-Soon"&gt;&lt;a href="https://www.rockstargames.com/zh/newswire/article/61639/GTA-Online-and-Red-Dead-Online-Updates-Coming-Soon"&gt;https://www.rockstargames.com/zh/newswire/article/61639/GTA-Online-and-Red-Dead-Online-Updates-Coming-Soon&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20200730/</guid><pubDate>Thu, 30 Jul 2020 17:02:00 +0806</pubDate></item><item><title>🌥️🌤️🌞</title><link>/archives/20210512/</link><description>&lt;div class="notice"&gt;切换至日间模式🏖️获得最佳观赏体验。&lt;/div&gt;&lt;div id="aplayer"&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 21 Aug 2021 22:07:53 +0806</lastBuildDate><pubDate>Sat, 21 Aug 2021 22:07:53 +0806</pubDate><item><title>🌥️🌤️🌞</title><link>/archives/20210512/</link><description>&lt;div class="notice"&gt;切换至日间模式🏖️获得最佳观赏体验。&lt;/div&gt;&lt;div id="aplayer"&gt;
 &lt;meting-js
 auto="https://y.qq.com/n/yqq/song/002dlB0X3bapxx.html"
 autoplay="true"&gt;
@@ -282,4 +278,32 @@ autoplay="false"&gt;
 &lt;p style="display:inline;"&gt;希望本文可以帮到你&lt;/p&gt;
 &lt;img src="https://cdn.elstec.cn/images/file_1016567.jpg" width="55px" height="55px" style="display: inline;"&gt;
 &lt;/html&gt;
-</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210821/</guid><pubDate>Sat, 21 Aug 2021 00:00:00 +0806</pubDate></item></channel></rss>
+</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210821/</guid><pubDate>Sat, 21 Aug 2021 00:00:00 +0806</pubDate></item><item><title>关于编译OpenWrt固件中找不到luci-app-ssr-plus更新说明</title><link>/archives/202108212/</link><description>&lt;html&gt;
+    &lt;div class="warn"&gt;
+        &lt;strong&gt;
+            教程类文章具有时效性，看清楚发布日期，超过一定日子文章内容可能失效，仅仅作为参考。
+        &lt;/strong&gt;
+    &lt;/div&gt;
+&lt;/html&gt;
+&lt;h2&gt;云编译&lt;/h2&gt;
+&lt;p&gt;云编译用户看上一篇更新说明：&lt;a href="https://elstec.cn/archives/20210821/"&gt;关于使用GitHub Actions云编译LEDE固件更新说明&lt;/a&gt;&lt;/p&gt;&lt;h2&gt;本地编译用户开始&lt;/h2&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;git clone https://github.com/coolsnowwolf/lede
+&lt;span class="nb"&gt;cd&lt;/span&gt; lede
+&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;修改&lt;code&gt;feeds.conf.default&lt;/code&gt;文件 &lt;strong&gt;（以下是2021年8月21日的文件）&lt;/strong&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;src-git packages https://github.com/coolsnowwolf/packages
+src-git luci https://github.com/coolsnowwolf/luci
+src-git routing https://git.openwrt.org/feed/routing.git
+src-git telephony https://git.openwrt.org/feed/telephony.git
+#src-git video https://github.com/openwrt/video.git
+#src-git targets https://github.com/openwrt/targets.git
+#src-git oldpackages http://git.openwrt.org/packages.git
+#src-link custom /usr/src/openwrt/custom-feed
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;可以发现并没有&lt;code&gt;XXRPlus&lt;/code&gt;或&lt;code&gt;PassWall&lt;/code&gt;，自行添加&lt;code&gt;XXRPlus&lt;/code&gt;或&lt;code&gt;PassWall&lt;/code&gt;。&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;src-git helloworld https://github.com/fw876/helloworld
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;pre&gt;&lt;code&gt;src-git passwall https://github.com/xiaorouji/openwrt-passwall
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;最后保存。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/202108212/</guid><pubDate>Sat, 21 Aug 2021 23:00:00 +0806</pubDate></item></channel></rss>
