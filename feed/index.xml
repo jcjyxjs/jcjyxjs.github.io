@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 21 Aug 2021 22:07:53 +0806</lastBuildDate><pubDate>Sat, 21 Aug 2021 22:07:53 +0806</pubDate><item><title>🌥️🌤️🌞</title><link>/archives/20210512/</link><description>&lt;div class="notice"&gt;切换至日间模式🏖️获得最佳观赏体验。&lt;/div&gt;&lt;div id="aplayer"&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 04 Sep 2021 23:40:21 +0806</lastBuildDate><pubDate>Sat, 04 Sep 2021 23:40:21 +0806</pubDate><item><title>🌥️🌤️🌞</title><link>/archives/20210512/</link><description>&lt;div class="notice"&gt;切换至日间模式🏖️获得最佳观赏体验。&lt;/div&gt;&lt;div id="aplayer"&gt;
 &lt;meting-js
 auto="https://y.qq.com/n/yqq/song/002dlB0X3bapxx.html"
 autoplay="true"&gt;
@@ -306,4 +306,4 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 
 &lt;pre&gt;&lt;code&gt;src-git passwall https://github.com/xiaorouji/openwrt-passwall
 &lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;最后保存。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/202108212/</guid><pubDate>Sat, 21 Aug 2021 23:00:00 +0806</pubDate></item></channel></rss>
+&lt;p&gt;最后保存。&lt;/p&gt;&lt;p&gt;我的博客即将同步至腾讯云+社区，邀请大家一同入驻：&lt;a href="https://cloud.tencent.com/developer/support-plan?invite_code=b70aijpftod5"&gt;https://cloud.tencent.com/developer/support-plan?invite_code=b70aijpftod5&lt;/a&gt;&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/202108212/</guid><pubDate>Sat, 21 Aug 2021 23:00:00 +0806</pubDate></item></channel></rss>

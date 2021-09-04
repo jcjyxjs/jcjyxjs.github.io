@@ -195,6 +195,14 @@ a#utp:hover {
     margin-bottom: 1.24em;
 }
 
+hr:before {
+    color: rgba(0, 0, 0, 0.2);
+    font-size: 1.1em;
+    display: block;
+    content: "* * *";
+    text-align: center;
+}
+
 @media screen and (prefers-color-scheme: dark) {
     html {
         background: rgb(13,17,23);
@@ -435,7 +443,7 @@ a#utp:hover {
 	}
 
 	td {
-		background: rgb(35 44 56);
+		background: rgb(32 32 32 / 95%);
 	}
 	
 	.yue .notice {
