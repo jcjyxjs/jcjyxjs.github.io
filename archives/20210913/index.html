@@ -7,7 +7,7 @@
     <meta name="HandheldFriendly" content="true">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="keywords" content="blog,jcjyxjs,毫无作为,永远年轻,永远热泪盈眶" />
-    <meta name="generator" content="Maverick 1.1" />
+    <meta name="generator" content="Maverick 1.2.1" />
     <meta name="template" content="Lighthouse" />
     <link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
     <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
@@ -112,7 +112,7 @@
                 <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                        <div class="notice">绑定自定义域名需要提前完成备案</div><p>更多更详细配置参考官方文档：<a href="https://webify.cloudbase.net/docs/introduction/"><a href="https://webify.cloudbase.net/docs/introduction/">https://webify.cloudbase.net/docs/introduction/</a></a></p><p>目前（2021年9月13日）仅支持部署静态网站，后期会支持<code>serverless</code>能力，类似于<code>Vercel</code>。本文以介绍接入静态网站为主。</p><p>登录<code>webify</code>后台设置<code>Git</code>平台账号授权。<a href="https://console.cloud.tencent.com/webify/set"><a href="https://console.cloud.tencent.com/webify/set">https://console.cloud.tencent.com/webify/set</a></a></p><p>然后在<a href="https://console.cloud.tencent.com/webify/new">Webify 新建应用页面</a>新建一个模板或选择导入<code>Git</code>平台仓库</p><figure class="pswp-item" style="flex: 108.89781859931114" ><img loading="lazy" width="1897" height="871" src="https://cdn.elstec.cn/40/1.png" /></figure><p>应用名称随意，如果使用这些静态程序的话，可以直接使用预设，自己的程序不在内也可自定义构建命令，输出目录和安装命令。（已经构建完成的静态网站只需要设置目录为<code>.</code>即可，其他都无需设置。）</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/40/2.png" /></figure><p>然后就是等待几分钟部署完成。可以在应用列表找到该应用。默认分配了一个超长的应用域名，可以在应用设置→自定义域名设置绑定自定义域名。后续在<code>Git</code>平台上有新提交<code>Webify</code>也会自动同步并构建。</p><blockquote>
+                        <div class="notice">绑定自定义域名需要提前完成备案</div><p>更多更详细配置参考官方文档：<a href="https://webify.cloudbase.net/docs/introduction/"><a href="https://webify.cloudbase.net/docs/introduction/">https://webify.cloudbase.net/docs/introduction/</a></a></p><p>目前（2021年9月13日）仅支持部署静态网站，后期会支持<code>serverless</code>能力，类似于<code>Vercel</code>。本文以介绍接入静态网站为主。</p><p>登录<code>webify</code>后台设置<code>Git</code>平台账号授权。<a href="https://console.cloud.tencent.com/webify/set"><a href="https://console.cloud.tencent.com/webify/set">https://console.cloud.tencent.com/webify/set</a></a></p><p>然后在<a href="https://console.cloud.tencent.com/webify/new">Webify 新建应用页面</a>新建一个模板或选择导入<code>Git</code>平台仓库</p><figure class="pswp-item" style="flex: 58.70229007633588" ><img loading="lazy" width="769" height="655" src="https://cdn.elstec.cn/41/1.png" /></figure><p>应用名称随意，如果使用这些静态程序的话，可以直接使用预设，自己的程序不在内也可自定义构建命令，输出目录和安装命令。（已经构建完成的静态网站只需要设置目录为<code>.</code>即可，其他都无需设置。）</p><figure class="pswp-item" style="flex: 25.0" ><img loading="lazy" width="319" height="638" src="https://cdn.elstec.cn/41/2.png" /></figure><p>然后就是等待几分钟部署完成。可以在应用列表找到该应用。默认分配了一个超长的应用域名，可以在应用设置→自定义域名设置绑定自定义域名。后续在<code>Git</code>平台上有新提交<code>Webify</code>也会自动同步并构建。</p><blockquote>
 <p>定价：Webify 费用参考：1000PV 网站预计消耗 0.21 元/天，300 元基本覆盖大部分个人站点的两年托管费用。如个别站点流量较大可额外联系申请。被刷流量提交工单审核也会免除被刷的费用</p></blockquote>
 <p>缺点：自定义域名CDN控制并没有接入内容分发网络控制台，控制选项不够多。删除应用不会马上把绑定的自定义域名删除，需要等待2-3小时系统删除或先删除域名再删应用。</p>
             </div>

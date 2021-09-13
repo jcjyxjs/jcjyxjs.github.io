@@ -104,8 +104,11 @@ body {
 .index-footer {
     font-size: 12px;
     text-align: center;
-    padding-bottom: 25px;
     color: #868e96;
+}
+
+.copyright {
+	margin: 0;
 }
 
 .brand a:hover {
