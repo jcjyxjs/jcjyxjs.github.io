@@ -58,18 +58,18 @@
         }
     </script>
     
-<title>国内Github下载加速 - 毫无作为</title>
+<title>使用腾讯云Webify托管静态网站 - 毫无作为</title>
 <meta name="author" content="jcjyxjs" />
-<meta name="description" content="前言" />
-<meta property="og:title" content="国内Github下载加速 - 毫无作为" />
-<meta property="og:description" content="前言" />
+<meta name="description" content="绑定自定义域名需要提前完成备案更多更详细配置参考官方文档：https://webify.cloudbase.net/docs/introduction/目前（2021年9月13日）仅支持部署静态网站，后期会支持serverless能力，类似于Vercel。本文以介绍接入静态网站为主。登录webify后台设置Git平台账号授权。https://console.cloud.tencent.com/webify/set然后在Webify 新建应用页面新建一个模板或选择导入Git平台仓库应用名称随意，如果使用这些静态程序的话，可以直接使用预设，自己的程序不在内也可自定义构建命令，输出目录和安装命令。（已经构建完成的静态网站只需要设置目录为.即可，其他都无需设置。）然后就是等待几分钟部署完成。可以在应用列表找到该应用。默认分配了一个超长的应用域名，可以在应用设置→自定义域名设置绑定自定义域名。后续在Git平台上有新提交Webify也会自动同步并构建。" />
+<meta property="og:title" content="使用腾讯云Webify托管静态网站 - 毫无作为" />
+<meta property="og:description" content="绑定自定义域名需要提前完成备案更多更详细配置参考官方文档：https://webify.cloudbase.net/docs/introduction/目前（2021年9月13日）仅支持部署静态网站，后期会支持serverless能力，类似于Vercel。本文以介绍接入静态网站为主。登录webify后台设置Git平台账号授权。https://console.cloud.tencent.com/webify/set然后在Webify 新建应用页面新建一个模板或选择导入Git平台仓库应用名称随意，如果使用这些静态程序的话，可以直接使用预设，自己的程序不在内也可自定义构建命令，输出目录和安装命令。（已经构建完成的静态网站只需要设置目录为.即可，其他都无需设置。）然后就是等待几分钟部署完成。可以在应用列表找到该应用。默认分配了一个超长的应用域名，可以在应用设置→自定义域名设置绑定自定义域名。后续在Git平台上有新提交Webify也会自动同步并构建。" />
 <meta property="og:site_name" content="毫无作为" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/sgclone/" />
+<meta property="og:url" content="/archives/20210913/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-03-15T12:50:00+08.00" />
-<meta name="twitter:title" content="国内Github下载加速 - 毫无作为" />
-<meta name="twitter:description" content="前言" />
+<meta property="article:published_time" content="2021-09-13T01:00:00+08.00" />
+<meta name="twitter:title" content="使用腾讯云Webify托管静态网站 - 毫无作为" />
+<meta name="twitter:description" content="绑定自定义域名需要提前完成备案更多更详细配置参考官方文档：https://webify.cloudbase.net/docs/introduction/目前（2021年9月13日）仅支持部署静态网站，后期会支持serverless能力，类似于Vercel。本文以介绍接入静态网站为主。登录webify后台设置Git平台账号授权。https://console.cloud.tencent.com/webify/set然后在Webify 新建应用页面新建一个模板或选择导入Git平台仓库应用名称随意，如果使用这些静态程序的话，可以直接使用预设，自己的程序不在内也可自定义构建命令，输出目录和安装命令。（已经构建完成的静态网站只需要设置目录为.即可，其他都无需设置。）然后就是等待几分钟部署完成。可以在应用列表找到该应用。默认分配了一个超长的应用域名，可以在应用设置→自定义域名设置绑定自定义域名。后续在Git平台上有新提交Webify也会自动同步并构建。" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -104,32 +104,17 @@
 <main>    
     <section class="ga-section ga-content">
         <article class="yue">
-            <h1 class="ga-post_title">国内Github下载加速</h1>
+            <h1 class="ga-post_title">使用腾讯云Webify托管静态网站</h1>
             <span class="ga-post_meta ga-mono">
                 <time>
-                    2020-03-15
+                    2021-09-13
                 </time>
                 <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                        <h1>前言</h1>
-<p>你是否也有过这种情况， <code>git clone</code> 基本没速度，但是无奈不能使用魔法。</p><figure class="pswp-item" style="flex: 235.68965517241378" ><img loading="lazy" width="1367" height="290" src="https://cdn.elstec.cn/19/1.png" /></figure><h1>实现</h1>
-<p>首先复制你要 <code>clone</code> 的github仓库地址，就像这样。</p><figure class="pswp-item" style="flex: 110.30927835051547" ><img loading="lazy" width="642" height="291" src="https://cdn.elstec.cn/19/2.png" /></figure><p>然后打开 <code>码云</code> ：<a href="https://gitee.com/">点我</a> ，登录账号之后，点击右上角的 <code>＋</code> ，选择 <code>从Github/Gitlab导入仓库</code></p><figure class="pswp-item" style="flex: 62.05128205128205" ><img loading="lazy" width="726" height="585" src="https://cdn.elstec.cn/19/3.png" /></figure><p>然后一般选择从URL导入，也可以选择其他的，URL导入直接填写刚刚复制的仓库地址，没什么问题就直接导入。</p><figure class="pswp-item" style="flex: 61.148936170212764" ><img loading="lazy" width="1437" height="1175" src="https://cdn.elstec.cn/19/4.png" /></figure><p>导入成功之后，直接 <code>git clone</code> 码云的地址，国内的 <code>clone</code> 速度还是飞快的。</p><figure class="pswp-item" style="flex: 203.64864864864865" ><img loading="lazy" width="1507" height="370" src="https://cdn.elstec.cn/19/6.png" /></figure><h1>其他</h1>
-<p>上面的只是单纯的 <code>clone</code> 。如果还要 <code>commit</code> 的话，需要更改根目录的 <code>.git</code> 文件夹中的 <code>config</code> 文件。</p><figure class="pswp-item" style="flex: 394.13145539906105" ><img loading="lazy" width="1679" height="213" src="https://cdn.elstec.cn/19/8.png" /></figure><p>每clone一个仓库，都会在其根目录带一个 <code>.git</code> 的文件夹。这是一个隐藏文件夹，需要系统显示隐藏文件夹（方法百度）。</p><figure class="pswp-item" style="flex: 44.5" ><img loading="lazy" width="178" height="200" src="https://cdn.elstec.cn/19/7.png" /></figure><p>打开 <code>config</code> 文件之后，找到URL，改成你要提交的仓库地址就行了。</p>
-<pre><code>[core]
-    repositoryformatversion = 0
-    filemode = false
-    bare = false
-    logallrefupdates = true
-    ignorecase = true
-[remote &quot;origin&quot;]
-    url = 这里改成你的仓库URL
-    fetch = +refs/heads/*:refs/remotes/origin/*
-[branch &quot;master&quot;]
-    remote = origin
-    merge = refs/heads/master
-</code></pre>
-
+                        <div class="notice">绑定自定义域名需要提前完成备案</div><p>更多更详细配置参考官方文档：<a href="https://webify.cloudbase.net/docs/introduction/"><a href="https://webify.cloudbase.net/docs/introduction/">https://webify.cloudbase.net/docs/introduction/</a></a></p><p>目前（2021年9月13日）仅支持部署静态网站，后期会支持<code>serverless</code>能力，类似于<code>Vercel</code>。本文以介绍接入静态网站为主。</p><p>登录<code>webify</code>后台设置<code>Git</code>平台账号授权。<a href="https://console.cloud.tencent.com/webify/set"><a href="https://console.cloud.tencent.com/webify/set">https://console.cloud.tencent.com/webify/set</a></a></p><p>然后在<a href="https://console.cloud.tencent.com/webify/new">Webify 新建应用页面</a>新建一个模板或选择导入<code>Git</code>平台仓库</p><figure class="pswp-item" style="flex: 108.89781859931114" ><img loading="lazy" width="1897" height="871" src="https://cdn.elstec.cn/40/1.png" /></figure><p>应用名称随意，如果使用这些静态程序的话，可以直接使用预设，自己的程序不在内也可自定义构建命令，输出目录和安装命令。（已经构建完成的静态网站只需要设置目录为<code>.</code>即可，其他都无需设置。）</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/40/2.png" /></figure><p>然后就是等待几分钟部署完成。可以在应用列表找到该应用。默认分配了一个超长的应用域名，可以在应用设置→自定义域名设置绑定自定义域名。后续在<code>Git</code>平台上有新提交<code>Webify</code>也会自动同步并构建。</p><blockquote>
+<p>定价：Webify 费用参考：1000PV 网站预计消耗 0.21 元/天，300 元基本覆盖大部分个人站点的两年托管费用。如个别站点流量较大可额外联系申请。被刷流量提交工单审核也会免除被刷的费用</p></blockquote>
+<p>缺点：自定义域名CDN控制并没有接入内容分发网络控制台，控制选项不够多。删除应用不会马上把绑定的自定义域名删除，需要等待2-3小时系统删除或先删除域名再删应用。</p>
             </div>
         </article>
         
@@ -139,7 +124,7 @@
 <section id="ga-content_pager">
 
     <div class="prev">
-        <a class="ga-highlight" href="/archives/qhlede/">群晖虚拟机安装lede软路由</a>
+        <a class="ga-highlight" href="/archives/202108212/">关于编译OpenWrt固件中找不到luci-app-ssr-plus更新说明</a>
     </div>
 
 </section>
