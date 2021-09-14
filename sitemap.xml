@@ -5,14 +5,14 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-    <loc>/about/</loc>
+    <loc>/links/</loc>
     <lastmod>2019-08-13</lastmod>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
 </url>
 
 <url>
-    <loc>/links/</loc>
+    <loc>/about/</loc>
     <lastmod>2019-08-13</lastmod>
     <changefreq>always</changefreq>
     <priority>0.8</priority>
@@ -145,14 +145,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/34/</loc>
+    <loc>/archives/10-14-5-mac1-2/</loc>
     <lastmod>2020-05-15</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/archives/10-14-5-mac1-2/</loc>
+    <loc>/archives/34/</loc>
     <lastmod>2020-05-15</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
@@ -243,14 +243,14 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/hexoblog/</loc>
+    <loc>/archives/enhttp3/</loc>
     <lastmod>2020-02-12</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
 </url>
 
 <url>
-    <loc>/archives/enhttp3/</loc>
+    <loc>/archives/hexoblog/</loc>
     <lastmod>2020-02-12</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
