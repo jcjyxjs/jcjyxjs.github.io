@@ -105,7 +105,10 @@ body {
     font-size: 12px;
     text-align: center;
     color: #868e96;
-    padding: 25px 0;
+}
+
+.copyright {
+    margin: 0;
 }
 
 .brand a:hover {
