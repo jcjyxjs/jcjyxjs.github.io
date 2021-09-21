@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/74ef1f678a8d8f9867bf10ecc5676fd2.json"
+            api: "/59aa066895e40a142593a07afe17d623.json"
         }
     </script>
     
@@ -124,7 +124,7 @@
 <p>所有<code>Git</code>的操作就跟在本地一样，唯一的区别就是<code>CI</code>的服务器<code>Push</code>到<code>Github</code>很快hhh，格式如下，最后分支那里不用加<code>HEAD</code>。</p>
 <pre><code>git push https://token@github.com/用户名/项目名.git branch
 </code></pre>
-<p>整仓<code>Push</code>到我的<code>Github</code>之后，开始构建并生成我的静态内容。我的博客和<code>GitHub Pages</code>是两个仓库所以我最终会提交两次，博客那个仓库主要做个备份。</p><p>我的博客用的<code>Maverick</code>，所以需要用到<code>Python</code>，版本只要大于3.6就可以，<code>CI</code>默认就有环境<code>SDK</code>内置。具体看官方文档。没有想要的环境或版本可以用自定义<code>docker</code>。</p><p><a href="https://help.coding.net/docs/ci/ways.html?&amp;_ga=2.233204055.856802041.1631519683-1446587655.1624866774#%E9%A2%84%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6-SDK"><a href="https://help.coding.net/docs/ci/ways.html?&amp;_ga=2.233204055.856802041.1631519683-1446587655.1624866774#%E9%A2%84%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6-SDK">https://help.coding.net/docs/ci/ways.html?&amp;_ga=2.233204055.856802041.1631519683-1446587655.1624866774#%E9%A2%84%E8%A3%85%E7%9A%84%E8%BD%AF%E4%BB%B6-SDK</a></a></p><p>查看文档可以看到和<code>Python</code>有关的环境有：<code>python3/pip3: 3.9、3.8、3.7</code>。</p><p>首先我更新默认的<code>pip</code>版本，其实这个无所谓。</p><div class="highlight"><pre><span></span>python3.9 -m pip install --upgrade pip
+<p>整仓<code>Push</code>到我的<code>Github</code>之后，开始构建并生成我的静态内容。我的博客和<code>GitHub Pages</code>是两个仓库所以我最终会提交两次，博客那个仓库主要做个备份。</p><p>我的博客用的<code>Maverick</code>，所以需要用到<code>Python</code>，版本只要大于3.6就可以，<code>CI</code>默认就有环境<code>SDK</code>内置。具体看官方文档。没有想要的环境或版本可以用自定义<code>docker</code>。</p><p><a href="https://help.coding.net/docs/ci/node/env.html"><a href="https://help.coding.net/docs/ci/node/env.html">https://help.coding.net/docs/ci/node/env.html</a></a></p><p>查看文档可以看到和<code>Python</code>有关的环境有：<code>python3/pip3: 3.9、3.8、3.7</code>。</p><p>首先我更新默认的<code>pip</code>版本，其实这个无所谓。</p><div class="highlight"><pre><span></span>python3.9 -m pip install --upgrade pip
 </pre></div>
 <p>然后就是安装依赖</p><div class="highlight"><pre><span></span>pip3.9 install -r requirements.txt
 </pre></div>
