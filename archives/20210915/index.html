@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/c2bfe5634f91e1e305245b9ee4dab294.json"
+            api: "/12a222c95bef0e4d8c42fb51c37efa9c.json"
         }
     </script>
     
@@ -130,10 +130,7 @@
 </pre></div>
 <p>最后生成</p><div class="highlight"><pre><span></span>python3.9 mvrk.py --config ./demo_src/config.py --source_dir ./demo_src/ --build_dir ./dist/
 </pre></div>
-<p>部署完成之后我需要推送到我的服务器，创建<code>执行 Pipeline 脚本</code>，可以用私钥也可以用账号密码，具体参考官方文档：<a href="https://help.coding.net/docs/ci/deploy/ssh.html"><a href="https://help.coding.net/docs/ci/deploy/ssh.html">https://help.coding.net/docs/ci/deploy/ssh.html</a></a></p><p>如果是图形化编辑器，复制从<code>def</code>开始的内容即可，文本编辑器参考文档。填写好<code>IP</code>，端口等之后，可以看到<code>credentialsId</code>，凭据ID可以在当前项目页面左下角找到项目设置，开发者选项，就有凭据选项。新建凭据，可以用私钥也可以设置账号密码。添加完成后把凭据ID替换到<code>执行的Pipeline脚本</code>内。</p>
-<pre><code>[https://jcjyxjs.coding.net/p/项目名称/setting/connection?page=1](https://jcjyxjs.coding.net/p/项目名称/setting/connection?page=1)
-</code></pre>
-<p>成功连接服务器之后，就等于直接操作服务器，首先我需要把生成的内容传输到我的服务器上，<code>form</code>就是<code>CI</code>目录，<code>into</code>就是我服务器目录。然后就是替换操作了。</p><div class="highlight"><pre><span></span><span class="n">sshPut</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">from:</span> <span class="s1">&#39;/root/workspace&#39;</span><span class="o">,</span> <span class="nl">into:</span> <span class="s1">&#39;/xxxxxxxx/&#39;</span>
+<p>部署完成之后我需要推送到我的服务器，创建<code>执行 Pipeline 脚本</code>，可以用私钥也可以用账号密码，具体参考官方文档：<a href="https://help.coding.net/docs/ci/deploy/ssh.html"><a href="https://help.coding.net/docs/ci/deploy/ssh.html">https://help.coding.net/docs/ci/deploy/ssh.html</a></a></p><p>如果是图形化编辑器，复制从<code>def</code>开始的内容即可，文本编辑器参考文档。填写好<code>IP</code>，端口等之后，可以看到<code>credentialsId</code>，凭据ID可以在当前项目页面左下角找到项目设置，开发者选项，就有凭据选项。新建凭据，可以用私钥也可以设置账号密码。添加完成后把凭据ID替换到<code>执行的Pipeline脚本</code>内。</p><p><a href="https://jcjyxjs.coding.net/p/%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0/setting/connection?page=1">https://jcjyxjs.coding.net/p/%E9%A1%B9%E7%9B%AE%E5%90%8D%E7%A7%B0/setting/connection?page=1</a></p><p>成功连接服务器之后，就等于直接操作服务器，首先我需要把生成的内容传输到我的服务器上，<code>form</code>就是<code>CI</code>目录，<code>into</code>就是我服务器目录。然后就是替换操作了。</p><div class="highlight"><pre><span></span><span class="n">sshPut</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">from:</span> <span class="s1">&#39;/root/workspace&#39;</span><span class="o">,</span> <span class="nl">into:</span> <span class="s1">&#39;/xxxxxxxx/&#39;</span>
 </pre></div>
 <div class="highlight"><pre><span></span><span class="kt">def</span> <span class="n">remote</span> <span class="o">=</span> <span class="o">[:]</span>
           <span class="n">remote</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;名字随便&#39;</span>
