@@ -1,43 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 26 Sep 2021 21:40:28 +0806</lastBuildDate><pubDate>Sun, 26 Sep 2021 21:40:28 +0806</pubDate><item><title>Valine自定义表情包</title><link>/archives/20210615/</link><description>&lt;p&gt;获取最新版本&lt;code&gt;Valine&lt;/code&gt;，截至目前为止最新版本是&lt;code&gt;1.4.14&lt;/code&gt;，格式化与否都可。&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://unpkg.com/valine/dist/Valine.min.js
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;搜索&lt;code&gt;sina&lt;/code&gt;字段。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;e&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                    &lt;span class="s2"&gt;&amp;quot;use strict&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                    &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;__esModule&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
-                    &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;DEFAULT_EMOJI_CDN&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                        &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;DB_NAME&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Comment&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                        &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;defaultConfig&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
-                            &lt;span class="nx"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;zh-CN&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;langMode&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;appId&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;appKey&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;clazzName&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Comment&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;meta&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;nick&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;mail&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;link&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-                            &lt;span class="nx"&gt;path&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;location&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;pathname&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;placeholder&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;Just Go Go&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;pageSize&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mf"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;recordIP&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;serverURLs&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;visitor&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;emojiCDN&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;emojiMaps&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="ow"&gt;void&lt;/span&gt; &lt;span class="mf"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;enableQQ&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="mf"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                            &lt;span class="nx"&gt;requiredFields&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="p"&gt;[]&lt;/span&gt;
-                        &lt;span class="p"&gt;},&lt;/span&gt;
-                        &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;defaultMeta&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;nick&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;mail&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;link&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt;
-                        &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;QQCacheKey&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;_v_Cache_Q&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                        &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;MetaCacheKey&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;_v_Cache_Meta&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;
-                        &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;RandomStr&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;Date&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;now&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;1e3&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;random&lt;/span&gt;&lt;span class="p"&gt;())).&lt;/span&gt;&lt;span class="nx"&gt;toString&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;32&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
-                        &lt;span class="nx"&gt;t&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;VERSION&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;1.4.14&amp;quot;&lt;/span&gt;
-                &lt;span class="p"&gt;},&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;修改其中的&lt;code&gt;emojiCDN&lt;/code&gt;和&lt;code&gt;emojiMaps&lt;/code&gt;字段内容。我选择&lt;code&gt;GitHub+jsdelivr&lt;/code&gt;高配置[doge]，&lt;code&gt;emojiCDN&lt;/code&gt;是域名，&lt;code&gt;emojiMaps&lt;/code&gt;是路径，合起来可以请求到一张图片。例：&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/2c/2018new_qinqin_thumb.png&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;其中&lt;code&gt;img.t.sinajs.cn/t4/appstyle/expression/ext/normal/&lt;/code&gt;就是&lt;code&gt;emojiCDN&lt;/code&gt;，&lt;code&gt;2c/2018new_qinqin_thumb.png&lt;/code&gt;就是&lt;code&gt;emojiMaps&lt;/code&gt;。其中&lt;code&gt;emojiMaps&lt;/code&gt;部分需要按照格式，例：&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nx"&gt;s2&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;alu/2.png&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="c1"&gt;//表情包名称无空格可以不加引号&lt;/span&gt;
-&lt;span class="s2"&gt;&amp;quot;sss 2&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;alu/2.png&amp;quot;&lt;/span&gt;&lt;span class="c1"&gt;//表情包名称含空格需加引号&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;发一条评论试试吧~&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210615/</guid><pubDate>Tue, 15 Jun 2021 20:00:00 +0806</pubDate></item><item><title>Grafana+Prometheus监控服务器</title><link>/archives/20210620/</link><description>&lt;div class="notice"&gt;环境：Centos7，Supervisor持久化运行&lt;/div&gt;&lt;p&gt;下载以及安装Grafana，需要放通&lt;code&gt;3000&lt;/code&gt;端口用于Grafana的网页后台控制。&lt;em&gt;（IP:3000）&lt;/em&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 02 Oct 2021 21:20:13 +0806</lastBuildDate><pubDate>Sat, 02 Oct 2021 21:20:13 +0806</pubDate><item><title>Grafana+Prometheus监控服务器</title><link>/archives/20210620/</link><description>&lt;div class="notice"&gt;环境：Centos7，Supervisor持久化运行&lt;/div&gt;&lt;p&gt;下载以及安装Grafana，需要放通&lt;code&gt;3000&lt;/code&gt;端口用于Grafana的网页后台控制。&lt;em&gt;（IP:3000）&lt;/em&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm
 sudo yum install grafana-8.0.3-1.x86_64.rpm
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;用&lt;code&gt;.deb&lt;/code&gt;或&lt;code&gt;.rpm&lt;/code&gt;安装完成之后可以用&lt;code&gt;systemd&lt;/code&gt;或&lt;code&gt;init.d&lt;/code&gt;控制。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo systemctl daemon-reload
@@ -346,7 +308,7 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 &lt;span class="s1"&gt;    &amp;quot;envs&amp;quot;: []&lt;/span&gt;
 &lt;span class="s1"&gt;}&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;再次创建一个&lt;code&gt;CI&lt;/code&gt;，使用&lt;code&gt;Coding&lt;/code&gt;的仓库，然后创建一个&lt;code&gt;Shell命令&lt;/code&gt;，把刚刚复制的&lt;code&gt;CURL&lt;/code&gt;命令粘贴进来然后保存就可以。&lt;/p&gt;&lt;p&gt;最终就会是：我本地提交&lt;code&gt;git&lt;/code&gt;到&lt;code&gt;Coding&lt;/code&gt;的仓库，触发器这个&lt;code&gt;CI&lt;/code&gt;检测到仓库变化然后运行，运行的内容就是启动另外一个&lt;code&gt;CI&lt;/code&gt;，触发器结束任务，主要的&lt;code&gt;CI&lt;/code&gt;开始运行我指定的内容。官方文档写的非常好，可读性极强。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210915/</guid><pubDate>Wed, 15 Sep 2021 01:00:00 +0806</pubDate></item><item><title>echarts在Markdown下深色模式自适应</title><link>/archives/20210926/</link><description>&lt;div class="notice"&gt;本文效果均使用JS，没有任何TS&lt;/div&gt;&lt;p&gt;我首先找了一个官方示例做例子。&lt;/p&gt;&lt;p&gt;圆角环形饼图：&lt;a href="https://echarts.apache.org/examples/zh/editor.html?c=pie-borderRadius&amp;amp;lang=js"&gt;&lt;a href="https://echarts.apache.org/examples/zh/editor.html?c=pie-borderRadius&amp;amp;lang=js"&gt;https://echarts.apache.org/examples/zh/editor.html?c=pie-borderRadius&amp;amp;lang=js&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;查阅官方文档得知深色模式根据&lt;code&gt;backgroundColor&lt;/code&gt;这个属性进行自适应。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;darkmode：&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;再次创建一个&lt;code&gt;CI&lt;/code&gt;，使用&lt;code&gt;Coding&lt;/code&gt;的仓库，然后创建一个&lt;code&gt;Shell命令&lt;/code&gt;，把刚刚复制的&lt;code&gt;CURL&lt;/code&gt;命令粘贴进来然后保存就可以。&lt;/p&gt;&lt;p&gt;最终就会是：我本地提交&lt;code&gt;git&lt;/code&gt;到&lt;code&gt;Coding&lt;/code&gt;的仓库，触发器这个&lt;code&gt;CI&lt;/code&gt;检测到仓库变化然后运行，运行的内容就是启动另外一个&lt;code&gt;CI&lt;/code&gt;，触发器结束任务，主要的&lt;code&gt;CI&lt;/code&gt;开始运行我指定的内容。官方文档写的非常好，可读性极强。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210915/</guid><pubDate>Wed, 15 Sep 2021 01:00:00 +0806</pubDate></item><item><title>echarts在Markdown下深色模式自适应</title><link>/archives/20210926/</link><description>&lt;p&gt;我首先找了一个官方示例做例子。&lt;/p&gt;&lt;p&gt;圆角环形饼图：&lt;a href="https://echarts.apache.org/examples/zh/editor.html?c=pie-borderRadius&amp;amp;lang=js"&gt;&lt;a href="https://echarts.apache.org/examples/zh/editor.html?c=pie-borderRadius&amp;amp;lang=js"&gt;https://echarts.apache.org/examples/zh/editor.html?c=pie-borderRadius&amp;amp;lang=js&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;&lt;p&gt;查阅官方文档得知深色模式根据&lt;code&gt;backgroundColor&lt;/code&gt;这个属性进行自适应。&lt;/p&gt;&lt;p&gt;&lt;strong&gt;darkmode：&lt;/strong&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;是否是暗黑模式，默认会根据背景色 backgroundColor 的亮度自动设置。 如果是设置了容器的背景色而无法判断到，就可以使用该配置手动指定，echarts 会根据是否是暗黑模式调整文本等的颜色。
 
 该配置通常会被用于主题中。
@@ -454,4 +416,45 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
     &lt;script src="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/43.js"&gt;&lt;/script&gt;
 &lt;/body&gt;
 &lt;/html&gt;
-&lt;p&gt;此时切换深色模式和浅色模式可以直接看到效果。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210926/</guid><pubDate>Sun, 26 Sep 2021 01:00:00 +0806</pubDate></item></channel></rss>
+&lt;p&gt;此时切换深色模式和浅色模式可以直接看到效果。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210926/</guid><pubDate>Sun, 26 Sep 2021 01:00:00 +0806</pubDate></item><item><title>本年度（2021）最后一个活动赠品</title><link>/archives/20211002/</link><description>&lt;p&gt;细数今年参加了不少线上活动，拿了很多屁用没有的小玩意。去年阿里云活动很多，但东西质量真的就一般，今年腾讯云活动挺多的，东西就是自家产品线上的玩偶，手办，比阿里要高上一个档次，但我就拿了一点，其他都是虚拟物品。&lt;/p&gt;&lt;html&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width"&gt;
+  &lt;link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"/&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class="mdui-table-fluid"&gt;
+  &lt;table class="mdui-table mdui-table-hoverable"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;序号&lt;/th&gt;
+        &lt;th&gt;名称&lt;/th&gt;
+        &lt;th&gt;数量&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;鼠年公仔16CM&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;牛年公仔20CM&lt;/td&gt;
+        &lt;td&gt;1&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;牛年公仔30CM+随机钥匙扣&lt;/td&gt;
+        &lt;td&gt;1+1&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt;
+&lt;script src="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+&lt;p&gt;今天拿到随便拍了几张照片，用的是&lt;code&gt;铭匠&lt;/code&gt;的&lt;code&gt;35mm f1.4&lt;/code&gt;手动头，成像效果很不错，就是没有打光，公仔那个早点很多，修的也不是很好。&lt;/p&gt;&lt;div class="photo"&gt;
+&lt;figure class="pswp-item" style="flex: 31.72926447574335" &gt;&lt;img loading="lazy" width="3244" height="5112" src="https://cdn.elstec.cn/44/1.jpg" /&gt;&lt;figcaption&gt;公仔&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;figure class="pswp-item" style="flex: 35.607035607035606" &gt;&lt;img loading="lazy" width="3320" height="4662" src="https://cdn.elstec.cn/44/2.jpg" /&gt;&lt;figcaption&gt;钥匙扣&lt;/figcaption&gt;&lt;/figure&gt;
+&lt;/div&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20211002/</guid><pubDate>Sat, 02 Oct 2021 01:00:00 +0806</pubDate></item></channel></rss>
