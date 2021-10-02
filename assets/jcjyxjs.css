@@ -53,7 +53,7 @@ del {
 
 body {
     line-height: 1.42;
-    font-family: 'Noto Serif SC', serif;
+    font-family: 'Noto Serif SC', serif!important;
     letter-spacing: 0.05em;
 }
 
