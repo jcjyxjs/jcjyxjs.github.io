@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sat, 02 Oct 2021 21:33:45 +0806</lastBuildDate><pubDate>Sat, 02 Oct 2021 21:33:45 +0806</pubDate><item><title>Grafana+Prometheus监控服务器</title><link>/archives/20210620/</link><description>&lt;div class="notice"&gt;环境：Centos7，Supervisor持久化运行&lt;/div&gt;&lt;p&gt;下载以及安装Grafana，需要放通&lt;code&gt;3000&lt;/code&gt;端口用于Grafana的网页后台控制。&lt;em&gt;（IP:3000）&lt;/em&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Sun, 03 Oct 2021 17:40:32 +0806</lastBuildDate><pubDate>Sun, 03 Oct 2021 17:40:32 +0806</pubDate><item><title>Grafana+Prometheus监控服务器</title><link>/archives/20210620/</link><description>&lt;div class="notice"&gt;环境：Centos7，Supervisor持久化运行&lt;/div&gt;&lt;p&gt;下载以及安装Grafana，需要放通&lt;code&gt;3000&lt;/code&gt;端口用于Grafana的网页后台控制。&lt;em&gt;（IP:3000）&lt;/em&gt;&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm
 sudo yum install grafana-8.0.3-1.x86_64.rpm
 &lt;/pre&gt;&lt;/div&gt;
 &lt;p&gt;用&lt;code&gt;.deb&lt;/code&gt;或&lt;code&gt;.rpm&lt;/code&gt;安装完成之后可以用&lt;code&gt;systemd&lt;/code&gt;或&lt;code&gt;init.d&lt;/code&gt;控制。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;sudo systemctl daemon-reload
@@ -417,14 +417,8 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
 &lt;/body&gt;
 &lt;/html&gt;
 &lt;p&gt;此时切换深色模式和浅色模式可以直接看到效果。&lt;/p&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210926/</guid><pubDate>Sun, 26 Sep 2021 01:00:00 +0806</pubDate></item><item><title>本年度（2021）最后一个活动赠品</title><link>/archives/20211002/</link><description>&lt;p&gt;细数今年参加了不少线上活动，拿了很多屁用没有的小玩意。去年阿里云活动很多，但东西质量真的就一般，今年腾讯云活动挺多的，东西就是自家产品线上的玩偶，手办，比阿里要高上一个档次，但我就拿了一点，其他都是虚拟物品。&lt;/p&gt;&lt;html&gt;
-&lt;head&gt;
-  &lt;meta charset="utf-8"&gt;
-  &lt;meta name="viewport" content="width=device-width"&gt;
-  &lt;link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"/&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div class="mdui-table-fluid"&gt;
-  &lt;table class="mdui-table mdui-table-hoverable"&gt;
+&lt;div&gt;
+  &lt;table&gt;
     &lt;thead&gt;
       &lt;tr&gt;
         &lt;th&gt;序号&lt;/th&gt;
@@ -451,8 +445,6 @@ src-git telephony https://git.openwrt.org/feed/telephony.git
     &lt;/tbody&gt;
   &lt;/table&gt;
 &lt;/div&gt;
-&lt;script src="//cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
 &lt;/html&gt;
 &lt;p&gt;今天拿到随便拍了几张照片，用的是&lt;code&gt;铭匠&lt;/code&gt;的&lt;code&gt;35mm f1.4&lt;/code&gt;手动头，成像效果很不错，就是没有打光，公仔那个早点很多，修的也不是很好。&lt;/p&gt;&lt;div class="photos"&gt;
 &lt;figure class="pswp-item" style="flex: 31.72926447574335" &gt;&lt;img loading="lazy" width="3244" height="5112" src="https://cdn.elstec.cn/44/1.jpg" /&gt;&lt;figcaption&gt;公仔&lt;/figcaption&gt;&lt;/figure&gt;
