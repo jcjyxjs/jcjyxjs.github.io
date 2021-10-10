@@ -208,7 +208,7 @@ hr:before {
 
 @media screen and (prefers-color-scheme: dark) {
     html {
-        background: rgb(13,17,23);
+        background: rgb(0,0,0);
     }
 
     body {
