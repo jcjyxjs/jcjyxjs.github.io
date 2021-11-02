@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -115,10 +115,10 @@
 <p>起因是某wp群有人发bt专业版6个月28的活动，跟风上车。</p></blockquote>
 <p>一套流程下来，发现安装nginx防火墙之后nginx直接关停，无法启动，重载配置也无果。试着卸载防火墙并重启nginx成功。论坛上也没有具体解决方案，官方人员只是说规则配置问题，要去加他们技术。不得不说，还挺牛.</p><blockquote>
 <p>报错看下图</p></blockquote>
-<div class="photoset"><div class="photos"><figure class="pswp-item" style="flex: 1324.5762711864406" ><img loading="lazy" width="1563" height="59" src="https://cdn.elstec.cn/8/1.png" /></figure></div><div class="photos"><figure class="pswp-item" style="flex: 55.03778337531486" ><img loading="lazy" width="874" height="794" src="https://cdn.elstec.cn/8/2.png" /></figure></div><div class="photos"><figure class="pswp-item" style="flex: 55.096774193548384" ><img loading="lazy" width="854" height="775" src="https://cdn.elstec.cn/8/3.png" /><figcaption>卸载bt的nginx防火墙就又正常了</figcaption></figure></div></div><p>解决方案：</p><div class="highlight"><pre><span></span>mv /www/server/panel/vhost/nginx/btwaf.conf  /tmp/btwaf.conf_back
+<div class="photoset"><div class="photos"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/8/1.png" /></figure></div><div class="photos"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/8/2.png" /></figure></div><div class="photos"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/8/3.png" /><figcaption>卸载bt的nginx防火墙就又正常了</figcaption></figure></div></div><p>解决方案：</p><div class="highlight"><pre><span></span>mv /www/server/panel/vhost/nginx/btwaf.conf  /tmp/btwaf.conf_back
     mv /www/server/panel/vhost/nginx/total.conf  /tmp/total.conf_back
 </pre></div>
-<figure class="pswp-item" style="flex: 127.24306688417619" ><img loading="lazy" width="1560" height="613" src="https://cdn.elstec.cn/8/4.png" /><figcaption>最终效果</figcaption></figure>
+<figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/8/4.png" /><figcaption>最终效果</figcaption></figure>
             </div>
         </article>
         

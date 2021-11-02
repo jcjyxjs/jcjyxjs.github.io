@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -114,7 +114,7 @@
                         <p>我的群晖每次重启之后SSL都会变成默认的证书，浏览器访问都要手动点击忽略，删除默认证书也没用，暂时不知道是什么原因导致的，可能是黑群晖的某些奇奇怪怪的bug（prpr）。</p><p>先进入到群晖上传证书的存放点，然后<code>ls</code>查看你的证书被放在哪个随机名称文件夹里了。群晖webui上传的SSL证书都会被放到随机名称文件夹里，为了方便起见我只传了一张SSL，找起来就方便。</p><div class="highlight"><pre><span></span><span class="k">cd</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>
 <span class="k">ls</span>
 </pre></div>
-<figure class="pswp-item" style="flex: 360.1503759398496" ><img loading="lazy" width="958" height="133" src="https://cdn.elstec.cn/35/1.png" /></figure><p>可以看到我的证书被放到<code>C2lZL4</code>文件夹里了，以及<code>default</code>文件夹。既然重启会加载使用默认证书，那可以<code>任务计划</code>设置把默认证书替换成我上传的证书，然后重启webui生效。</p><div class="highlight"><pre><span></span><span class="k">cp</span> <span class="p">-</span><span class="k">f</span> <span class="p">-</span><span class="k">p</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>C2lZL4<span class="sr">/cert.pem /</span>usr<span class="sr">/syno/</span>etc<span class="sr">/certificate/</span>system<span class="sr">/default/</span>cert.pem
+<figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/35/1.png" /></figure><p>可以看到我的证书被放到<code>C2lZL4</code>文件夹里了，以及<code>default</code>文件夹。既然重启会加载使用默认证书，那可以<code>任务计划</code>设置把默认证书替换成我上传的证书，然后重启webui生效。</p><div class="highlight"><pre><span></span><span class="k">cp</span> <span class="p">-</span><span class="k">f</span> <span class="p">-</span><span class="k">p</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>C2lZL4<span class="sr">/cert.pem /</span>usr<span class="sr">/syno/</span>etc<span class="sr">/certificate/</span>system<span class="sr">/default/</span>cert.pem
 <span class="k">cp</span> <span class="p">-</span><span class="k">f</span> <span class="p">-</span><span class="k">p</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>C2lZL4<span class="sr">/fullchain.pem /</span>usr<span class="sr">/syno/</span>etc<span class="sr">/certificate/</span>system<span class="sr">/default/</span>fullchain.pem
 <span class="k">cp</span> <span class="p">-</span><span class="k">f</span> <span class="p">-</span><span class="k">p</span> <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>certificate<span class="sr">/_archive/</span>C2lZL4<span class="sr">/privkey.pem /</span>usr<span class="sr">/syno/</span>etc<span class="sr">/certificate/</span>system<span class="sr">/default/</span>privkey.pem
 <span class="sr">/usr/</span>syno<span class="sr">/etc/</span>rc.sysv/nginx.<span class="k">sh</span> reload

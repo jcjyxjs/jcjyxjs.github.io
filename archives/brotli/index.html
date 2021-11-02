@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -112,7 +112,7 @@
             </span>
             <div class="ga-content_body">
                         <h2>前言</h2>
-<p>我建站没几个钱，买 <code>1M</code> 服务器，又贪图速度，想加载快点。之前是静动分离， <code>BBR，CDN，webp自适应</code> 。</p><p>老早看到 <code>CDN</code> 控制台 <code>Gzip</code> 旁边的 <code>Brotli</code> ，但是又不给用 :%(酷安_tiebaemotion76)</p><figure class="pswp-item" style="flex: 125.85836909871244" ><img loading="lazy" width="1173" height="466" src="https://cdn.elstec.cn/31/1.png" /><figcaption>如图，永远在升级</figcaption></figure><p>无奈之下，只好各种查资料。查到的都是复制粘贴的水文，不是水文就是特别早的文章，也不怎么适用。</p><p>但大多数都是先 <code>Git clone Brotli</code> 的仓库，然后 <code>git submodule update --init</code> 升级 <code>Brotli</code> 。最后编译安装 <code>Nginx</code> 的时候添加一条编译 <code>Brotli</code> 的语句。</p><p>兼容性方面，感觉还是可以的，毕竟好几年前出的。</p><figure class="pswp-item" style="flex: 140.625" ><img loading="lazy" width="1890" height="672" src="https://cdn.elstec.cn/31/4.png" /><figcaption>兼容性</figcaption></figure><h2>遇到的问题</h2>
+<p>我建站没几个钱，买 <code>1M</code> 服务器，又贪图速度，想加载快点。之前是静动分离， <code>BBR，CDN，webp自适应</code> 。</p><p>老早看到 <code>CDN</code> 控制台 <code>Gzip</code> 旁边的 <code>Brotli</code> ，但是又不给用 :%(酷安_tiebaemotion76)</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/31/1.png" /><figcaption>如图，永远在升级</figcaption></figure><p>无奈之下，只好各种查资料。查到的都是复制粘贴的水文，不是水文就是特别早的文章，也不怎么适用。</p><p>但大多数都是先 <code>Git clone Brotli</code> 的仓库，然后 <code>git submodule update --init</code> 升级 <code>Brotli</code> 。最后编译安装 <code>Nginx</code> 的时候添加一条编译 <code>Brotli</code> 的语句。</p><p>兼容性方面，感觉还是可以的，毕竟好几年前出的。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/31/4.png" /><figcaption>兼容性</figcaption></figure><h2>遇到的问题</h2>
 <ol>
 <li>前期 <code>Nginx</code> 需要编译安装（宝塔无视即可）。</li>
 <li>国内 <code>Git Clone</code> 速度比较慢，可以改 <code>DNS</code> 跟我一样 <code>20kb/s</code> （海外机器无视即可）</li>
@@ -145,7 +145,7 @@ brotli_types text/plain text/javascript text/css text/xml text/x-component appli
 brotli_static always;
 brotli_window 512k;
 </code></pre>
-<p>看到 <code>content-encoding: br</code> 就代表生效。至于效果怎么样看人。据说它的 <code>Level 1</code> 比 <code>Gzip</code> 的 <code>Level 9</code> 还要牛逼 :%(酷安_emotion1018) 这么编译的好处就是 <code>Brotli</code> 和 <code>Gzip</code> 可以同时运行。</p><figure class="pswp-item" style="flex: 36.72496025437202" ><img loading="lazy" width="924" height="1258" src="https://cdn.elstec.cn/31/2.png" /><figcaption>Final</figcaption></figure><hr />
+<p>看到 <code>content-encoding: br</code> 就代表生效。至于效果怎么样看人。据说它的 <code>Level 1</code> 比 <code>Gzip</code> 的 <code>Level 9</code> 还要牛逼 :%(酷安_emotion1018) 这么编译的好处就是 <code>Brotli</code> 和 <code>Gzip</code> 可以同时运行。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/31/2.png" /><figcaption>Final</figcaption></figure><hr />
 <p>参考：<a href="http://bbs.chenruo.net/thread-20205-1-1.html">http://bbs.chenruo.net/thread-20205-1-1.html</a></p>
             </div>
         </article>

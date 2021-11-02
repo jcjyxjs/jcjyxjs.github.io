@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -112,7 +112,7 @@
             </span>
             <div class="ga-content_body">
                         <div class="notice"><strong>rpmdb报错解决方案如下</strong></div><h4>rpmdb报错参考文章：<a href="https://elstec.cn/archives/fixrpmdb/"><a href="https://elstec.cn/archives/fixrpmdb/">https://elstec.cn/archives/fixrpmdb/</a></a></h4>
-<p>我本来想着国内机器装个BBR玩玩，然后直接找了一键脚本，就像这种</p><figure class="pswp-item" style="flex: 103.63423212192262" ><img loading="lazy" width="1768" height="853" src="https://cdn.elstec.cn/30/1.png" /><figcaption>一键脚本</figcaption></figure><p>然后我选了BBR/BBR魔改版，因为机器就1M带宽反正装啥都一样。安装之后很快就提示我重启，再然后就开不了机了。</p><p>重装之后我就换种方法，用升级内核来开启BBR。</p><p>先升级软件最新</p><div class="highlight"><pre><span></span>yum update -y
+<p>我本来想着国内机器装个BBR玩玩，然后直接找了一键脚本，就像这种</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/30/1.png" /><figcaption>一键脚本</figcaption></figure><p>然后我选了BBR/BBR魔改版，因为机器就1M带宽反正装啥都一样。安装之后很快就提示我重启，再然后就开不了机了。</p><p>重装之后我就换种方法，用升级内核来开启BBR。</p><p>先升级软件最新</p><div class="highlight"><pre><span></span>yum update -y
 </pre></div>
 <p>然后导入 <code>elrepo</code> 软件源的 <code>key</code> 并安装</p><div class="highlight"><pre><span></span>rpm --import https://www.elrepo.org/RPM-GPG-KEY-elrepo.org
 rpm -Uvh https://www.elrepo.org/elrepo-release-7.0-3.el7.elrepo.noarch.rpm

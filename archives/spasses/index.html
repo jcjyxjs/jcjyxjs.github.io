@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -118,9 +118,9 @@
 <p>直译过来大致意思就是：滥用服务及其资源，或使用 jsDelivr 作为通用文件或媒体托管服务，包括:运行图像托管网站并使用 jsDelivr 作为所有上传图像的存储。</p><p>*** 2020年3月30日更新：***</p><p>如果直接使用分支进行访问，例： <code>https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/1.jpg#vwid=2048&amp;vhei=1364</code> 。</p><p><code>master</code> 分支会有缓存，缓存应该是一天更新一次。如果想进行及时更新，可以把 <code>master</code> 直接改成 <code>latest</code> 即可。</p><p>格式如下： <code>https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@latest/1.jpg</code></p><h1>前言</h1>
 <p>GitHub作为全球最大的代码托管平台，众所周知，GitHub又有GitHub Pages这个功能，使得很多静态网站都托管在GitHub上，国内访问速度一直上不去。但是jsDelivr这家CDN支持加速npm，GitHub和WordPress，jsDelivr在国外是CloudFlare节点，国内都是网速的CDN节点，速度还是飞快的，真正的全球高速。</p><h1>注意</h1>
 <p>建议只用作静态文件加速，例如 <code>JS/CSS/Image</code> 。并不适合大文件分发，大文件分发还是移步国内各厂的对象存储。</p><h1>实现</h1>
-<p>首先需要一个GitHub仓库，我就新建一个仓库为例。</p><figure class="pswp-item" style="flex: 57.6278659611993" ><img loading="lazy" width="1307" height="1134" src="https://cdn.elstec.cn/20/1.png" /></figure><p>然后我随便上传一张图片并创建一个 <code>releases</code> 。</p><blockquote>
+<p>首先需要一个GitHub仓库，我就新建一个仓库为例。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/20/1.png" /></figure><p>然后我随便上传一张图片并创建一个 <code>releases</code> 。</p><blockquote>
 <p><strong>创建 <code>releases</code> 这步嫌麻烦可以省略，不是必要的。</strong></p></blockquote>
-<figure class="pswp-item" style="flex: 55.02325581395349" ><img loading="lazy" width="1183" height="1075" src="https://cdn.elstec.cn/20/2.png" /></figure><p>官方的访问方法就是：</p>
+<figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/20/2.png" /></figure><p>官方的访问方法就是：</p>
 <pre><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名或版本号/文件名
 </code></pre>
 <p>例如我在repo根目录下传了一张名为 <code>1.jpg</code> 的图片，那么文件链接就是</p>
@@ -132,10 +132,10 @@
 <p>jsdelivr也可以直接获取仓库目录，格式如下。</p>
 <pre><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名或版本号/
 </code></pre>
-<figure class="pswp-item" style="flex: 110.55304740406321" ><img loading="lazy" width="1959" height="886" src="https://cdn.elstec.cn/20/3.png" /></figure><p>在目录页面选择文件右键复制地址就可以直接拿来用了。</p><h1>演示</h1>
+<figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/20/3.png" /></figure><p>在目录页面选择文件右键复制地址就可以直接拿来用了。</p><h1>演示</h1>
 <figure class="pswp-item" style="flex: 75.0733137829912" ><img loading="lazy" width="2048" height="1364" src="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/1.jpg" /><figcaption>twitter@iiikawa__</figcaption></figure><blockquote>
 <p>图片来源：<a href="https://twitter.com/iiikawa__/status/1150995627003674625"><a href="https://twitter.com/iiikawa__/status/1150995627003674625">https://twitter.com/iiikawa__/status/1150995627003674625</a></a></p></blockquote>
-<p>10M视频下载测速：<a href="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/dl1.mp4">点我</a></p><p>测试结果来自：17ce.com</p><figure class="pswp-item" style="flex: 119.8300283286119" ><img loading="lazy" width="2538" height="1059" src="https://cdn.elstec.cn/20/4.png" /></figure><figure class="pswp-item" style="flex: 119.92445703493863" ><img loading="lazy" width="2540" height="1059" src="https://cdn.elstec.cn/20/5.png" /></figure><p>测试结果来自：站长工具</p><table>
+<p>10M视频下载测速：<a href="https://cdn.jsdelivr.net/gh/jcjyxjs/cdn@master/dl1.mp4">点我</a></p><p>测试结果来自：17ce.com</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/20/4.png" /></figure><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/20/5.png" /></figure><p>测试结果来自：站长工具</p><table>
 <thead>
 <tr>
   <th>线路</th>

@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -117,7 +117,7 @@
 <li>自选IP原理就是国内DNS解析的时候分配最快的IP然后用A记录解析到这个IP上，国外保持不变。</li>
 </ol>
 <figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/16/1.svg" /></figure><h1>实现</h1>
-<p>首先添加域名（我是用的奔牛，用什么其实原理都一样）</p><figure class="pswp-item" style="flex: 119.08212560386474" ><img loading="lazy" width="493" height="207" src="https://cdn.elstec.cn/16/2.png" /></figure><p>然后可以在解析设置看到需要解析的地址，先CNAME解析然后等待SSL签发。默认IP直接ping这条CNAME记录就行。</p><figure class="pswp-item" style="flex: 128.37150127226462" ><img loading="lazy" width="2018" height="786" src="https://cdn.elstec.cn/16/3.png" /></figure><p>SSL签发之后，进入dns解析把CNAME解析删掉，国内根据情况分线路进行解析。境外默认分配IP就行。</p><h1>其他</h1>
+<p>首先添加域名（我是用的奔牛，用什么其实原理都一样）</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/16/2.png" /></figure><p>然后可以在解析设置看到需要解析的地址，先CNAME解析然后等待SSL签发。默认IP直接ping这条CNAME记录就行。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/16/3.png" /></figure><p>SSL签发之后，进入dns解析把CNAME解析删掉，国内根据情况分线路进行解析。境外默认分配IP就行。</p><h1>其他</h1>
 <p>CloudFlare官方公示IP
 <a href="https://www.cloudflare.com/zh-cn/ips/"><a href="https://www.cloudflare.com/zh-cn/ips/">https://www.cloudflare.com/zh-cn/ips/</a></a></p><h3>IPv4</h3>
 <ul>

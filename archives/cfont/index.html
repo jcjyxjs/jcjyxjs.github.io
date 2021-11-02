@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -114,7 +114,7 @@
                         <blockquote>
 <p>建议本文搭配 <em><a href="https://elstec.cn/archives/fwbf/">使用Fontmin生成WebFont压缩字体</a></em> 食用更佳</p></blockquote>
 <p>今天看到主题作者主页大标题用了这个字体，我一想哇还挺好看，也想自己整一个，看了看主题设置并没有更改字体的设置，只有头部标签引用,又回头看了看原页面，注意到了这两行代码，翻遍了他所有的评论知道这个字体叫<strong>方正粗金陵繁体</strong></p><blockquote>
-<div class="photoset"><div class="photos"><figure class="pswp-item" style="flex: 126.34408602150538" ><img loading="lazy" width="235" height="93" src="https://cdn.elstec.cn/font.png" /><figcaption>①</figcaption></figure></div><div class="photos"><figure class="pswp-item" style="flex: 741.6666666666666" ><img loading="lazy" width="890" height="60" src="https://cdn.elstec.cn/branda.png" /><figcaption>②</figcaption></figure></div></div></blockquote>
+<div class="photoset"><div class="photos"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/font.png" /><figcaption>①</figcaption></figure></div><div class="photos"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/branda.png" /><figcaption>②</figcaption></figure></div></div></blockquote>
 <p>于是我从方正官网下到了这个字体的ttf版本，并相应转成了<code>.eot</code>和<code>.woff</code>格式。
 新建一个css，码入以下代码，因为针对<code>class</code>为<code>brand</code>的文字字体替换，所以直接定义</p><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
         <span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;f&#39;</span><span class="o">;</span>
@@ -130,7 +130,7 @@
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;.</span><span class="nc">brand</span><span class="p">{</span><span class="k">font-family</span><span class="p">:</span><span class="s1">&#39;f&#39;</span><span class="p">;</span><span class="k">font-weight</span><span class="p">:</span><span class="kc">normal</span><span class="p">;}&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 </pre></div>
 <p>我直接把字体重命名为f，因为好打。刷新一看，字体没更新，看到不允许跨域访问。
-<figure class="pswp-item" style="flex: 307.4257425742574" ><img loading="lazy" width="621" height="101" src="https://cdn.elstec.cn/er1.png" /><figcaption> ￣﹃￣ </figcaption></figure>
+<figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/er1.png" /><figcaption> ￣﹃￣ </figcaption></figure>
 解决方案如下:
 在<code>nginx</code>配置文件中做如下配置</p>
 <pre><code>    location ~ .*\.(eot|ttf|ttc|otf|eot|woff|woff2|svg)(.*) {

@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -113,9 +113,9 @@
             <div class="ga-content_body">
                         <p>我上一篇文章<a href="https://elstec.cn/archives/cfont.html">(记一次改字体的辛酸史，解决CDN跨域问题)</a>讲的是我改字体的一个过程，用了<code>@font-face</code>的方式，引用了一整个特殊字体，导致网站加载了整个字体文件，访问变慢，所有内容加起来已经有5MB。于是我在找前端如何优化字体加速访问，然而找到的都是<a href="https://github.com/aui/font-spider/blob/master/README-ZH-CN.md">Font-Spider(字蛛)</a>，看了网上各种教程，无一例外全是一模一样的。
 昨天我测试字体的时候用过<a href="https://www.webfont.com/">有字库</a>，有字库就是一个典型的webfont，我就在想有没有跟有字库差不多的webfont引用方式，不直接引用整个字体，而是引用需要用到字，终于，我在GitHub上找到了这个15年的项目<code>Fontmin</code>，我直接下载了他的客户端，<code>Fontmin</code>提供了Mac os &amp; Windows客户端。只需要将ttf原字体拖入客户端，输入需要用到的字，即可一键生成字体和css配置。
-<figure class="pswp-item" style="flex: 74.11971830985915" ><img loading="lazy" width="842" height="568" src="https://cdn.elstec.cn/gif/3.gif" /></figure></p><blockquote>
+<figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/gif/3.gif" /></figure></p><blockquote>
 <p>生成之后，会创建以你原字体名开头的<code>eot，ttf，woff，css</code>文件</p></blockquote>
-<figure class="pswp-item" style="flex: 269.04761904761904" ><img loading="lazy" width="791" height="147" src="https://cdn.elstec.cn/6.png" /></figure>
+<figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/6.png" /></figure>
 由于我源站国内访问并不是很快，我修改了css内容，上传字体到我的腾讯云cos并链接，有两个css，一个是<code>name.css</code>，一个是<code>name-embed.css</code>，以下是我的配置<div class="highlight"><pre><span></span><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
         <span class="nt">font-family</span><span class="o">:</span> <span class="s2">&quot;f&quot;</span><span class="o">;</span>
         <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s2">&quot;cdn.elstec.cn/test/f.eot&quot;</span><span class="o">);</span> <span class="c">/* IE9 */</span>

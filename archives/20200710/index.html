@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/f81722b7c874939aca2632896eb85b33.json"
+            api: "/ef9eb4f799b9ee2dc438e935643017ca.json"
         }
     </script>
     
@@ -112,14 +112,14 @@
             </span>
             <div class="ga-content_body">
                         <h2>前言</h2>
-<p>一开始我是使用阿里云香港轻量，也是 <code>Typecho + VOID</code> 的形式，搭建的博客，那时候的域名是 <code>jcjyxjs.me</code> ，是 <code>Github</code> 学生包里送的。3个月之后发现阿里云香港不走 <code>CN2</code> 了，加上晚上一直检测到无法访问。我就想转到国内，突然就想到还有这么一个备案域名。</p><p>于是我使用 <a href="https://github.com/AlanDecode/Maverick">Maverick</a> 这个程序搭建的静态博客，因为正好这个主题的作者也在推 <code>Maverick</code> ，类似于 <code>Hexo</code> ， <code>Hugo</code> 等。</p><figure class="pswp-item" style="flex: 31.515711645101664" ><img loading="lazy" width="341" height="541" src="https://cdn.elstec.cn/30/2.png" /><figcaption>流程图</figcaption></figure><p>使用腾讯云对象存储（COS）+内容分发网络（CDN）的形式。<code>COS</code> 开启静态网站支持。就这样持续了有个大半年。我突然意识到，
+<p>一开始我是使用阿里云香港轻量，也是 <code>Typecho + VOID</code> 的形式，搭建的博客，那时候的域名是 <code>jcjyxjs.me</code> ，是 <code>Github</code> 学生包里送的。3个月之后发现阿里云香港不走 <code>CN2</code> 了，加上晚上一直检测到无法访问。我就想转到国内，突然就想到还有这么一个备案域名。</p><p>于是我使用 <a href="https://github.com/AlanDecode/Maverick">Maverick</a> 这个程序搭建的静态博客，因为正好这个主题的作者也在推 <code>Maverick</code> ，类似于 <code>Hexo</code> ， <code>Hugo</code> 等。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/30/2.png" /><figcaption>流程图</figcaption></figure><p>使用腾讯云对象存储（COS）+内容分发网络（CDN）的形式。<code>COS</code> 开启静态网站支持。就这样持续了有个大半年。我突然意识到，
 <code>Maverick</code> 主题有点少，而且没有暗黑模式自适应（没说Maverick不好），我又太菜，只会一个暗黑模式自适应。最近就看到腾讯云新用户 <code>1H2G1M 99/年</code>  :%(酷安_doge呵斥)  果断入手。</p><p>7月10号中午入手，装完环境，配置好CDN，我就开冲了。</p><hr />
 <h2>首先</h2>
 <ol>
 <li>我需要把所有文章一篇一篇导入，我不会批量导入，也怕批量导入出现各种错误整的到时候还是要一篇一篇手动导入。</li>
 <li>需要导入 <code>jcjyxjs.me</code> 这个博客的评论，以及使用 <code>Maverick</code> 是在 <code>Leancloud</code> 的评论。这个也只能一条一条导入然后修改信息。</li>
 </ol>
-<p>我当时的数据库备份和根目录备份是很早的，基本没什么文章，还不如重新安装重新弄过。文章一篇一篇复制粘贴然后发布没什么好说的。主要是评论。</p><p>原来的评论，我只能用评论者的 <code>Name，Mail，[Link]</code> 在我新的站里面重新评论，然后进入 <code>MySQL</code> 一条一条改。更要命的是， <code>Leancloud</code> 后台评论时间是具体的 <code>XXXX年XX月XX日 XX:XX</code> 。</p><figure class="pswp-item" style="flex: 141.57187176835575" ><img loading="lazy" width="2738" height="967" src="https://cdn.elstec.cn/30/3.png" /><figcaption>Leancloud</figcaption></figure><p>而 <code>MySQL</code> 是10位时间戳，就是说我得把具体时间转换成时间戳。</p><figure class="pswp-item" style="flex: 23.211314475873543" ><img loading="lazy" width="558" height="1202" src="https://cdn.elstec.cn/30/4.png" /><figcaption>MySQL</figcaption></figure><p>由于是重装的，主题啥的得重新配置。服务器只有1M，又追求速度，只能配置静动分离。（视频，图片，音乐，js，css等）全部托管在COS，减少源站压力，服务器安装 <code>BBR</code> ，并不使用 <code>Redis</code> 等进行缓存，之前看其他博客说会把密码缓存了 :%(酷安_流汗滑稽) 然后就是把一些文章的标题图片全部加回来。</p><hr />
+<p>我当时的数据库备份和根目录备份是很早的，基本没什么文章，还不如重新安装重新弄过。文章一篇一篇复制粘贴然后发布没什么好说的。主要是评论。</p><p>原来的评论，我只能用评论者的 <code>Name，Mail，[Link]</code> 在我新的站里面重新评论，然后进入 <code>MySQL</code> 一条一条改。更要命的是， <code>Leancloud</code> 后台评论时间是具体的 <code>XXXX年XX月XX日 XX:XX</code> 。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/30/3.png" /><figcaption>Leancloud</figcaption></figure><p>而 <code>MySQL</code> 是10位时间戳，就是说我得把具体时间转换成时间戳。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/30/4.png" /><figcaption>MySQL</figcaption></figure><p>由于是重装的，主题啥的得重新配置。服务器只有1M，又追求速度，只能配置静动分离。（视频，图片，音乐，js，css等）全部托管在COS，减少源站压力，服务器安装 <code>BBR</code> ，并不使用 <code>Redis</code> 等进行缓存，之前看其他博客说会把密码缓存了 :%(酷安_流汗滑稽) 然后就是把一些文章的标题图片全部加回来。</p><hr />
 <p>最后，我给主题加了两组表情包，分别是2233娘和酷安（部分） :*(2233_大笑) 如果站点有任何问题也请直接留言告诉我（开启了评论审核），谢谢~ :%(酷安_py交易)</p>
             </div>
         </article>
