@@ -463,6 +463,6 @@ hr:before {
     }
 
     hr:before {
-        color: rgb(210,209,217);
+        color: rgb(210 209 217 / 50%);
     }
 }
