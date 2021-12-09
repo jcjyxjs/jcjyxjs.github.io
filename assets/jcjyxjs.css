@@ -461,4 +461,8 @@ hr:before {
     .v[data-class=v] a:hover {
         color: #d38081;
     }
+
+    hr:before {
+        color: rgb(210,209,217);
+    }
 }
