@@ -54,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/30b6eb359c2f22e649dcd627aa92cfe1.json"
+            api: "/2367bdea5c6186db2299f6c13c0342bd.json"
         }
     </script>
     
@@ -111,7 +111,8 @@
             </span>
             <div class="ga-content_body">
                         <h1>看前须知</h1>
-<p>本文只是我使用<code>Coding Devops+</code>部署博客以及自动<code>Push</code>到<code>GitHub</code>的过程记录，我只用到了<code>repo</code>和<code>ci</code>功能，不需要一模一样，<code>hexo</code>等可以效仿，其他仅作参考，有问题评论留言即可。<strong>（看懂本文需要会一点<code>Git</code>，<code>Linux</code>服务器相关内容）</strong></p><h1>开始</h1>
+<p>本文只是我使用<code>Coding Devops+</code>部署博客以及自动<code>Push</code>到<code>GitHub</code>的过程记录，我只用到了<code>repo</code>和<code>ci</code>功能，不需要一模一样，<code>hexo</code>等可以效仿，其他仅作参考，有问题评论留言即可。<strong>（看懂本文需要会一点<code>Git</code>，<code>Linux</code>服务器相关内容）</strong></p><h3>当前构建状态</h3>
+<p><a href="https://jcjyxjs.coding.net/p/blog/ci/job"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://jcjyxjs.coding.net/badges/blog/job/808073/build.svg" /><figcaption>构建状态</figcaption></figure></a></p><h1>开始</h1>
 <p>实现的最终效果如图。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/42/1.svg" /></figure><p><code>Coding</code>这个实现起来不是很难，我自己用也不需要什么测试，迭代。</p><p>在想要构建的仓库里<code>创建构建计划</code>→<code>自定义构建过程</code>→<code>不使用代码仓库</code>。不适用代码仓库的原因是如果一开始就使用选定的仓库，运行<code>CI</code>会全局覆盖<code>Git</code>信息导致后续无法<code>Push</code>到<code>Github</code>。</p><p>不选代码仓库就没有检出这一步骤，第一步创建<code>执行Shell脚本</code>，内容就是<code>clone</code>托管在<code>Coding</code>的仓库，不使用<code>SSH</code>方式，改成账号密码。除了账号密码以外的部分可以在仓库里找到。</p><div class="highlight"><pre><span></span>git clone https://账号:密码@e.coding.net/用户名/项目名/项目名.git
 </pre></div>
 <p><code>Coding CI</code>的初始目录如下，所有的操作都会在这个目录里进行，需要注意的是：如果有<code>cd</code>操作，<code>cd</code>结束之后会自动回到这个目录，所以所有的步骤都要<code>cd</code>或者直接把内容拖到这个目录。</p><div class="highlight"><pre><span></span>/root/workspace
