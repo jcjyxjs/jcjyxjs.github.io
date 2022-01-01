@@ -28,7 +28,8 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
 	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
-	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
+	<link rel="shortcut icon" href="https://cdn.elstec.cn/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script>
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script>
 	<script data-ad-client="ca-pub-9781903816543246" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
@@ -53,7 +54,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/bb27068622fce917c673374d1d6db1a8.json"
+            api: "/081c006d315c1414d876764f9ca6c1a5.json"
         }
     </script>
     
@@ -120,35 +121,35 @@ sudo systemctl status grafana-server
 tar -xzvf prometheus-2.28.0-rc.0.linux-amd64.tar.gz
 <span class="nb">cd</span> prometheus-2.28.0-rc.0.linux-amd64
 </pre></div>
-<p>编辑<code>prometheus.yml</code>文件，官方默认配置文件如下，默认监控Prometheus自身。</p><div class="highlight"><pre><span></span><span class="c1"># my global config</span>
-<span class="nt">global</span><span class="p">:</span>
-  <span class="nt">scrape_interval</span><span class="p">:</span>     <span class="l l-Scalar l-Scalar-Plain">15s</span> <span class="c1"># Set the scrape interval to every 15 seconds. Default is every 1 minute.</span>
-  <span class="nt">evaluation_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15s</span> <span class="c1"># Evaluate rules every 15 seconds. The default is every 1 minute.</span>
-  <span class="c1"># scrape_timeout is set to the global default (10s).</span>
+<p>编辑<code>prometheus.yml</code>文件，官方默认配置文件如下，默认监控Prometheus自身。</p><div class="highlight"><pre><span></span><span class="c1"># my global config</span><span class="w"></span>
+<span class="nt">global</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">15s</span><span class="w"> </span><span class="c1"># Set the scrape interval to every 15 seconds. Default is every 1 minute.</span><span class="w"></span>
+<span class="w">  </span><span class="nt">evaluation_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span><span class="w"> </span><span class="c1"># Evaluate rules every 15 seconds. The default is every 1 minute.</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># scrape_timeout is set to the global default (10s).</span><span class="w"></span>
 
-<span class="c1"># Alertmanager configuration</span>
-<span class="nt">alerting</span><span class="p">:</span>
-  <span class="nt">alertmanagers</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">static_configs</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span>
-      <span class="c1"># - alertmanager:9093</span>
+<span class="c1"># Alertmanager configuration</span><span class="w"></span>
+<span class="nt">alerting</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="nt">alertmanagers</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">static_configs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"></span>
+<span class="w">      </span><span class="c1"># - alertmanager:9093</span><span class="w"></span>
 
-<span class="c1"># Load rules once and periodically evaluate them according to the global &#39;evaluation_interval&#39;.</span>
-<span class="nt">rule_files</span><span class="p">:</span>
-  <span class="c1"># - &quot;first_rules.yml&quot;</span>
-  <span class="c1"># - &quot;second_rules.yml&quot;</span>
+<span class="c1"># Load rules once and periodically evaluate them according to the global &#39;evaluation_interval&#39;.</span><span class="w"></span>
+<span class="nt">rule_files</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># - &quot;first_rules.yml&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># - &quot;second_rules.yml&quot;</span><span class="w"></span>
 
-<span class="c1"># A scrape configuration containing exactly one endpoint to scrape:</span>
-<span class="c1"># Here it&#39;s Prometheus itself.</span>
-<span class="nt">scrape_configs</span><span class="p">:</span>
-  <span class="c1"># The job name is added as a label `job=` to any timeseries scraped from this config.</span>
-  <span class="p p-Indicator">-</span> <span class="nt">job_name</span><span class="p">:</span> <span class="s">&#39;prometheus&#39;</span>
+<span class="c1"># A scrape configuration containing exactly one endpoint to scrape:</span><span class="w"></span>
+<span class="c1"># Here it&#39;s Prometheus itself.</span><span class="w"></span>
+<span class="nt">scrape_configs</span><span class="p">:</span><span class="w"></span>
+<span class="w">  </span><span class="c1"># The job name is added as a label `job=` to any timeseries scraped from this config.</span><span class="w"></span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;prometheus&#39;</span><span class="w"></span>
 
-    <span class="c1"># metrics_path defaults to &#39;/metrics&#39;</span>
-    <span class="c1"># scheme defaults to &#39;http&#39;.</span>
+<span class="w">    </span><span class="c1"># metrics_path defaults to &#39;/metrics&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="c1"># scheme defaults to &#39;http&#39;.</span><span class="w"></span>
 
-    <span class="nt">static_configs</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;localhost:9090&#39;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;localhost:9090&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
 </pre></div>
 <div class="highlight"><pre><span></span><span class="c1">#全局时间间隔</span>
 scrape_interval: 15s 
@@ -165,9 +166,9 @@ tar -xzvf node_exporter-1.1.2.linux-amd64.tar.gz
 <span class="nb">cd</span> node_exporter-1.1.2.linux-amd64
 ./node_exporter
 </pre></div>
-<p>Prometheus创建job获取node_exporter的数据，<code>job_name</code>可以随便取。修改yml文件一定要严格注意格式（缩进）。</p><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">job_name</span><span class="p">:</span> <span class="s">&#39;exporter&#39;</span>
-    <span class="nt">static_configs</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;localhost:9100&#39;</span><span class="p p-Indicator">]</span>
+<p>Prometheus创建job获取node_exporter的数据，<code>job_name</code>可以随便取。修改yml文件一定要严格注意格式（缩进）。</p><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;exporter&#39;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;localhost:9100&#39;</span><span class="p p-Indicator">]</span><span class="w"></span>
 </pre></div>
 <p>然后重启Prometheus，网页后台可以看到这个job上线了。</p><p>重新回到Grafana网页后台，可以自己创建Dashboard，也可以用现成的。进入官方库：<a href="https://grafana.com/grafana/dashboards"><a href="https://grafana.com/grafana/dashboards">https://grafana.com/grafana/dashboards</a></a></p><p>也可以用这个：<a href="https://grafana.com/grafana/dashboards/8919"><a href="https://grafana.com/grafana/dashboards/8919">https://grafana.com/grafana/dashboards/8919</a></a></p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/37/1.png" /></figure><p>复制数字，回到后台，点左侧加号然后<code>Import</code>，输入数字ID点<code>Load</code>，<code>VictoriaMetrics</code>选择<code>Prometheus</code>，最后<code>Import</code>即可。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/37/2.png" /></figure>
             </div>
