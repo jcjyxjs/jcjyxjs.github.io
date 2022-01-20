@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
     <link rel="stylesheet" href="/assets/katex.min.css">
     <link rel="stylesheet" href="/assets/jcjyxjs.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.elstec.cn/remixicon/fonts/remixicon.css" rel="stylesheet">
         <!-- require APlayer -->
     <link rel="stylesheet" href="https://cdn.elstec.cn/APlayer.min.css">
     <script src="https://cdn.elstec.cn/APlayer.min.js"></script>
@@ -166,13 +166,13 @@
 </ul>
 <figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/12/1.png" /></figure><ul>
 <li><p>复制你仓库的地址比方说我新建的仓库是<code>name.github.io</code>，那么你的仓库地址就是<code>https://github.com/jcjyxjs/name.github.io.git</code>，仓库链接可在仓库页面页面复制到</p></li>
-<li><p>修改博客根目录下的<code>_config.yml</code> 代码第100行。type就git，repo就是上面复制的仓库地址，branch就是仓库分支，默认master。repo和branch需要手动打上去</p><div class="highlight"><pre><span></span><span class="err">deploy</span><span class="p">:</span><span class="w"></span>
+<li><p>修改博客根目录下的<code>_config.yml</code> 代码第100行。type就git，repo就是上面复制的仓库地址，branch就是仓库分支，默认master。repo和branch需要手动打上去</p><div class="highlight"><pre><span></span><span class="err">deploy:</span>
 
-<span class="kc">t</span><span class="err">ype</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;gi</span><span class="kc">t</span><span class="err">&#39;</span><span class="w"></span>
+<span class="err">type:</span> <span class="err">&#39;git&#39;</span>
 
-<span class="err">repo</span><span class="p">:</span><span class="w"> </span><span class="err">h</span><span class="kc">tt</span><span class="err">ps</span><span class="p">:</span><span class="err">//gi</span><span class="kc">t</span><span class="err">hub.com/jcjyxjs/</span><span class="kc">na</span><span class="err">me.gi</span><span class="kc">t</span><span class="err">hub.io.gi</span><span class="kc">t</span><span class="w"></span>
+<span class="err">repo:</span> <span class="err">https://github.com/jcjyxjs/name.github.io.git</span>
 
-<span class="err">bra</span><span class="kc">n</span><span class="err">ch</span><span class="p">:</span><span class="w"> </span><span class="err">mas</span><span class="kc">ter</span><span class="w"></span>
+<span class="err">branch:</span> <span class="err">master</span>
 </pre></div>
 </li>
 <li><p>回到git bash，输入以下两条命令</p><p><code>git config --global user.name &quot;yourname&quot;</code></p><p><code>git config --global user.email &quot;youremail&quot;</code></p></li>

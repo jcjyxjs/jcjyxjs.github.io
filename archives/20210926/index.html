@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
     <link rel="stylesheet" href="/assets/katex.min.css">
     <link rel="stylesheet" href="/assets/jcjyxjs.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.elstec.cn/remixicon/fonts/remixicon.css" rel="stylesheet">
         <!-- require APlayer -->
     <link rel="stylesheet" href="https://cdn.elstec.cn/APlayer.min.css">
     <script src="https://cdn.elstec.cn/APlayer.min.js"></script>
@@ -132,16 +132,16 @@
     <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Title<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdn.jsdelivr.net/npm/echarts@5.2.0/dist/echarts.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#fff</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">@</span><span class="k">media</span><span class="o">(</span><span class="nt">prefers-color-scheme</span><span class="o">:</span><span class="w"> </span><span class="nt">dark</span><span class="o">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">body</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="mh">#000</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+        <span class="nt">body</span> <span class="p">{</span>
+            <span class="k">background</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="p">@</span><span class="k">media</span><span class="o">(</span><span class="nt">prefers-color-scheme</span><span class="o">:</span> <span class="nt">dark</span><span class="o">)</span> <span class="p">{</span>
+            <span class="nt">body</span> <span class="p">{</span>
+                <span class="k">background</span><span class="p">:</span> <span class="mh">#000</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
 <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;main&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;width: 600px;height: 600px;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
@@ -166,9 +166,9 @@
             <span class="nx">radius</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;40%&#39;</span><span class="p">,</span> <span class="s1">&#39;70%&#39;</span><span class="p">],</span>
             <span class="nx">avoidLabelOverlap</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
             <span class="nx">itemStyle</span><span class="o">:</span> <span class="p">{</span>
-                <span class="nx">borderRadius</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
+                <span class="nx">borderRadius</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
                 <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;#fff&#39;</span><span class="p">,</span>
-                <span class="nx">borderWidth</span><span class="o">:</span> <span class="mf">2</span>
+                <span class="nx">borderWidth</span><span class="o">:</span> <span class="mi">2</span>
             <span class="p">},</span>
             <span class="nx">label</span><span class="o">:</span> <span class="p">{</span>
                 <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span><span class="p">,</span>
@@ -185,11 +185,11 @@
                 <span class="nx">show</span><span class="o">:</span> <span class="kc">false</span>
             <span class="p">},</span>
             <span class="nx">data</span><span class="o">:</span> <span class="p">[</span>
-                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">1048</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Search Engine&#39;</span> <span class="p">},</span>
-                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">735</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Direct&#39;</span> <span class="p">},</span>
-                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">580</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Email&#39;</span> <span class="p">},</span>
-                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">484</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Union Ads&#39;</span> <span class="p">},</span>
-                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mf">300</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Video Ads&#39;</span> <span class="p">}</span>
+                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">1048</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Search Engine&#39;</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">735</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Direct&#39;</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">580</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Email&#39;</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">484</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Union Ads&#39;</span> <span class="p">},</span>
+                <span class="p">{</span> <span class="nx">value</span><span class="o">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;Video Ads&#39;</span> <span class="p">}</span>
             <span class="p">]</span>
         <span class="p">}</span>
     <span class="p">]</span>

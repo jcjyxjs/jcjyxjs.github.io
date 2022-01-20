@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
     <link rel="stylesheet" href="/assets/katex.min.css">
     <link rel="stylesheet" href="/assets/jcjyxjs.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.elstec.cn/remixicon/fonts/remixicon.css" rel="stylesheet">
         <!-- require APlayer -->
     <link rel="stylesheet" href="https://cdn.elstec.cn/APlayer.min.css">
     <script src="https://cdn.elstec.cn/APlayer.min.js"></script>
@@ -110,9 +110,9 @@
                 <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                        <p>其实很早就想做一个暗黑模式自适应了，一直没做是因为太菜了实在不会，但最近晚上关灯看自己的站实在是瞎眼睛（哭）。</p><p>其实有很多种方法，原始的方法是准备两套 <code>css</code> ，使用 <code>js</code> 进行替换。</p><p>我使用的就是另外一种比较新的方法。使用媒体查询，检测到用户是深色模式时，自动进行切换。</p><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">media</span><span class="w"> </span><span class="o">(</span><span class="nt">prefers-color-scheme</span><span class="o">:</span><span class="w"> </span><span class="nt">dark</span><span class="o">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+                        <p>其实很早就想做一个暗黑模式自适应了，一直没做是因为太菜了实在不会，但最近晚上关灯看自己的站实在是瞎眼睛（哭）。</p><p>其实有很多种方法，原始的方法是准备两套 <code>css</code> ，使用 <code>js</code> 进行替换。</p><p>我使用的就是另外一种比较新的方法。使用媒体查询，检测到用户是深色模式时，自动进行切换。</p><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">media</span> <span class="o">(</span><span class="nt">prefers-color-scheme</span><span class="o">:</span> <span class="nt">dark</span><span class="o">)</span> <span class="p">{</span>
 
-<span class="p">}</span><span class="w"></span>
+<span class="p">}</span>
 </pre></div>
 <p>只要在这个标签内重写需要覆盖的 <code>css</code> 内容就可以了。 <code>Windows</code> 还需要把浏览器改成深色模式。（我用的是 <code>Edge Canary</code> ）</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/29/1.png" /><figcaption>浏览器</figcaption></figure><p>效果图：</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/29/2.png" /><figcaption>主页</figcaption></figure><p>如果这套暗黑模式有问题的话，希望发现能及时联系我。</p>
             </div>

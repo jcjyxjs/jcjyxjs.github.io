@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
     <link rel="stylesheet" href="/assets/katex.min.css">
     <link rel="stylesheet" href="/assets/jcjyxjs.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.elstec.cn/remixicon/fonts/remixicon.css" rel="stylesheet">
         <!-- require APlayer -->
     <link rel="stylesheet" href="https://cdn.elstec.cn/APlayer.min.css">
     <script src="https://cdn.elstec.cn/APlayer.min.js"></script>
@@ -115,7 +115,7 @@
 </code></pre>
 <p>搜索<code>sina</code>字段。</p><div class="highlight"><pre><span></span><span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">,</span> <span class="nx">t</span><span class="p">,</span> <span class="nx">n</span><span class="p">)</span> <span class="p">{</span>
                     <span class="s2">&quot;use strict&quot;</span><span class="p">;</span>
-                    <span class="nx">t</span><span class="p">.</span><span class="nx">__esModule</span> <span class="o">=</span> <span class="o">!</span><span class="mf">0</span><span class="p">;</span>
+                    <span class="nx">t</span><span class="p">.</span><span class="nx">__esModule</span> <span class="o">=</span> <span class="o">!</span><span class="mi">0</span><span class="p">;</span>
                     <span class="nx">t</span><span class="p">.</span><span class="nx">DEFAULT_EMOJI_CDN</span> <span class="o">=</span> <span class="s2">&quot;//img.t.sinajs.cn/t4/appstyle/expression/ext/normal/&quot;</span><span class="p">,</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">DB_NAME</span> <span class="o">=</span> <span class="s2">&quot;Comment&quot;</span><span class="p">,</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">defaultConfig</span> <span class="o">=</span> <span class="p">{</span>
@@ -127,19 +127,19 @@
                             <span class="nx">meta</span><span class="o">:</span> <span class="p">[</span><span class="s2">&quot;nick&quot;</span><span class="p">,</span> <span class="s2">&quot;mail&quot;</span><span class="p">,</span> <span class="s2">&quot;link&quot;</span><span class="p">],</span>
                             <span class="nx">path</span><span class="o">:</span> <span class="nx">location</span><span class="p">.</span><span class="nx">pathname</span><span class="p">,</span>
                             <span class="nx">placeholder</span><span class="o">:</span> <span class="s2">&quot;Just Go Go&quot;</span><span class="p">,</span>
-                            <span class="nx">pageSize</span><span class="o">:</span> <span class="mf">10</span><span class="p">,</span>
-                            <span class="nx">recordIP</span><span class="o">:</span> <span class="o">!</span><span class="mf">0</span><span class="p">,</span>
+                            <span class="nx">pageSize</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+                            <span class="nx">recordIP</span><span class="o">:</span> <span class="o">!</span><span class="mi">0</span><span class="p">,</span>
                             <span class="nx">serverURLs</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                            <span class="nx">visitor</span><span class="o">:</span> <span class="o">!</span><span class="mf">1</span><span class="p">,</span>
+                            <span class="nx">visitor</span><span class="o">:</span> <span class="o">!</span><span class="mi">1</span><span class="p">,</span>
                             <span class="nx">emojiCDN</span><span class="o">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
-                            <span class="nx">emojiMaps</span><span class="o">:</span> <span class="ow">void</span> <span class="mf">0</span><span class="p">,</span>
-                            <span class="nx">enableQQ</span><span class="o">:</span> <span class="o">!</span><span class="mf">1</span><span class="p">,</span>
+                            <span class="nx">emojiMaps</span><span class="o">:</span> <span class="k">void</span> <span class="mi">0</span><span class="p">,</span>
+                            <span class="nx">enableQQ</span><span class="o">:</span> <span class="o">!</span><span class="mi">1</span><span class="p">,</span>
                             <span class="nx">requiredFields</span><span class="o">:</span> <span class="p">[]</span>
                         <span class="p">},</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">defaultMeta</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;nick&quot;</span><span class="p">,</span> <span class="s2">&quot;mail&quot;</span><span class="p">,</span> <span class="s2">&quot;link&quot;</span><span class="p">],</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">QQCacheKey</span> <span class="o">=</span> <span class="s2">&quot;_v_Cache_Q&quot;</span><span class="p">,</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">MetaCacheKey</span> <span class="o">=</span> <span class="s2">&quot;_v_Cache_Meta&quot;</span><span class="p">,</span>
-                        <span class="nx">t</span><span class="p">.</span><span class="nx">RandomStr</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mf">1e3</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())).</span><span class="nx">toString</span><span class="p">(</span><span class="mf">32</span><span class="p">),</span>
+                        <span class="nx">t</span><span class="p">.</span><span class="nx">RandomStr</span> <span class="o">=</span> <span class="p">(</span><span class="nb">Date</span><span class="p">.</span><span class="nx">now</span><span class="p">()</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">round</span><span class="p">(</span><span class="mi">1</span><span class="nx">e3</span> <span class="o">*</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">())).</span><span class="nx">toString</span><span class="p">(</span><span class="mi">32</span><span class="p">),</span>
                         <span class="nx">t</span><span class="p">.</span><span class="nx">VERSION</span> <span class="o">=</span> <span class="s2">&quot;1.4.14&quot;</span>
                 <span class="p">},</span>
 </pre></div>

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
     <link rel="stylesheet" href="/assets/katex.min.css">
     <link rel="stylesheet" href="/assets/jcjyxjs.css">
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link href="https://cdn.elstec.cn/remixicon/fonts/remixicon.css" rel="stylesheet">
         <!-- require APlayer -->
     <link rel="stylesheet" href="https://cdn.elstec.cn/APlayer.min.css">
     <script src="https://cdn.elstec.cn/APlayer.min.js"></script>
@@ -115,15 +115,15 @@
 <p>今天看到主题作者主页大标题用了这个字体，我一想哇还挺好看，也想自己整一个，看了看主题设置并没有更改字体的设置，只有头部标签引用,又回头看了看原页面，注意到了这两行代码，翻遍了他所有的评论知道这个字体叫<strong>方正粗金陵繁体</strong></p><blockquote>
 <div class="photoset"><div class="photos"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/font.png" /><figcaption>①</figcaption></figure></div><div class="photos"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/branda.png" /><figcaption>②</figcaption></figure></div></div></blockquote>
 <p>于是我从方正官网下到了这个字体的ttf版本，并相应转成了<code>.eot</code>和<code>.woff</code>格式。
-新建一个css，码入以下代码，因为针对<code>class</code>为<code>brand</code>的文字字体替换，所以直接定义</p><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">font-face</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="nt">font-family</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;f&#39;</span><span class="o">;</span><span class="w"></span>
-<span class="w">        </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://cdn.elstec.cn/font/f.eot?#iefix&#39;</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s1">&#39;eot&#39;</span><span class="o">);</span><span class="c">/*IE*/</span><span class="w"></span>
-<span class="w">        </span><span class="nt">src</span><span class="o">:</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://cdn.elstec.cn/font/f.woff&#39;</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s1">&#39;woff&#39;</span><span class="o">),</span><span class="w"> </span><span class="nt">url</span><span class="o">(</span><span class="s1">&#39;f.ttf&#39;</span><span class="o">)</span><span class="w"> </span><span class="nt">format</span><span class="o">(</span><span class="s1">&#39;truetype&#39;</span><span class="o">);</span><span class="c">/*non-IE*/</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+新建一个css，码入以下代码，因为针对<code>class</code>为<code>brand</code>的文字字体替换，所以直接定义</p><div class="highlight"><pre><span></span><span class="p">@</span><span class="k">font-face</span> <span class="p">{</span>
+        <span class="nt">font-family</span><span class="o">:</span> <span class="s1">&#39;f&#39;</span><span class="o">;</span>
+        <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://cdn.elstec.cn/font/f.eot?#iefix&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;eot&#39;</span><span class="o">);</span><span class="c">/*IE*/</span>
+        <span class="nt">src</span><span class="o">:</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;https://cdn.elstec.cn/font/f.woff&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;woff&#39;</span><span class="o">),</span> <span class="nt">url</span><span class="o">(</span><span class="s1">&#39;f.ttf&#39;</span><span class="o">)</span> <span class="nt">format</span><span class="o">(</span><span class="s1">&#39;truetype&#39;</span><span class="o">);</span><span class="c">/*non-IE*/</span>
+        <span class="p">}</span>
 
-<span class="w">        </span><span class="nt">div</span><span class="p">.</span><span class="nc">brand</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="k">font-family</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;f&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+        <span class="nt">div</span><span class="p">.</span><span class="nc">brand</span> <span class="p">{</span>
+            <span class="k">font-family</span><span class="p">:</span> <span class="s1">&#39;f&#39;</span><span class="p">;</span>
+        <span class="p">}</span>
 </pre></div>
 <p>主题设置<code>head</code><strong>标签输出内容</strong></p><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;https://cdn.elstec.cn/zt.css&quot;</span> <span class="p">/&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;.</span><span class="nc">brand</span><span class="p">{</span><span class="k">font-family</span><span class="p">:</span><span class="s1">&#39;f&#39;</span><span class="p">;</span><span class="k">font-weight</span><span class="p">:</span><span class="kc">normal</span><span class="p">;}&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
