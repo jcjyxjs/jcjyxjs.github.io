@@ -58,18 +58,18 @@
         }
     </script>
     
-<title>解决  git push Permission denied - 毫无作为</title>
+<title>爱快多拨+负载均衡叠加带宽 - 毫无作为</title>
 <meta name="author" content="jcjyxjs" />
-<meta name="description" content="前言" />
-<meta property="og:title" content="解决  git push Permission denied - 毫无作为" />
-<meta property="og:description" content="前言" />
+<meta name="description" content="一直想买一台低功耗小主机做软路由，前几天刚好看到淘宝有卖便宜双网口j1900小主机，看样子和成色应该是整机二手，不过看着还行，叫卖家给我装了爱快，插电直接用也省的我装。先找来笔记本换默认网关IP，换了个192.168.192.1。然后设置WAN口，爱快PPPoE拨号，接入方式选择基于物理网卡的混合模式，拨号选ADSL/PPPoE。主要是多拨设置，打开多播助手，多拨并发数一般2或3，再多拨不出（因地区而异）。最重要的是需要开启掉线并重拨，检测周期全选，检测时间凌晨2-6点，因为白天多拨大概率失败，凌晨成功概率比较高，掉线检测间隔时间和掉线数量随便。当然如果运营商在上游进行限制，那是无法多拨的。然后新建两条PPPoE，名称只能adsl打头，账号密码一样，其他默认。多拨最后来到流控分流-分流设置-多线负载。新建设置，负载模式选择（可以二选一），其他设置需具体测试，一般这两种是比较稳定的：" />
+<meta property="og:title" content="爱快多拨+负载均衡叠加带宽 - 毫无作为" />
+<meta property="og:description" content="一直想买一台低功耗小主机做软路由，前几天刚好看到淘宝有卖便宜双网口j1900小主机，看样子和成色应该是整机二手，不过看着还行，叫卖家给我装了爱快，插电直接用也省的我装。先找来笔记本换默认网关IP，换了个192.168.192.1。然后设置WAN口，爱快PPPoE拨号，接入方式选择基于物理网卡的混合模式，拨号选ADSL/PPPoE。主要是多拨设置，打开多播助手，多拨并发数一般2或3，再多拨不出（因地区而异）。最重要的是需要开启掉线并重拨，检测周期全选，检测时间凌晨2-6点，因为白天多拨大概率失败，凌晨成功概率比较高，掉线检测间隔时间和掉线数量随便。当然如果运营商在上游进行限制，那是无法多拨的。然后新建两条PPPoE，名称只能adsl打头，账号密码一样，其他默认。多拨最后来到流控分流-分流设置-多线负载。新建设置，负载模式选择（可以二选一），其他设置需具体测试，一般这两种是比较稳定的：" />
 <meta property="og:site_name" content="毫无作为" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/20200330/" />
+<meta property="og:url" content="/archives/20220123/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-03-30T23:50:00+08.00" />
-<meta name="twitter:title" content="解决  git push Permission denied - 毫无作为" />
-<meta name="twitter:description" content="前言" />
+<meta property="article:published_time" content="2022-01-23T01:00:00+08.00" />
+<meta name="twitter:title" content="爱快多拨+负载均衡叠加带宽 - 毫无作为" />
+<meta name="twitter:description" content="一直想买一台低功耗小主机做软路由，前几天刚好看到淘宝有卖便宜双网口j1900小主机，看样子和成色应该是整机二手，不过看着还行，叫卖家给我装了爱快，插电直接用也省的我装。先找来笔记本换默认网关IP，换了个192.168.192.1。然后设置WAN口，爱快PPPoE拨号，接入方式选择基于物理网卡的混合模式，拨号选ADSL/PPPoE。主要是多拨设置，打开多播助手，多拨并发数一般2或3，再多拨不出（因地区而异）。最重要的是需要开启掉线并重拨，检测周期全选，检测时间凌晨2-6点，因为白天多拨大概率失败，凌晨成功概率比较高，掉线检测间隔时间和掉线数量随便。当然如果运营商在上游进行限制，那是无法多拨的。然后新建两条PPPoE，名称只能adsl打头，账号密码一样，其他默认。多拨最后来到流控分流-分流设置-多线负载。新建设置，负载模式选择（可以二选一），其他设置需具体测试，一般这两种是比较稳定的：" />
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:image" content="" />
 
@@ -102,43 +102,19 @@
 <main>    
     <section class="ga-section ga-content">
         <article class="yue">
-            <h1 class="ga-post_title">解决  git push Permission denied</h1>
+            <h1 class="ga-post_title">爱快多拨+负载均衡叠加带宽</h1>
             <span class="ga-post_meta ga-mono">
                 <time>
-                    2020-03-30
+                    2022-01-23
                 </time>
                 <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                        <h1>前言</h1>
-<p>我重装了系统啥都没了hhhh，然后今天提交的时候报错。</p><div class="highlight"><pre><span></span>$ git push
-git@github.com: Permission denied <span class="o">(</span>publickey<span class="o">)</span>.
-fatal: Could not <span class="nb">read</span> from remote repository.
-
-Please make sure you have the correct access rights
-and the repository exists.
-</pre></div>
-<h1>解决方法</h1>
-<p>我是在 <code>Windows10</code> 下用 <code>Git Bash</code> 操作的其他平台也差不多。</p><p>重新生成 <code>SSH Key</code>。</p><div class="highlight"><pre><span></span>$ ssh-keygen -t rsa -C GitHub绑定的邮箱
-</pre></div>
-<div class="highlight"><pre><span></span>$ ssh-keygen -t rsa -C GitHub绑定的邮箱
-Generating public/private rsa key pair.
-Enter file in which to save the key <span class="o">(</span>/c/Users/用户名/.ssh/id_rsa<span class="o">)</span>:
-Enter passphrase <span class="o">(</span>empty <span class="k">for</span> no passphrase<span class="o">)</span>:
-Enter same passphrase again:
-Your identification has been saved in /c/Users/用户名/.ssh/id_rsa
-Your public key has been saved in /c/Users/用户名/.ssh/id_rsa.pub
-The key fingerprint is:
-SHA256:KI0NCK6lOpAvHOT9RPtpobmj3/08V4i+Bbg756Zh8+Q GitHub绑定的邮箱
-The key<span class="err">&#39;</span>s randomart image is:
-+---<span class="o">[</span>RSA <span class="m">3072</span><span class="o">]</span>----+
-...
-+----<span class="o">[</span>SHA256<span class="o">]</span>-----+
-</pre></div>
-<p>然后找到这个位置，编辑这个文件，全选然后复制。</p>
-<pre><code>/c/Users/用户名/.ssh/id_rsa.pub
-</code></pre>
-<p>然后打开 <a href="https://github.com/settings/keys"><a href="https://github.com/settings/keys">https://github.com/settings/keys</a></a></p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/23/1.png" /></figure><p>点 <code>New SSH key</code> ，把刚刚 <code>id_rsa.pub</code> 这个文件的内容粘贴进来，保存即可。</p>
+                        <p>一直想买一台低功耗小主机做软路由，前几天刚好看到淘宝有卖便宜双网口<code>j1900</code>小主机，看样子和成色应该是整机二手，不过看着还行，叫卖家给我装了爱快，插电直接用也省的我装。</p><p>先找来笔记本换<code>默认网关IP</code>，换了个<code>192.168.192.1</code>。</p><p>然后设置<code>WAN</code>口，爱快<code>PPPoE</code>拨号，接入方式选择<code>基于物理网卡的混合模式</code>，拨号选<code>ADSL/PPPoE</code>。</p><p>主要是多拨设置，打开多播助手，多拨并发数一般2或3，再多拨不出（因地区而异）。最重要的是需要开启<strong>掉线并重拨</strong>，检测周期全选，检测时间凌晨<code>2-6</code>点，因为白天多拨大概率失败，凌晨成功概率比较高，掉线检测间隔时间和掉线数量随便。</p><p>当然如果运营商在上游进行限制，那是无法多拨的。</p><p>然后新建两条<code>PPPoE</code>，名称只能<code>adsl</code>打头，账号密码一样，其他默认。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/48/1.png" /><figcaption>多拨</figcaption></figure><p>最后来到<code>流控分流-分流设置-多线负载</code>。</p><p>新建设置，负载模式选择（可以二选一），其他设置需具体测试，一般这两种是比较稳定的：</p><ol>
+<li>新建连接数</li>
+<li>源IP+目的IP+目的端口</li>
+</ol>
+<p>由于是单线多拨，运营商是同一个，所以全部。</p><p>我是双拨，所以只有两条线路，负载比例全部<code>1</code>能叠加带宽，但我貌似只能叠加下行 🤬 上行要是叠加的话我公网看家里的影片也快一点了hhhh</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/48/2.png" /><figcaption>负载均衡</figcaption></figure>
             </div>
         </article>
         
@@ -148,7 +124,7 @@ The key<span class="err">&#39;</span>s randomart image is:
 <section id="ga-content_pager">
 
     <div class="prev">
-        <a class="ga-highlight" href="/archives/qikuai/">群晖安装ikuai（爱快）软路由</a>
+        <a class="ga-highlight" href="/archives/review2021/">贰零贰壹</a>
     </div>
 
 </section>
