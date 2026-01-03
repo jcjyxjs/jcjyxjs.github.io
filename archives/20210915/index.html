@@ -32,29 +32,17 @@
     <link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script>
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script>
-	<script data-ad-client="ca-pub-9781903816543246" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
+        <script>
         console.log('\n' + ' %c Elstec By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');
 	</script>
 	<script>
 	var XrYt1 = XrYt1 || [];	(function() {	  var u2 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74"]("\x73\x63\x72\x69\x70\x74");	  u2["\x73\x72\x63"] = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x68\x6d\x2e\x62\x61\x69\x64\x75\x2e\x63\x6f\x6d\x2f\x68\x6d\x2e\x6a\x73\x3f\x64\x34\x34\x36\x36\x64\x63\x39\x38\x30\x66\x36\x64\x65\x30\x61\x30\x38\x34\x33\x64\x34\x35\x66\x34\x36\x37\x36\x39\x35\x63\x34";	  var w_VTclmj3 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x73\x42\x79\x54\x61\x67\x4e\x61\x6d\x65"]("\x73\x63\x72\x69\x70\x74")[0]; 	  w_VTclmj3["\x70\x61\x72\x65\x6e\x74\x4e\x6f\x64\x65"]["\x69\x6e\x73\x65\x72\x74\x42\x65\x66\x6f\x72\x65"](u2, w_VTclmj3);	})();
 	</script>
-	<script>
-	(function(){
-	var el = document.createElement("script");
-	el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?5bc9506fe8c153ad91abc604f1a9e4e49ad7b3d2b595a7161b0561b7ad19d86e0933b63409a51e721c4b12a69a2568afc3d5f516090be79a37739b24b0caeecf";
-	el.id = "ttzz";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(el, s);
-	})(window)
-	</script>
-	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-	<script>LA.init({id: "JJNPePzoBCdUIbEU",ck: "JJNPePzoBCdUIbEU"})</script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&amp;display=swap" rel="stylesheet">
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4e1fb68a2985ff4521c329ec3cff41bb.json"
+            api: "/2809b9cce5a5bbe257e95b0ccbead1ae.json"
         }
     </script>
     
@@ -113,7 +101,7 @@
                         <h1>看前须知</h1>
 <p>本文只是我使用<code>Coding Devops+</code>部署博客以及自动<code>Push</code>到<code>GitHub</code>的过程记录，我只用到了<code>repo</code>和<code>ci</code>功能，不需要一模一样，<code>hexo</code>等可以效仿，其他仅作参考，有问题评论留言即可。<strong>（看懂本文需要会一点<code>Git</code>，<code>Linux</code>服务器相关内容）</strong></p><h3>当前构建状态</h3>
 <p><a href="https://jcjyxjs.coding.net/p/blog/ci/job"><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://jcjyxjs.coding.net/badges/blog/job/808073/build.svg" /><figcaption>构建状态</figcaption></figure></a></p><h1>开始</h1>
-<p>实现的最终效果如图。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/42/1.svg" /></figure><p><code>Coding</code>这个实现起来不是很难，我自己用也不需要什么测试，迭代。</p><p>在想要构建的仓库里<code>创建构建计划</code>→<code>自定义构建过程</code>→<code>不使用代码仓库</code>。不适用代码仓库的原因是如果一开始就使用选定的仓库，运行<code>CI</code>会全局覆盖<code>Git</code>信息导致后续无法<code>Push</code>到<code>Github</code>。</p><p>不选代码仓库就没有检出这一步骤，第一步创建<code>执行Shell脚本</code>，内容就是<code>clone</code>托管在<code>Coding</code>的仓库，不使用<code>SSH</code>方式，改成账号密码。除了账号密码以外的部分可以在仓库里找到。</p><div class="highlight"><pre><span></span>git clone https://账号:密码@e.coding.net/用户名/项目名/项目名.git
+<p>实现的最终效果如图。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/42/1.svg" /></figure><p><code>Coding</code>这个实现起来不是很难，我自己用也不需要什么测试，迭代。</p><p>在想要构建的仓库里<code>创建构建计划</code>→<code>自定义构建过程</code>→<code>不使用代码仓库</code>。不适用代码仓库的原因是如果一开始就使用选定的仓库，运行<code>CI</code>会全局覆盖<code>Git</code>信息导致后续无法<code>Push</code>到<code>Github</code>。</p><p>不选代码仓库就没有检出这一步骤，第一步创建<code>执行Shell脚本</code>，内容就是<code>clone</code>托管在<code>Coding</code>的仓库，不使用<code>SSH</code>方式，改成账号密码。除了账号密码以外的部分可以在仓库里找到。</p><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://账号:密码@e.coding.net/用户名/项目名/项目名.git
 </pre></div>
 <p><code>Coding CI</code>的初始目录如下，所有的操作都会在这个目录里进行，需要注意的是：如果有<code>cd</code>操作，<code>cd</code>结束之后会自动回到这个目录，所以所有的步骤都要<code>cd</code>或者直接把内容拖到这个目录。</p><div class="highlight"><pre><span></span>/root/workspace
 </pre></div>
@@ -123,45 +111,45 @@
 <p>所有<code>Git</code>的操作就跟在本地一样，唯一的区别就是<code>CI</code>的服务器<code>Push</code>到<code>Github</code>很快hhh，格式如下，最后分支那里不用加<code>HEAD</code>。</p>
 <pre><code>git push https://token@github.com/用户名/项目名.git branch
 </code></pre>
-<p>整仓<code>Push</code>到我的<code>Github</code>之后，开始构建并生成我的静态内容。我的博客和<code>GitHub Pages</code>是两个仓库所以我最终会提交两次，博客那个仓库主要做个备份。</p><p>我的博客用的<code>Maverick</code>，所以需要用到<code>Python</code>，版本只要大于3.6就可以，<code>CI</code>默认就有环境<code>SDK</code>内置。具体看官方文档。没有想要的环境或版本可以用自定义<code>docker</code>。</p><p><a href="https://help.coding.net/docs/ci/node/env.html"><a href="https://help.coding.net/docs/ci/node/env.html">https://help.coding.net/docs/ci/node/env.html</a></a></p><p>查看文档可以看到和<code>Python</code>有关的环境有：<code>python3/pip3: 3.9、3.8、3.7</code>。</p><p>首先我更新默认的<code>pip</code>版本，其实这个无所谓。</p><div class="highlight"><pre><span></span>python3.9 -m pip install --upgrade pip
+<p>整仓<code>Push</code>到我的<code>Github</code>之后，开始构建并生成我的静态内容。我的博客和<code>GitHub Pages</code>是两个仓库所以我最终会提交两次，博客那个仓库主要做个备份。</p><p>我的博客用的<code>Maverick</code>，所以需要用到<code>Python</code>，版本只要大于3.6就可以，<code>CI</code>默认就有环境<code>SDK</code>内置。具体看官方文档。没有想要的环境或版本可以用自定义<code>docker</code>。</p><p><a href="https://help.coding.net/docs/ci/node/env.html"><a href="https://help.coding.net/docs/ci/node/env.html">https://help.coding.net/docs/ci/node/env.html</a></a></p><p>查看文档可以看到和<code>Python</code>有关的环境有：<code>python3/pip3: 3.9、3.8、3.7</code>。</p><p>首先我更新默认的<code>pip</code>版本，其实这个无所谓。</p><div class="highlight"><pre><span></span>python3.9<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>--upgrade<span class="w"> </span>pip
 </pre></div>
-<p>然后就是安装依赖</p><div class="highlight"><pre><span></span>pip3.9 install -r requirements.txt
+<p>然后就是安装依赖</p><div class="highlight"><pre><span></span>pip3.9<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
 </pre></div>
-<p>最后生成</p><div class="highlight"><pre><span></span>python3.9 mvrk.py --config ./demo_src/config.py --source_dir ./demo_src/ --build_dir ./dist/
+<p>最后生成</p><div class="highlight"><pre><span></span>python3.9<span class="w"> </span>mvrk.py<span class="w"> </span>--config<span class="w"> </span>./demo_src/config.py<span class="w"> </span>--source_dir<span class="w"> </span>./demo_src/<span class="w"> </span>--build_dir<span class="w"> </span>./dist/
 </pre></div>
 <p>部署完成之后我需要推送到我的服务器，创建<code>执行 Pipeline 脚本</code>，可以用私钥也可以用账号密码，具体参考官方文档：<a href="https://help.coding.net/docs/ci/deploy/ssh.html"><a href="https://help.coding.net/docs/ci/deploy/ssh.html">https://help.coding.net/docs/ci/deploy/ssh.html</a></a></p><p>如果是图形化编辑器，复制从<code>def</code>开始的内容即可，文本编辑器参考文档。填写好<code>IP</code>，端口等之后，可以看到<code>credentialsId</code>，凭据ID可以在当前项目页面左下角找到项目设置，开发者选项，就有凭据选项。新建凭据，可以用私钥也可以设置账号密码。添加完成后把凭据ID替换到<code>执行的Pipeline脚本</code>内。</p>
 <pre><code>https://jcjyxjs.coding.net/p/项目名称/setting/connection?page=1
 </code></pre>
-<p>成功连接服务器之后，就等于直接操作服务器，首先我需要把生成的内容传输到我的服务器上，<code>form</code>就是<code>CI</code>目录，<code>into</code>就是我服务器目录。然后就是替换操作了。</p><div class="highlight"><pre><span></span><span class="n">sshPut</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">from:</span> <span class="s1">&#39;/root/workspace&#39;</span><span class="o">,</span> <span class="nl">into:</span> <span class="s1">&#39;/xxxxxxxx/&#39;</span>
+<p>成功连接服务器之后，就等于直接操作服务器，首先我需要把生成的内容传输到我的服务器上，<code>form</code>就是<code>CI</code>目录，<code>into</code>就是我服务器目录。然后就是替换操作了。</p><div class="highlight"><pre><span></span><span class="n">sshPut</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">from:</span><span class="w"> </span><span class="s1">&#39;/root/workspace&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">into:</span><span class="w"> </span><span class="s1">&#39;/xxxxxxxx/&#39;</span>
 </pre></div>
-<div class="highlight"><pre><span></span><span class="kt">def</span> <span class="n">remote</span> <span class="o">=</span> <span class="o">[:]</span>
-          <span class="n">remote</span><span class="o">.</span><span class="na">name</span> <span class="o">=</span> <span class="s1">&#39;名字随便&#39;</span>
-          <span class="n">remote</span><span class="o">.</span><span class="na">allowAnyHosts</span> <span class="o">=</span> <span class="kc">true</span>
-          <span class="n">remote</span><span class="o">.</span><span class="na">host</span> <span class="o">=</span> <span class="s1">&#39;服务器IP&#39;</span>
-          <span class="n">remote</span><span class="o">.</span><span class="na">port</span> <span class="o">=</span> <span class="n">SSH端口</span>
-          <span class="n">remote</span><span class="o">.</span><span class="na">user</span> <span class="o">=</span> <span class="s1">&#39;用户&#39;</span>
+<div class="highlight"><pre><span></span><span class="kt">def</span><span class="w"> </span><span class="n">remote</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[:]</span>
+<span class="w">          </span><span class="n">remote</span><span class="o">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;名字随便&#39;</span>
+<span class="w">          </span><span class="n">remote</span><span class="o">.</span><span class="na">allowAnyHosts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">          </span><span class="n">remote</span><span class="o">.</span><span class="na">host</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;服务器IP&#39;</span>
+<span class="w">          </span><span class="n">remote</span><span class="o">.</span><span class="na">port</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">SSH端口</span>
+<span class="w">          </span><span class="n">remote</span><span class="o">.</span><span class="na">user</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;用户&#39;</span>
 
-          <span class="c1">// 把「CODING 凭据管理」中的「凭据 ID」填入 credentialsId，而 id_rsa 无需修改</span>
-          <span class="n">withCredentials</span><span class="o">([</span><span class="n">sshUserPrivateKey</span><span class="o">(</span><span class="nl">credentialsId:</span> <span class="s2">&quot;xxxxxxxxxxxxx&quot;</span><span class="o">,</span> <span class="nl">keyFileVariable:</span> <span class="s1">&#39;id_rsa&#39;</span><span class="o">)])</span> <span class="o">{</span>
-            <span class="n">remote</span><span class="o">.</span><span class="na">identityFile</span> <span class="o">=</span> <span class="n">id_rsa</span>
+<span class="w">          </span><span class="c1">// 把「CODING 凭据管理」中的「凭据 ID」填入 credentialsId，而 id_rsa 无需修改</span>
+<span class="w">          </span><span class="n">withCredentials</span><span class="o">([</span><span class="n">sshUserPrivateKey</span><span class="o">(</span><span class="nl">credentialsId:</span><span class="w"> </span><span class="s2">&quot;xxxxxxxxxxxxx&quot;</span><span class="o">,</span><span class="w"> </span><span class="nl">keyFileVariable:</span><span class="w"> </span><span class="s1">&#39;id_rsa&#39;</span><span class="o">)])</span><span class="w"> </span><span class="o">{</span>
+<span class="w">            </span><span class="n">remote</span><span class="o">.</span><span class="na">identityFile</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id_rsa</span>
 
-            <span class="c1">// SSH 上传文件到远端服务器</span>
-            <span class="n">sshPut</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">from:</span> <span class="s1">&#39;/tmp/tmp.tar.gz&#39;</span><span class="o">,</span> <span class="nl">into:</span> <span class="s1">&#39;/tmp/&#39;</span>
-            <span class="c1">// 解压缩</span>
-            <span class="n">sshCommand</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">command:</span> <span class="s2">&quot;tar -zxf /tmp/tmp.tar.gz -C /tmp/&quot;</span>
-            <span class="n">sshCommand</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">sudo:</span> <span class="kc">true</span><span class="o">,</span> <span class="nl">command:</span> <span class="s2">&quot;mkdir -p /var/www/example-site&quot;</span>
-            <span class="n">sshCommand</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">sudo:</span> <span class="kc">true</span><span class="o">,</span> <span class="nl">command:</span> <span class="s2">&quot;cp -R /tmp/site/* /var/www/example-site/&quot;</span>
-            <span class="n">sshCommand</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">sudo:</span> <span class="kc">true</span><span class="o">,</span> <span class="nl">command:</span> <span class="s2">&quot;cp -R /tmp/apache2/ /etc/&quot;</span>
-            <span class="c1">// 重启 apache2</span>
-            <span class="n">sshCommand</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">sudo:</span> <span class="kc">true</span><span class="o">,</span> <span class="nl">command:</span> <span class="s2">&quot;a2ensite example.com&quot;</span>
-            <span class="n">sshCommand</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">sudo:</span> <span class="kc">true</span><span class="o">,</span> <span class="nl">command:</span> <span class="s2">&quot;a2enmod headers rewrite ssl&quot;</span>
-            <span class="n">sshCommand</span> <span class="nl">remote:</span> <span class="n">remote</span><span class="o">,</span> <span class="nl">sudo:</span> <span class="kc">true</span><span class="o">,</span> <span class="nl">command:</span> <span class="s2">&quot;systemctl reload apache2&quot;</span>
-          <span class="o">}</span>
+<span class="w">            </span><span class="c1">// SSH 上传文件到远端服务器</span>
+<span class="w">            </span><span class="n">sshPut</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">from:</span><span class="w"> </span><span class="s1">&#39;/tmp/tmp.tar.gz&#39;</span><span class="o">,</span><span class="w"> </span><span class="nl">into:</span><span class="w"> </span><span class="s1">&#39;/tmp/&#39;</span>
+<span class="w">            </span><span class="c1">// 解压缩</span>
+<span class="w">            </span><span class="n">sshCommand</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">command:</span><span class="w"> </span><span class="s2">&quot;tar -zxf /tmp/tmp.tar.gz -C /tmp/&quot;</span>
+<span class="w">            </span><span class="n">sshCommand</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">sudo:</span><span class="w"> </span><span class="kc">true</span><span class="o">,</span><span class="w"> </span><span class="nl">command:</span><span class="w"> </span><span class="s2">&quot;mkdir -p /var/www/example-site&quot;</span>
+<span class="w">            </span><span class="n">sshCommand</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">sudo:</span><span class="w"> </span><span class="kc">true</span><span class="o">,</span><span class="w"> </span><span class="nl">command:</span><span class="w"> </span><span class="s2">&quot;cp -R /tmp/site/* /var/www/example-site/&quot;</span>
+<span class="w">            </span><span class="n">sshCommand</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">sudo:</span><span class="w"> </span><span class="kc">true</span><span class="o">,</span><span class="w"> </span><span class="nl">command:</span><span class="w"> </span><span class="s2">&quot;cp -R /tmp/apache2/ /etc/&quot;</span>
+<span class="w">            </span><span class="c1">// 重启 apache2</span>
+<span class="w">            </span><span class="n">sshCommand</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">sudo:</span><span class="w"> </span><span class="kc">true</span><span class="o">,</span><span class="w"> </span><span class="nl">command:</span><span class="w"> </span><span class="s2">&quot;a2ensite example.com&quot;</span>
+<span class="w">            </span><span class="n">sshCommand</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">sudo:</span><span class="w"> </span><span class="kc">true</span><span class="o">,</span><span class="w"> </span><span class="nl">command:</span><span class="w"> </span><span class="s2">&quot;a2enmod headers rewrite ssl&quot;</span>
+<span class="w">            </span><span class="n">sshCommand</span><span class="w"> </span><span class="nl">remote:</span><span class="w"> </span><span class="n">remote</span><span class="o">,</span><span class="w"> </span><span class="nl">sudo:</span><span class="w"> </span><span class="kc">true</span><span class="o">,</span><span class="w"> </span><span class="nl">command:</span><span class="w"> </span><span class="s2">&quot;systemctl reload apache2&quot;</span>
+<span class="w">          </span><span class="o">}</span>
 </pre></div>
-<p>最后回到<code>CI</code>，还是创建<code>Shell命令</code>，我也不会其他方法，只能先删不需要的然后把<code>dist</code>目录内的东西移动到工作目录，然后<code>clone</code>在<code>GitHub</code>的仓库，把<code>.git</code>移动到工作目录，删除<code>clone</code>的产物，最后<code>git push</code>，<code>git init</code>然后添加远程仓库就是<code>push</code>不上去也不知道什么原因，我只能先这样。其他东西参考上文。</p><p>在每个步骤的最后我都添加了一步，推送消息到企业微信，这还挺方便的，执行到哪里了也都知道。</p><p>这个<code>CI</code>没有用代码仓库所以不会检测<code>repo</code>然后触发自动构建，所以在触发规则中，选择<code>API</code>触发，可以直接生成<code>CURL</code>触发命令，项目令牌和密码也可以一键生成，时间可以自定义。然后复制这个触发命令。</p><div class="highlight"><pre><span></span>curl -u &lt;项目令牌用户名&gt;:&lt;项目令牌密码&gt; <span class="se">\</span>
-   -v -X POST  <span class="s1">&#39;自己的CI点生成可以看到&#39;</span> <span class="se">\</span>
-   -H <span class="s1">&#39;Content-Type: application/json&#39;</span> <span class="se">\</span>
-   -d <span class="s1">&#39;</span>
+<p>最后回到<code>CI</code>，还是创建<code>Shell命令</code>，我也不会其他方法，只能先删不需要的然后把<code>dist</code>目录内的东西移动到工作目录，然后<code>clone</code>在<code>GitHub</code>的仓库，把<code>.git</code>移动到工作目录，删除<code>clone</code>的产物，最后<code>git push</code>，<code>git init</code>然后添加远程仓库就是<code>push</code>不上去也不知道什么原因，我只能先这样。其他东西参考上文。</p><p>在每个步骤的最后我都添加了一步，推送消息到企业微信，这还挺方便的，执行到哪里了也都知道。</p><p>这个<code>CI</code>没有用代码仓库所以不会检测<code>repo</code>然后触发自动构建，所以在触发规则中，选择<code>API</code>触发，可以直接生成<code>CURL</code>触发命令，项目令牌和密码也可以一键生成，时间可以自定义。然后复制这个触发命令。</p><div class="highlight"><pre><span></span>curl<span class="w"> </span>-u<span class="w"> </span>&lt;项目令牌用户名&gt;:&lt;项目令牌密码&gt;<span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-v<span class="w"> </span>-X<span class="w"> </span>POST<span class="w">  </span><span class="s1">&#39;自己的CI点生成可以看到&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-H<span class="w"> </span><span class="s1">&#39;Content-Type: application/json&#39;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">   </span>-d<span class="w"> </span><span class="s1">&#39;</span>
 <span class="s1">    {</span>
 <span class="s1">    &quot;ref&quot;: &quot;master&quot;,</span>
 <span class="s1">    &quot;envs&quot;: []</span>

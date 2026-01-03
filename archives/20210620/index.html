@@ -32,29 +32,17 @@
     <link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script>
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script>
-	<script data-ad-client="ca-pub-9781903816543246" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
+        <script>
         console.log('\n' + ' %c Elstec By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');
 	</script>
 	<script>
 	var XrYt1 = XrYt1 || [];	(function() {	  var u2 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74"]("\x73\x63\x72\x69\x70\x74");	  u2["\x73\x72\x63"] = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x68\x6d\x2e\x62\x61\x69\x64\x75\x2e\x63\x6f\x6d\x2f\x68\x6d\x2e\x6a\x73\x3f\x64\x34\x34\x36\x36\x64\x63\x39\x38\x30\x66\x36\x64\x65\x30\x61\x30\x38\x34\x33\x64\x34\x35\x66\x34\x36\x37\x36\x39\x35\x63\x34";	  var w_VTclmj3 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x73\x42\x79\x54\x61\x67\x4e\x61\x6d\x65"]("\x73\x63\x72\x69\x70\x74")[0]; 	  w_VTclmj3["\x70\x61\x72\x65\x6e\x74\x4e\x6f\x64\x65"]["\x69\x6e\x73\x65\x72\x74\x42\x65\x66\x6f\x72\x65"](u2, w_VTclmj3);	})();
 	</script>
-	<script>
-	(function(){
-	var el = document.createElement("script");
-	el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?5bc9506fe8c153ad91abc604f1a9e4e49ad7b3d2b595a7161b0561b7ad19d86e0933b63409a51e721c4b12a69a2568afc3d5f516090be79a37739b24b0caeecf";
-	el.id = "ttzz";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(el, s);
-	})(window)
-	</script>
-	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-	<script>LA.init({id: "JJNPePzoBCdUIbEU",ck: "JJNPePzoBCdUIbEU"})</script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&amp;display=swap" rel="stylesheet">
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4e1fb68a2985ff4521c329ec3cff41bb.json"
+            api: "/2809b9cce5a5bbe257e95b0ccbead1ae.json"
         }
     </script>
     
@@ -110,65 +98,65 @@
                 <span class="mid">jcjyxjs</span>
             </span>
             <div class="ga-content_body">
-                        <div class="notice">环境：Centos7，Supervisor持久化运行</div><p>下载以及安装Grafana，需要放通<code>3000</code>端口用于Grafana的网页后台控制。<em>（IP:3000）</em></p><div class="highlight"><pre><span></span>wget https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm
-sudo yum install grafana-8.0.3-1.x86_64.rpm
+                        <div class="notice">环境：Centos7，Supervisor持久化运行</div><p>下载以及安装Grafana，需要放通<code>3000</code>端口用于Grafana的网页后台控制。<em>（IP:3000）</em></p><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://dl.grafana.com/oss/release/grafana-8.0.3-1.x86_64.rpm
+sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>grafana-8.0.3-1.x86_64.rpm
 </pre></div>
-<p>用<code>.deb</code>或<code>.rpm</code>安装完成之后可以用<code>systemd</code>或<code>init.d</code>控制。</p><div class="highlight"><pre><span></span>sudo systemctl daemon-reload
-sudo systemctl start grafana-server
-sudo systemctl status grafana-server
+<p>用<code>.deb</code>或<code>.rpm</code>安装完成之后可以用<code>systemd</code>或<code>init.d</code>控制。</p><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
+sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>grafana-server
+sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>grafana-server
 </pre></div>
-<p>登入后台，默认用户名密码<code>admin</code>，首次登录会被要求强制修改密码。</p><p>安装Prometheus，找到最新版，截至目前是2.28.0 <code>https://github.com/prometheus/prometheus/releases/</code> <em>（外网访问需要放通9090端口）</em></p><div class="highlight"><pre><span></span>wget https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-amd64.tar.gz
-tar -xzvf prometheus-2.28.0-rc.0.linux-amd64.tar.gz
-<span class="nb">cd</span> prometheus-2.28.0-rc.0.linux-amd64
+<p>登入后台，默认用户名密码<code>admin</code>，首次登录会被要求强制修改密码。</p><p>安装Prometheus，找到最新版，截至目前是2.28.0 <code>https://github.com/prometheus/prometheus/releases/</code> <em>（外网访问需要放通9090端口）</em></p><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/prometheus/prometheus/releases/download/v2.28.0-rc.0/prometheus-2.28.0-rc.0.linux-amd64.tar.gz
+tar<span class="w"> </span>-xzvf<span class="w"> </span>prometheus-2.28.0-rc.0.linux-amd64.tar.gz
+<span class="nb">cd</span><span class="w"> </span>prometheus-2.28.0-rc.0.linux-amd64
 </pre></div>
 <p>编辑<code>prometheus.yml</code>文件，官方默认配置文件如下，默认监控Prometheus自身。</p><div class="highlight"><pre><span></span><span class="c1"># my global config</span>
 <span class="nt">global</span><span class="p">:</span>
-  <span class="nt">scrape_interval</span><span class="p">:</span>     <span class="l l-Scalar l-Scalar-Plain">15s</span> <span class="c1"># Set the scrape interval to every 15 seconds. Default is every 1 minute.</span>
-  <span class="nt">evaluation_interval</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">15s</span> <span class="c1"># Evaluate rules every 15 seconds. The default is every 1 minute.</span>
-  <span class="c1"># scrape_timeout is set to the global default (10s).</span>
+<span class="w">  </span><span class="nt">scrape_interval</span><span class="p">:</span><span class="w">     </span><span class="l l-Scalar l-Scalar-Plain">15s</span><span class="w"> </span><span class="c1"># Set the scrape interval to every 15 seconds. Default is every 1 minute.</span>
+<span class="w">  </span><span class="nt">evaluation_interval</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">15s</span><span class="w"> </span><span class="c1"># Evaluate rules every 15 seconds. The default is every 1 minute.</span>
+<span class="w">  </span><span class="c1"># scrape_timeout is set to the global default (10s).</span>
 
 <span class="c1"># Alertmanager configuration</span>
 <span class="nt">alerting</span><span class="p">:</span>
-  <span class="nt">alertmanagers</span><span class="p">:</span>
-  <span class="p p-Indicator">-</span> <span class="nt">static_configs</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span>
-      <span class="c1"># - alertmanager:9093</span>
+<span class="w">  </span><span class="nt">alertmanagers</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">static_configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># - alertmanager:9093</span>
 
 <span class="c1"># Load rules once and periodically evaluate them according to the global &#39;evaluation_interval&#39;.</span>
 <span class="nt">rule_files</span><span class="p">:</span>
-  <span class="c1"># - &quot;first_rules.yml&quot;</span>
-  <span class="c1"># - &quot;second_rules.yml&quot;</span>
+<span class="w">  </span><span class="c1"># - &quot;first_rules.yml&quot;</span>
+<span class="w">  </span><span class="c1"># - &quot;second_rules.yml&quot;</span>
 
 <span class="c1"># A scrape configuration containing exactly one endpoint to scrape:</span>
 <span class="c1"># Here it&#39;s Prometheus itself.</span>
 <span class="nt">scrape_configs</span><span class="p">:</span>
-  <span class="c1"># The job name is added as a label `job=` to any timeseries scraped from this config.</span>
-  <span class="p p-Indicator">-</span> <span class="nt">job_name</span><span class="p">:</span> <span class="s">&#39;prometheus&#39;</span>
+<span class="w">  </span><span class="c1"># The job name is added as a label `job=` to any timeseries scraped from this config.</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;prometheus&#39;</span>
 
-    <span class="c1"># metrics_path defaults to &#39;/metrics&#39;</span>
-    <span class="c1"># scheme defaults to &#39;http&#39;.</span>
+<span class="w">    </span><span class="c1"># metrics_path defaults to &#39;/metrics&#39;</span>
+<span class="w">    </span><span class="c1"># scheme defaults to &#39;http&#39;.</span>
 
-    <span class="nt">static_configs</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;localhost:9090&#39;</span><span class="p p-Indicator">]</span>
+<span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;localhost:9090&#39;</span><span class="p p-Indicator">]</span>
 </pre></div>
 <div class="highlight"><pre><span></span><span class="c1">#全局时间间隔</span>
-scrape_interval: 15s 
+scrape_interval:<span class="w"> </span>15s<span class="w"> </span>
 <span class="c1">#规则扫描时间间隔</span>
-evaluation_interval: 15s 
+evaluation_interval:<span class="w"> </span>15s<span class="w"> </span>
 <span class="c1">#超时时间</span>
-scrape_timeout: 5s
+scrape_timeout:<span class="w"> </span>5s
 </pre></div>
 <p>更详细的可以参考官方文档：<a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/"><a href="https://prometheus.io/docs/prometheus/latest/configuration/configuration/">https://prometheus.io/docs/prometheus/latest/configuration/configuration/</a></a></p><div class="highlight"><pre><span></span>./prometheus
 </pre></div>
 <p>网页后台：<code>IP:9090</code>可以看到自身的状态是<code>UP</code>。</p><p>node_exporter就是获取宿主机的资源信息，CPU占用，内存占用等</p><p>安装node_exporter，找到最新版，截至目前是1.1.2 
-<code>https://github.com/prometheus/node_exporter/releases/</code>  <em>（外网访问需要放通9100端口）</em></p><div class="highlight"><pre><span></span>wget https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
-tar -xzvf node_exporter-1.1.2.linux-amd64.tar.gz
-<span class="nb">cd</span> node_exporter-1.1.2.linux-amd64
+<code>https://github.com/prometheus/node_exporter/releases/</code>  <em>（外网访问需要放通9100端口）</em></p><div class="highlight"><pre><span></span>wget<span class="w"> </span>https://github.com/prometheus/node_exporter/releases/download/v1.1.2/node_exporter-1.1.2.linux-amd64.tar.gz
+tar<span class="w"> </span>-xzvf<span class="w"> </span>node_exporter-1.1.2.linux-amd64.tar.gz
+<span class="nb">cd</span><span class="w"> </span>node_exporter-1.1.2.linux-amd64
 ./node_exporter
 </pre></div>
-<p>Prometheus创建job获取node_exporter的数据，<code>job_name</code>可以随便取。修改yml文件一定要严格注意格式（缩进）。</p><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">job_name</span><span class="p">:</span> <span class="s">&#39;exporter&#39;</span>
-    <span class="nt">static_configs</span><span class="p">:</span>
-    <span class="p p-Indicator">-</span> <span class="nt">targets</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&#39;localhost:9100&#39;</span><span class="p p-Indicator">]</span>
+<p>Prometheus创建job获取node_exporter的数据，<code>job_name</code>可以随便取。修改yml文件一定要严格注意格式（缩进）。</p><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">job_name</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;exporter&#39;</span>
+<span class="w">    </span><span class="nt">static_configs</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">targets</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&#39;localhost:9100&#39;</span><span class="p p-Indicator">]</span>
 </pre></div>
 <p>然后重启Prometheus，网页后台可以看到这个job上线了。</p><p>重新回到Grafana网页后台，可以自己创建Dashboard，也可以用现成的。进入官方库：<a href="https://grafana.com/grafana/dashboards"><a href="https://grafana.com/grafana/dashboards">https://grafana.com/grafana/dashboards</a></a></p><p>也可以用这个：<a href="https://grafana.com/grafana/dashboards/8919"><a href="https://grafana.com/grafana/dashboards/8919">https://grafana.com/grafana/dashboards/8919</a></a></p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/37/1.png" /></figure><p>复制数字，回到后台，点左侧加号然后<code>Import</code>，输入数字ID点<code>Load</code>，<code>VictoriaMetrics</code>选择<code>Prometheus</code>，最后<code>Import</code>即可。</p><figure class="pswp-item"  size-undefined><img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/37/2.png" /></figure>
             </div>

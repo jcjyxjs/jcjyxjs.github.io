@@ -32,29 +32,17 @@
     <link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script>
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script>
-	<script data-ad-client="ca-pub-9781903816543246" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
+        <script>
         console.log('\n' + ' %c Elstec By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');
 	</script>
 	<script>
 	var XrYt1 = XrYt1 || [];	(function() {	  var u2 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74"]("\x73\x63\x72\x69\x70\x74");	  u2["\x73\x72\x63"] = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x68\x6d\x2e\x62\x61\x69\x64\x75\x2e\x63\x6f\x6d\x2f\x68\x6d\x2e\x6a\x73\x3f\x64\x34\x34\x36\x36\x64\x63\x39\x38\x30\x66\x36\x64\x65\x30\x61\x30\x38\x34\x33\x64\x34\x35\x66\x34\x36\x37\x36\x39\x35\x63\x34";	  var w_VTclmj3 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x73\x42\x79\x54\x61\x67\x4e\x61\x6d\x65"]("\x73\x63\x72\x69\x70\x74")[0]; 	  w_VTclmj3["\x70\x61\x72\x65\x6e\x74\x4e\x6f\x64\x65"]["\x69\x6e\x73\x65\x72\x74\x42\x65\x66\x6f\x72\x65"](u2, w_VTclmj3);	})();
 	</script>
-	<script>
-	(function(){
-	var el = document.createElement("script");
-	el.src = "https://sf1-scmcdn-tos.pstatp.com/goofy/ttzz/push.js?5bc9506fe8c153ad91abc604f1a9e4e49ad7b3d2b595a7161b0561b7ad19d86e0933b63409a51e721c4b12a69a2568afc3d5f516090be79a37739b24b0caeecf";
-	el.id = "ttzz";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(el, s);
-	})(window)
-	</script>
-	<script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-	<script>LA.init({id: "JJNPePzoBCdUIbEU",ck: "JJNPePzoBCdUIbEU"})</script>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&amp;display=swap" rel="stylesheet">
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/4e1fb68a2985ff4521c329ec3cff41bb.json"
+            api: "/2809b9cce5a5bbe257e95b0ccbead1ae.json"
         }
     </script>
     
@@ -117,21 +105,21 @@
 <li>国内 <code>Git Clone</code> 速度比较慢，可以改 <code>DNS</code> 跟我一样 <code>20kb/s</code> （海外机器无视即可）</li>
 </ol>
 <h2>过程</h2>
-<p>首先 <code>Clone brotli</code> 仓库</p><div class="highlight"><pre><span></span>git clone https://github.com/google/ngx_brotli.git
+<p>首先 <code>Clone brotli</code> 仓库</p><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/google/ngx_brotli.git
 </pre></div>
-<p>进入目录</p><div class="highlight"><pre><span></span><span class="nb">cd</span> ngx_brotli
+<p>进入目录</p><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>ngx_brotli
 </pre></div>
-<p>升级 <code>Brotli</code></p><div class="highlight"><pre><span></span>git submodule update --init
+<p>升级 <code>Brotli</code></p><div class="highlight"><pre><span></span>git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init
 </pre></div>
-<p>应该会这么提示</p><div class="highlight"><pre><span></span><span class="o">[</span>root@VM-0-7-centos ngx_brotli<span class="o">]</span><span class="c1"># git submodule update --init</span>
-Cloning into <span class="s1">&#39;deps/brotli&#39;</span>...
-remote: Enumerating objects: <span class="m">8</span>, <span class="k">done</span>.
-remote: Counting objects: <span class="m">100</span>% <span class="o">(</span><span class="m">8</span>/8<span class="o">)</span>, <span class="k">done</span>.
-remote: Compressing objects: <span class="m">100</span>% <span class="o">(</span><span class="m">7</span>/7<span class="o">)</span>, <span class="k">done</span>.
-remote: Total <span class="m">6096</span> <span class="o">(</span>delta <span class="m">1</span><span class="o">)</span>, reused <span class="m">2</span> <span class="o">(</span>delta <span class="m">1</span><span class="o">)</span>, pack-reused <span class="m">6088</span>
-Receiving objects: <span class="m">100</span>% <span class="o">(</span><span class="m">6096</span>/6096<span class="o">)</span>, <span class="m">30</span>.64 MiB <span class="p">|</span> <span class="m">24</span>.00 KiB/s, <span class="k">done</span>.
-Resolving deltas: <span class="m">100</span>% <span class="o">(</span><span class="m">3914</span>/3914<span class="o">)</span>, <span class="k">done</span>.
-Submodule path <span class="s1">&#39;deps/brotli&#39;</span>: checked out <span class="s1">&#39;d6d98957ca8ccb1ef45922e978bb10efca0ea541&#39;</span>
+<p>应该会这么提示</p><div class="highlight"><pre><span></span><span class="o">[</span>root@VM-0-7-centos<span class="w"> </span>ngx_brotli<span class="o">]</span><span class="c1"># git submodule update --init</span>
+Cloning<span class="w"> </span>into<span class="w"> </span><span class="s1">&#39;deps/brotli&#39;</span>...
+remote:<span class="w"> </span>Enumerating<span class="w"> </span>objects:<span class="w"> </span><span class="m">8</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Counting<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">8</span>/8<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Compressing<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">7</span>/7<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+remote:<span class="w"> </span>Total<span class="w"> </span><span class="m">6096</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">1</span><span class="o">)</span>,<span class="w"> </span>reused<span class="w"> </span><span class="m">2</span><span class="w"> </span><span class="o">(</span>delta<span class="w"> </span><span class="m">1</span><span class="o">)</span>,<span class="w"> </span>pack-reused<span class="w"> </span><span class="m">6088</span>
+Receiving<span class="w"> </span>objects:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">6096</span>/6096<span class="o">)</span>,<span class="w"> </span><span class="m">30</span>.64<span class="w"> </span>MiB<span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="m">24</span>.00<span class="w"> </span>KiB/s,<span class="w"> </span><span class="k">done</span>.
+Resolving<span class="w"> </span>deltas:<span class="w"> </span><span class="m">100</span>%<span class="w"> </span><span class="o">(</span><span class="m">3914</span>/3914<span class="o">)</span>,<span class="w"> </span><span class="k">done</span>.
+Submodule<span class="w"> </span>path<span class="w"> </span><span class="s1">&#39;deps/brotli&#39;</span>:<span class="w"> </span>checked<span class="w"> </span>out<span class="w"> </span><span class="s1">&#39;d6d98957ca8ccb1ef45922e978bb10efca0ea541&#39;</span>
 </pre></div>
 <p>由于我是宝塔用户，所以不需要读取编译信息。直接在 <code>软件商店→Nginx→编译安装→添加自定义模块</code></p><p>添加自定义模块时，加入如下参数，其中， <code>/www/server/ngx_brotli</code> 是刚刚 <code>Clone</code> 的位置。按需替换，位置在哪都一样。然后直接开始编译安装。</p>
 <pre><code>--add-module=/www/server/ngx_brotli
