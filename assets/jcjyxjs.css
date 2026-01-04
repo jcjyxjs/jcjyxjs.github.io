@@ -18,7 +18,7 @@ i {
 
 del:hover {
     background: none;
-    transition: 0.3s background;
+    transition: .3s background;
     color: black;
 }
 
@@ -26,7 +26,7 @@ del {
     text-decoration: none;
     background: black;
     color: black;
-    transition: 0.3s background;
+    transition: .3s background;
 }
 
 .author_image img {
@@ -206,6 +206,40 @@ hr:before {
     content: "* * *";
     text-align: center;
 }
+
+.ga-content span.ga-post_meta {
+    margin-top: 1.5rem;
+}
+
+.utterances {
+    margin-top: -3rem;
+}
+
+#ga-header div[first] aside#ga-brand p {
+    font-weight: 600;
+}
+
+/* Justified Gallery Fixes */
+.yue .justified-gallery figure.pswp-item img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: cover !important; /* 配合正确的容器比例，cover 既无变形也无缝隙 */
+    background-color: transparent !important;
+}
+
+/* Ensure figure doesn't have weird margins inside gallery */
+.yue .justified-gallery figure.pswp-item {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: absolute; 
+}
+
 
 @media screen and (prefers-color-scheme: dark) {
     html {
@@ -432,10 +466,12 @@ hr:before {
 	
 	del {
 		color:black;
+        transition: .3s;
 	}
 	
 	del:hover {
 		color:rgb(173,186,199);
+        transition: .3s;
 	}
 	
 	.highlight .nx,.highlight .p{

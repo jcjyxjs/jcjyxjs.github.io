@@ -11,6 +11,7 @@
     <meta name="template" content="Lighthouse" />
     <link rel="alternate" type="application/rss+xml" title="毫无作为 &raquo; RSS 2.0" href="/feed/index.xml" />
     <link rel="alternate" type="application/atom+xml" title="毫无作为 &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="/assets/justifiedGallery.min.css">
     <link rel="stylesheet" href="/assets/lighthouse.css">
     <link rel="stylesheet" href="/assets/ExSearch/ExSearch-182e5a8868.css">
     <link rel="stylesheet" href="/assets/katex.min.css">
@@ -22,27 +23,27 @@
         <!-- require MetingJS -->
     <script src="https://cdn.elstec.cn/Meting.min.js"></script>
 	<meta http-equiv="x-dns-prefetch-control" content="on">
-    <meta name="chinaz-site-verification" content="3EC3C9BC99F337AE">
+    <!-- <meta name="chinaz-site-verification" content="3EC3C9BC99F337AE">
     <meta name="sogou_site_verification" content="M91y3JaB22"/>
-	<meta name="bytedance-verification-code" content="ocVFOTgNQ+2VVhqMA+/M" />
+	<meta name="bytedance-verification-code" content="ocVFOTgNQ+2VVhqMA+/M" /> -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4">
+    <!-- <meta name="baidu_union_verify" content="207885b84bb3379373d847ba3583f0b4"> -->
 	<link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/photoswipe.css"> 
 	<link rel="shortcut icon" href="https://cdn.elstec.cn/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.elstec.cn/PhotoSwipe/default-skin/default-skin.css"> 
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe.min.js"></script>
 	<script src="https://cdn.elstec.cn/PhotoSwipe/photoswipe-ui-default.min.js"></script>
-        <script>
+    <script>
         console.log('\n' + ' %c Elstec By JCJYXJS' + ' %c https://elstec.cn/ ' + '\n', 'color: #000; background: #FFC0CB; padding:5px 0; font-size:10px', 'background: #F8F8FF; padding:5px 0; font-size:10px');
 	</script>
-	<script>
+	<!-- <script>
 	var XrYt1 = XrYt1 || [];	(function() {	  var u2 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d\x65\x6e\x74"]("\x73\x63\x72\x69\x70\x74");	  u2["\x73\x72\x63"] = "\x68\x74\x74\x70\x73\x3a\x2f\x2f\x68\x6d\x2e\x62\x61\x69\x64\x75\x2e\x63\x6f\x6d\x2f\x68\x6d\x2e\x6a\x73\x3f\x64\x34\x34\x36\x36\x64\x63\x39\x38\x30\x66\x36\x64\x65\x30\x61\x30\x38\x34\x33\x64\x34\x35\x66\x34\x36\x37\x36\x39\x35\x63\x34";	  var w_VTclmj3 = window["\x64\x6f\x63\x75\x6d\x65\x6e\x74"]["\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74\x73\x42\x79\x54\x61\x67\x4e\x61\x6d\x65"]("\x73\x63\x72\x69\x70\x74")[0]; 	  w_VTclmj3["\x70\x61\x72\x65\x6e\x74\x4e\x6f\x64\x65"]["\x69\x6e\x73\x65\x72\x74\x42\x65\x66\x6f\x72\x65"](u2, w_VTclmj3);	})();
-	</script>
+	</script> -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;900&amp;display=swap" rel="stylesheet">
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "/2809b9cce5a5bbe257e95b0ccbead1ae.json"
+            api: "/5b10fc391aa76fe0a107b9928a3c8e92.json"
         }
     </script>
     
@@ -55,7 +56,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="/archives/20210926/" />
 <meta property="og:image" content="" />
-<meta property="article:published_time" content="2021-09-26T01:00:00+08.00" />
+<meta property="article:published_time" content="2021-09-26T01:00:00-00.00" />
 <meta name="twitter:title" content="echarts在Markdown下深色模式自适应 - 毫无作为" />
 <meta name="twitter:description" content="我首先找了一个官方示例做例子。圆角环形饼图：https://echarts.apache.org/examples/zh/editor.html?c=pie-borderRadius&amp;lang=js查阅官方文档得知深色模式根据backgroundColor这个属性进行自适应。darkmode：" />
 <meta name="twitter:card" content="summary" />
@@ -223,15 +224,48 @@
 
 
     
+        <div id="comments"></div>
+        <script src="https://utteranc.es/client.js"
+            repo="jcjyxjs/blog_comments"
+            issue-term="pathname"
+            label="Comment"
+            theme="preferred-color-scheme"
+            crossorigin="anonymous"
+            async>
+        </script>   
+        <!-- 深色模式监听 -->
         <script>
-            var initValine = function () {
-                new Valine({"enable": true, "el": "#vcomments", "appId": "6IbSkySz1sFtHscRpUnjah3J-gzGzoHsz", "appKey": "TuXcNNNCp9UkJuPnpYN538zT", "visitor": true, "recordIP": true});
-            }
-        </script>
-        <script defer src='https://cdn.elstec.cn/Valine.min.js' onload="initValine()"></script>
-        <div id="vcomments"></div>
-    
+            (function () {
+            const mq = window.matchMedia('(prefers-color-scheme: dark)');
 
+            function applyTheme() {
+                const iframe = document.querySelector('iframe.utterances-frame');
+                if (!iframe) return;
+
+                iframe.contentWindow.postMessage(
+                {
+                    type: 'set-theme',
+                    theme: mq.matches ? 'github-dark' : 'github-light'
+                },
+                'https://utteranc.es'
+                );
+            }
+
+            // 监听 Utterances iframe 出现
+            const observer = new MutationObserver(() => {
+                const iframe = document.querySelector('iframe.utterances-frame');
+                if (iframe) {
+                applyTheme();
+                observer.disconnect();
+                }
+            });
+
+            observer.observe(document.body, { childList: true, subtree: true });
+
+            // 监听系统主题切换
+            mq.addEventListener('change', applyTheme);
+            })();
+        </script>
 </main>
 
                     <div class="index-footer">
@@ -345,60 +379,121 @@
             galleryUID: String(galleryIndex + 1),
             index: itemIndex,
             getThumbBoundsFn: function (index) {
-                var thumbnail = gallery[index].el,
-                    pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
-                    rect = thumbnail.getBoundingClientRect();
-                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
-            }
-        }
-        var pswp = new PhotoSwipe(document.querySelectorAll('.pswp')[0],
-            PhotoSwipeUI_Default, gallery, options);
+                var thumbnail = gallery[index].el;
+                if (!thumbnail) return null; // 如果没有缩略图元素，返回null
+                var pageYScroll = window.pageYOffset || document.documentElement.scrollTop;
+                var rect = thumbnail.getBoundingClientRect();
+                return { x: rect.left, y: rect.top + pageYScroll, w: rect.width, h: rect.height };
+            },
+            // 添加一些配置选项来改善用户体验
+            closeOnScroll: false,
+            escKey: true,
+            arrowKeys: true,
+            preload: [1, 1], // 预加载相邻图片
+            loop: true, // 循环浏览
+            bgOpacity: 0.8,
+            // 确保图片保持原始比例
+            maxSpreadZoom: 2,
+            allowPanToNext: true,
+            pinchToClose: true,
+            closeOnScroll: false,
+            closeOnVerticalDrag: true,
+            mouseUsed: false,
+            scaleMode: 'fit', // 确保图片按比例缩放
+            // 确保竖向图片正确显示
+            getImageData: function (item, index) {
+                // 确保图片尺寸信息正确
+                return {
+                    w: item.w || 800,
+                    h: item.h || 600
+                };
+            },
+            // 确保图片适应屏幕同时保持比例
+            fitControlsWidth: 170,
+            bgOpacity: 0.8
+        };
+
+        var pswpElement = document.querySelectorAll('.pswp')[0];
+        if (!pswpElement) return; // 确保pswp元素存在
+
+        var pswp = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, gallery, options);
         pswp.init();
     };
 
     var figureClick = function (e) {
         e = e || window.event;
         e.preventDefault ? e.preventDefault() : e.returnValue = false;
-        var eTarget = e.target || e.srcElement;  // figure
+
+        var eTarget = e.target || e.srcElement;
 
         // 找到最近的 item
         var figure = eTarget;
-        while (!figure.matches(itemSelector)) {
+        while (figure && !figure.matches(itemSelector)) {
             figure = figure.parentNode;
         }
 
+        if (!figure) return; // 如果没找到匹配的元素，直接返回
+
         // 找到最近的 gallery
         var gallery = figure;
-        while (!gallery.matches(gallerySelector)) {
+        while (gallery && !gallery.matches(gallerySelector)) {
             gallery = gallery.parentNode;
         }
 
+        if (!gallery) return; // 如果没找到匹配的画廊，直接返回
+
         var galleryIndex = parseInt(gallery.dataset.pswpGid) - 1;
         var itemIndex = parseInt(figure.dataset.pswpPid) - 1;
+
+        // 确保索引有效
+        if (isNaN(galleryIndex) || isNaN(itemIndex)) return;
+
         openPhotoSwipe(galleryIndex, itemIndex);
     }
 
     var initPhotoSwipeFromDOM = function () {
         this.gallerys = [];
 
-        var gallyers = document.querySelectorAll(gallerySelector);
-        for (var i = 0; i < gallyers.length; i++) {
-            var gallery = gallyers[i];
+        var galleries = document.querySelectorAll(gallerySelector);
+        for (var i = 0; i < galleries.length; i++) {
+            var gallery = galleries[i];
             gallery.setAttribute('data-pswp-gid', i + 1);
-            var currentList = []
+            var currentList = [];
 
             var figures = gallery.querySelectorAll(itemSelector);
             for (var j = 0; j < figures.length; j++) {
                 var figure = figures[j];
                 figure.setAttribute('data-pswp-pid', j + 1);
+
+                // 移除之前的点击事件监听器，避免重复绑定
+                figure.onclick = null;
                 figure.onclick = figureClick;
-                img = figure.firstChild;
-                currentList.push({
-                    src: img.src,
-                    h: parseInt(img.getAttribute('height')),
-                    w: parseInt(img.getAttribute('width')),
-                    el: img
-                })
+
+                var img = figure.querySelector('img') || figure.firstChild;
+                if (img && img.src) {
+                    // 优先使用data-width和data-height属性，这些是从缓存中获取的真实尺寸
+                    var width = parseInt(img.getAttribute('data-width') || img.getAttribute('width') || 0);
+                    var height = parseInt(img.getAttribute('height') || img.getAttribute('data-height') || 0);
+
+                    // 如果没有获取到尺寸信息，使用默认值或尝试从图片对象获取
+                    if (width <= 0 || height <= 0) {
+                        if (img.naturalWidth && img.naturalHeight) {
+                            width = img.naturalWidth;
+                            height = img.naturalHeight;
+                        } else {
+                            // 如果仍然没有尺寸信息，使用一个合理的默认比例
+                            width = 800;
+                            height = 600;
+                        }
+                    }
+
+                    currentList.push({
+                        src: img.src,
+                        w: width,
+                        h: height,
+                        el: img
+                    });
+                }
             }
 
             this.gallerys.push(currentList);
@@ -440,8 +535,16 @@
         }
     }
 
-    initPhotoSwipeFromDOM();
-    openFromUrl();
+    // 等待页面完全加载后再初始化
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            initPhotoSwipeFromDOM();
+            openFromUrl();
+        });
+    } else {
+        initPhotoSwipeFromDOM();
+        openFromUrl();
+    }
 })('.pswp-gallery', '.pswp-item');
 </script>
   <script>
@@ -477,6 +580,22 @@
     <script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
 
     <script src="/assets/ExSearch/jquery.min.js"></script>
+    <!-- 由于Justified Gallery库文件可能存在问题，我们使用CSS Grid作为备用方案 -->
+
+
+    <script src="/assets/jquery.justifiedGallery.min.js"></script>
+    <script>
+    $(document).ready(function() {
+        $('.photos').justifiedGallery({
+            rowHeight: 140,
+            maxRowHeight: false,
+            margins: 4,
+            lastRow: 'justify',
+            captions: false,
+            selector: 'figure'
+        });
+    });
+    </script>
     <script src="/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
 
     
