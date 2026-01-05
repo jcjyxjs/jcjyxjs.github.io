@@ -1,58 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Mon, 05 Jan 2026 00:33:24 +0806</lastBuildDate><pubDate>Mon, 05 Jan 2026 00:33:24 +0806</pubDate><item><title>关于使用GitHub Actions云编译LEDE固件更新说明</title><link>/archives/20210821/</link><description>&lt;html&gt;
-    &lt;div class="warn"&gt;
-        &lt;strong&gt;
-            教程类文章具有时效性，看清楚发布日期，超过一定日子文章内容可能失效，仅仅作为参考。
-        &lt;/strong&gt;
-    &lt;/div&gt;
-&lt;/html&gt;
-&lt;p&gt;点击&lt;code&gt;Use this template&lt;/code&gt;按钮，创建&lt;code&gt;repo&lt;/code&gt;。然后给该&lt;code&gt;repo&lt;/code&gt;启用&lt;code&gt;Actions&lt;/code&gt;功能。&lt;/p&gt;&lt;html&gt;
-&lt;div class="uttpl"&gt;
-    &lt;a href="https://github.com/P3TERX/Actions-OpenWrt/generate" id="utp"&gt;Use this template&lt;/a&gt;
-&lt;/div&gt;
-&lt;/html&gt;
-&lt;p&gt;项目&lt;code&gt;GitHub&lt;/code&gt;地址：&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;https://github.com/P3TERX/Actions-OpenWrt
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;编辑&lt;code&gt;diy-part1.sh&lt;/code&gt;文件，可以更改固件是&lt;code&gt;XXRPlus&lt;/code&gt;还是&lt;code&gt;Passwall&lt;/code&gt;，想用什么就给倒数两行其中一行取消注释就生效。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# Copyright (c) 2019-2020 P3TERX &amp;lt;https://p3terx.com&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# This is free software, licensed under the MIT License.&lt;/span&gt;
-&lt;span class="c1"&gt;# See /LICENSE for more information.&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# https://github.com/P3TERX/Actions-OpenWrt&lt;/span&gt;
-&lt;span class="c1"&gt;# File name: diy-part1.sh&lt;/span&gt;
-&lt;span class="c1"&gt;# Description: OpenWrt DIY script part 1 (Before Update feeds)&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Uncomment a feed source&lt;/span&gt;
-&lt;span class="c1"&gt;#sed -i &amp;#39;s/^#\(.*helloworld\)/\1/&amp;#39; feeds.conf.default&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Add a feed source&lt;/span&gt;
-&lt;span class="c1"&gt;#echo &amp;#39;src-git helloworld https://github.com/fw876/helloworld&amp;#39; &amp;gt;&amp;gt;feeds.conf.default&lt;/span&gt;
-&lt;span class="c1"&gt;#echo &amp;#39;src-git passwall https://github.com/xiaorouji/openwrt-passwall&amp;#39; &amp;gt;&amp;gt;feeds.conf.default&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;编辑&lt;code&gt;diy-part2.sh&lt;/code&gt;文件，修改最后一行可以更改固件默认后台地址。这个无关紧要反正在shell里面也可以通过&lt;code&gt;vi etc/config/network&lt;/code&gt;命令更改。&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="ch"&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# Copyright (c) 2019-2020 P3TERX &amp;lt;https://p3terx.com&amp;gt;&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# This is free software, licensed under the MIT License.&lt;/span&gt;
-&lt;span class="c1"&gt;# See /LICENSE for more information.&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-&lt;span class="c1"&gt;# https://github.com/P3TERX/Actions-OpenWrt&lt;/span&gt;
-&lt;span class="c1"&gt;# File name: diy-part2.sh&lt;/span&gt;
-&lt;span class="c1"&gt;# Description: OpenWrt DIY script part 2 (After Update feeds)&lt;/span&gt;
-&lt;span class="c1"&gt;#&lt;/span&gt;
-
-&lt;span class="c1"&gt;# Modify default IP&lt;/span&gt;
-&lt;span class="c1"&gt;#sed -i &amp;#39;s/192.168.1.1/192.168.50.5/g&amp;#39; package/base-files/files/bin/config_generate&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;p&gt;然后进入&lt;code&gt;actions&lt;/code&gt;，选&lt;code&gt;Build OpenWrt&lt;/code&gt;任务，单击&lt;code&gt;Run workflow&lt;/code&gt;，可以选择分支和是否启用&lt;code&gt;SSH&lt;/code&gt;，默认是&lt;code&gt;false&lt;/code&gt;，改成&lt;code&gt;true&lt;/code&gt;就可以使用&lt;code&gt;SSH&lt;/code&gt;功能，最后运行即可。&lt;/p&gt;&lt;div class="photoset"&gt;&lt;div class="photos"&gt;&lt;figure class="pswp-item"  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/40/1.png" /&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;&lt;html&gt;
-&lt;p style="display:inline;"&gt;希望本文可以帮到你&lt;/p&gt;
-&lt;img src="https://cdn.elstec.cn/images/file_1016567.jpg" width="55px" height="55px" style="display: inline;"&gt;
-&lt;/html&gt;
-</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20210821/</guid><pubDate>Sat, 21 Aug 2021 00:00:00 +0806</pubDate></item><item><title>关于编译OpenWrt固件中找不到luci-app-ssr-plus更新说明</title><link>/archives/202108212/</link><description>&lt;html&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>毫无作为</title><link>/</link><description>永远年轻，永远热泪盈眶。</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>/favicon.ico</url><title>毫无作为</title><link>/</link></image><language>english</language><lastBuildDate>Mon, 05 Jan 2026 05:59:48 +0806</lastBuildDate><pubDate>Mon, 05 Jan 2026 05:59:48 +0806</pubDate><item><title>关于编译OpenWrt固件中找不到luci-app-ssr-plus更新说明</title><link>/archives/202108212/</link><description>&lt;html&gt;
     &lt;div class="warn"&gt;
         &lt;strong&gt;
             教程类文章具有时效性，看清楚发布日期，超过一定日子文章内容可能失效，仅仅作为参考。
@@ -325,4 +272,4 @@ autoplay="true"&gt;
 &lt;li&gt;新建连接数&lt;/li&gt;
 &lt;li&gt;源IP+目的IP+目的端口&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;由于是单线多拨，运营商是同一个，所以全部。&lt;/p&gt;&lt;p&gt;我是双拨，所以只有两条线路，负载比例全部&lt;code&gt;1&lt;/code&gt;能叠加带宽，但我貌似只能叠加下行 🤬 上行要是叠加的话我公网看家里的影片也快一点了hhhh&lt;/p&gt;&lt;div class="photoset"&gt;&lt;div class="photos"&gt;&lt;figure class="pswp-item"  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/48/2.png" /&gt;&lt;figcaption&gt;负载均衡&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20220123/</guid><pubDate>Sun, 23 Jan 2022 01:00:00 +0806</pubDate></item></channel></rss>
+&lt;p&gt;由于是单线多拨，运营商是同一个，所以全部。&lt;/p&gt;&lt;p&gt;我是双拨，所以只有两条线路，负载比例全部&lt;code&gt;1&lt;/code&gt;能叠加带宽，但我貌似只能叠加下行 🤬 上行要是叠加的话我公网看家里的影片也快一点了hhhh&lt;/p&gt;&lt;div class="photoset"&gt;&lt;div class="photos"&gt;&lt;figure class="pswp-item"  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="https://cdn.elstec.cn/48/2.png" /&gt;&lt;figcaption&gt;负载均衡&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20220123/</guid><pubDate>Sun, 23 Jan 2022 01:00:00 +0806</pubDate></item><item><title>阿里云ESA（边缘安全加速）+IPV6一键回程访问NAS资源</title><link>/archives/20260105/</link><description>&lt;p&gt;近期阿里云上线了ESA的免费套餐，不限流量，全球加速，且国内能正常使用，自定义规则，与CF类似。刚好家中有NAS带IPV6公网，于是赶紧接入折腾了。&lt;/p&gt;&lt;div class="photoset"&gt;&lt;div class="photos"&gt;&lt;figure class="pswp-item"  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/20260105/1.png" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;通过NS方式接入其实也方便，原先域名托管在腾讯云，直接导出Zone文件再导入ESA就开始运作了&lt;/p&gt;&lt;div class="photoset"&gt;&lt;div class="photos"&gt;&lt;figure class="pswp-item"  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/20260105/2.png" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;前期需要有一个域名DDNS到IPV6的地址。然后直接在DNS添加一条CNAME记录。源站选域名以及跟随源站域名即可。下一步后会选择是静态资源加速还是音视频还是其他加速，根据需求选择。NAS主页静态资源，emby这类就选择音视频，非常简单。&lt;/p&gt;&lt;div class="photoset"&gt;&lt;div class="photos"&gt;&lt;figure class="pswp-item"  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/20260105/3.png" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;&lt;p&gt;一般NAS中的资源都是非标准端口，即非80/443，到也问题不大。添加完加速后，进入规则加一条回源规则。直接指定回源协议以及回源端口。&lt;/p&gt;&lt;div class="photoset"&gt;&lt;div class="photos"&gt;&lt;figure class="pswp-item"  size-undefined&gt;&lt;img loading="lazy" width="-1" height="-1" src="./images/20260105/4.png" /&gt;&lt;figcaption&gt;image&lt;/figcaption&gt;&lt;/figure&gt;&lt;/div&gt;&lt;/div&gt;</description><author>i@elstec.cn (jcjyxjs)</author><guid isPermaLink="true">/archives/20260105/</guid><pubDate>Mon, 05 Jan 2026 01:00:00 +0806</pubDate></item></channel></rss>
