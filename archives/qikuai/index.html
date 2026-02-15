@@ -313,8 +313,8 @@
             pinchToClose: true,
             closeOnScroll: false,
             closeOnVerticalDrag: true,
-            // 关键：确保图片适应屏幕
-            scaleMode: 'fit'
+            // 确保图片正确缩放适应屏幕
+            doubleTapZoomLevel: 1
         };
 
         var pswpElement = document.querySelectorAll('.pswp')[0];
@@ -375,9 +375,18 @@
 
                 var img = figure.querySelector('img') || figure.firstChild;
                 if (img && img.src) {
-                    // 优先使用data-width和data-height属性
                     var width = parseInt(img.getAttribute('data-width') || img.getAttribute('width') || 0);
                     var height = parseInt(img.getAttribute('data-height') || img.getAttribute('height') || 0);
+
+                    if (width <= 0 || height <= 0) {
+                        if (img.naturalWidth && img.naturalHeight) {
+                            width = img.naturalWidth;
+                            height = img.naturalHeight;
+                        } else {
+                            width = 1200;
+                            height = 800;
+                        }
+                    }
 
                     currentList.push({
                         src: img.src,
@@ -472,72 +481,36 @@
     <script defer src="/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
 
     <script src="/assets/ExSearch/jquery.min.js"></script>
-    <!-- 由于Justified Gallery库文件可能存在问题，我们使用CSS Grid作为备用方案 -->
     <style>
-        /* 使用CSS Grid实现画廊效果，满足所有需求 - 使用更强的优先级 */
+        /* JustifiedGallery 画廊样式 */
         .ga-content .photos {
-            width: 100% !important;
-            max-width: 860px !important;  /* 与body .container的max-width一致 */
-            margin: 0 auto !important;    /* 居中对齐 */
-            display: grid !important;
-            grid-template-columns: repeat(2, 1fr) !important;  /* 固定2列，确保每行2个图片 */
-            grid-gap: 5px !important;
-            padding: 5px 0 !important;
-            box-sizing: border-box !important;
+            width: 100%;
+            margin: 0 auto;
         }
 
-        /* 确保图片不被裁切并自适应填充容器 - 使用JustifiedGallery默认样式 */
         .ga-content .photos figure {
             margin: 0;
             padding: 0;
-            display: inline-block;
         }
-        
+
         .ga-content .photos figure img {
             width: 100%;
             height: auto;
             display: block;
         }
-
-        .ga-content .photos figure img {
-            object-fit: cover !important;  /* 改为cover模式，确保图片填满容器 */
-            object-position: center !important;
-            width: 100% !important;
-            height: 100% !important;
-            max-width: 100% !important;
-            max-height: 100% !important;
-            display: block !important;
-            margin: 0 !important;
-            padding: 0 !important;
-            border: none !important;
-            box-sizing: border-box !important;
-        }
-
-        /* 特殊处理：如果容器中只有一个figure，让它占据整行（2列） */
-        .ga-content .photos:has(figure:only-of-type) {
-            grid-template-columns: 1fr !important;
-        }
-
-        /* 特殊处理：如果容器中只有两个figure，让它们各占一列 */
-        .ga-content .photos:has(figure:nth-of-type(2):last-of-type) {
-            grid-template-columns: 1fr 1fr !important;
-        }
-
-        /* ================== PhotoSwipe 图片防止变形样式 ================== */
-        /* 确保PhotoSwipe图片保持原始比例，防止变形 */
-        /* 注意：不要覆盖PhotoSwipe的默认定位样式，只修复比例问题 */
     </style>
 
     <script src="/assets/jquery.justifiedGallery.min.js"></script>
     <script>
     $(document).ready(function() {
         $('.photos').justifiedGallery({
-            rowHeight: 200,
-            maxRowHeight: 300,
-            margins: 5,
+            rowHeight: 180,
+            maxRowHeight: 280,
+            margins: 6,
             lastRow: 'justify',
             captions: false,
-            selector: 'figure'
+            selector: 'figure',
+            waitThumbnailsLoad: true
         });
     });
     </script>
