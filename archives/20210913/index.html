@@ -292,8 +292,10 @@
             closeOnScroll: false,
             closeOnVerticalDrag: true,
             mouseUsed: false,
-            // 关键配置：确保图片按比例缩放并居中显示
-            fitControlsWidth: 170
+            // 禁用不必要的控制宽度调整
+            fitControlsWidth: false,
+            // 确保图片按比例缩放并正确居中
+            scaleMode: 'fit'
         };
 
         var pswpElement = document.querySelectorAll('.pswp')[0];
@@ -475,12 +477,9 @@
         .ga-content .photos figure {
             margin: 0 !important;
             padding: 0 !important;
-            overflow: hidden !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
+            overflow: visible !important;
+            display: block !important;
             position: relative !important;
-            height: 200px !important;  /* 统一高度 */
             box-sizing: border-box !important;
         }
 
@@ -511,32 +510,17 @@
         /* ================== PhotoSwipe 图片防止变形样式 ================== */
         /* 确保PhotoSwipe图片保持原始比例，防止变形 */
         .pswp__img {
-            /* 让PhotoSwipe自己控制尺寸，只确保保持比例 */
-            max-width: 100% !important;
-            max-height: 100% !important;
-            object-fit: contain !important;
-            /* 防止任何继承的transform影响 */
-            transform-origin: center center !important;
+            /* 让PhotoSwipe自己控制尺寸和位置 */
+            max-width: none !important;
+            max-height: none !important;
+            width: auto !important;
+            height: auto !important;
         }
         
-        /* 确保PhotoSwipe容器正确显示 */
-        .pswp__zoom-wrap {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-        
-        /* 确保图片容器正确显示 */
+        /* 移除可能影响PhotoSwipe布局的flex样式 */
+        .pswp__zoom-wrap,
         .pswp__item {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-        }
-        
-        /* 防止图片在动画过程中变形 */
-        .pswp--animate_opacity .pswp__img,
-        .pswp--animated-in .pswp__img {
-            transition: opacity 0.3s ease !important;
+            display: block !important;
         }
         
         /* 确保加载中的图片也保持比例 */
@@ -549,12 +533,15 @@
     <script>
     $(document).ready(function() {
         $('.photos').justifiedGallery({
-            rowHeight: 140,
-            maxRowHeight: false,
-            margins: 4,
-            lastRow: 'justify',
+            rowHeight: 160,
+            maxRowHeight: 200,
+            margins: 5,
+            lastRow: 'nojustify',
             captions: false,
-            selector: 'figure'
+            selector: 'figure',
+            randomize: false,
+            waitThumbnailsLoad: true,
+            justifyThreshold: 0.75
         });
     });
     </script>
