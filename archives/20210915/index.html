@@ -513,10 +513,19 @@
 
     <script src="/assets/ExSearch/jquery.min.js"></script>
     <!-- 由于Justified Gallery库文件可能存在问题，我们使用CSS Grid作为备用方案 -->
+    <style>
+        /* 使用CSS Grid实现画廊效果，满足所有需求 - 使用更强的优先级 */
+        .ga-content .photos {
+            width: 100% !important;
+            max-width: 860px !important;  /* 与body .container的max-width一致 */
+            margin: 0 auto !important;    /* 居中对齐 */
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;  /* 固定2列，确保每行2个图片 */
+            grid-gap: 5px !important;
+            padding: 5px 0 !important;
+            box-sizing: border-box !important;
+        }
 
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
         /* 确保图片不被裁切并自适应填充容器 */
         .ga-content .photos figure {
             margin: 0 !important;
@@ -591,9 +600,6 @@
             object-fit: contain !important;
         }
     </style>
-=======
->>>>>>> 8275c269e3ca9cfc925a2f1dc0595650e35968d3
->>>>>>> Stashed changes
 
     <script src="/assets/jquery.justifiedGallery.min.js"></script>
     <script>
