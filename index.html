@@ -530,7 +530,7 @@
         }
 
         .ga-content .photos figure img {
-            object-fit: contain !important;  /* 确保图片不被裁切，完整显示 */
+            object-fit: cover !important;  /* 改为cover模式，确保图片填满容器 */
             object-position: center !important;
             width: 100% !important;
             height: 100% !important;
@@ -556,12 +556,11 @@
         /* ================== PhotoSwipe 图片防止变形样式 ================== */
         /* 确保PhotoSwipe图片保持原始比例，防止变形 */
         .pswp__img {
-            width: auto !important;
-            height: auto !important;
+            /* 让PhotoSwipe自己控制尺寸，只确保保持比例 */
             max-width: 100% !important;
             max-height: 100% !important;
             object-fit: contain !important;
-            /* 防止任何继承的transform或max-width/max-height影响 */
+            /* 防止任何继承的transform影响 */
             transform-origin: center center !important;
         }
         
